@@ -1,0 +1,259 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Beflex v3\n"
+"POT-Creation-Date: 2019-09-04 15:02+0200\n"
+"PO-Revision-Date: 2019-09-04 15:02+0200\n"
+"Last-Translator: \n"
+"Language-Team: Eoxia\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.3\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;esc_html_e;_x;esc_attr_x;esc_html__;_n:1,2;"
+"_n_noop:1,2;_nx:1,2;_nx_noop:1,2;esc_attr_x:1,2c;__ngettext:1,2;_n:1,2;"
+"__ngettext_noop:1,2;_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_nx:4c,1,2;"
+"_nx_noop:4c,1,2;_ex:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: inc/tgm-plugin-activation\n"
+"X-Poedit-SearchPathExcluded-1: node_modules\n"
+
+#: 404.php:18
+msgid "Oops, that page can't be found"
+msgstr "Oups ! Cette page n'a pas été trouvée"
+
+#: 404.php:22
+msgid ""
+"It looks like nothing was found at this location. Perhaps searching can "
+"help ? "
+msgstr ""
+"Il semblerait que rien n'ai été trouvé. Peut-être une recherche pourrait "
+"aider ? "
+
+#: comments.php:35
+#, php-format
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "%1$s commentaire sur &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s commentaires sur &ldquo;%2$s&rdquo;"
+
+#: comments.php:44 comments.php:65
+msgid "Comment navigation"
+msgstr "Navigation des commentaires"
+
+#: comments.php:47 comments.php:68
+msgid "Older Comments"
+msgstr "Anciens commentaires"
+
+#: comments.php:48 comments.php:69
+msgid "Newer Comments"
+msgstr "Nouveaux commentaires"
+
+#: comments.php:81
+msgid "Comments are closed."
+msgstr "Les commentaires sont fermés."
+
+#: footer.php:80 header.php:66
+msgid "Please set your navigation as \"Main navigation\" to make it appear"
+msgstr ""
+"Veuillez définir un menu en \"Navigation principale\" pour qu'il apparaisse "
+"ici"
+
+#: functions.php:63
+msgid "Main Navigation"
+msgstr "Navigation principale"
+
+#: functions.php:104
+msgid "Sidebar Blog"
+msgstr "Blog"
+
+#: functions.php:106
+msgid "Display on blog / post / archive pages."
+msgstr "S'affiche sur les pages Blog / Article / Archives."
+
+#: functions.php:114
+msgid "Shop"
+msgstr "Boutique"
+
+#: functions.php:116
+msgid "Display on shop pages"
+msgstr "S'affiche sur les pages de la boutique"
+
+#: functions.php:124
+msgid "Boxfoot 1"
+msgstr "Boxfoot 1"
+
+#: functions.php:126
+msgid "1 Boxfoot. Boxfoot display before Footer"
+msgstr "1ère zone du boxfoot. Le boxfoot s'affiche au dessus du footer"
+
+#: functions.php:133
+msgid "Boxfoot 2"
+msgstr "Boxfoot 2"
+
+#: functions.php:135
+msgid "2 Boxfoot. Boxfoot display before Footer"
+msgstr "2ème zone du boxfoot. Le boxfoot s'affiche au dessus du footer"
+
+#: functions.php:142
+msgid "Boxfoot 3"
+msgstr "Boxfoot 3"
+
+#: functions.php:144
+msgid "3 Boxfoot. Boxfoot display before Footer"
+msgstr "3ème zone du boxfoot. Le boxfoot s'affiche au dessus du footer"
+
+#: functions.php:151
+msgid "Boxfoot 4"
+msgstr "Boxfoot 4"
+
+#: functions.php:153
+msgid "4 Boxfoot. Boxfoot display before Footer"
+msgstr "4ème zone du boxfoot. Le boxfoot s'affiche au dessus du footer"
+
+#: functions.php:160
+msgid "Footer"
+msgstr "Footer"
+
+#: functions.php:162
+msgid "Display on right in Footer"
+msgstr "S'affiche à droite du footer"
+
+#: header.php:28
+msgid "Skip to content"
+msgstr "Passer au contenu"
+
+#: header.php:70
+msgid "Navigation"
+msgstr "Navigation"
+
+#: header.php:96
+msgctxt "placeholder"
+msgid "Enter a Keyword"
+msgstr "Entrer un mot clé"
+
+#: header.php:98
+msgctxt "label"
+msgid "Search for:"
+msgstr "Recherche pour:"
+
+#: inc/customizer.php:29
+msgid "Primary color"
+msgstr "Couleur principale"
+
+#: inc/general-functions.php:109
+#, php-format
+msgid ""
+"<div class=\"notification %1$s\"> <i class=\"notification-icon fas fa-"
+"exclamation-triangle\"></i> %2$s%3$s</div>"
+msgstr ""
+"<div class=\"notification %1$s\"> <i class=\"notification-icon fas fa-"
+"exclamation-triangle\"></i> %2$s%3$s</div>"
+
+#: inc/template-tags.php:38
+#, php-format
+msgctxt "post date"
+msgid "The %s"
+msgstr "Le %s"
+
+#: inc/template-tags.php:44
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr "par %s"
+
+#: inc/template-tags.php:65
+msgid ", "
+msgstr ", "
+
+#: inc/template-tags.php:68
+#, php-format
+msgid "Posted in %1$s"
+msgstr "Posté dans %1$s"
+
+#: inc/template-tags.php:72
+msgctxt "list item separator"
+msgid ", "
+msgstr ", "
+
+#: inc/template-tags.php:75
+#, php-format
+msgid "Tagged %1$s"
+msgstr "Tagué %1$s"
+
+#: inc/template-tags.php:85
+#, php-format
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr "Poster un commentaire<span class=\"screen-reader-text\"> sur %s</span>"
+
+#: inc/template-tags.php:102 inc/template-tags.php:126
+#: template-parts/content-page.php:36
+#, php-format
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr "Modifier <span class=\"screen-reader-text\">%s</span>"
+
+#: search.php:23
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Recherche pour: %s"
+
+#: template-parts/content-none.php:17
+msgid "Nothing Found"
+msgstr "Rien n'a été trouvé"
+
+#: template-parts/content-none.php:28
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Prêt à publier votre premier article ? <a href=\"%1$s\">Commencez ici</a>."
+
+#: template-parts/content-none.php:41
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Désolé, aucun résultat ne correspond à vos critères de recherche. Veuillez "
+"essayer avec différents mots-clés."
+
+#: template-parts/content-none.php:47
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Il semblerait que nous ne trouvons pas ce que vous cherchez. Peut-être une "
+"recherche pourrait aider."
+
+#: template-parts/content-page.php:23 template-parts/content.php:57
+msgid "Pages:"
+msgstr "Pages:"
+
+#: template-parts/content.php:62
+msgid "Lire la suite"
+msgstr ""
+
+#~ msgid "Category's sub-category list"
+#~ msgstr "Liste des sous-catégories de la catégorie"
+
+#~ msgid "There is nothing to output here"
+#~ msgstr "Il n'y a rien a afficher ici"
+
+#~ msgid "<div class=\"notification %1$s\">%2$s%3$s</div>"
+#~ msgstr "<div class=\"notification %1$s\">%2$s%3$s</div>"
+
+#~ msgid "The Bloc is empty. Click here to configure"
+#~ msgstr "Le bloc est vide. Cliquez ici pour le configurer"
+
+#~ msgid "Edit Bloc"
+#~ msgstr "Modifier Bloc"
+
+#~ msgid "Edit Diaporama"
+#~ msgstr "Modifier Diaporama"
+
+#~ msgid "One thought on &ldquo;%1$s&rdquo;"
+#~ msgstr "Un commentaire sur &ldquo;%1$s&rdquo;"

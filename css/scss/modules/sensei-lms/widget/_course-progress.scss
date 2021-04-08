@@ -1,0 +1,106 @@
+.widget.widget_sensei_course_progress {
+  background: rgba(0,0,0,0.05);
+
+  header {
+    padding: 1em;
+    background: $color__primary;
+    text-align: center;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+
+    .course-title {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 700;
+
+      a {
+        color: #fff;
+      }
+    }
+  }
+
+  .course-progress-navigation {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0;
+    border-top: 2px solid #fff;
+    background: $color__primary;
+
+    .prev, .next {
+      margin: 0;
+      width: 50%;
+      border-bottom: 0;
+
+      a {
+        background: none;
+        color: #fff;
+        padding: 0.5em 0;
+        transition: all 0.2s ease-out;
+
+        &:hover {
+          background: rgba(255,255,255,0.2);
+        }
+        &::before, &::after {
+          font-size: 1em;
+        }
+      }
+    }
+    .prev a {
+      border-right: 1px solid #fff;
+    }
+    .next {
+      margin-left: auto;
+
+      a {
+        border-left: 1px solid #fff;
+      }
+    }
+  }
+
+  .course-progress-lessons {
+    margin: 0;
+
+    .course-progress-module {
+      background: none;
+      padding: 0.5em 1em;
+      margin-top: 1em;
+      border-bottom: 0;
+
+      .module-title {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 400;
+      }
+    }
+    .course-progress-lesson {
+      padding-bottom: 0.5em;
+
+      span, a {
+        line-height: 1.4;
+        color: rgba(0,0,0,0.9);
+        font-weight: 400;
+        font-size: 14px;
+        padding: 0.4em 3em;
+        background: none;
+        transition: all 0.2s ease-out;
+        border-bottom: 0;
+
+        &::before {
+          top: 50%;
+          transform: translateY(-50%);
+          left: 0.8em;
+        }
+      }
+      a:hover {
+        color: $color__primary;
+        transform: translateX(4px);
+      }
+
+      &.current a, &.current span {
+        color: $color__primary;
+        font-weight: 600;
+        border-top: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+a {
+	color: $color__primary;
+	text-decoration: none;
+
+	&:visited {
+		color: $color__primary;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		color: darken($color__primary, 10%);
+	}
+	&:focus {
+		outline: thin dotted;
+	}
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}

@@ -1,0 +1,148 @@
+#masthead {
+	position: relative;
+	background: #fff;
+	border-bottom: solid #f7f7f7 1px;
+
+	> .site-width {
+		@include flexbox();
+		flex-wrap: nowrap;
+	}
+	.site-branding {
+		width: 30%;
+	}
+	.site-navigation {
+		width: 100%;
+	}
+	@media ( max-width: $media__medium ) {
+		.site-branding {
+			width: 50%;
+		}
+		.site-navigation {
+			margin-left: auto;
+			width: auto;
+		}
+	}
+	@media ( max-width: $media__medium ) {
+		padding: 0;
+	}
+	@media ( max-width: $media__small ) {
+		.site-branding {
+			width: 70%;
+
+			img {
+				width: 100%;
+			}
+		}
+	}
+}
+
+// Site branding, logo & subtitle
+#masthead .site-branding {
+	margin: auto 0;
+	line-height: 1;
+	display: flex;
+	flex-grow: 1;
+
+	.custom-logo-link {
+		padding-right: 1em;
+		@include transition();
+
+		img {
+			width: auto;
+			max-height: 80px;
+			@include transition();
+		}
+	}
+	.site-branding-container {
+		margin: auto 0;
+	}
+
+	.site-title, .site-description {
+		margin: 0;
+	}
+	.site-title a {
+		color: $color__text-main;
+		font-size: 20px;
+	}
+	.site-description {
+		font-size: 12px;
+	}
+}
+
+/** Site navigation */
+#masthead .site-navigation {
+	@include flexbox();
+	flex-wrap: nowrap;
+	margin-top: auto;
+	margin-bottom: auto;
+
+	#main-navigation {
+		margin-left: auto;
+	}
+}
+
+/** Site tool */
+#masthead .site-tool {
+	padding: 0 0 0 0.6em;
+	@include flexbox();
+	flex-wrap: nowrap;
+	margin: auto 0;
+
+	> a {
+		line-height: 1;
+		@include transition();
+		padding: 2.3em 0.6em;
+		display: inline-block;
+		color: $color__text-main;
+		font-size: 14px;
+
+		&:hover {
+			color: lighten($color__text-main, 30);
+		}
+		&:focus {
+			outline: none;
+		}
+		&.wps-action-mini-cart-opener {
+			position: relative;
+			.wps-numeration-cart {
+				position: absolute;
+				top: 30%;
+				right: 0px;
+				width: 14px;
+				height: 14px;
+				font-size: 10px;
+				text-align: center;
+				line-height: 10px;
+				background: $color__primary;
+				display: inline-block;
+				color: #fff;
+				border-radius: 50%;
+			}
+		}
+	}
+}
+
+/* Sitcky Header */
+#masthead.sticky {
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+	box-shadow: 0px 0px 6px 0px rgba(0,0,0,0);
+	&.-scroll {
+		top: 0;
+		box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.1);
+		#main-navigation .menu > .menu-item > a, .site-tool > * {
+			padding-top: 1.2em;
+			padding-bottom: 1.2em;
+		}
+
+		.site-branding .custom-logo-link img {
+			max-height: 48px;
+		}
+	}
+}
+@media ( min-width: 600px ) {
+	body.admin-bar #masthead.-scroll {
+		top: 32px;
+	}
+}

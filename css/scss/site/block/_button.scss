@@ -1,0 +1,17 @@
+.wp-block-button .wp-block-button__link {
+	padding: 10px 20px;
+	line-height: 1.4;
+	font-size: 12px;
+	text-transform: uppercase;
+	box-shadow: none;
+	font-weight: 700;
+	@include transition;
+
+	&:hover {
+		box-shadow: inset 0 -40px rgba(255,255,255,0.25);
+		cursor: pointer;
+	}
+	&:focus {
+		outline: none;
+	}
+}

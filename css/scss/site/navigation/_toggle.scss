@@ -1,0 +1,48 @@
+/* Toggle Menu */
+.site-navigation {
+	.menu-toggle {
+		display: block;
+	}
+}
+/* Toggle Link */
+.site-navigation {
+	.menu-toggle {
+		font-size: 12px;
+    font-weight: 600;
+		padding: 2.4em 1.4em;
+    height: 100%;
+		text-transform: uppercase;
+		color: rgba(0,0,0,0.7);
+		@include transition();
+
+		&:hover {
+			cursor: pointer;
+			color: rgba(0,0,0,0.9);
+		}
+		.svg-inline--fa {
+			color: $color__primary;
+			@media ( max-width: $media__small ) {
+				font-size: 16px;
+			}
+		}
+		.fa {
+			padding-right: 0.6em;
+			color: $color__primary;
+			@media ( max-width: $media__small ) {
+				padding-right: 0;
+				font-size: 16px;
+				color: rgba(0,0,0,0.8);
+			}
+		}
+		span {
+			@media ( max-width: $media__small ) {
+				display: none;
+			}
+		}
+	}
+}
+
+#masthead.-sticky .site-navigation .menu-toggle {
+	padding-top: 1.2em;
+	padding-bottom: 1.2em;
+}

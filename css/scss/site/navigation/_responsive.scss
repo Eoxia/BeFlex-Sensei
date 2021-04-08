@@ -1,0 +1,19 @@
+@media ( max-width: $media__medium ) {
+	.active-burger #burger-menu {
+		opacity: 1;
+		pointer-events: all;
+		transform: scale(1);
+	}
+}
+
+
+@media ( min-width: $media__medium ) {
+	.site-navigation {
+		.menu-toggle {
+			display: none;
+		}
+		#main-navigation {
+			display: block;
+		}
+	}
+}

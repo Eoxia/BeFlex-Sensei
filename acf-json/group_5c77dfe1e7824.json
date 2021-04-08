@@ -1,0 +1,1143 @@
+{
+    "key": "group_5c77dfe1e7824",
+    "title": "BeFlex - Call To Action",
+    "fields": [
+        {
+            "key": "field_5c77e004ae195",
+            "label": "Call To Action",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5c866082f7619",
+            "label": "Titre général",
+            "name": "beflex_call_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5c792a9aea919",
+            "label": "Type de publication",
+            "name": "beflex_call_data_type",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "manual": "Manuel",
+                "post": "Articles \/ Pages",
+                "category": "Catégories d'articles",
+                "wps-product": "Produits WPshop",
+                "wps-product-cat": "Catégories WPshop",
+                "course": "Cours"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "manual",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5c792c41e5215",
+            "label": "Contenu",
+            "name": "beflex_call_manual_data",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c792a9aea919",
+                        "operator": "==",
+                        "value": "manual"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_5c792ce1e5217",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Ajouter un bloc",
+            "sub_fields": [
+                {
+                    "key": "field_5c792cafe5216",
+                    "label": "Image",
+                    "name": "manual_image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_5c792ce1e5217",
+                    "label": "Titre",
+                    "name": "manual_title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "70",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5c792cf6e5218",
+                    "label": "Contenu",
+                    "name": "manual_content",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
+                    "key": "field_5ef456a73f2ec",
+                    "label": "Lien",
+                    "name": "manual_link",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
+                }
+            ]
+        },
+        {
+            "key": "field_5c792ee0e7899",
+            "label": "Filtre",
+            "name": "beflex_call_post_filter",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c792a9aea919",
+                        "operator": "==",
+                        "value": "post"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "manual": "Manuel",
+                "date": "Date (articles)"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5c792f16e789a",
+            "label": "Choix (articles\/pages)",
+            "name": "beflex_call_post_manual",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c792a9aea919",
+                        "operator": "==",
+                        "value": "post"
+                    },
+                    {
+                        "field": "field_5c792ee0e7899",
+                        "operator": "==",
+                        "value": "manual"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "post",
+                "page"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search",
+                "post_type",
+                "taxonomy"
+            ],
+            "elements": "",
+            "min": "",
+            "max": "",
+            "return_format": "object"
+        },
+        {
+            "key": "field_5c793277e789c",
+            "label": "Filtre catégorie",
+            "name": "beflex_call_post_filter_tax",
+            "type": "taxonomy",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c792a9aea919",
+                        "operator": "==",
+                        "value": "post"
+                    },
+                    {
+                        "field": "field_5c792ee0e7899",
+                        "operator": "==",
+                        "value": "date"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "category",
+            "field_type": "multi_select",
+            "allow_null": 0,
+            "add_term": 0,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "id",
+            "multiple": 0
+        },
+        {
+            "key": "field_5c7933fde789e",
+            "label": "Nombre d'articles",
+            "name": "beflex_call_post_number",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c792a9aea919",
+                        "operator": "==",
+                        "value": "post"
+                    },
+                    {
+                        "field": "field_5c792ee0e7899",
+                        "operator": "==",
+                        "value": "date"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 3,
+            "placeholder": "",
+            "prepend": "Afficher",
+            "append": "articles",
+            "min": 1,
+            "max": 999,
+            "step": 1
+        },
+        {
+            "key": "field_5c7934d30849e",
+            "label": "Choix (Catégories)",
+            "name": "beflex_call_tax",
+            "type": "taxonomy",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c792a9aea919",
+                        "operator": "==",
+                        "value": "category"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "category",
+            "field_type": "multi_select",
+            "allow_null": 0,
+            "add_term": 0,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "id",
+            "multiple": 0
+        },
+        {
+            "key": "field_5e144c7d998e8",
+            "label": "Configuration des produits",
+            "name": "beflex_call_products",
+            "type": "group",
+            "instructions": "Ce block ne fonctionne que avec l'extension WPshop.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c792a9aea919",
+                        "operator": "==",
+                        "value": "wps-product"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5e1449adb94ae",
+                    "label": "Filtre produit",
+                    "name": "beflex_call_product_filter",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "manual": "Manuel",
+                        "category": "Catégorie WPshop"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "default_value": "",
+                    "layout": "horizontal",
+                    "return_format": "value",
+                    "save_other_choice": 0
+                },
+                {
+                    "key": "field_5e1449efb94af",
+                    "label": "Choix (produits)",
+                    "name": "beflex_call_product_manual",
+                    "type": "relationship",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e1449adb94ae",
+                                "operator": "==",
+                                "value": "manual"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "wps-product"
+                    ],
+                    "taxonomy": "",
+                    "filters": [
+                        "search",
+                        "post_type",
+                        "taxonomy"
+                    ],
+                    "elements": [
+                        "featured_image"
+                    ],
+                    "min": "",
+                    "max": "",
+                    "return_format": "object"
+                },
+                {
+                    "key": "field_5e144acebd51c",
+                    "label": "Filtre catégorie WPshop",
+                    "name": "beflex_call_product_category",
+                    "type": "taxonomy",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e1449adb94ae",
+                                "operator": "==",
+                                "value": "category"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "taxonomy": "wps-product-cat",
+                    "field_type": "multi_select",
+                    "allow_null": 0,
+                    "add_term": 0,
+                    "save_terms": 0,
+                    "load_terms": 0,
+                    "return_format": "id",
+                    "multiple": 0
+                }
+            ]
+        },
+        {
+            "key": "field_5e144b31bd51d",
+            "label": "Choix (Catégories WPshop)",
+            "name": "beflex_call_products_categories",
+            "type": "taxonomy",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c792a9aea919",
+                        "operator": "==",
+                        "value": "wps-product-cat"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "wps-product-cat",
+            "field_type": "multi_select",
+            "allow_null": 0,
+            "add_term": 0,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "id",
+            "multiple": 0
+        },
+        {
+            "key": "field_6062f4db39881",
+            "label": "Affichage des cours",
+            "name": "beflex_call_courses",
+            "type": "group",
+            "instructions": "Extension Sensei LMS requise",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c792a9aea919",
+                        "operator": "==",
+                        "value": "course"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_6062f4f939882",
+                    "label": "Filtre",
+                    "name": "course_filter",
+                    "type": "button_group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "manual": "Choix manuel",
+                        "category": "Choix par catégorie"
+                    },
+                    "allow_null": 0,
+                    "default_value": "",
+                    "layout": "horizontal",
+                    "return_format": "value"
+                },
+                {
+                    "key": "field_6062f55939883",
+                    "label": "Choix manuel",
+                    "name": "course_manual",
+                    "type": "relationship",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6062f4f939882",
+                                "operator": "==",
+                                "value": "manual"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "course"
+                    ],
+                    "taxonomy": "",
+                    "filters": [
+                        "search",
+                        "post_type",
+                        "taxonomy"
+                    ],
+                    "elements": [
+                        "featured_image"
+                    ],
+                    "min": "",
+                    "max": "",
+                    "return_format": "object"
+                },
+                {
+                    "key": "field_6062f58c39884",
+                    "label": "Choix par catégories",
+                    "name": "course_category",
+                    "type": "taxonomy",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6062f4f939882",
+                                "operator": "==",
+                                "value": "category"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "taxonomy": "course-category",
+                    "field_type": "multi_select",
+                    "allow_null": 0,
+                    "add_term": 0,
+                    "save_terms": 0,
+                    "load_terms": 0,
+                    "return_format": "id",
+                    "multiple": 0
+                },
+                {
+                    "key": "field_6062f5cc39885",
+                    "label": "Nombre de cours à afficher",
+                    "name": "course_count",
+                    "type": "number",
+                    "instructions": "Entrer -1 pour afficher tous les cours",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6062f4f939882",
+                                "operator": "==",
+                                "value": "category"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": -1,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": "",
+                    "max": "",
+                    "step": 1
+                }
+            ]
+        },
+        {
+            "key": "field_5c793570f8212",
+            "label": "Design",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5c79370df8213",
+            "label": "Type d'affichage",
+            "name": "beflex_design_type",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "default": "Standard",
+                "background": "Image en fond",
+                "list-left": "Image sur la gauche",
+                "list-right": "Image sur la droite",
+                "box": "Encart"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "default",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5c7937932d310",
+            "label": "Couleur de fond",
+            "name": "beflex_design_bloc_background",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c79370df8213",
+                        "operator": "==",
+                        "value": "background"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#000"
+        },
+        {
+            "key": "field_5c7938ba2d311",
+            "label": "Couleur de texte",
+            "name": "beflex_design_bloc_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c79370df8213",
+                        "operator": "==",
+                        "value": "background"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#fff"
+        },
+        {
+            "key": "field_5c7938d32d312",
+            "label": "Opacité de l'image",
+            "name": "beflex_design_opacity",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c79370df8213",
+                        "operator": "==",
+                        "value": "background"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "%",
+            "min": 0,
+            "max": 100,
+            "step": 10
+        },
+        {
+            "key": "field_5c79391a2d313",
+            "label": "Couleur de fond du bouton",
+            "name": "beflex_design_button_background",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": ""
+        },
+        {
+            "key": "field_5c79396e2d314",
+            "label": "Couleur de texte du bouton",
+            "name": "beflex_design_button_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": ""
+        },
+        {
+            "key": "field_5c7939ab7b9a4",
+            "label": "Afficher une image\/couleur en fond ?",
+            "name": "beflex_design_section",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5c7939da7b9a5",
+            "label": "Couleur de fond",
+            "name": "beflex_design_section_background",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c7939ab7b9a4",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#fff"
+        },
+        {
+            "key": "field_5c793a087b9a6",
+            "label": "Couleur du texte",
+            "name": "beflex_design_section_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c7939ab7b9a4",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#444"
+        },
+        {
+            "key": "field_5c793a1c7b9a7",
+            "label": "Opacité du fond de couleur",
+            "name": "beflex_design_section_opacity",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c7939ab7b9a4",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 50,
+            "placeholder": "",
+            "prepend": "",
+            "append": "%",
+            "min": 0,
+            "max": 100,
+            "step": 10
+        },
+        {
+            "key": "field_5c793e877b9a8",
+            "label": "Image de fond",
+            "name": "beflex_design_section_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c7939ab7b9a4",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5c793eeb47b4a",
+            "label": "Options",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5c793efa47b4b",
+            "label": "Éléments à afficher",
+            "name": "beflex_option_data_display",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c792a9aea919",
+                        "operator": "!=",
+                        "value": "course"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "image": "Image",
+                "cat": "Catégorie",
+                "title": "Titre",
+                "content": "Contenu",
+                "button": "Bouton"
+            },
+            "allow_custom": 0,
+            "default_value": [
+                "image",
+                "title",
+                "content",
+                "button"
+            ],
+            "layout": "horizontal",
+            "toggle": 1,
+            "return_format": "value",
+            "save_custom": 0
+        },
+        {
+            "key": "field_6063276c67369",
+            "label": "Éléments à afficher - Cours",
+            "name": "beflex_option_data_display_course",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c792a9aea919",
+                        "operator": "==",
+                        "value": "course"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "image": "Image",
+                "cat": "Catégories",
+                "author": "Auteur",
+                "length": "Durée du cours",
+                "title": "Titre",
+                "content": "Contenu",
+                "button": "Bouton"
+            },
+            "allow_custom": 0,
+            "default_value": [
+                "image",
+                "title",
+                "content",
+                "button"
+            ],
+            "layout": "horizontal",
+            "toggle": 1,
+            "return_format": "value",
+            "save_custom": 0
+        },
+        {
+            "key": "field_5c79411047b4c",
+            "label": "Niveau du titre général",
+            "name": "beflex_option_title_general_level",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "h1": "h1",
+                "h2": "h2",
+                "h3": "h3",
+                "h4": "h4",
+                "h5": "h5",
+                "h6": "h6",
+                "div": "Pas de titre"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "h2",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5ef45b4dcf307",
+            "label": "Niveau des titres des blocs",
+            "name": "beflex_option_title_level",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "h1": "h1",
+                "h2": "h2",
+                "h3": "h3",
+                "h4": "h4",
+                "h5": "h5",
+                "h6": "h6",
+                "div": "Pas de titre"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "h3",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5c794671fe4c0",
+            "label": "Nombre de blocs par ligne",
+            "name": "beflex_option_column",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 3,
+            "min": 1,
+            "max": 6,
+            "step": 1,
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5c79413a47b4d",
+            "label": "Espacement blocs",
+            "name": "beflex_option_gap",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "min": 0,
+            "max": 10,
+            "step": 1,
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5c79416047b4e",
+            "label": "Afficher en carrousel",
+            "name": "beflex_option_carrousel",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/beflex-call-action"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1617113488
+}

@@ -1,0 +1,98 @@
+.beflex-call-to-action .call-to-container .call-to-block.-mode-box {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.beflex-call-to-action .call-to-container .call-to-block.-mode-box .block-thumbnail {
+  position: relative;
+  background: #000;
+}
+
+.beflex-call-to-action .call-to-container .call-to-block.-mode-box .block-thumbnail img {
+  display: block;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.beflex-call-to-action .call-to-container .call-to-block.-mode-box .block-thumbnail img:hover {
+  opacity: 0.8;
+}
+
+.beflex-call-to-action .call-to-container .call-to-block.-mode-box .block-thumbnail.no-thumb {
+  background: #fff;
+}
+
+.beflex-call-to-action .call-to-container .call-to-block.-mode-box .block-thumbnail.no-thumb .block-categories {
+  position: static !important;
+  padding: 0 1.5em;
+}
+
+.beflex-call-to-action .call-to-container .call-to-block.-mode-box .block-categories {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+
+.beflex-call-to-action .call-to-container .call-to-block.-mode-box .block-categories .block-categorie {
+  background: #fff;
+  padding: 0.3em 0.6em;
+  font-size: 12px;
+  font-weight: 700;
+  margin-right: 0.4em;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  color: #0e6eff;
+}
+
+.beflex-call-to-action .call-to-container .call-to-block.-mode-box .block-categories .block-categorie:hover {
+  opacity: 0.8;
+}
+
+.beflex-call-to-action .call-to-container .call-to-block.-mode-box .block-content {
+  padding: 1.5em;
+}
+
+.beflex-call-to-action .call-to-container .call-to-block.-mode-box .block-content a:not(.button) {
+  color: rgba(0, 0, 0, 0.9);
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.beflex-call-to-action .call-to-container .call-to-block.-mode-box .block-content a:not(.button):hover {
+  color: #0e6eff;
+}
+
+.beflex-call-to-action .call-to-container .call-to-block.-mode-box .block-content .block-title {
+  font-size: 20px;
+}
+
+.beflex-call-to-action .call-to-container .call-to-block.-mode-box .block-footer {
+  background: rgba(0, 0, 0, 0.05);
+  padding: 0.5em 1.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.7);
+  margin-top: auto;
+}
+
+.beflex-call-to-action .call-to-container .call-to-block.-mode-box .block-footer .course-length, .beflex-call-to-action .call-to-container .call-to-block.-mode-box .block-footer .course-author {
+  margin: auto 0;
+}
+
+.beflex-call-to-action .call-to-container .call-to-block.-mode-box .block-footer .course-length {
+  margin-right: 0.5em;
+}
+
+.beflex-call-to-action .call-to-container .call-to-block.-mode-box .block-footer .course-author .avatar {
+  border-radius: 50%;
+  vertical-align: text-top;
+  margin-right: 0.2em;
+}
