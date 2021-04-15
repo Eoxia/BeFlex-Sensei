@@ -1,16 +1,7 @@
 .site-width {
 	width: 100%;
-	padding-left: 12%;
-	padding-right: 12%;
 
-	@media ( max-width: $media__medium ) {
-		padding-left: 8%;
-		padding-right: 8%;
-	}
-	@media ( max-width: $media__small ) {
-		padding-left: 4%;
-		padding-right: 4%;
-	}
+	@include site-width();
 }
 /** Garde seulement la marge du site-width global */
 #content.site-width .site-width {
@@ -72,5 +63,8 @@ body.search {
 
 /** Ajoute une marge en haut de la page si la navigation est en absolute */
 body.sticky-nav #content {
-	padding-top: 80px;
+	padding-top: 2em;
+}
+body.home.sticky-nav #content {
+  padding-top: 80px;
 }

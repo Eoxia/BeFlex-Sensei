@@ -12,6 +12,20 @@
 
 require_once ABSPATH . 'wp-admin/includes/plugin.php';
 
+if ( ! function_exists( 'beflex_is_sensei' ) ) :
+	/**
+	 * Returns true if wpshop plugin is active in the theme
+	 *
+	 * @return boolean
+	 */
+	function beflex_is_sensei() {
+		if ( is_plugin_active( 'sensei-lms/sensei-lms.php' ) ) :
+			return true;
+		endif;
+		return false;
+	}
+endif;
+
 if ( ! function_exists( 'is_wpshop' ) ) :
 	/**
 	 * Returns true if wpshop plugin is active in the theme

@@ -29,11 +29,11 @@ $category_output = get_the_term_list( $post->ID, 'course-category', '', ' ', '' 
 
     <div class="meta-datas gridlayout grid-2">
         <div class="meta">
-            <i class="fal fa-clock"></i>
+            <i class="far fa-clock"></i>
             <span class="meta-label"><?php echo sprintf( _n( '%d minute', '%d minutes', $course_length, 'beflex-child' ), $course_length ); ?></span>
         </div>
         <div class="meta">
-            <i class="fal fa-book"></i>
+            <i class="far fa-book"></i>
             <span class="meta-label"><?php echo sprintf( _n( '%d leçon', '%d leçons', $lesson_count, 'beflex-child' ), $lesson_count ); ?></span>
         </div>
     </div>

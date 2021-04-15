@@ -1,4 +1,7 @@
 .course-container {
+  border-bottom: 0;
+  margin-left: 0 !important;
+
   .course {
     padding: 0;
 
@@ -42,7 +45,7 @@
           }
         }
         .course-excerpt {
-          margin: 0;
+          margin: 0 0 1.5em 0;
         }
         .course-meta {
           margin: auto 0 0 0;
@@ -55,5 +58,13 @@
         }
       }
     }
+  }
+}
+
+.course-container.columns-1 {
+  li.course {
+    float: none;
+    padding-left: 0;
+    padding-right: 0;
   }
 }

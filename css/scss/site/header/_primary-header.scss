@@ -1,0 +1,32 @@
+#header-page {
+  padding-top: 80px;
+  position: relative;
+
+
+  &::before {
+    display: block;
+    content: '';
+    height: 100%;
+    position: absolute;
+    @include full-size();
+    background: $color__background-pastel;
+    border-bottom: 4px solid rgba(0,0,0,0.05);
+    bottom: 0;
+    z-index: -1;
+  }
+
+  .header-title-container {
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+    .header-title-content {
+    }
+    #breadcrumbs {
+      margin: 0;
+    }
+    .header-title {
+      margin: 0;
+    }
+  }
+
+}

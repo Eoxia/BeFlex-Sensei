@@ -36,6 +36,12 @@ endif;
 		<?php endif; ?>
 	}
 
+	<?php if ( ! empty( $beflex_font_family ) ) : ?>
+		#masthead .site-branding .site-title a {
+			font-family: <?php echo esc_html( $beflex_font_family ); ?>;
+		}
+	<?php endif; ?>
+
 	<?php if ( ! empty( $beflex_primary ) ) : ?>
 		.button.button-primary:not(.bordered), button, input[type="button"], input[type="reset"], input[type="submit"] {
 			background: <?php echo esc_html( $beflex_primary ); ?>;
@@ -109,6 +115,10 @@ endif;
 		.wp-block-quote.is-style-default {
 			border-left: 4px solid <?php echo esc_html( $beflex_primary ); ?>;
 		}
+
+	.course-container .course .course-content .entry-content .course-title a:hover {
+		color: <?php echo esc_html( $beflex_primary ); ?>;
+	}
 	<?php endif; ?>
 
 </style>

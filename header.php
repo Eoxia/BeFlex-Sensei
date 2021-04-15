@@ -117,4 +117,8 @@
 	endif;
 	?>
 
+	<?php if ( ! is_front_page() ) : ?>
+		<?php get_template_part( 'template-parts/page', 'header' ); ?>
+	<?php endif; ?>
+
 	<div id="content" class="site-content site-width <?php echo esc_html( $beflex_is_sidebar ); ?>">

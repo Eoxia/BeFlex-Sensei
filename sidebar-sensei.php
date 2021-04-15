@@ -18,8 +18,9 @@ endif;
 
 <?php
 $post_types = array( 'lesson', 'quiz', 'question' );
+$taxes      = array( 'module' );
 
-if ( is_singular( $post_types ) ) :
+if ( is_singular( $post_types ) || is_tax( $taxes ) ) :
     ?>
     <aside id="secondary" class="widget-area" role="complementary">
         <?php dynamic_sidebar( 'sensei-lesson' ); ?>

@@ -1,58 +1,51 @@
-body.single-course .single-course-meta {
-  margin-top: 3em;
-  margin-bottom: 1em;
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 1em;
-  border-bottom: 1px solid rgba(0,0,0,0.2);
+body.single-course, body.single-lesson {
+  #header-page .header-title-container {
+    display: flex;
 
-  .meta-author, .meta-datas, .meta-categories {
-    margin-top: auto;
-    margin-bottom: auto;
-  }
-
-  .meta-author {
-    max-width: 20%;
-
-    .avatar {
-      border-radius: 50%;
-      vertical-align: bottom;
-      margin-right: 0.5em;
+    .single-course-meta {
+      max-width: 300px;
+      min-width: 300px;
+      width: 100%;
+      background: #fff;
+      margin: auto 0 auto auto;
+      padding: 1em;
+      border: 1px solid rgba(0,0,0,0.1);
+      box-shadow: 0 1px 0 0 rgba(0,0,0,0.15);
+      border-radius: 4px;
     }
-    .author-label {
-      vertical-align: super;
-    }
-  }
-
-  .meta-datas {
-    .meta {
-      text-align: center;
-
-      i {
-        display: block;
-        font-size: 28px;
-        margin-bottom: 0.2em;
+    .meta-author {
+      .avatar {
+        border-radius: 50%;
+        vertical-align: bottom;
+        margin-right: 0.5em;
       }
+      .author-label {
+        vertical-align: super;
+        color: $color__secondary;
+      }
+    }
+
+    .meta-datas {
       .meta-label {
-        display: block;
-        font-size: 12px;
+        color: $color__secondary;
       }
     }
-  }
 
-  .meta-categories {
-    max-width: 20%;
+    .meta-categories {
+      margin-top: 0.5em;
 
-    [rel="tag"] {
-      background: rgba(0,0,0,0.1);
-      margin: 0 0.2em 0.4em 0;
-      color: rgba(0,0,0,0.6);
-      @include transition;
-      padding: 0.2em 0.4em;
-      display: inline-block;
+      [rel="tag"] {
+        background: rgba(0,0,0,0.1);
+        margin: 0 0.2em 0.4em 0;
+        color: rgba(0,0,0,0.6);
+        @include transition;
+        padding: 0.2em 0.4em;
+        display: inline-block;
+        font-size: 13px;
 
-      &:hover {
-        background: rgba(0,0,0,0.2);
+        &:hover {
+          background: rgba(0,0,0,0.2);
+        }
       }
     }
   }

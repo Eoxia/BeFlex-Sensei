@@ -130,17 +130,19 @@ function beflex_widgets_init() {
 			)
 		);
 	endif;
-	register_sidebar(
-		array(
-			'name'          => esc_html__( 'Sensei LMS (Lessons)', 'beflex' ),
-			'id'            => 'sensei-lesson',
-			'description'   => esc_html__( 'Display in Sensei lesson/quizz pages', 'beflex' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<div class="widget-title">',
-			'after_title'   => '</div>',
-		)
-	);
+	if ( beflex_is_sensei() ) :
+		register_sidebar(
+			array(
+				'name'          => esc_html__( 'Sensei LMS (Lessons)', 'beflex' ),
+				'id'            => 'sensei-lesson',
+				'description'   => esc_html__( 'Display in Sensei lesson/quizz pages', 'beflex' ),
+				'before_widget' => '<section id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</section>',
+				'before_title'  => '<div class="widget-title">',
+				'after_title'   => '</div>',
+			)
+		);
+	endif;
 	register_sidebar(
 		array(
 			'name'          => esc_html__( 'Boxfoot 1', 'beflex' ),
@@ -351,103 +353,55 @@ require get_template_directory() . '/inc/general-functions.php';
 function beflex_child_theme_setup() {
 	add_theme_support( 'sensei' );
 
-	add_image_size( 'beflex-call-to-action-course', 300, 300, true );
-
-	require get_stylesheet_directory() . '/sensei/functions.php';
+	if ( beflex_is_sensei() ) {
+		add_image_size( 'beflex-call-to-action-course', 300, 300, true );
+		require get_stylesheet_directory() . '/sensei/functions.php';
+	}
 }
 add_action( 'after_setup_theme', 'beflex_child_theme_setup' );
 
+/**
+ * Add google fonts to your website
+ * REQUIRE BEFLEX PRO
+ *
+ * @param  Array $urls_mapping array with fonts urls.
+ * @return Array $urls_mapping
+ */
+function beflex_filter_font_url( $urls_mapping ) {
+	 $urls_mapping['Merriweather Sans'] = 'Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800';
+	 $urls_mapping['Lato'] = 'Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900';
+	return $urls_mapping;
+}
 
 /**
- * Add Course type to Call To Action
- *
- * @param  array  $bloc_data Data of Call to Action.
- * @param  string $type      Type of the CTA.
- * @param  int    $id_block  Gutenberg bloc ID.
- *
- * @return array $bloc_data Data of Call to Action.
+ * Action to add new fonts url
+ * REQUIRE BEFLEX PRO
  */
-function beflex_call_to_action_courses( $bloc_data, $type, $id_block ) {
-	if ( 'course' == $type ) {
-		$call_to_courses = get_field( 'beflex_call_courses', $id_block );
-		if ( 'manual' == $call_to_courses['course_filter'] ) :
-			$posts_ids = $call_to_courses['course_manual'];
-		elseif ( 'category' == $call_to_courses['course_filter'] ) :
-			$course_category = $call_to_courses['course_category'];
-			$course_count    = $call_to_courses['course_count'];
-			$args            = array(
-				'post_type'           => 'course',
-				'posts_per_page'      => ( ! empty( $course_count ) ) ? $course_count : 3,
-				'ignore_sticky_posts' => 1,
-				'tax_query'      => array(
-					array(
-						'taxonomy'         => 'course-category',
-						'field'            => 'term_id',
-						'terms'            => $course_category,
-						'include_children' => false,
-					),
-				),
-			);
+function beflex_add_font_url() {
+	add_filter( 'beflex_pro_goolge_font', 'beflex_filter_font_url', 10, 1 );
+}
+add_action( 'init', 'beflex_add_font_url' );
 
-			$dynamic_data = new \WP_Query( $args );
-			if ( ! empty( $dynamic_data->posts ) ) :
-				$posts_ids = $dynamic_data->posts;
-			endif;
-		else :
-			return array();
-		endif;
+/**
+ * Load ACF fields of the parent theme
+ *
+ * @method load_acf_parent
+ * @param  Array $paths paths of files.
+ * @return Array $paths paths of files.
+ */
+function load_acf_parent( $paths ) {
+	$paths[] = get_template_directory() . '/acf-json';
+	return $paths;
+}
+add_filter( 'acf/settings/load_json', 'load_acf_parent' );
 
-		if ( ! empty( $posts_ids ) ) :
-			$i              = 0;
-			$bloc_data = array();
 
-			foreach ( $posts_ids as $element ) :
-				$bloc_data[ $i ] = array(
-					'id'               => $element->ID,
-					'title'            => ( ! empty( $element->post_title ) ) ? $element->post_title : false,
-					'categories'       => get_the_terms( $element->ID, 'course-category' ),
-					'image'            => get_post_thumbnail_id( $element ),
-					'content'          => get_the_excerpt( $element ),
-					'permalink'        => get_permalink( $element ),
-					'permalink_label'  => __( 'Aperçu du cours', 'beflex-child' ),
-					'permalink_target' => '_self',
-					'author'           => ( ! empty( $element->post_author ) ) ? $element->post_author : false,
-					'course_length'    => beflex_get_course_length( $element->ID ),
-					'row'              => $i,
-				);
-				$i++;
-			endforeach;
-		else :
-			return array();
-		endif;
+function beflex_display_page_breadcrumb() {
+	if ( ! is_single() ) {
+		if (function_exists('yoast_breadcrumb')) {
+			yoast_breadcrumb('<p id="breadcrumbs">', '</p>');
+		}
 	}
-
-	return $bloc_data;
 }
-add_filter( 'beflex_callto_data_type', 'beflex_call_to_action_courses', 10, 3 );
+//add_action( 'beflex_header_page_inside_before', 'beflex_display_page_breadcrumb', 10 );
 
-/**
- * Display course elements for Call To Action courses type.
- *
- * @param  array  $call_atts Call To Ation datas.
- * @param  array  $block     Gutenberg block data.
- *
- * @return array $call_atts Call To Ation datas.
- */
-function beflex_call_to_action_atts_course( $call_atts, $block ) {
-	$type = get_field( 'beflex_call_data_type', $block['ID'] );
-	if ( 'course' == $type ) :
-		$display_elt = get_field( 'beflex_option_data_display_course', $block['ID'] );
-
-		$call_atts['display_image']      = ( ! empty( $display_elt ) && in_array( 'image', $display_elt, true ) ) ? 1 : 0;
-		$call_atts['display_title']      = ( ! empty( $display_elt ) && in_array( 'title', $display_elt, true ) ) ? 1 : 0;
-		$call_atts['display_categories'] = ( ! empty( $display_elt ) && in_array( 'cat', $display_elt, true ) ) ? 1 : 0;
-		$call_atts['display_content']    = ( ! empty( $display_elt ) && in_array( 'content', $display_elt, true ) ) ? 1 : 0;
-		$call_atts['display_button']     = ( ! empty( $display_elt ) && in_array( 'button', $display_elt, true ) ) ? 1 : 0;
-		$call_atts['display_author']     = ( ! empty( $display_elt ) && in_array( 'author', $display_elt, true ) ) ? 1 : 0;
-		$call_atts['display_length']     = ( ! empty( $display_elt ) && in_array( 'length', $display_elt, true ) ) ? 1 : 0;
-	endif;
-
-	return $call_atts;
-}
-add_filter( 'beflex_callto_bloc', 'beflex_call_to_action_atts_course', 10, 2 );
