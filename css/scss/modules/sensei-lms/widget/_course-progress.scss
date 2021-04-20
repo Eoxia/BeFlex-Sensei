@@ -116,7 +116,7 @@
       &.completed span::before, &.completed a::before {
         content: '\f058';
         font-weight: 900;
-        color: #1fc588;
+        color: $color__green;
       }
     }
   }

@@ -1,0 +1,10 @@
+.wp-block-sensei-lms-lesson-actions {
+  @extend .beflex-box;
+  display: flex;
+  justify-content: center;
+
+  .wp-block-sensei-lms-button-complete-lesson .wp-block-button__link {
+    background: $color__green;
+    border-radius: 4px;
+  }
+}

@@ -11,10 +11,6 @@
  */
 ?>
 
-<header class="primary-header site-width">
-	<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
-</header><!-- .primary-header -->
-
 <div class="primary-content">
 	<?php
 	the_content();

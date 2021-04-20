@@ -76,21 +76,11 @@
 
 			<div class="site-tool">
 				<a href="#" class="js-search"><i class="fas fa-search"></i></a>
-				<?php
-				if ( is_wpshop() ) :
-					$pages_ids = get_option( 'wps_page_ids', \wpshop\Pages::g()->default_options );
-					if ( is_array( $pages_ids ) && ! empty( $pages_ids['my_account_id'] ) ) :
-						?>
-						<a href="<?php echo esc_url( get_permalink( $pages_ids['my_account_id'] ) ); ?>"><i class="fas fa-fw fa-user-alt"></i></a>
-						<?php
-					endif;
-					if ( is_array( $pages_ids ) && ! empty( $pages_ids['cart_id'] ) ) :
-						?>
-						<a href="<?php echo esc_url( get_permalink( $pages_ids['cart_id'] ) ); ?>"><i class="fas fa-fw fa-shopping-cart"></i></a>
-						<?php
-					endif;
-				endif;
-				?>
+				<?php if ( beflex_is_sensei() ) : ?>
+					<div class="sensei-links">
+						<?php get_template_part( 'template-parts/navigation-sensei-login' ); ?>
+					</div>
+				<?php endif; ?>
 			</div><!-- .site-tool -->
 
 		</div><!-- .site-width -->

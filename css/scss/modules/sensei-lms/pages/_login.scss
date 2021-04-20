@@ -1,0 +1,9 @@
+#my-courses .col2-set {
+  @extend .gridlayout;
+  @extend .gridlayout.grid-2;
+  @extend .gridlayout.grid-gap-2;
+
+  .col-2 {
+    @extend .beflex-box;
+  }
+}

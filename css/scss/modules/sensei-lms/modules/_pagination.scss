@@ -1,0 +1,9 @@
+.sensei-pagination {
+  @extend .beflex-box;
+  display: flex;
+  justify-content: space-between;
+
+  .nav-prev, .nav-next {
+    float: none;
+  }
+}

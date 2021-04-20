@@ -30,7 +30,8 @@ remove_action( 'sensei_single_course_content_inside_before', array( $sensei->cou
 remove_action( 'sensei_single_lesson_content_inside_before', array( 'Sensei_Lesson', 'the_title' ), 15 );
 /** Module */
 remove_action( 'sensei_taxonomy_module_content_inside_before', array( $sensei->lesson, 'the_archive_header' ), 20 );
-
+/** Quizz*/
+remove_action( 'sensei_single_quiz_content_inside_before', array( 'Sensei_Quiz', 'the_title' ), 20 );
 
 /**
  * Load theme actions

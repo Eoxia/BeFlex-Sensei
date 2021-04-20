@@ -697,7 +697,7 @@ input[type="submit"] {
   line-height: 1.4;
   vertical-align: middle;
   height: auto;
-  border-radius: 0;
+  border-radius: 4px;
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
   position: relative;
@@ -1269,14 +1269,14 @@ body.home.sticky-nav #content {
 /*--------------------------------------------------------------
 ## Grid layout Grid
 --------------------------------------------------------------*/
-.gridlayout {
+.gridlayout, #my-courses .col2-set {
   display: grid;
   grid-gap: 1em 1em;
   grid-template-columns: repeat(4, 1fr);
 }
 
 /** Définition des tailles */
-.gridlayout {
+.gridlayout, #my-courses .col2-set {
   /** Du parent */
   /** Chaque enfant peut modifier sa propre taille */
   /** Chaque enfant peut modifier sa propre taille */
@@ -1286,380 +1286,380 @@ body.home.sticky-nav #content {
   /** Chaque enfant peut modifier sa propre taille */
 }
 
-.gridlayout.grid-1 {
+.gridlayout.grid-1, #my-courses .grid-1.col2-set {
   grid-template-columns: repeat(1, 1fr);
 }
 
-.gridlayout.grid-1 > .gridw-1 {
+.gridlayout.grid-1 > .gridw-1, #my-courses .grid-1.col2-set > .gridw-1 {
   grid-column: auto/span 1;
 }
 
-.gridlayout.grid-2 {
+.gridlayout.grid-2, #my-courses .col2-set {
   grid-template-columns: repeat(2, 1fr);
 }
 
-.gridlayout.grid-2 > .gridw-1 {
+.gridlayout.grid-2 > .gridw-1, #my-courses .col2-set > .gridw-1 {
   grid-column: auto/span 1;
 }
 
-.gridlayout.grid-2 > .gridw-2 {
+.gridlayout.grid-2 > .gridw-2, #my-courses .col2-set > .gridw-2 {
   grid-column: auto/span 2;
 }
 
 @media (max-width: 770px) {
-  .gridlayout.grid-2 > .gridw-2 {
+  .gridlayout.grid-2 > .gridw-2, #my-courses .col2-set > .gridw-2 {
     grid-column: auto / span 2;
   }
 }
 
-.gridlayout.grid-3 {
+.gridlayout.grid-3, #my-courses .grid-3.col2-set {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.gridlayout.grid-3 > .gridw-1 {
+.gridlayout.grid-3 > .gridw-1, #my-courses .grid-3.col2-set > .gridw-1 {
   grid-column: auto/span 1;
 }
 
-.gridlayout.grid-3 > .gridw-2 {
+.gridlayout.grid-3 > .gridw-2, #my-courses .grid-3.col2-set > .gridw-2 {
   grid-column: auto/span 2;
 }
 
 @media (max-width: 770px) {
-  .gridlayout.grid-3 > .gridw-2 {
+  .gridlayout.grid-3 > .gridw-2, #my-courses .grid-3.col2-set > .gridw-2 {
     grid-column: auto / span 2;
   }
 }
 
-.gridlayout.grid-3 > .gridw-3 {
+.gridlayout.grid-3 > .gridw-3, #my-courses .grid-3.col2-set > .gridw-3 {
   grid-column: auto/span 3;
 }
 
 @media (max-width: 770px) {
-  .gridlayout.grid-3 > .gridw-3 {
+  .gridlayout.grid-3 > .gridw-3, #my-courses .grid-3.col2-set > .gridw-3 {
     grid-column: auto / span 2;
   }
 }
 
-.gridlayout.grid-4 {
+.gridlayout.grid-4, #my-courses .grid-4.col2-set {
   grid-template-columns: repeat(4, 1fr);
 }
 
-.gridlayout.grid-4 > .gridw-1 {
+.gridlayout.grid-4 > .gridw-1, #my-courses .grid-4.col2-set > .gridw-1 {
   grid-column: auto/span 1;
 }
 
-.gridlayout.grid-4 > .gridw-2 {
+.gridlayout.grid-4 > .gridw-2, #my-courses .grid-4.col2-set > .gridw-2 {
   grid-column: auto/span 2;
 }
 
 @media (max-width: 770px) {
-  .gridlayout.grid-4 > .gridw-2 {
+  .gridlayout.grid-4 > .gridw-2, #my-courses .grid-4.col2-set > .gridw-2 {
     grid-column: auto / span 2;
   }
 }
 
-.gridlayout.grid-4 > .gridw-3 {
+.gridlayout.grid-4 > .gridw-3, #my-courses .grid-4.col2-set > .gridw-3 {
   grid-column: auto/span 3;
 }
 
 @media (max-width: 770px) {
-  .gridlayout.grid-4 > .gridw-3 {
+  .gridlayout.grid-4 > .gridw-3, #my-courses .grid-4.col2-set > .gridw-3 {
     grid-column: auto / span 2;
   }
 }
 
-.gridlayout.grid-4 > .gridw-4 {
+.gridlayout.grid-4 > .gridw-4, #my-courses .grid-4.col2-set > .gridw-4 {
   grid-column: auto/span 4;
 }
 
 @media (max-width: 770px) {
-  .gridlayout.grid-4 > .gridw-4 {
+  .gridlayout.grid-4 > .gridw-4, #my-courses .grid-4.col2-set > .gridw-4 {
     grid-column: auto / span 2;
   }
 }
 
-.gridlayout.grid-5 {
+.gridlayout.grid-5, #my-courses .grid-5.col2-set {
   grid-template-columns: repeat(5, 1fr);
 }
 
-.gridlayout.grid-5 > .gridw-1 {
+.gridlayout.grid-5 > .gridw-1, #my-courses .grid-5.col2-set > .gridw-1 {
   grid-column: auto/span 1;
 }
 
-.gridlayout.grid-5 > .gridw-2 {
+.gridlayout.grid-5 > .gridw-2, #my-courses .grid-5.col2-set > .gridw-2 {
   grid-column: auto/span 2;
 }
 
 @media (max-width: 770px) {
-  .gridlayout.grid-5 > .gridw-2 {
+  .gridlayout.grid-5 > .gridw-2, #my-courses .grid-5.col2-set > .gridw-2 {
     grid-column: auto / span 2;
   }
 }
 
-.gridlayout.grid-5 > .gridw-3 {
+.gridlayout.grid-5 > .gridw-3, #my-courses .grid-5.col2-set > .gridw-3 {
   grid-column: auto/span 3;
 }
 
 @media (max-width: 770px) {
-  .gridlayout.grid-5 > .gridw-3 {
+  .gridlayout.grid-5 > .gridw-3, #my-courses .grid-5.col2-set > .gridw-3 {
     grid-column: auto / span 2;
   }
 }
 
-.gridlayout.grid-5 > .gridw-4 {
+.gridlayout.grid-5 > .gridw-4, #my-courses .grid-5.col2-set > .gridw-4 {
   grid-column: auto/span 4;
 }
 
 @media (max-width: 770px) {
-  .gridlayout.grid-5 > .gridw-4 {
+  .gridlayout.grid-5 > .gridw-4, #my-courses .grid-5.col2-set > .gridw-4 {
     grid-column: auto / span 2;
   }
 }
 
-.gridlayout.grid-5 > .gridw-5 {
+.gridlayout.grid-5 > .gridw-5, #my-courses .grid-5.col2-set > .gridw-5 {
   grid-column: auto/span 5;
 }
 
 @media (max-width: 770px) {
-  .gridlayout.grid-5 > .gridw-5 {
+  .gridlayout.grid-5 > .gridw-5, #my-courses .grid-5.col2-set > .gridw-5 {
     grid-column: auto / span 2;
   }
 }
 
-.gridlayout.grid-6 {
+.gridlayout.grid-6, #my-courses .grid-6.col2-set {
   grid-template-columns: repeat(6, 1fr);
 }
 
-.gridlayout.grid-6 > .gridw-1 {
+.gridlayout.grid-6 > .gridw-1, #my-courses .grid-6.col2-set > .gridw-1 {
   grid-column: auto/span 1;
 }
 
-.gridlayout.grid-6 > .gridw-2 {
+.gridlayout.grid-6 > .gridw-2, #my-courses .grid-6.col2-set > .gridw-2 {
   grid-column: auto/span 2;
 }
 
 @media (max-width: 770px) {
-  .gridlayout.grid-6 > .gridw-2 {
+  .gridlayout.grid-6 > .gridw-2, #my-courses .grid-6.col2-set > .gridw-2 {
     grid-column: auto / span 2;
   }
 }
 
-.gridlayout.grid-6 > .gridw-3 {
+.gridlayout.grid-6 > .gridw-3, #my-courses .grid-6.col2-set > .gridw-3 {
   grid-column: auto/span 3;
 }
 
 @media (max-width: 770px) {
-  .gridlayout.grid-6 > .gridw-3 {
+  .gridlayout.grid-6 > .gridw-3, #my-courses .grid-6.col2-set > .gridw-3 {
     grid-column: auto / span 2;
   }
 }
 
-.gridlayout.grid-6 > .gridw-4 {
+.gridlayout.grid-6 > .gridw-4, #my-courses .grid-6.col2-set > .gridw-4 {
   grid-column: auto/span 4;
 }
 
 @media (max-width: 770px) {
-  .gridlayout.grid-6 > .gridw-4 {
+  .gridlayout.grid-6 > .gridw-4, #my-courses .grid-6.col2-set > .gridw-4 {
     grid-column: auto / span 2;
   }
 }
 
-.gridlayout.grid-6 > .gridw-5 {
+.gridlayout.grid-6 > .gridw-5, #my-courses .grid-6.col2-set > .gridw-5 {
   grid-column: auto/span 5;
 }
 
 @media (max-width: 770px) {
-  .gridlayout.grid-6 > .gridw-5 {
+  .gridlayout.grid-6 > .gridw-5, #my-courses .grid-6.col2-set > .gridw-5 {
     grid-column: auto / span 2;
   }
 }
 
-.gridlayout.grid-6 > .gridw-6 {
+.gridlayout.grid-6 > .gridw-6, #my-courses .grid-6.col2-set > .gridw-6 {
   grid-column: auto/span 6;
 }
 
 @media (max-width: 770px) {
-  .gridlayout.grid-6 > .gridw-6 {
+  .gridlayout.grid-6 > .gridw-6, #my-courses .grid-6.col2-set > .gridw-6 {
     grid-column: auto / span 2;
   }
 }
 
 /** Définition des hauteur des enfants */
-.gridlayout > .gridh-1 {
+.gridlayout > .gridh-1, #my-courses .col2-set > .gridh-1 {
   grid-row: auto/span 1;
 }
 
 @media (max-width: 770px) {
-  .gridlayout > .gridh-1 {
+  .gridlayout > .gridh-1, #my-courses .col2-set > .gridh-1 {
     grid-row: auto / span 1 !important;
   }
 }
 
-.gridlayout > .gridh-2 {
+.gridlayout > .gridh-2, #my-courses .col2-set > .gridh-2 {
   grid-row: auto/span 2;
 }
 
 @media (max-width: 770px) {
-  .gridlayout > .gridh-2 {
+  .gridlayout > .gridh-2, #my-courses .col2-set > .gridh-2 {
     grid-row: auto / span 1 !important;
   }
 }
 
-.gridlayout > .gridh-3 {
+.gridlayout > .gridh-3, #my-courses .col2-set > .gridh-3 {
   grid-row: auto/span 3;
 }
 
 @media (max-width: 770px) {
-  .gridlayout > .gridh-3 {
+  .gridlayout > .gridh-3, #my-courses .col2-set > .gridh-3 {
     grid-row: auto / span 1 !important;
   }
 }
 
-.gridlayout > .gridh-4 {
+.gridlayout > .gridh-4, #my-courses .col2-set > .gridh-4 {
   grid-row: auto/span 4;
 }
 
 @media (max-width: 770px) {
-  .gridlayout > .gridh-4 {
+  .gridlayout > .gridh-4, #my-courses .col2-set > .gridh-4 {
     grid-row: auto / span 1 !important;
   }
 }
 
-.gridlayout > .gridh-5 {
+.gridlayout > .gridh-5, #my-courses .col2-set > .gridh-5 {
   grid-row: auto/span 5;
 }
 
 @media (max-width: 770px) {
-  .gridlayout > .gridh-5 {
+  .gridlayout > .gridh-5, #my-courses .col2-set > .gridh-5 {
     grid-row: auto / span 1 !important;
   }
 }
 
-.gridlayout > .gridh-6 {
+.gridlayout > .gridh-6, #my-courses .col2-set > .gridh-6 {
   grid-row: auto/span 6;
 }
 
 @media (max-width: 770px) {
-  .gridlayout > .gridh-6 {
+  .gridlayout > .gridh-6, #my-courses .col2-set > .gridh-6 {
     grid-row: auto / span 1 !important;
   }
 }
 
 /** Mages */
-.gridlayout.grid-margin-0 {
+.gridlayout.grid-margin-0, #my-courses .grid-margin-0.col2-set {
   margin: 0em 0;
 }
 
-.gridlayout.grid-margin-1 {
+.gridlayout.grid-margin-1, #my-courses .grid-margin-1.col2-set {
   margin: 1em 0;
 }
 
-.gridlayout.grid-margin-2 {
+.gridlayout.grid-margin-2, #my-courses .grid-margin-2.col2-set {
   margin: 2em 0;
 }
 
-.gridlayout.grid-margin-3 {
+.gridlayout.grid-margin-3, #my-courses .grid-margin-3.col2-set {
   margin: 3em 0;
 }
 
-.gridlayout.grid-margin-4 {
+.gridlayout.grid-margin-4, #my-courses .grid-margin-4.col2-set {
   margin: 4em 0;
 }
 
-.gridlayout.grid-margin-5 {
+.gridlayout.grid-margin-5, #my-courses .grid-margin-5.col2-set {
   margin: 5em 0;
 }
 
-.gridlayout.grid-margin-6 {
+.gridlayout.grid-margin-6, #my-courses .grid-margin-6.col2-set {
   margin: 6em 0;
 }
 
 /** Gouttières */
-.gridlayout.grid-gap-0 {
+.gridlayout.grid-gap-0, #my-courses .grid-gap-0.col2-set {
   grid-gap: 0em 0em;
 }
 
-.gridlayout.grid-gap-1 {
+.gridlayout.grid-gap-1, #my-courses .grid-gap-1.col2-set {
   grid-gap: 1em 1em;
 }
 
-.gridlayout.grid-gap-2 {
+.gridlayout.grid-gap-2, #my-courses .col2-set {
   grid-gap: 2em 2em;
 }
 
-.gridlayout.grid-gap-3 {
+.gridlayout.grid-gap-3, #my-courses .grid-gap-3.col2-set {
   grid-gap: 3em 3em;
 }
 
-.gridlayout.grid-gap-4 {
+.gridlayout.grid-gap-4, #my-courses .grid-gap-4.col2-set {
   grid-gap: 4em 4em;
 }
 
-.gridlayout.grid-gap-5 {
+.gridlayout.grid-gap-5, #my-courses .grid-gap-5.col2-set {
   grid-gap: 5em 5em;
 }
 
-.gridlayout.grid-gap-6 {
+.gridlayout.grid-gap-6, #my-courses .grid-gap-6.col2-set {
   grid-gap: 6em 6em;
 }
 
 /** Media queries */
 @media (max-width: 480px) {
-  .gridlayout.grid-2 {
+  .gridlayout.grid-2, #my-courses .col2-set {
     grid-template-columns: repeat(1, 1fr) !important;
   }
 }
 
 @media (max-width: 770px) {
-  .gridlayout.grid-3 {
+  .gridlayout.grid-3, #my-courses .grid-3.col2-set {
     grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 
 @media (max-width: 480px) {
-  .gridlayout.grid-3 {
+  .gridlayout.grid-3, #my-courses .grid-3.col2-set {
     grid-template-columns: repeat(1, 1fr) !important;
   }
 }
 
 @media (max-width: 770px) {
-  .gridlayout.grid-4 {
+  .gridlayout.grid-4, #my-courses .grid-4.col2-set {
     grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 
 @media (max-width: 480px) {
-  .gridlayout.grid-4 {
+  .gridlayout.grid-4, #my-courses .grid-4.col2-set {
     grid-template-columns: repeat(1, 1fr) !important;
   }
 }
 
 @media (max-width: 770px) {
-  .gridlayout.grid-5 {
+  .gridlayout.grid-5, #my-courses .grid-5.col2-set {
     grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 
 @media (max-width: 480px) {
-  .gridlayout.grid-5 {
+  .gridlayout.grid-5, #my-courses .grid-5.col2-set {
     grid-template-columns: repeat(1, 1fr) !important;
   }
 }
 
 @media (max-width: 770px) {
-  .gridlayout.grid-6 {
+  .gridlayout.grid-6, #my-courses .grid-6.col2-set {
     grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 
 @media (max-width: 480px) {
-  .gridlayout.grid-6 {
+  .gridlayout.grid-6, #my-courses .grid-6.col2-set {
     grid-template-columns: repeat(1, 1fr) !important;
   }
 }
 
 @media (max-width: 480px) {
-  .gridlayout > * {
+  .gridlayout > *, #my-courses .col2-set > * {
     grid-column: auto / span 1 !important;
   }
 }
@@ -1778,6 +1778,64 @@ body [class*="wps-bton-first"] i, body [class*="wps-bton-second"] i {
 /*--------------------------------------------------------------
 ## Sensei
 --------------------------------------------------------------*/
+.course-header-excerpt {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+body.single-course #header-page .header-title-container, body.single-lesson #header-page .header-title-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body.single-course #header-page .header-title-container .single-course-meta, body.single-lesson #header-page .header-title-container .single-course-meta {
+  max-width: 300px;
+  min-width: 300px;
+  width: 100%;
+  background: #fff;
+  margin: auto 0 auto auto;
+  padding: 1em;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+body.single-course #header-page .header-title-container .meta-author .avatar, body.single-lesson #header-page .header-title-container .meta-author .avatar {
+  border-radius: 50%;
+  vertical-align: bottom;
+  margin-right: 0.5em;
+}
+
+body.single-course #header-page .header-title-container .meta-author .author-label, body.single-lesson #header-page .header-title-container .meta-author .author-label {
+  vertical-align: super;
+  color: #8a97ab;
+}
+
+body.single-course #header-page .header-title-container .meta-datas .meta-label, body.single-lesson #header-page .header-title-container .meta-datas .meta-label {
+  color: #8a97ab;
+}
+
+body.single-course #header-page .header-title-container .meta-categories, body.single-lesson #header-page .header-title-container .meta-categories {
+  margin-top: 0.5em;
+}
+
+body.single-course #header-page .header-title-container .meta-categories [rel="tag"], body.single-lesson #header-page .header-title-container .meta-categories [rel="tag"] {
+  background: rgba(0, 0, 0, 0.1);
+  margin: 0 0.2em 0.4em 0;
+  color: rgba(0, 0, 0, 0.6);
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  padding: 0.2em 0.4em;
+  display: inline-block;
+  font-size: 13px;
+}
+
+body.single-course #header-page .header-title-container .meta-categories [rel="tag"]:hover, body.single-lesson #header-page .header-title-container .meta-categories [rel="tag"]:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
 .course-container {
   border-bottom: 0;
   margin-left: 0 !important;
@@ -1853,76 +1911,39 @@ body [class*="wps-bton-first"] i, body [class*="wps-bton-second"] i {
   padding-right: 0;
 }
 
-.course-header-excerpt {
-  font-size: 18px;
-  color: rgba(0, 0, 0, 0.5);
-}
-
-body.single-course #header-page .header-title-container, body.single-lesson #header-page .header-title-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-body.single-course #header-page .header-title-container .single-course-meta, body.single-lesson #header-page .header-title-container .single-course-meta {
-  max-width: 300px;
-  min-width: 300px;
-  width: 100%;
-  background: #fff;
-  margin: auto 0 auto auto;
-  padding: 1em;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15);
-  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-}
-
-body.single-course #header-page .header-title-container .meta-author .avatar, body.single-lesson #header-page .header-title-container .meta-author .avatar {
-  border-radius: 50%;
-  vertical-align: bottom;
-  margin-right: 0.5em;
-}
-
-body.single-course #header-page .header-title-container .meta-author .author-label, body.single-lesson #header-page .header-title-container .meta-author .author-label {
-  vertical-align: super;
-  color: #8a97ab;
-}
-
-body.single-course #header-page .header-title-container .meta-datas .meta-label, body.single-lesson #header-page .header-title-container .meta-datas .meta-label {
-  color: #8a97ab;
-}
-
-body.single-course #header-page .header-title-container .meta-categories, body.single-lesson #header-page .header-title-container .meta-categories {
-  margin-top: 0.5em;
-}
-
-body.single-course #header-page .header-title-container .meta-categories [rel="tag"], body.single-lesson #header-page .header-title-container .meta-categories [rel="tag"] {
-  background: rgba(0, 0, 0, 0.1);
-  margin: 0 0.2em 0.4em 0;
-  color: rgba(0, 0, 0, 0.6);
-  -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-  padding: 0.2em 0.4em;
-  display: inline-block;
-  font-size: 13px;
-}
-
-body.single-course #header-page .header-title-container .meta-categories [rel="tag"]:hover, body.single-lesson #header-page .header-title-container .meta-categories [rel="tag"]:hover {
-  background: rgba(0, 0, 0, 0.2);
-}
-
 .wp-block-sensei-lms-lesson-actions {
-  background: rgba(152, 166, 195, 0.1);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding: 1em;
+}
+
+.wp-block-sensei-lms-lesson-actions .wp-block-sensei-lms-button-complete-lesson .wp-block-button__link {
+  background: #1fc588;
+  border-radius: 4px;
+}
+
+body.single-lesson .video iframe {
+  width: 100%;
+}
+
+.wp-block-sensei-lms-progress-bar div {
+  background: #1fc588;
+}
+
+.sensei-pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.sensei-pagination .nav-prev, .sensei-pagination .nav-next {
+  float: none;
 }
 
 .widget.widget_sensei_course_progress {
@@ -2050,13 +2071,6 @@ body.single-course #header-page .header-title-container .meta-categories [rel="t
   color: #1fc588;
 }
 
-.wp-block-sensei-lms-course-outline-module {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background: rgba(152, 166, 195, 0.1);
-  -webkit-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
-}
-
 .wp-block-sensei-lms-course-outline-module .wp-block-sensei-lms-course-outline-module__header {
   background: none !important;
   color: #1f1f1f;
@@ -2167,7 +2181,7 @@ body.single-course #header-page .header-title-container .meta-categories [rel="t
 }
 
 #masthead .site-branding {
-  width: 30%;
+  width: 40%;
 }
 
 #masthead .site-navigation {
@@ -2266,7 +2280,7 @@ body.single-course #header-page .header-title-container .meta-categories [rel="t
 
 /** Site tool */
 #masthead .site-tool {
-  padding: 0 0 0 0.6em;
+  padding: 0 0 0 1.4em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2286,7 +2300,7 @@ body.single-course #header-page .header-title-container .meta-categories [rel="t
   line-height: 1;
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
-  padding: 2.3em 0.6em;
+  padding: 2em 0.6em;
   display: inline-block;
   color: #2b2b2b;
   font-size: 14px;
@@ -2319,6 +2333,38 @@ body.single-course #header-page .header-title-container .meta-categories [rel="t
   border-radius: 50%;
 }
 
+#masthead .site-tool .sensei-links {
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  padding-left: 0.2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto 0 auto 0.2em;
+}
+
+#masthead .site-tool .sensei-links a {
+  font-size: 13px;
+  color: #2b2b2b;
+  white-space: nowrap;
+  padding: 0.5em;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+#masthead .site-tool .sensei-links a:hover {
+  color: #919191;
+}
+
+#masthead .site-tool .sensei-links a:last-child {
+  padding-left: 0.2em;
+}
+
+#masthead .site-tool .sensei-links a:last-child::before {
+  display: inline-block;
+  content: '•';
+  letter-spacing: 5px;
+}
+
 /* Sitcky Header */
 #masthead.sticky {
   position: fixed;
@@ -2341,7 +2387,7 @@ body.single-course #header-page .header-title-container .meta-categories [rel="t
   content: '';
 }
 
-#masthead.sticky.-scroll #main-navigation .menu > .menu-item > a, #masthead.sticky.-scroll .site-tool > * {
+#masthead.sticky.-scroll #main-navigation .menu > .menu-item > a, #masthead.sticky.-scroll .site-tool > .js-search {
   padding-top: 1.2em;
   padding-bottom: 1.2em;
 }
@@ -2621,6 +2667,14 @@ a:focus {
 
 a:hover, a:active {
   outline: 0;
+}
+
+.beflex-box, .wp-block-sensei-lms-lesson-actions, .sensei-pagination, .wp-block-sensei-lms-course-outline-module, #my-courses .col2-set .col-2 {
+  background: rgba(152, 166, 195, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+  padding: 1em;
 }
 
 /*--------------------------------------------------------------
@@ -3109,7 +3163,7 @@ textarea {
 }
 
 #main-navigation .menu a {
-  font-size: 12px;
+  font-size: 13px;
 }
 
 #main-navigation .menu > .menu-item {
@@ -3118,14 +3172,13 @@ textarea {
 }
 
 #main-navigation .menu > .menu-item > a {
-  padding: 2.4em 1.4em;
+  padding: 2em 1.4em;
   height: 100%;
   display: block;
-  text-transform: uppercase;
   color: #2b2b2b;
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 #main-navigation .menu > .menu-item.current_page_item > a,

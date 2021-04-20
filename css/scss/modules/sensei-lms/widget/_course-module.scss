@@ -1,7 +1,5 @@
 .wp-block-sensei-lms-course-outline-module {
-  border: 1px solid rgba(0,0,0,0.1);
-  background: $color__background-pastel;
-  box-shadow: 0 1px 0 0 rgba(0,0,0,0.1);
+  @extend .beflex-box;
 
   .wp-block-sensei-lms-course-outline-module__header {
     background: none !important;
@@ -16,14 +14,14 @@
   }
 
   .wp-block-sensei-lms-course-outline-module__progress-indicator.completed {
-    background: #1fc588 !important;
+    background: $color__green !important;
     border: 0 !important;
     color: #fff !important;
   }
 
   .wp-block-sensei-lms-course-outline-lesson.completed {
     .wp-block-sensei-lms-course-outline-lesson__status {
-      background: #1fc588;
+      background: $color__green;
       border: 0;
       fill: #fff;
     }
