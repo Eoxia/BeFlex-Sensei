@@ -85,6 +85,32 @@ if ( ! function_exists( 'beflex_pagination' ) ) {
  * @return string
  */
 function beflex_display_page_title( $title, $id ) {
+	if ( empty( $id ) ) {
+		return;
+	}
+
+	$beflex_display_title = beflex_is_page_title( $id );
+
+	if ( $beflex_display_title ) :
+		return $title;
+	else :
+		return '';
+	endif;
+}
+add_filter( 'the_title', 'beflex_display_page_title', 10, 2 );
+
+/**
+ * Check if the page option display title or not
+ *
+ * @param int $id Page ID.
+ *
+ * @return bool $beflex_display_title Display true or false the title.
+ */
+function beflex_is_page_title( $id ) {
+	if ( empty( $id ) ) {
+		return;
+	}
+
 	$beflex_display_title = true;
 
 	if ( ! is_admin() && is_acf() && is_beflex_pro() ) :
@@ -94,13 +120,8 @@ function beflex_display_page_title( $title, $id ) {
 		endif;
 	endif;
 
-	if ( $beflex_display_title ) :
-		return $title;
-	else :
-		return '';
-	endif;
+	return $beflex_display_title;
 }
-add_filter( 'the_title', 'beflex_display_page_title', 10, 2 );
 
 /**
  * Remove filter the_title before nav menu starts

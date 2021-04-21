@@ -1,17 +1,35 @@
 #colophon {
-	background: #f7f7f7;
+	background: #fff;
+  border-top: 4px solid rgba(0,0,0,0.05);
 	padding: 2em 0;
 	font-size: 14px;
+  color: rgba(0,0,0,0.6);
 
 	.sidebar {
 		* {
 			margin: 0;
 		}
 		.widget-title {
-			font-size: 20px;
+			font-size: 16px;
 			margin-bottom: 0.8em;
+      color: $color__title-main;
 		}
 	}
+
+  .widget_nav_menu {
+    li {
+      list-style-type: none;
+    }
+    a {
+      color: rgba(0,0,0,0.6);
+      @include transition;
+      line-height: 2.5;
+
+      &:hover {
+        color: $color__primary;
+      }
+    }
+  }
 }
 
 #colophon #boxfoot {

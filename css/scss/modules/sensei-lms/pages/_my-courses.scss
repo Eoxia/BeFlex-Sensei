@@ -1,0 +1,13 @@
+#sensei-user-courses {
+  .my-messages-link {
+    @extend .button;
+
+    &::before {
+      display: inline-block;
+      font-family: 'Font Awesome 5 Pro';
+      content: '\f0e0';
+      font-weight: 400;
+      margin-right: 0.4em;
+    }
+  }
+}

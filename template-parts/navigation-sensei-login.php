@@ -12,12 +12,11 @@
 
 $my_account_page_id = intval( Sensei()->settings->settings['my_course_page'] );
 $my_courses_url     = get_permalink( $my_account_page_id );
-$learner_profile    = Sensei()->learner_profiles->get_permalink();
 
 if ( is_user_logged_in() ) :
 	?>
-	<?php if ( ! empty( $learner_profile ) ) : ?>
-		<a href="<?php echo esc_url( $learner_profile ); ?>"><i class="far fa-user"></i> <?php esc_html_e( 'My profile', 'beflex' ); ?> </a>
+	<?php if ( ! empty( $my_courses_url ) ) : ?>
+		<a href="<?php echo esc_url( $my_courses_url ); ?>"><i class="far fa-user"></i> <?php esc_html_e( 'My courses', 'beflex' ); ?> </a>
 	<?php endif; ?>
 	<a href="<?php echo esc_url( wp_logout_url( home_url() ) ); ?>"><?php esc_html_e( 'Logout', 'beflex' ); ?></a>
 	<?php

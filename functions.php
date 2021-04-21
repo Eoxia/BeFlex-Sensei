@@ -176,28 +176,6 @@ function beflex_widgets_init() {
 			'after_title'   => '</div>',
 		)
 	);
-	register_sidebar(
-		array(
-			'name'          => esc_html__( 'Boxfoot 4', 'beflex' ),
-			'id'            => 'boxfoot-4',
-			'description'   => esc_html__( '4 Boxfoot. Boxfoot display before Footer', 'beflex' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<div class="widget-title">',
-			'after_title'   => '</div>',
-		)
-	);
-	register_sidebar(
-		array(
-			'name'          => esc_html__( 'Footer', 'beflex' ),
-			'id'            => 'footer-1',
-			'description'   => esc_html__( 'Display on right in Footer', 'beflex' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<div class="widget-title">',
-			'after_title'   => '</div>',
-		)
-	);
 }
 add_action( 'widgets_init', 'beflex_widgets_init' );
 
@@ -405,3 +383,20 @@ function beflex_display_page_breadcrumb() {
 }
 //add_action( 'beflex_header_page_inside_before', 'beflex_display_page_breadcrumb', 10 );
 
+
+add_filter( 'body_class', function( $classes ) {
+	global $post;
+
+	if ( empty( $post ) ) {
+		return $classes;
+	}
+
+	if ( is_page( $post->ID ) ) {
+		$display_title = beflex_is_page_title( $post->ID );
+		if ( $display_title ) {
+			return array_merge( $classes, array( 'beflex-is-title' ) );
+		}
+	}
+
+	return $classes;
+} );

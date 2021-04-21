@@ -14,22 +14,6 @@ get_header(); ?>
 
 	<main id="primary" class="content-area" role="main">
 
-		<header class="primary-header">
-			<?php
-			$term = get_queried_object();
-			$thumbnail = get_field( 'beflex_thumbnail', $term );
-			if ( ! empty( $thumbnail ) ) :
-				echo wp_get_attachment_image( $thumbnail, 'thumbnail', false, array( 'class' => 'header-thumbnail' ) );
-			endif;
-			?>
-			<div class="primary-header-content">
-				<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
-				the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</div>
-		</header><!-- .primary-header -->
-
 		<?php
 		if ( have_posts() ) :
 

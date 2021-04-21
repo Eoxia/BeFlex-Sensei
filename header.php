@@ -89,11 +89,12 @@
 	<div id="search-area">
 		<form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 			<label>
-				<span class="search-icon"><i class="fas fa-search"></i></span>
+				<span class="search-icon"><i class="far fa-search"></i></span>
 				<input type="search" class="search-field"
 						placeholder="<?php echo esc_attr_x( 'Enter a Keyword', 'placeholder', 'beflex' ); ?>"
 						value="<?php echo get_search_query(); ?>" name="s"
 						title="<?php echo esc_attr_x( 'Search for:', 'label', 'beflex' ); ?>" />
+				<input type="hidden" name="post_type" value="course" />
 			</label>
 		</form>
 		<div class="search-overlay"></div>
@@ -107,8 +108,6 @@
 	endif;
 	?>
 
-	<?php if ( ! is_front_page() ) : ?>
 		<?php get_template_part( 'template-parts/page', 'header' ); ?>
-	<?php endif; ?>
 
 	<div id="content" class="site-content site-width <?php echo esc_html( $beflex_is_sidebar ); ?>">

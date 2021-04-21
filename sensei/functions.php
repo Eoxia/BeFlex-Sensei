@@ -21,6 +21,7 @@ $sensei = Sensei();
 remove_action( 'sensei_before_main_content', array( $woothemes_sensei->frontend, 'sensei_output_content_wrapper' ), 10 );
 remove_action( 'sensei_after_main_content', array( $woothemes_sensei->frontend, 'sensei_output_content_wrapper_end' ), 10 );
 /** Course */
+remove_action( 'sensei_archive_before_course_loop', array( 'Sensei_Course', 'archive_header' ), 10 );
 remove_action( 'sensei_course_content_inside_before', array( 'Sensei_Templates', 'the_title' ), 5 );
 remove_action( 'sensei_course_content_inside_before', array( $sensei->course, 'the_course_meta' ) );
 remove_action( 'sensei_course_content_inside_before', array( $sensei->course, 'course_image' ), 30 );
@@ -32,25 +33,47 @@ remove_action( 'sensei_single_lesson_content_inside_before', array( 'Sensei_Less
 remove_action( 'sensei_taxonomy_module_content_inside_before', array( $sensei->lesson, 'the_archive_header' ), 20 );
 /** Quizz*/
 remove_action( 'sensei_single_quiz_content_inside_before', array( 'Sensei_Quiz', 'the_title' ), 20 );
+/** Learner page */
+remove_action( 'sensei_learner_profile_info', array( $sensei->learner_profiles, 'learner_profile_courses_heading' ), 30 );
+/** Messages page */
+remove_action( 'sensei_archive_before_message_loop', array( 'Sensei_Messages', 'the_archive_header' ) );
+remove_action( 'sensei_content_message_before', array( 'Sensei_Messages', 'the_message_sender' ), 20 );
+remove_action( 'sensei_single_message_content_inside_before', array( 'Sensei_Messages', 'the_title' ), 20 );
+remove_action( 'sensei_single_message_content_inside_before', array( 'Sensei_Messages', 'the_message_sent_by_title' ), 40 );
 
 /**
  * Load theme actions
  */
 function beflex_load_theme_actions() {
+	// Actions.
+	// Main wrapper.
 	add_action('sensei_before_main_content', 'beflex_theme_wrapper_start', 10);
 	add_action('sensei_after_main_content', 'beflex_theme_wrapper_end', 10);
-
+	// Course.
 	add_action( 'beflex_header_page_after', 'beflex_single_course_meta', 10 );
 	add_action( 'beflex_header_page_after', 'beflex_single_lesson_meta', 10 );
 	add_action( 'beflex_header_page_inside_after', 'beflex_single_course_excerpt' );
-	add_action( 'beflex_header_page_inside_before', 'beflex_single_lesson_backlink', 10 );
 	add_action( 'sensei_course_content_inside_before', 'beflex_loop_course_template', 11 );
+	// Lesson.
+	add_action( 'beflex_header_page_inside_before', 'beflex_single_lesson_backlink', 10 );
+	// Profile.
+	add_action( 'beflex_header_page_inside_before', 'beflex_profile_header_author', 10 );
 
+	// Filters.
+	// Course.
 	add_filter( 'sensei_the_title_html_tag', 'beflex_loop_course_title_tag' );
 	add_filter( 'beflex_callto_data_type', 'beflex_call_to_action_courses', 10, 3 );
 	add_filter( 'beflex_callto_bloc', 'beflex_call_to_action_atts_course', 10, 2 );
+	// Lesson
 	add_filter( 'register_post_type_args', 'beflex_sensei_lesson_filter_post_type_args', 10, 2 );
+	// Module
 	add_filter( 'sensei_breadcrumb_output', 'beflex_delete_module_breadcrumb_link', 10, 2 );
+	// Message.
+	add_action( 'sensei_content_message_after', array( 'Sensei_Messages', 'the_message_sender' ), 10, 1 );
+	add_action( 'beflex_page_header_title', 'beflex_single_message_title', 10, 2 );
+	add_action( 'beflex_header_page_inside_before', 'beflex_single_message_backlink', 10 );
+
+
 }
 add_action( 'after_setup_theme', 'beflex_load_theme_actions', 11 );
 
@@ -145,6 +168,30 @@ function beflex_single_lesson_backlink() {
 }
 
 /**
+ * Display student informations in the page header
+ */
+function beflex_profile_header_author() {
+	global $wp_query;
+	if ( isset( $wp_query->query_vars['learner_profile'] ) ) {
+		$query_var    = $wp_query->query_vars['learner_profile'];
+		$learner_user = Sensei_Learner::find_by_query_var( $query_var );
+
+		if ( ! empty( $learner_user ) ) {
+			$name   = $learner_user->data->display_name;
+			$bio    = get_user_meta( $learner_user->ID, 'description', true );
+			$avatar = get_avatar( $learner_user->ID, 80 );
+
+			get_template_part( 'sensei/profile', 'header', array(
+				'user_ID'      => $learner_user->ID,
+				'display_name' => $name,
+				'description'  => $bio,
+				'avatar'       => $avatar,
+			) );
+		}
+	}
+}
+
+/**
  * Returns the HTML tag for title in course listing.
  *
  * @param  string $tag HTML Tag of the title.
@@ -205,7 +252,7 @@ function beflex_call_to_action_courses( $bloc_data, $type, $id_block ) {
 					'image'            => get_post_thumbnail_id( $element ),
 					'content'          => get_the_excerpt( $element ),
 					'permalink'        => get_permalink( $element ),
-					'permalink_label'  => __( 'Aperçu du cours', 'beflex-child' ),
+					'permalink_label'  => __( 'Show course', 'beflex' ),
 					'permalink_target' => '_self',
 					'author'           => ( ! empty( $element->post_author ) ) ? $element->post_author : false,
 					'course_length'    => beflex_get_course_length( $element->ID ),
@@ -230,18 +277,20 @@ function beflex_call_to_action_courses( $bloc_data, $type, $id_block ) {
  * @return array $call_atts Call To Ation datas.
  */
 function beflex_call_to_action_atts_course( $call_atts, $block ) {
-	$type = get_field( 'beflex_call_data_type', $block['ID'] );
-	if ( 'course' == $type ) :
-		$display_elt = get_field( 'beflex_option_data_display_course', $block['ID'] );
+	$type = get_field( 'beflex_call_data_type', $block['id'] );
+	if ( ! empty( $type ) ) {
+		if ( 'course' == $type ) {
+			$display_elt = get_field('beflex_option_data_display_course', $block['id']);
 
-		$call_atts['display_image']      = ( ! empty( $display_elt ) && in_array( 'image', $display_elt, true ) ) ? 1 : 0;
-		$call_atts['display_title']      = ( ! empty( $display_elt ) && in_array( 'title', $display_elt, true ) ) ? 1 : 0;
-		$call_atts['display_categories'] = ( ! empty( $display_elt ) && in_array( 'cat', $display_elt, true ) ) ? 1 : 0;
-		$call_atts['display_content']    = ( ! empty( $display_elt ) && in_array( 'content', $display_elt, true ) ) ? 1 : 0;
-		$call_atts['display_button']     = ( ! empty( $display_elt ) && in_array( 'button', $display_elt, true ) ) ? 1 : 0;
-		$call_atts['display_author']     = ( ! empty( $display_elt ) && in_array( 'author', $display_elt, true ) ) ? 1 : 0;
-		$call_atts['display_length']     = ( ! empty( $display_elt ) && in_array( 'length', $display_elt, true ) ) ? 1 : 0;
-	endif;
+			$call_atts['display_image'] = (!empty($display_elt) && in_array('image', $display_elt, true)) ? 1 : 0;
+			$call_atts['display_title'] = (!empty($display_elt) && in_array('title', $display_elt, true)) ? 1 : 0;
+			$call_atts['display_categories'] = (!empty($display_elt) && in_array('cat', $display_elt, true)) ? 1 : 0;
+			$call_atts['display_content'] = (!empty($display_elt) && in_array('content', $display_elt, true)) ? 1 : 0;
+			$call_atts['display_button'] = (!empty($display_elt) && in_array('button', $display_elt, true)) ? 1 : 0;
+			$call_atts['display_author'] = (!empty($display_elt) && in_array('author', $display_elt, true)) ? 1 : 0;
+			$call_atts['display_length'] = (!empty($display_elt) && in_array('length', $display_elt, true)) ? 1 : 0;
+		}
+	}
 
 	return $call_atts;
 }
@@ -265,4 +314,34 @@ function beflex_sensei_lesson_filter_post_type_args( $args, $post_type ) {
 
 function beflex_delete_module_breadcrumb_link( $html, $separator ) {
 	return;
+}
+
+/**
+ * Delete title if single message page
+ *
+ * @param string $page_title Main title of page.
+ * @param int    $post_id    ID of page.
+ *
+ * @return string $page_title Main title of page.
+ */
+function beflex_single_message_title($page_title, $post_id) {
+	if (  is_singular( 'sensei_message' ) ) {
+		// On lance les actions qui vont ajouter le vrai titre.
+		add_action( 'beflex_header_page_inside_before', array( 'Sensei_Messages', 'the_title' ), 20 );
+		add_action( 'beflex_header_page_inside_after', array( 'Sensei_Messages', 'the_message_sent_by_title' ), 10 );
+
+		// On ne renvoie pas le titre principal généré par Beflex.
+		return;
+	}
+
+	return $page_title;
+}
+
+/**
+ * Display the backlink to messages page
+ */
+function beflex_single_message_backlink() {
+	if (  is_singular( 'sensei_message' ) ) {
+		get_template_part( 'sensei/single-message', 'backlink' );
+	}
 }

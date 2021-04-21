@@ -1,0 +1,14 @@
+.beflex-widget-social {
+  .beflex-social-item {
+    .beflex-social-link {
+      color: $color__text-main;
+      width: auto;
+      height: auto;
+      margin-right: 0.4em !important;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+}

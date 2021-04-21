@@ -206,3 +206,23 @@
 		top: 32px;
 	}
 }
+
+/** No title header */
+body.page:not(.beflex-is-title) {
+  #masthead:not(.-scroll) {
+    background: $color__background-pastel;
+    border-bottom: 4px solid rgba(0,0,0,0.05);
+  }
+  #masthead::after {
+    display: none !important;
+    content: '' !important;
+  }
+
+  #header-page {
+    opacity: 0;
+
+    .header-title-container {
+      padding: 0 !important;
+    }
+  }
+}

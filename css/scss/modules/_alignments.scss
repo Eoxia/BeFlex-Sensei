@@ -68,3 +68,10 @@ body.sticky-nav #content {
 body.home.sticky-nav #content {
   padding-top: 80px;
 }
+
+/** Correctifs si pas de titre affichés pour les pages */
+body.page:not(.beflex-is-title) {
+  #content {
+    padding-top: 0 !important;
+  }
+}

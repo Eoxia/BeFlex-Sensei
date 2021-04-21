@@ -25,7 +25,7 @@ endif;
     <div class="course-header-content">
         <h1><?php echo wp_kses_post( apply_filters( 'sensei_single_title', get_the_title( $post ), $post->post_type ) ); ?></h1>
         <?php if ( has_excerpt() ) : ?>
-            <div class="course-header-excerpt"><?php echo wp_kses_post( get_the_excerpt() ); ?></div>
+            <div class="header-excerpt"><?php echo wp_kses_post( get_the_excerpt() ); ?></div>
         <?php endif; ?>
     </div>
 </header>

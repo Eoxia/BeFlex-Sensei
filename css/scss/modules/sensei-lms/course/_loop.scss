@@ -57,6 +57,20 @@
           }
         }
       }
+
+      .entry-actions {
+        .sensei-results-links {
+          text-align: right;
+        }
+        .button {
+          float: none;
+          @extend .button;
+          margin: 0 0 0.5em 0;
+        }
+        .sensei-certificate-link {
+          @extend .button.button-primary;
+        }
+      }
     }
   }
 }

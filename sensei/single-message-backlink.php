@@ -1,6 +1,6 @@
 <?php
 /**
- * The Template for outputting the header of single course
+ * The Template for outputting the meta of course
  *
  * @author    Eoxia <contact@eoxia.com>
  * @copyright (c) 2006-2019 Eoxia <contact@eoxia.com>
@@ -10,13 +10,11 @@
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  */
 
-$post = get_post( $args['post_id'] );
+$my_messages_url    = get_post_type_archive_link( 'sensei_message' );
 
-if ( empty( $post ) ) :
-	return;
+if ( ! empty( $my_messages_url ) ) :
+	?>
+	<a href="<?php echo esc_url( $my_messages_url ); ?>"><i class="fas fa-reply"></i> <?php esc_html_e( 'Back to messages', 'beflex' ); ?></a>
+<?php
 endif;
 ?>
-
-<?php if ( has_excerpt() ) : ?>
-	<div class="header-excerpt"><?php echo wp_kses_post( get_the_excerpt( $post->ID ) ); ?></div>
-<?php endif; ?>

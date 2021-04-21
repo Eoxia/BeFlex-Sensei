@@ -11,9 +11,9 @@
  */
 
 if ( is_404() ) :
-	$page_title = __( 'Erreur 404', 'beflex-child' );
+	$page_title = __( '404 error', 'beflex' );
 elseif ( is_search() ) :
-	$page_title = __( 'Recherche pour :', 'beflex-child' ) . ' ' . get_search_query();
+	$page_title = __( 'Search for :', 'beflex' ) . ' ' . get_search_query();
 elseif ( is_author() ) :
 	$post_author_id = get_post_field( 'post_author', $post->ID );
 	$page_title     = get_the_author_meta( 'display_name', $post->post_author );
@@ -29,6 +29,8 @@ elseif ( is_page() ) :
 else :
 	$page_title = single_post_title( '', false );
 endif;
+
+$page_title = apply_filters( 'beflex_page_header_title', $page_title, get_the_ID() );
 ?>
 
 <div id="header-page" class="beflex-animation" data-animation="headerPage">

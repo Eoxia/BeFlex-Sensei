@@ -6,6 +6,7 @@
 }
 
 #comments {
+
 	ol, ul {
 		list-style-type: none;
 		margin: 0;
@@ -16,6 +17,10 @@
 	.children {
 		margin-left: 3em;
 	}
+  .comments-title {
+    font-size: 16px;
+    margin-top: 4em;
+  }
 }
 
 #comments .comment-list {
@@ -26,8 +31,7 @@
 	}
 	.comment-reply-link {
 		@extend .button;
-		@extend .button.bordered;
-		@extend .button.bordered.button-primary;
+		@extend .button.button-primary;
 		position: absolute;
 		top: 0;
 		right: 0;
@@ -37,9 +41,10 @@
 	}
 	.comment-author img {
 		border-radius: 50%;
+    vertical-align: bottom;
 	}
 	.comment-author .fn {
-		@include font-size(1.4);
+    font-size: 16px;
 		font-weight: 300;
 	}
 	.comment-metadata a {
@@ -49,4 +54,19 @@
 	.comment-metadata .comment-edit-link {
 		color: $color__primary;
 	}
+}
+
+#respond {
+  @extend .beflex-box;
+  margin: 1.5em 0;
+
+  #reply-title {
+    margin: 0;
+  }
+  .logged-in-as {
+    margin: 0;
+  }
+  .form-submit {
+    margin-bottom: 0;
+  }
 }

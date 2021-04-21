@@ -96,3 +96,14 @@
   vertical-align: text-top;
   margin-right: 0.2em;
 }
+
+.beflex-widget-social .beflex-social-item .beflex-social-link {
+  color: #333333;
+  width: auto;
+  height: auto;
+  margin-right: 0.4em !important;
+}
+
+.beflex-widget-social .beflex-social-item .beflex-social-link:hover {
+  opacity: 0.6;
+}

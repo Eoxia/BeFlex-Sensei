@@ -683,7 +683,7 @@ body.hidden-scroll {
 /*--------------------------------------------------------------
 ## Buttons
 --------------------------------------------------------------*/
-.button, #comments .comment-list .comment-reply-link, button,
+.button, .course-container .course .course-content .entry-actions .button, #learner-info .my-messages-link, #learner-info .course .sensei-results-links .button, #sensei-user-courses .my-messages-link, #comments .comment-list .comment-reply-link, button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
@@ -711,17 +711,17 @@ input[type="submit"] {
   color: #fff;
 }
 
-.button:focus, #comments .comment-list .comment-reply-link:focus, button:focus,
+.button:focus, .course-container .course .course-content .entry-actions .button:focus, #learner-info .my-messages-link:focus, #learner-info .course .sensei-results-links .button:focus, #sensei-user-courses .my-messages-link:focus, #comments .comment-list .comment-reply-link:focus, button:focus,
 input:focus[type="button"],
 input:focus[type="reset"],
-input:focus[type="submit"], .button:visited, #comments .comment-list .comment-reply-link:visited, button:visited,
+input:focus[type="submit"], .button:visited, .course-container .course .course-content .entry-actions .button:visited, #learner-info .my-messages-link:visited, #learner-info .course .sensei-results-links .button:visited, #sensei-user-courses .my-messages-link:visited, #comments .comment-list .comment-reply-link:visited, button:visited,
 input:visited[type="button"],
 input:visited[type="reset"],
 input:visited[type="submit"] {
   color: #fff;
 }
 
-.button:hover, #comments .comment-list .comment-reply-link:hover, button:hover,
+.button:hover, .course-container .course .course-content .entry-actions .button:hover, #learner-info .my-messages-link:hover, #learner-info .course .sensei-results-links .button:hover, #sensei-user-courses .my-messages-link:hover, #comments .comment-list .comment-reply-link:hover, button:hover,
 input:hover[type="button"],
 input:hover[type="reset"],
 input:hover[type="submit"] {
@@ -731,14 +731,20 @@ input:hover[type="submit"] {
   cursor: pointer;
 }
 
-.button:focus, #comments .comment-list .comment-reply-link:focus, button:focus,
+.button:focus, .course-container .course .course-content .entry-actions .button:focus, #learner-info .my-messages-link:focus, #learner-info .course .sensei-results-links .button:focus, #sensei-user-courses .my-messages-link:focus, #comments .comment-list .comment-reply-link:focus, button:focus,
 input:focus[type="button"],
 input:focus[type="reset"],
 input:focus[type="submit"] {
   outline: none;
 }
 
-.button.button-primary, #comments .comment-list .button-primary.comment-reply-link, button,
+.button.button-primary, .course-container .course .course-content .entry-actions .button-primary.button, .course-container .course .course-content .entry-actions .sensei-certificate-link, .course-container .course .course-content .entry-actions button,
+.course-container .course .course-content .entry-actions input[type="button"],
+.course-container .course .course-content .entry-actions input[type="reset"],
+.course-container .course .course-content .entry-actions input[type="submit"], #learner-info .button-primary.my-messages-link, #learner-info .course .sensei-results-links .button-primary.button, #learner-info .course-container .course .sensei-results-links .course-content .entry-actions .sensei-certificate-link, .course-container #learner-info .course .sensei-results-links .course-content .entry-actions .sensei-certificate-link, #learner-info .course-container .course .course-content .entry-actions .sensei-results-links .sensei-certificate-link, .course-container #learner-info .course .course-content .entry-actions .sensei-results-links .sensei-certificate-link, #learner-info .course .sensei-results-links .button.sensei-certificate-link, #learner-info .course .sensei-results-links #comments .comment-list .comment-reply-link, #comments .comment-list #learner-info .course .sensei-results-links .comment-reply-link, #learner-info .course .sensei-results-links button,
+#learner-info .course .sensei-results-links input[type="button"],
+#learner-info .course .sensei-results-links input[type="reset"],
+#learner-info .course .sensei-results-links input[type="submit"], #sensei-user-courses .button-primary.my-messages-link, #comments .comment-list .comment-reply-link, button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
@@ -747,7 +753,7 @@ input[type="submit"] {
   color: #fff;
 }
 
-.button.button-light, #comments .comment-list .button-light.comment-reply-link, button.button-light,
+.button.button-light, .course-container .course .course-content .entry-actions .button-light.button, #learner-info .button-light.my-messages-link, #learner-info .course .sensei-results-links .button-light.button, #sensei-user-courses .button-light.my-messages-link, #comments .comment-list .button-light.comment-reply-link, button.button-light,
 input.button-light[type="button"],
 input.button-light[type="reset"],
 input.button-light[type="submit"] {
@@ -756,7 +762,7 @@ input.button-light[type="submit"] {
   color: #2b2b2b;
 }
 
-.button.button-light:hover, #comments .comment-list .button-light.comment-reply-link:hover, button.button-light:hover,
+.button.button-light:hover, .course-container .course .course-content .entry-actions .button-light.button:hover, #learner-info .button-light.my-messages-link:hover, #learner-info .course .sensei-results-links .button-light.button:hover, #sensei-user-courses .button-light.my-messages-link:hover, #comments .comment-list .button-light.comment-reply-link:hover, button.button-light:hover,
 input.button-light:hover[type="button"],
 input.button-light:hover[type="reset"],
 input.button-light:hover[type="submit"] {
@@ -765,7 +771,7 @@ input.button-light:hover[type="submit"] {
   color: #2b2b2b;
 }
 
-.button.button-dark, #comments .comment-list .button-dark.comment-reply-link, button.button-dark,
+.button.button-dark, .course-container .course .course-content .entry-actions .button-dark.button, #learner-info .button-dark.my-messages-link, #learner-info .course .sensei-results-links .button-dark.button, #sensei-user-courses .button-dark.my-messages-link, #comments .comment-list .button-dark.comment-reply-link, button.button-dark,
 input.button-dark[type="button"],
 input.button-dark[type="reset"],
 input.button-dark[type="submit"] {
@@ -773,7 +779,7 @@ input.button-dark[type="submit"] {
   border-color: #333333;
 }
 
-.button.bordered, #comments .comment-list .comment-reply-link, button.bordered,
+.button.bordered, .course-container .course .course-content .entry-actions .bordered.button, #learner-info .bordered.my-messages-link, #learner-info .course .sensei-results-links .bordered.button, #sensei-user-courses .bordered.my-messages-link, #comments .comment-list .bordered.comment-reply-link, button.bordered,
 input.bordered[type="button"],
 input.bordered[type="reset"],
 input.bordered[type="submit"] {
@@ -783,7 +789,13 @@ input.bordered[type="submit"] {
   color: #0e6eff;
 }
 
-.button.bordered.button-primary, #comments .comment-list .comment-reply-link, button.bordered,
+.button.bordered.button-primary, .course-container .course .course-content .entry-actions .bordered.button-primary.button, .course-container .course .course-content .entry-actions .bordered.sensei-certificate-link, .course-container .course .course-content .entry-actions button.bordered,
+.course-container .course .course-content .entry-actions input.bordered[type="button"],
+.course-container .course .course-content .entry-actions input.bordered[type="reset"],
+.course-container .course .course-content .entry-actions input.bordered[type="submit"], #learner-info .bordered.button-primary.my-messages-link, #learner-info .course .sensei-results-links .bordered.button-primary.button, #learner-info .course-container .course .sensei-results-links .course-content .entry-actions .bordered.sensei-certificate-link, .course-container #learner-info .course .sensei-results-links .course-content .entry-actions .bordered.sensei-certificate-link, #learner-info .course-container .course .course-content .entry-actions .sensei-results-links .bordered.sensei-certificate-link, .course-container #learner-info .course .course-content .entry-actions .sensei-results-links .bordered.sensei-certificate-link, #learner-info .course .sensei-results-links .bordered.button.sensei-certificate-link, #learner-info .course .sensei-results-links button.bordered,
+#learner-info .course .sensei-results-links input.bordered[type="button"],
+#learner-info .course .sensei-results-links input.bordered[type="reset"],
+#learner-info .course .sensei-results-links input.bordered[type="submit"], #sensei-user-courses .bordered.button-primary.my-messages-link, #comments .comment-list .bordered.comment-reply-link, button.bordered,
 input.bordered[type="button"],
 input.bordered[type="reset"],
 input.bordered[type="submit"] {
@@ -791,7 +803,13 @@ input.bordered[type="submit"] {
   color: #0e6eff;
 }
 
-.button.bordered.button-primary:hover, #comments .comment-list .comment-reply-link:hover, button.bordered:hover,
+.button.bordered.button-primary:hover, .course-container .course .course-content .entry-actions .bordered.button-primary.button:hover, .course-container .course .course-content .entry-actions .bordered.sensei-certificate-link:hover, .course-container .course .course-content .entry-actions button.bordered:hover,
+.course-container .course .course-content .entry-actions input.bordered:hover[type="button"],
+.course-container .course .course-content .entry-actions input.bordered:hover[type="reset"],
+.course-container .course .course-content .entry-actions input.bordered:hover[type="submit"], #learner-info .bordered.button-primary.my-messages-link:hover, #learner-info .course .sensei-results-links .bordered.button-primary.button:hover, #learner-info .course-container .course .sensei-results-links .course-content .entry-actions .bordered.sensei-certificate-link:hover, .course-container #learner-info .course .sensei-results-links .course-content .entry-actions .bordered.sensei-certificate-link:hover, #learner-info .course-container .course .course-content .entry-actions .sensei-results-links .bordered.sensei-certificate-link:hover, .course-container #learner-info .course .course-content .entry-actions .sensei-results-links .bordered.sensei-certificate-link:hover, #learner-info .course .sensei-results-links .bordered.button.sensei-certificate-link:hover, #learner-info .course .sensei-results-links button.bordered:hover,
+#learner-info .course .sensei-results-links input.bordered:hover[type="button"],
+#learner-info .course .sensei-results-links input.bordered:hover[type="reset"],
+#learner-info .course .sensei-results-links input.bordered:hover[type="submit"], #sensei-user-courses .bordered.button-primary.my-messages-link:hover, #comments .comment-list .bordered.comment-reply-link:hover, button.bordered:hover,
 input.bordered:hover[type="button"],
 input.bordered:hover[type="reset"],
 input.bordered:hover[type="submit"] {
@@ -800,7 +818,7 @@ input.bordered:hover[type="submit"] {
   color: #fff;
 }
 
-.button.bordered.button-light, #comments .comment-list .button-light.comment-reply-link, button.bordered.button-light,
+.button.bordered.button-light, .course-container .course .course-content .entry-actions .bordered.button-light.button, #learner-info .bordered.button-light.my-messages-link, #learner-info .course .sensei-results-links .bordered.button-light.button, #sensei-user-courses .bordered.button-light.my-messages-link, #comments .comment-list .bordered.button-light.comment-reply-link, button.bordered.button-light,
 input.bordered.button-light[type="button"],
 input.bordered.button-light[type="reset"],
 input.bordered.button-light[type="submit"] {
@@ -808,7 +826,7 @@ input.bordered.button-light[type="submit"] {
   color: #fff;
 }
 
-.button.bordered.button-light:hover, #comments .comment-list .button-light.comment-reply-link:hover, button.bordered.button-light:hover,
+.button.bordered.button-light:hover, .course-container .course .course-content .entry-actions .bordered.button-light.button:hover, #learner-info .bordered.button-light.my-messages-link:hover, #learner-info .course .sensei-results-links .bordered.button-light.button:hover, #sensei-user-courses .bordered.button-light.my-messages-link:hover, #comments .comment-list .bordered.button-light.comment-reply-link:hover, button.bordered.button-light:hover,
 input.bordered.button-light:hover[type="button"],
 input.bordered.button-light:hover[type="reset"],
 input.bordered.button-light:hover[type="submit"] {
@@ -817,7 +835,7 @@ input.bordered.button-light:hover[type="submit"] {
   color: #2b2b2b;
 }
 
-.button.bordered.button-dark, #comments .comment-list .button-dark.comment-reply-link, button.bordered.button-dark,
+.button.bordered.button-dark, .course-container .course .course-content .entry-actions .bordered.button-dark.button, #learner-info .bordered.button-dark.my-messages-link, #learner-info .course .sensei-results-links .bordered.button-dark.button, #sensei-user-courses .bordered.button-dark.my-messages-link, #comments .comment-list .bordered.button-dark.comment-reply-link, button.bordered.button-dark,
 input.bordered.button-dark[type="button"],
 input.bordered.button-dark[type="reset"],
 input.bordered.button-dark[type="submit"] {
@@ -825,7 +843,7 @@ input.bordered.button-dark[type="submit"] {
   color: #333333;
 }
 
-.button.bordered.button-dark:hover, #comments .comment-list .button-dark.comment-reply-link:hover, button.bordered.button-dark:hover,
+.button.bordered.button-dark:hover, .course-container .course .course-content .entry-actions .bordered.button-dark.button:hover, #learner-info .bordered.button-dark.my-messages-link:hover, #learner-info .course .sensei-results-links .bordered.button-dark.button:hover, #sensei-user-courses .bordered.button-dark.my-messages-link:hover, #comments .comment-list .bordered.button-dark.comment-reply-link:hover, button.bordered.button-dark:hover,
 input.bordered.button-dark:hover[type="button"],
 input.bordered.button-dark:hover[type="reset"],
 input.bordered.button-dark:hover[type="submit"] {
@@ -833,7 +851,7 @@ input.bordered.button-dark:hover[type="submit"] {
   box-shadow: inset 0 -2.6em #333333;
 }
 
-.button.bordered:hover, #comments .comment-list .comment-reply-link:hover, button.bordered:hover,
+.button.bordered:hover, .course-container .course .course-content .entry-actions .bordered.button:hover, #learner-info .bordered.my-messages-link:hover, #learner-info .course .sensei-results-links .bordered.button:hover, #sensei-user-courses .bordered.my-messages-link:hover, #comments .comment-list .bordered.comment-reply-link:hover, button.bordered:hover,
 input.bordered:hover[type="button"],
 input.bordered:hover[type="reset"],
 input.bordered:hover[type="submit"] {
@@ -842,28 +860,28 @@ input.bordered:hover[type="submit"] {
   color: #fff;
 }
 
-.button .button-icon, #comments .comment-list .comment-reply-link .button-icon, button .button-icon, input[type="button"] .button-icon, input[type="reset"] .button-icon, input[type="submit"] .button-icon, .button span, #comments .comment-list .comment-reply-link span, button span, input[type="button"] span, input[type="reset"] span, input[type="submit"] span {
+.button .button-icon, .course-container .course .course-content .entry-actions .button .button-icon, #learner-info .my-messages-link .button-icon, #learner-info .course .sensei-results-links .button .button-icon, #sensei-user-courses .my-messages-link .button-icon, #comments .comment-list .comment-reply-link .button-icon, button .button-icon, input[type="button"] .button-icon, input[type="reset"] .button-icon, input[type="submit"] .button-icon, .button span, .course-container .course .course-content .entry-actions .button span, #learner-info .my-messages-link span, #learner-info .course .sensei-results-links .button span, #sensei-user-courses .my-messages-link span, #comments .comment-list .comment-reply-link span, button span, input[type="button"] span, input[type="reset"] span, input[type="submit"] span {
   position: relative;
 }
 
-.button .button-icon ~ span, #comments .comment-list .comment-reply-link .button-icon ~ span, button .button-icon ~ span, input[type="button"] .button-icon ~ span, input[type="reset"] .button-icon ~ span, input[type="submit"] .button-icon ~ span {
+.button .button-icon ~ span, .course-container .course .course-content .entry-actions .button .button-icon ~ span, #learner-info .my-messages-link .button-icon ~ span, #learner-info .course .sensei-results-links .button .button-icon ~ span, #sensei-user-courses .my-messages-link .button-icon ~ span, #comments .comment-list .comment-reply-link .button-icon ~ span, button .button-icon ~ span, input[type="button"] .button-icon ~ span, input[type="reset"] .button-icon ~ span, input[type="submit"] .button-icon ~ span {
   margin-left: 10px;
 }
 
-.button span ~ .button-icon, #comments .comment-list .comment-reply-link span ~ .button-icon, button span ~ .button-icon, input[type="button"] span ~ .button-icon, input[type="reset"] span ~ .button-icon, input[type="submit"] span ~ .button-icon {
+.button span ~ .button-icon, .course-container .course .course-content .entry-actions .button span ~ .button-icon, #learner-info .my-messages-link span ~ .button-icon, #learner-info .course .sensei-results-links .button span ~ .button-icon, #sensei-user-courses .my-messages-link span ~ .button-icon, #comments .comment-list .comment-reply-link span ~ .button-icon, button span ~ .button-icon, input[type="button"] span ~ .button-icon, input[type="reset"] span ~ .button-icon, input[type="submit"] span ~ .button-icon {
   margin-left: 10px;
 }
 
-.button.button-strong span, #comments .comment-list .button-strong.comment-reply-link span, button.button-strong span, input.button-strong[type="button"] span, input.button-strong[type="reset"] span, input.button-strong[type="submit"] span {
+.button.button-strong span, .course-container .course .course-content .entry-actions .button-strong.button span, #learner-info .button-strong.my-messages-link span, #learner-info .course .sensei-results-links .button-strong.button span, #sensei-user-courses .button-strong.my-messages-link span, #comments .comment-list .button-strong.comment-reply-link span, button.button-strong span, input.button-strong[type="button"] span, input.button-strong[type="reset"] span, input.button-strong[type="submit"] span {
   font-weight: 800;
 }
 
-.button.button-uppercase span, #comments .comment-list .button-uppercase.comment-reply-link span, button.button-uppercase span, input.button-uppercase[type="button"] span, input.button-uppercase[type="reset"] span, input.button-uppercase[type="submit"] span {
+.button.button-uppercase span, .course-container .course .course-content .entry-actions .button-uppercase.button span, #learner-info .button-uppercase.my-messages-link span, #learner-info .course .sensei-results-links .button-uppercase.button span, #sensei-user-courses .button-uppercase.my-messages-link span, #comments .comment-list .button-uppercase.comment-reply-link span, button.button-uppercase span, input.button-uppercase[type="button"] span, input.button-uppercase[type="reset"] span, input.button-uppercase[type="submit"] span {
   text-transform: uppercase;
   font-size: 14px;
 }
 
-.button[class*="button-square-"], #comments .comment-list .comment-reply-link[class*="button-square-"], button[class*="button-square-"],
+.button[class*="button-square-"], .course-container .course .course-content .entry-actions .button[class*="button-square-"], #learner-info .my-messages-link[class*="button-square-"], #learner-info .course .sensei-results-links .button[class*="button-square-"], #sensei-user-courses .my-messages-link[class*="button-square-"], #comments .comment-list .comment-reply-link[class*="button-square-"], button[class*="button-square-"],
 input[class*="button-square-"][type="button"],
 input[class*="button-square-"][type="reset"],
 input[class*="button-square-"][type="submit"] {
@@ -872,7 +890,7 @@ input[class*="button-square-"][type="submit"] {
   padding: 0;
 }
 
-.button.button-square-30, #comments .comment-list .button-square-30.comment-reply-link, button.button-square-30,
+.button.button-square-30, .course-container .course .course-content .entry-actions .button-square-30.button, #learner-info .button-square-30.my-messages-link, #learner-info .course .sensei-results-links .button-square-30.button, #sensei-user-courses .button-square-30.my-messages-link, #comments .comment-list .button-square-30.comment-reply-link, button.button-square-30,
 input.button-square-30[type="button"],
 input.button-square-30[type="reset"],
 input.button-square-30[type="submit"] {
@@ -881,11 +899,11 @@ input.button-square-30[type="submit"] {
   line-height: 24px;
 }
 
-.button.button-square-30 .button-icon, #comments .comment-list .button-square-30.comment-reply-link .button-icon, button.button-square-30 .button-icon, input.button-square-30[type="button"] .button-icon, input.button-square-30[type="reset"] .button-icon, input.button-square-30[type="submit"] .button-icon {
+.button.button-square-30 .button-icon, .course-container .course .course-content .entry-actions .button-square-30.button .button-icon, #learner-info .button-square-30.my-messages-link .button-icon, #learner-info .course .sensei-results-links .button-square-30.button .button-icon, #sensei-user-courses .button-square-30.my-messages-link .button-icon, #comments .comment-list .button-square-30.comment-reply-link .button-icon, button.button-square-30 .button-icon, input.button-square-30[type="button"] .button-icon, input.button-square-30[type="reset"] .button-icon, input.button-square-30[type="submit"] .button-icon {
   font-size: 12px;
 }
 
-.button.button-square-40, #comments .comment-list .button-square-40.comment-reply-link, button.button-square-40,
+.button.button-square-40, .course-container .course .course-content .entry-actions .button-square-40.button, #learner-info .button-square-40.my-messages-link, #learner-info .course .sensei-results-links .button-square-40.button, #sensei-user-courses .button-square-40.my-messages-link, #comments .comment-list .button-square-40.comment-reply-link, button.button-square-40,
 input.button-square-40[type="button"],
 input.button-square-40[type="reset"],
 input.button-square-40[type="submit"] {
@@ -894,7 +912,7 @@ input.button-square-40[type="submit"] {
   line-height: 34px;
 }
 
-.button.button-square-50, #comments .comment-list .button-square-50.comment-reply-link, button.button-square-50,
+.button.button-square-50, .course-container .course .course-content .entry-actions .button-square-50.button, #learner-info .button-square-50.my-messages-link, #learner-info .course .sensei-results-links .button-square-50.button, #sensei-user-courses .button-square-50.my-messages-link, #comments .comment-list .button-square-50.comment-reply-link, button.button-square-50,
 input.button-square-50[type="button"],
 input.button-square-50[type="reset"],
 input.button-square-50[type="submit"] {
@@ -903,7 +921,7 @@ input.button-square-50[type="submit"] {
   line-height: 44px;
 }
 
-.button.button-square-60, #comments .comment-list .button-square-60.comment-reply-link, button.button-square-60,
+.button.button-square-60, .course-container .course .course-content .entry-actions .button-square-60.button, #learner-info .button-square-60.my-messages-link, #learner-info .course .sensei-results-links .button-square-60.button, #sensei-user-courses .button-square-60.my-messages-link, #comments .comment-list .button-square-60.comment-reply-link, button.button-square-60,
 input.button-square-60[type="button"],
 input.button-square-60[type="reset"],
 input.button-square-60[type="submit"] {
@@ -912,74 +930,74 @@ input.button-square-60[type="submit"] {
   line-height: 54px;
 }
 
-.button.button-float-left, #comments .comment-list .button-float-left.comment-reply-link, button.button-float-left,
+.button.button-float-left, .course-container .course .course-content .entry-actions .button-float-left.button, #learner-info .button-float-left.my-messages-link, #learner-info .course .sensei-results-links .button-float-left.button, #sensei-user-courses .button-float-left.my-messages-link, #comments .comment-list .button-float-left.comment-reply-link, button.button-float-left,
 input.button-float-left[type="button"],
 input.button-float-left[type="reset"],
 input.button-float-left[type="submit"] {
   float: left;
 }
 
-.button.button-float-right, #comments .comment-list .button-float-right.comment-reply-link, button.button-float-right,
+.button.button-float-right, .course-container .course .course-content .entry-actions .button-float-right.button, #learner-info .button-float-right.my-messages-link, #learner-info .course .sensei-results-links .button-float-right.button, #sensei-user-courses .button-float-right.my-messages-link, #comments .comment-list .button-float-right.comment-reply-link, button.button-float-right,
 input.button-float-right[type="button"],
 input.button-float-right[type="reset"],
 input.button-float-right[type="submit"] {
   float: right;
 }
 
-.button.button-margin, #comments .comment-list .button-margin.comment-reply-link, button.button-margin,
+.button.button-margin, .course-container .course .course-content .entry-actions .button-margin.button, #learner-info .button-margin.my-messages-link, #learner-info .course .sensei-results-links .button-margin.button, #sensei-user-courses .button-margin.my-messages-link, #comments .comment-list .button-margin.comment-reply-link, button.button-margin,
 input.button-margin[type="button"],
 input.button-margin[type="reset"],
 input.button-margin[type="submit"] {
   margin: 1em 0;
 }
 
-.button.button-radius-1, #comments .comment-list .button-radius-1.comment-reply-link, button.button-radius-1,
+.button.button-radius-1, .course-container .course .course-content .entry-actions .button-radius-1.button, #learner-info .button-radius-1.my-messages-link, #learner-info .course .sensei-results-links .button-radius-1.button, #sensei-user-courses .button-radius-1.my-messages-link, #comments .comment-list .button-radius-1.comment-reply-link, button.button-radius-1,
 input.button-radius-1[type="button"],
 input.button-radius-1[type="reset"],
 input.button-radius-1[type="submit"] {
   border-radius: 2px;
 }
 
-.button.button-radius-2, #comments .comment-list .button-radius-2.comment-reply-link, button.button-radius-2,
+.button.button-radius-2, .course-container .course .course-content .entry-actions .button-radius-2.button, #learner-info .button-radius-2.my-messages-link, #learner-info .course .sensei-results-links .button-radius-2.button, #sensei-user-courses .button-radius-2.my-messages-link, #comments .comment-list .button-radius-2.comment-reply-link, button.button-radius-2,
 input.button-radius-2[type="button"],
 input.button-radius-2[type="reset"],
 input.button-radius-2[type="submit"] {
   border-radius: 4px;
 }
 
-.button.button-radius-3, #comments .comment-list .button-radius-3.comment-reply-link, button.button-radius-3,
+.button.button-radius-3, .course-container .course .course-content .entry-actions .button-radius-3.button, #learner-info .button-radius-3.my-messages-link, #learner-info .course .sensei-results-links .button-radius-3.button, #sensei-user-courses .button-radius-3.my-messages-link, #comments .comment-list .button-radius-3.comment-reply-link, button.button-radius-3,
 input.button-radius-3[type="button"],
 input.button-radius-3[type="reset"],
 input.button-radius-3[type="submit"] {
   border-radius: 6px;
 }
 
-.button.button-rounded, #comments .comment-list .button-rounded.comment-reply-link, button.button-rounded,
+.button.button-rounded, .course-container .course .course-content .entry-actions .button-rounded.button, #learner-info .button-rounded.my-messages-link, #learner-info .course .sensei-results-links .button-rounded.button, #sensei-user-courses .button-rounded.my-messages-link, #comments .comment-list .button-rounded.comment-reply-link, button.button-rounded,
 input.button-rounded[type="button"],
 input.button-rounded[type="reset"],
 input.button-rounded[type="submit"] {
   border-radius: 50%;
 }
 
-.button.button-size-small, #comments .comment-list .button-size-small.comment-reply-link, button.button-size-small,
+.button.button-size-small, .course-container .course .course-content .entry-actions .button-size-small.button, #learner-info .button-size-small.my-messages-link, #learner-info .course .sensei-results-links .button-size-small.button, #sensei-user-courses .button-size-small.my-messages-link, #comments .comment-list .button-size-small.comment-reply-link, button.button-size-small,
 input.button-size-small[type="button"],
 input.button-size-small[type="reset"],
 input.button-size-small[type="submit"] {
   font-size: 14px;
 }
 
-.button.button-size-small.button-uppercase span, #comments .comment-list .button-size-small.button-uppercase.comment-reply-link span, button.button-size-small.button-uppercase span, input.button-size-small.button-uppercase[type="button"] span, input.button-size-small.button-uppercase[type="reset"] span, input.button-size-small.button-uppercase[type="submit"] span {
+.button.button-size-small.button-uppercase span, .course-container .course .course-content .entry-actions .button-size-small.button-uppercase.button span, #learner-info .button-size-small.button-uppercase.my-messages-link span, #learner-info .course .sensei-results-links .button-size-small.button-uppercase.button span, #sensei-user-courses .button-size-small.button-uppercase.my-messages-link span, #comments .comment-list .button-size-small.button-uppercase.comment-reply-link span, button.button-size-small.button-uppercase span, input.button-size-small.button-uppercase[type="button"] span, input.button-size-small.button-uppercase[type="reset"] span, input.button-size-small.button-uppercase[type="submit"] span {
   font-size: 12px;
 }
 
-.button.button-size-large, #comments .comment-list .button-size-large.comment-reply-link, button.button-size-large,
+.button.button-size-large, .course-container .course .course-content .entry-actions .button-size-large.button, #learner-info .button-size-large.my-messages-link, #learner-info .course .sensei-results-links .button-size-large.button, #sensei-user-courses .button-size-large.my-messages-link, #comments .comment-list .button-size-large.comment-reply-link, button.button-size-large,
 input.button-size-large[type="button"],
 input.button-size-large[type="reset"],
 input.button-size-large[type="submit"] {
   font-size: 18px;
 }
 
-.button.button-size-large.button-uppercase span, #comments .comment-list .button-size-large.button-uppercase.comment-reply-link span, button.button-size-large.button-uppercase span, input.button-size-large.button-uppercase[type="button"] span, input.button-size-large.button-uppercase[type="reset"] span, input.button-size-large.button-uppercase[type="submit"] span {
+.button.button-size-large.button-uppercase span, .course-container .course .course-content .entry-actions .button-size-large.button-uppercase.button span, #learner-info .button-size-large.button-uppercase.my-messages-link span, #learner-info .course .sensei-results-links .button-size-large.button-uppercase.button span, #sensei-user-courses .button-size-large.button-uppercase.my-messages-link span, #comments .comment-list .button-size-large.button-uppercase.comment-reply-link span, button.button-size-large.button-uppercase span, input.button-size-large.button-uppercase[type="button"] span, input.button-size-large.button-uppercase[type="reset"] span, input.button-size-large.button-uppercase[type="submit"] span {
   font-size: 16px;
 }
 
@@ -1116,6 +1134,11 @@ body.sticky-nav #content {
 
 body.home.sticky-nav #content {
   padding-top: 80px;
+}
+
+/** Correctifs si pas de titre affichés pour les pages */
+body.page:not(.beflex-is-title) #content {
+  padding-top: 0 !important;
 }
 
 /*--------------------------------------------------------------
@@ -1269,14 +1292,14 @@ body.home.sticky-nav #content {
 /*--------------------------------------------------------------
 ## Grid layout Grid
 --------------------------------------------------------------*/
-.gridlayout, #my-courses .col2-set {
+.gridlayout, #my-courses .col2-set, body.sensei_message .message-container {
   display: grid;
   grid-gap: 1em 1em;
   grid-template-columns: repeat(4, 1fr);
 }
 
 /** Définition des tailles */
-.gridlayout, #my-courses .col2-set {
+.gridlayout, #my-courses .col2-set, body.sensei_message .message-container {
   /** Du parent */
   /** Chaque enfant peut modifier sa propre taille */
   /** Chaque enfant peut modifier sa propre taille */
@@ -1286,380 +1309,380 @@ body.home.sticky-nav #content {
   /** Chaque enfant peut modifier sa propre taille */
 }
 
-.gridlayout.grid-1, #my-courses .grid-1.col2-set {
+.gridlayout.grid-1, #my-courses .grid-1.col2-set, body.sensei_message .grid-1.message-container {
   grid-template-columns: repeat(1, 1fr);
 }
 
-.gridlayout.grid-1 > .gridw-1, #my-courses .grid-1.col2-set > .gridw-1 {
+.gridlayout.grid-1 > .gridw-1, #my-courses .grid-1.col2-set > .gridw-1, body.sensei_message .grid-1.message-container > .gridw-1 {
   grid-column: auto/span 1;
 }
 
-.gridlayout.grid-2, #my-courses .col2-set {
+.gridlayout.grid-2, #my-courses .col2-set, body.sensei_message .grid-2.message-container {
   grid-template-columns: repeat(2, 1fr);
 }
 
-.gridlayout.grid-2 > .gridw-1, #my-courses .col2-set > .gridw-1 {
+.gridlayout.grid-2 > .gridw-1, #my-courses .col2-set > .gridw-1, body.sensei_message .grid-2.message-container > .gridw-1 {
   grid-column: auto/span 1;
 }
 
-.gridlayout.grid-2 > .gridw-2, #my-courses .col2-set > .gridw-2 {
+.gridlayout.grid-2 > .gridw-2, #my-courses .col2-set > .gridw-2, body.sensei_message .grid-2.message-container > .gridw-2 {
   grid-column: auto/span 2;
 }
 
 @media (max-width: 770px) {
-  .gridlayout.grid-2 > .gridw-2, #my-courses .col2-set > .gridw-2 {
+  .gridlayout.grid-2 > .gridw-2, #my-courses .col2-set > .gridw-2, body.sensei_message .grid-2.message-container > .gridw-2 {
     grid-column: auto / span 2;
   }
 }
 
-.gridlayout.grid-3, #my-courses .grid-3.col2-set {
+.gridlayout.grid-3, #my-courses .grid-3.col2-set, body.sensei_message .message-container {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.gridlayout.grid-3 > .gridw-1, #my-courses .grid-3.col2-set > .gridw-1 {
+.gridlayout.grid-3 > .gridw-1, #my-courses .grid-3.col2-set > .gridw-1, body.sensei_message .message-container > .gridw-1 {
   grid-column: auto/span 1;
 }
 
-.gridlayout.grid-3 > .gridw-2, #my-courses .grid-3.col2-set > .gridw-2 {
+.gridlayout.grid-3 > .gridw-2, #my-courses .grid-3.col2-set > .gridw-2, body.sensei_message .message-container > .gridw-2 {
   grid-column: auto/span 2;
 }
 
 @media (max-width: 770px) {
-  .gridlayout.grid-3 > .gridw-2, #my-courses .grid-3.col2-set > .gridw-2 {
+  .gridlayout.grid-3 > .gridw-2, #my-courses .grid-3.col2-set > .gridw-2, body.sensei_message .message-container > .gridw-2 {
     grid-column: auto / span 2;
   }
 }
 
-.gridlayout.grid-3 > .gridw-3, #my-courses .grid-3.col2-set > .gridw-3 {
+.gridlayout.grid-3 > .gridw-3, #my-courses .grid-3.col2-set > .gridw-3, body.sensei_message .message-container > .gridw-3 {
   grid-column: auto/span 3;
 }
 
 @media (max-width: 770px) {
-  .gridlayout.grid-3 > .gridw-3, #my-courses .grid-3.col2-set > .gridw-3 {
+  .gridlayout.grid-3 > .gridw-3, #my-courses .grid-3.col2-set > .gridw-3, body.sensei_message .message-container > .gridw-3 {
     grid-column: auto / span 2;
   }
 }
 
-.gridlayout.grid-4, #my-courses .grid-4.col2-set {
+.gridlayout.grid-4, #my-courses .grid-4.col2-set, body.sensei_message .grid-4.message-container {
   grid-template-columns: repeat(4, 1fr);
 }
 
-.gridlayout.grid-4 > .gridw-1, #my-courses .grid-4.col2-set > .gridw-1 {
+.gridlayout.grid-4 > .gridw-1, #my-courses .grid-4.col2-set > .gridw-1, body.sensei_message .grid-4.message-container > .gridw-1 {
   grid-column: auto/span 1;
 }
 
-.gridlayout.grid-4 > .gridw-2, #my-courses .grid-4.col2-set > .gridw-2 {
+.gridlayout.grid-4 > .gridw-2, #my-courses .grid-4.col2-set > .gridw-2, body.sensei_message .grid-4.message-container > .gridw-2 {
   grid-column: auto/span 2;
 }
 
 @media (max-width: 770px) {
-  .gridlayout.grid-4 > .gridw-2, #my-courses .grid-4.col2-set > .gridw-2 {
+  .gridlayout.grid-4 > .gridw-2, #my-courses .grid-4.col2-set > .gridw-2, body.sensei_message .grid-4.message-container > .gridw-2 {
     grid-column: auto / span 2;
   }
 }
 
-.gridlayout.grid-4 > .gridw-3, #my-courses .grid-4.col2-set > .gridw-3 {
+.gridlayout.grid-4 > .gridw-3, #my-courses .grid-4.col2-set > .gridw-3, body.sensei_message .grid-4.message-container > .gridw-3 {
   grid-column: auto/span 3;
 }
 
 @media (max-width: 770px) {
-  .gridlayout.grid-4 > .gridw-3, #my-courses .grid-4.col2-set > .gridw-3 {
+  .gridlayout.grid-4 > .gridw-3, #my-courses .grid-4.col2-set > .gridw-3, body.sensei_message .grid-4.message-container > .gridw-3 {
     grid-column: auto / span 2;
   }
 }
 
-.gridlayout.grid-4 > .gridw-4, #my-courses .grid-4.col2-set > .gridw-4 {
+.gridlayout.grid-4 > .gridw-4, #my-courses .grid-4.col2-set > .gridw-4, body.sensei_message .grid-4.message-container > .gridw-4 {
   grid-column: auto/span 4;
 }
 
 @media (max-width: 770px) {
-  .gridlayout.grid-4 > .gridw-4, #my-courses .grid-4.col2-set > .gridw-4 {
+  .gridlayout.grid-4 > .gridw-4, #my-courses .grid-4.col2-set > .gridw-4, body.sensei_message .grid-4.message-container > .gridw-4 {
     grid-column: auto / span 2;
   }
 }
 
-.gridlayout.grid-5, #my-courses .grid-5.col2-set {
+.gridlayout.grid-5, #my-courses .grid-5.col2-set, body.sensei_message .grid-5.message-container {
   grid-template-columns: repeat(5, 1fr);
 }
 
-.gridlayout.grid-5 > .gridw-1, #my-courses .grid-5.col2-set > .gridw-1 {
+.gridlayout.grid-5 > .gridw-1, #my-courses .grid-5.col2-set > .gridw-1, body.sensei_message .grid-5.message-container > .gridw-1 {
   grid-column: auto/span 1;
 }
 
-.gridlayout.grid-5 > .gridw-2, #my-courses .grid-5.col2-set > .gridw-2 {
+.gridlayout.grid-5 > .gridw-2, #my-courses .grid-5.col2-set > .gridw-2, body.sensei_message .grid-5.message-container > .gridw-2 {
   grid-column: auto/span 2;
 }
 
 @media (max-width: 770px) {
-  .gridlayout.grid-5 > .gridw-2, #my-courses .grid-5.col2-set > .gridw-2 {
+  .gridlayout.grid-5 > .gridw-2, #my-courses .grid-5.col2-set > .gridw-2, body.sensei_message .grid-5.message-container > .gridw-2 {
     grid-column: auto / span 2;
   }
 }
 
-.gridlayout.grid-5 > .gridw-3, #my-courses .grid-5.col2-set > .gridw-3 {
+.gridlayout.grid-5 > .gridw-3, #my-courses .grid-5.col2-set > .gridw-3, body.sensei_message .grid-5.message-container > .gridw-3 {
   grid-column: auto/span 3;
 }
 
 @media (max-width: 770px) {
-  .gridlayout.grid-5 > .gridw-3, #my-courses .grid-5.col2-set > .gridw-3 {
+  .gridlayout.grid-5 > .gridw-3, #my-courses .grid-5.col2-set > .gridw-3, body.sensei_message .grid-5.message-container > .gridw-3 {
     grid-column: auto / span 2;
   }
 }
 
-.gridlayout.grid-5 > .gridw-4, #my-courses .grid-5.col2-set > .gridw-4 {
+.gridlayout.grid-5 > .gridw-4, #my-courses .grid-5.col2-set > .gridw-4, body.sensei_message .grid-5.message-container > .gridw-4 {
   grid-column: auto/span 4;
 }
 
 @media (max-width: 770px) {
-  .gridlayout.grid-5 > .gridw-4, #my-courses .grid-5.col2-set > .gridw-4 {
+  .gridlayout.grid-5 > .gridw-4, #my-courses .grid-5.col2-set > .gridw-4, body.sensei_message .grid-5.message-container > .gridw-4 {
     grid-column: auto / span 2;
   }
 }
 
-.gridlayout.grid-5 > .gridw-5, #my-courses .grid-5.col2-set > .gridw-5 {
+.gridlayout.grid-5 > .gridw-5, #my-courses .grid-5.col2-set > .gridw-5, body.sensei_message .grid-5.message-container > .gridw-5 {
   grid-column: auto/span 5;
 }
 
 @media (max-width: 770px) {
-  .gridlayout.grid-5 > .gridw-5, #my-courses .grid-5.col2-set > .gridw-5 {
+  .gridlayout.grid-5 > .gridw-5, #my-courses .grid-5.col2-set > .gridw-5, body.sensei_message .grid-5.message-container > .gridw-5 {
     grid-column: auto / span 2;
   }
 }
 
-.gridlayout.grid-6, #my-courses .grid-6.col2-set {
+.gridlayout.grid-6, #my-courses .grid-6.col2-set, body.sensei_message .grid-6.message-container {
   grid-template-columns: repeat(6, 1fr);
 }
 
-.gridlayout.grid-6 > .gridw-1, #my-courses .grid-6.col2-set > .gridw-1 {
+.gridlayout.grid-6 > .gridw-1, #my-courses .grid-6.col2-set > .gridw-1, body.sensei_message .grid-6.message-container > .gridw-1 {
   grid-column: auto/span 1;
 }
 
-.gridlayout.grid-6 > .gridw-2, #my-courses .grid-6.col2-set > .gridw-2 {
+.gridlayout.grid-6 > .gridw-2, #my-courses .grid-6.col2-set > .gridw-2, body.sensei_message .grid-6.message-container > .gridw-2 {
   grid-column: auto/span 2;
 }
 
 @media (max-width: 770px) {
-  .gridlayout.grid-6 > .gridw-2, #my-courses .grid-6.col2-set > .gridw-2 {
+  .gridlayout.grid-6 > .gridw-2, #my-courses .grid-6.col2-set > .gridw-2, body.sensei_message .grid-6.message-container > .gridw-2 {
     grid-column: auto / span 2;
   }
 }
 
-.gridlayout.grid-6 > .gridw-3, #my-courses .grid-6.col2-set > .gridw-3 {
+.gridlayout.grid-6 > .gridw-3, #my-courses .grid-6.col2-set > .gridw-3, body.sensei_message .grid-6.message-container > .gridw-3 {
   grid-column: auto/span 3;
 }
 
 @media (max-width: 770px) {
-  .gridlayout.grid-6 > .gridw-3, #my-courses .grid-6.col2-set > .gridw-3 {
+  .gridlayout.grid-6 > .gridw-3, #my-courses .grid-6.col2-set > .gridw-3, body.sensei_message .grid-6.message-container > .gridw-3 {
     grid-column: auto / span 2;
   }
 }
 
-.gridlayout.grid-6 > .gridw-4, #my-courses .grid-6.col2-set > .gridw-4 {
+.gridlayout.grid-6 > .gridw-4, #my-courses .grid-6.col2-set > .gridw-4, body.sensei_message .grid-6.message-container > .gridw-4 {
   grid-column: auto/span 4;
 }
 
 @media (max-width: 770px) {
-  .gridlayout.grid-6 > .gridw-4, #my-courses .grid-6.col2-set > .gridw-4 {
+  .gridlayout.grid-6 > .gridw-4, #my-courses .grid-6.col2-set > .gridw-4, body.sensei_message .grid-6.message-container > .gridw-4 {
     grid-column: auto / span 2;
   }
 }
 
-.gridlayout.grid-6 > .gridw-5, #my-courses .grid-6.col2-set > .gridw-5 {
+.gridlayout.grid-6 > .gridw-5, #my-courses .grid-6.col2-set > .gridw-5, body.sensei_message .grid-6.message-container > .gridw-5 {
   grid-column: auto/span 5;
 }
 
 @media (max-width: 770px) {
-  .gridlayout.grid-6 > .gridw-5, #my-courses .grid-6.col2-set > .gridw-5 {
+  .gridlayout.grid-6 > .gridw-5, #my-courses .grid-6.col2-set > .gridw-5, body.sensei_message .grid-6.message-container > .gridw-5 {
     grid-column: auto / span 2;
   }
 }
 
-.gridlayout.grid-6 > .gridw-6, #my-courses .grid-6.col2-set > .gridw-6 {
+.gridlayout.grid-6 > .gridw-6, #my-courses .grid-6.col2-set > .gridw-6, body.sensei_message .grid-6.message-container > .gridw-6 {
   grid-column: auto/span 6;
 }
 
 @media (max-width: 770px) {
-  .gridlayout.grid-6 > .gridw-6, #my-courses .grid-6.col2-set > .gridw-6 {
+  .gridlayout.grid-6 > .gridw-6, #my-courses .grid-6.col2-set > .gridw-6, body.sensei_message .grid-6.message-container > .gridw-6 {
     grid-column: auto / span 2;
   }
 }
 
 /** Définition des hauteur des enfants */
-.gridlayout > .gridh-1, #my-courses .col2-set > .gridh-1 {
+.gridlayout > .gridh-1, #my-courses .col2-set > .gridh-1, body.sensei_message .message-container > .gridh-1 {
   grid-row: auto/span 1;
 }
 
 @media (max-width: 770px) {
-  .gridlayout > .gridh-1, #my-courses .col2-set > .gridh-1 {
+  .gridlayout > .gridh-1, #my-courses .col2-set > .gridh-1, body.sensei_message .message-container > .gridh-1 {
     grid-row: auto / span 1 !important;
   }
 }
 
-.gridlayout > .gridh-2, #my-courses .col2-set > .gridh-2 {
+.gridlayout > .gridh-2, #my-courses .col2-set > .gridh-2, body.sensei_message .message-container > .gridh-2 {
   grid-row: auto/span 2;
 }
 
 @media (max-width: 770px) {
-  .gridlayout > .gridh-2, #my-courses .col2-set > .gridh-2 {
+  .gridlayout > .gridh-2, #my-courses .col2-set > .gridh-2, body.sensei_message .message-container > .gridh-2 {
     grid-row: auto / span 1 !important;
   }
 }
 
-.gridlayout > .gridh-3, #my-courses .col2-set > .gridh-3 {
+.gridlayout > .gridh-3, #my-courses .col2-set > .gridh-3, body.sensei_message .message-container > .gridh-3 {
   grid-row: auto/span 3;
 }
 
 @media (max-width: 770px) {
-  .gridlayout > .gridh-3, #my-courses .col2-set > .gridh-3 {
+  .gridlayout > .gridh-3, #my-courses .col2-set > .gridh-3, body.sensei_message .message-container > .gridh-3 {
     grid-row: auto / span 1 !important;
   }
 }
 
-.gridlayout > .gridh-4, #my-courses .col2-set > .gridh-4 {
+.gridlayout > .gridh-4, #my-courses .col2-set > .gridh-4, body.sensei_message .message-container > .gridh-4 {
   grid-row: auto/span 4;
 }
 
 @media (max-width: 770px) {
-  .gridlayout > .gridh-4, #my-courses .col2-set > .gridh-4 {
+  .gridlayout > .gridh-4, #my-courses .col2-set > .gridh-4, body.sensei_message .message-container > .gridh-4 {
     grid-row: auto / span 1 !important;
   }
 }
 
-.gridlayout > .gridh-5, #my-courses .col2-set > .gridh-5 {
+.gridlayout > .gridh-5, #my-courses .col2-set > .gridh-5, body.sensei_message .message-container > .gridh-5 {
   grid-row: auto/span 5;
 }
 
 @media (max-width: 770px) {
-  .gridlayout > .gridh-5, #my-courses .col2-set > .gridh-5 {
+  .gridlayout > .gridh-5, #my-courses .col2-set > .gridh-5, body.sensei_message .message-container > .gridh-5 {
     grid-row: auto / span 1 !important;
   }
 }
 
-.gridlayout > .gridh-6, #my-courses .col2-set > .gridh-6 {
+.gridlayout > .gridh-6, #my-courses .col2-set > .gridh-6, body.sensei_message .message-container > .gridh-6 {
   grid-row: auto/span 6;
 }
 
 @media (max-width: 770px) {
-  .gridlayout > .gridh-6, #my-courses .col2-set > .gridh-6 {
+  .gridlayout > .gridh-6, #my-courses .col2-set > .gridh-6, body.sensei_message .message-container > .gridh-6 {
     grid-row: auto / span 1 !important;
   }
 }
 
 /** Mages */
-.gridlayout.grid-margin-0, #my-courses .grid-margin-0.col2-set {
+.gridlayout.grid-margin-0, #my-courses .grid-margin-0.col2-set, body.sensei_message .grid-margin-0.message-container {
   margin: 0em 0;
 }
 
-.gridlayout.grid-margin-1, #my-courses .grid-margin-1.col2-set {
+.gridlayout.grid-margin-1, #my-courses .grid-margin-1.col2-set, body.sensei_message .grid-margin-1.message-container {
   margin: 1em 0;
 }
 
-.gridlayout.grid-margin-2, #my-courses .grid-margin-2.col2-set {
+.gridlayout.grid-margin-2, #my-courses .grid-margin-2.col2-set, body.sensei_message .grid-margin-2.message-container {
   margin: 2em 0;
 }
 
-.gridlayout.grid-margin-3, #my-courses .grid-margin-3.col2-set {
+.gridlayout.grid-margin-3, #my-courses .grid-margin-3.col2-set, body.sensei_message .grid-margin-3.message-container {
   margin: 3em 0;
 }
 
-.gridlayout.grid-margin-4, #my-courses .grid-margin-4.col2-set {
+.gridlayout.grid-margin-4, #my-courses .grid-margin-4.col2-set, body.sensei_message .grid-margin-4.message-container {
   margin: 4em 0;
 }
 
-.gridlayout.grid-margin-5, #my-courses .grid-margin-5.col2-set {
+.gridlayout.grid-margin-5, #my-courses .grid-margin-5.col2-set, body.sensei_message .grid-margin-5.message-container {
   margin: 5em 0;
 }
 
-.gridlayout.grid-margin-6, #my-courses .grid-margin-6.col2-set {
+.gridlayout.grid-margin-6, #my-courses .grid-margin-6.col2-set, body.sensei_message .grid-margin-6.message-container {
   margin: 6em 0;
 }
 
 /** Gouttières */
-.gridlayout.grid-gap-0, #my-courses .grid-gap-0.col2-set {
+.gridlayout.grid-gap-0, #my-courses .grid-gap-0.col2-set, body.sensei_message .grid-gap-0.message-container {
   grid-gap: 0em 0em;
 }
 
-.gridlayout.grid-gap-1, #my-courses .grid-gap-1.col2-set {
+.gridlayout.grid-gap-1, #my-courses .grid-gap-1.col2-set, body.sensei_message .grid-gap-1.message-container {
   grid-gap: 1em 1em;
 }
 
-.gridlayout.grid-gap-2, #my-courses .col2-set {
+.gridlayout.grid-gap-2, #my-courses .col2-set, body.sensei_message .message-container {
   grid-gap: 2em 2em;
 }
 
-.gridlayout.grid-gap-3, #my-courses .grid-gap-3.col2-set {
+.gridlayout.grid-gap-3, #my-courses .grid-gap-3.col2-set, body.sensei_message .grid-gap-3.message-container {
   grid-gap: 3em 3em;
 }
 
-.gridlayout.grid-gap-4, #my-courses .grid-gap-4.col2-set {
+.gridlayout.grid-gap-4, #my-courses .grid-gap-4.col2-set, body.sensei_message .grid-gap-4.message-container {
   grid-gap: 4em 4em;
 }
 
-.gridlayout.grid-gap-5, #my-courses .grid-gap-5.col2-set {
+.gridlayout.grid-gap-5, #my-courses .grid-gap-5.col2-set, body.sensei_message .grid-gap-5.message-container {
   grid-gap: 5em 5em;
 }
 
-.gridlayout.grid-gap-6, #my-courses .grid-gap-6.col2-set {
+.gridlayout.grid-gap-6, #my-courses .grid-gap-6.col2-set, body.sensei_message .grid-gap-6.message-container {
   grid-gap: 6em 6em;
 }
 
 /** Media queries */
 @media (max-width: 480px) {
-  .gridlayout.grid-2, #my-courses .col2-set {
+  .gridlayout.grid-2, #my-courses .col2-set, body.sensei_message .grid-2.message-container {
     grid-template-columns: repeat(1, 1fr) !important;
   }
 }
 
 @media (max-width: 770px) {
-  .gridlayout.grid-3, #my-courses .grid-3.col2-set {
+  .gridlayout.grid-3, #my-courses .grid-3.col2-set, body.sensei_message .message-container {
     grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 
 @media (max-width: 480px) {
-  .gridlayout.grid-3, #my-courses .grid-3.col2-set {
+  .gridlayout.grid-3, #my-courses .grid-3.col2-set, body.sensei_message .message-container {
     grid-template-columns: repeat(1, 1fr) !important;
   }
 }
 
 @media (max-width: 770px) {
-  .gridlayout.grid-4, #my-courses .grid-4.col2-set {
+  .gridlayout.grid-4, #my-courses .grid-4.col2-set, body.sensei_message .grid-4.message-container {
     grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 
 @media (max-width: 480px) {
-  .gridlayout.grid-4, #my-courses .grid-4.col2-set {
+  .gridlayout.grid-4, #my-courses .grid-4.col2-set, body.sensei_message .grid-4.message-container {
     grid-template-columns: repeat(1, 1fr) !important;
   }
 }
 
 @media (max-width: 770px) {
-  .gridlayout.grid-5, #my-courses .grid-5.col2-set {
+  .gridlayout.grid-5, #my-courses .grid-5.col2-set, body.sensei_message .grid-5.message-container {
     grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 
 @media (max-width: 480px) {
-  .gridlayout.grid-5, #my-courses .grid-5.col2-set {
+  .gridlayout.grid-5, #my-courses .grid-5.col2-set, body.sensei_message .grid-5.message-container {
     grid-template-columns: repeat(1, 1fr) !important;
   }
 }
 
 @media (max-width: 770px) {
-  .gridlayout.grid-6, #my-courses .grid-6.col2-set {
+  .gridlayout.grid-6, #my-courses .grid-6.col2-set, body.sensei_message .grid-6.message-container {
     grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 
 @media (max-width: 480px) {
-  .gridlayout.grid-6, #my-courses .grid-6.col2-set {
+  .gridlayout.grid-6, #my-courses .grid-6.col2-set, body.sensei_message .grid-6.message-container {
     grid-template-columns: repeat(1, 1fr) !important;
   }
 }
 
 @media (max-width: 480px) {
-  .gridlayout > *, #my-courses .col2-set > * {
+  .gridlayout > *, #my-courses .col2-set > *, body.sensei_message .message-container > * {
     grid-column: auto / span 1 !important;
   }
 }
@@ -1778,11 +1801,6 @@ body [class*="wps-bton-first"] i, body [class*="wps-bton-second"] i {
 /*--------------------------------------------------------------
 ## Sensei
 --------------------------------------------------------------*/
-.course-header-excerpt {
-  font-size: 18px;
-  color: rgba(0, 0, 0, 0.5);
-}
-
 body.single-course #header-page .header-title-container, body.single-lesson #header-page .header-title-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1905,10 +1923,30 @@ body.single-course #header-page .header-title-container .meta-categories [rel="t
   border-radius: 50%;
 }
 
+.course-container .course .course-content .entry-actions .sensei-results-links {
+  text-align: right;
+}
+
+.course-container .course .course-content .entry-actions .button, .course-container .course .course-content .entry-actions #learner-info .my-messages-link, #learner-info .course-container .course .course-content .entry-actions .my-messages-link, .course-container #learner-info .course .course-content .entry-actions .sensei-results-links .button, #learner-info .course-container .course .course-content .entry-actions .sensei-results-links .button, .course-container #learner-info .course .sensei-results-links .course-content .entry-actions .button, #learner-info .course-container .course .sensei-results-links .course-content .entry-actions .button, .course-container .course .course-content .entry-actions #sensei-user-courses .my-messages-link, #sensei-user-courses .course-container .course .course-content .entry-actions .my-messages-link, .course-container .course .course-content .entry-actions #comments .comment-list .comment-reply-link, #comments .comment-list .course-container .course .course-content .entry-actions .comment-reply-link, .course-container .course .course-content .entry-actions button,
+.course-container .course .course-content .entry-actions input[type="button"],
+.course-container .course .course-content .entry-actions input[type="reset"],
+.course-container .course .course-content .entry-actions input[type="submit"] {
+  float: none;
+  margin: 0 0 0.5em 0;
+}
+
 .course-container.columns-1 li.course {
   float: none;
   padding-left: 0;
   padding-right: 0;
+}
+
+.sensei-archive-controls .sensei-course-filters {
+  margin-left: 0;
+}
+
+.sensei-archive-controls .sensei-course-filters li {
+  margin: 0 0.5em 0 0;
 }
 
 .wp-block-sensei-lms-lesson-actions {
@@ -1947,7 +1985,7 @@ body.single-lesson .video iframe {
 }
 
 .widget.widget_sensei_course_progress {
-  background: rgba(152, 166, 195, 0.1);
+  background: #f4f6f9;
   border: 1px solid rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
@@ -2097,6 +2135,142 @@ body.single-lesson .video iframe {
   fill: #fff;
 }
 
+.header-profile-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header-profile-container .avatar {
+  border-radius: 50%;
+  margin: auto 1em auto 0;
+}
+
+#learner-info .learner-avatar, #learner-info .learner-content {
+  display: none;
+}
+
+#learner-info .my-messages-link::before {
+  display: inline-block;
+  font-family: 'Font Awesome 5 Pro';
+  content: '\f0e0';
+  font-weight: 400;
+  margin-right: 0.4em;
+}
+
+#learner-info #my-courses.ui-tabs .ui-tabs-nav {
+  border-bottom: 1px solid #dcdcdc;
+}
+
+#learner-info #my-courses.ui-tabs .ui-tabs-nav .ui-tabs-tab .ui-tabs-anchor {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border: 1px solid #dcdcdc;
+  padding: 1em;
+  position: relative;
+  bottom: -1px;
+}
+
+#learner-info .course .thumbnail {
+  max-width: 300px;
+}
+
+#learner-info .course .course-author {
+  display: none;
+}
+
+#learner-info .course .sensei-course-meta {
+  margin: 0;
+}
+
+#sensei-user-courses .my-messages-link::before {
+  display: inline-block;
+  font-family: 'Font Awesome 5 Pro';
+  content: '\f0e0';
+  font-weight: 400;
+  margin-right: 0.4em;
+}
+
+body.sensei_message .message-container .sensei_message {
+  margin: 0;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+body.sensei_message .message-container .sensei_message .message-content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+body.sensei_message .message-container .sensei_message h2 {
+  display: block;
+  font-size: 20px;
+  margin: 0;
+  padding: 1em 1.5em 0 1.5em;
+}
+
+body.sensei_message .message-container .sensei_message h2 a {
+  color: #1f1f1f;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+body.sensei_message .message-container .sensei_message h2 a:hover {
+  color: #0e6eff;
+}
+
+body.sensei_message .message-container .sensei_message .entry {
+  display: block;
+  padding: 0.5em 1.5em 1em 1.5em;
+}
+
+body.sensei_message .message-container .sensei_message .entry .message-excerpt {
+  margin: 0;
+}
+
+body.sensei_message .message-container .sensei_message .message-meta {
+  display: block;
+  margin: auto 0 0 0;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 0.5em 1.5em;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+body.single-sensei_message #header-page h1 {
+  margin: 0;
+}
+
+body.single-sensei_message #header-page h1 a {
+  color: #1f1f1f;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+body.single-sensei_message #header-page h1 a:hover {
+  color: #0e6eff;
+}
+
+body.single-sensei_message #header-page .message-meta {
+  margin: 0;
+}
+
+body.single-sensei_message #header-page .message-meta small {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+body.single-sensei_message #header-page .message-meta em {
+  font-style: normal;
+}
+
 /*--------------------------------------------------------------
 # Theme
 --------------------------------------------------------------*/
@@ -2104,7 +2278,7 @@ body.single-lesson .video iframe {
 ## Core
 --------------------------------------------------------------*/
 #header-page {
-  padding-top: 80px;
+  padding-top: 75px;
   position: relative;
 }
 
@@ -2117,7 +2291,7 @@ body.single-lesson .video iframe {
   margin-right: calc( -100vw / 2 + 100% / 2);
   max-width: 100vw;
   width: 100vw;
-  background: rgba(152, 166, 195, 0.1);
+  background: #f4f6f9;
   border-bottom: 4px solid rgba(0, 0, 0, 0.05);
   bottom: 0;
   z-index: -1;
@@ -2134,6 +2308,11 @@ body.single-lesson .video iframe {
 
 #header-page .header-title-container .header-title {
   margin: 0;
+}
+
+#header-page .header-title-container .header-excerpt {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.5);
 }
 
 #masthead {
@@ -2402,6 +2581,25 @@ body.single-lesson .video iframe {
   }
 }
 
+/** No title header */
+body.page:not(.beflex-is-title) #masthead:not(.-scroll) {
+  background: #f4f6f9;
+  border-bottom: 4px solid rgba(0, 0, 0, 0.05);
+}
+
+body.page:not(.beflex-is-title) #masthead::after {
+  display: none !important;
+  content: '' !important;
+}
+
+body.page:not(.beflex-is-title) #header-page {
+  opacity: 0;
+}
+
+body.page:not(.beflex-is-title) #header-page .header-title-container {
+  padding: 0 !important;
+}
+
 #search-area {
   pointer-events: none;
   position: fixed;
@@ -2451,18 +2649,18 @@ body.single-lesson .video iframe {
   flex: 0 1 auto;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  border-bottom: 2px solid #fff;
+  background: #fff;
 }
 
 #search-area form .search-icon {
   margin: auto;
-  padding: 0.6em;
+  padding: 0.6em 0.6em 0.6em 2em;
   display: inline-block;
 }
 
 #search-area form .fa-search {
-  color: #fff;
-  font-size: 32px;
+  color: #1f1f1f;
+  font-size: 42px;
 }
 
 @media (max-width: 480px) {
@@ -2473,16 +2671,16 @@ body.single-lesson .video iframe {
 
 #search-area form input {
   background: none;
-  color: #fff;
+  color: #1f1f1f;
   border: 0;
   border-radius: 0;
-  padding-bottom: 0.2em;
   font-size: 50px;
   font-weight: 100;
   width: 100%;
   -webkit-box-shadow: none;
   box-shadow: none;
   outline: none;
+  padding-left: 0.2em;
 }
 
 #search-area form input:focus {
@@ -2491,22 +2689,22 @@ body.single-lesson .video iframe {
 
 #search-area form input::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(0, 0, 0, 0.4);
 }
 
 #search-area form input::-moz-placeholder {
   /* Firefox 19+ */
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(0, 0, 0, 0.4);
 }
 
 #search-area form input:-ms-input-placeholder {
   /* IE 10+ */
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(0, 0, 0, 0.4);
 }
 
 #search-area form input:-moz-placeholder {
   /* Firefox 18- */
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(0, 0, 0, 0.4);
 }
 
 @media (max-width: 770px) {
@@ -2543,9 +2741,11 @@ body.single-lesson .video iframe {
 }
 
 #colophon {
-  background: #f7f7f7;
+  background: #fff;
+  border-top: 4px solid rgba(0, 0, 0, 0.05);
   padding: 2em 0;
   font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 #colophon .sidebar * {
@@ -2553,8 +2753,24 @@ body.single-lesson .video iframe {
 }
 
 #colophon .sidebar .widget-title {
-  font-size: 20px;
+  font-size: 16px;
   margin-bottom: 0.8em;
+  color: #1f1f1f;
+}
+
+#colophon .widget_nav_menu li {
+  list-style-type: none;
+}
+
+#colophon .widget_nav_menu a {
+  color: rgba(0, 0, 0, 0.6);
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  line-height: 2.5;
+}
+
+#colophon .widget_nav_menu a:hover {
+  color: #0e6eff;
 }
 
 #colophon #boxfoot {
@@ -2669,8 +2885,8 @@ a:hover, a:active {
   outline: 0;
 }
 
-.beflex-box, .wp-block-sensei-lms-lesson-actions, .sensei-pagination, .wp-block-sensei-lms-course-outline-module, #my-courses .col2-set .col-2 {
-  background: rgba(152, 166, 195, 0.1);
+.beflex-box, .wp-block-sensei-lms-lesson-actions, .sensei-pagination, .wp-block-sensei-lms-course-outline-module, #my-courses .col2-set .col-2, #respond {
+  background: #f4f6f9;
   border: 1px solid rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
@@ -3054,6 +3270,11 @@ ul.wp-block-gallery .blocks-gallery-item a:hover::after {
   margin-left: 3em;
 }
 
+#comments .comments-title {
+  font-size: 16px;
+  margin-top: 4em;
+}
+
 #comments .comment-list .comment-body {
   position: relative;
   margin: 1em 0;
@@ -3072,10 +3293,11 @@ ul.wp-block-gallery .blocks-gallery-item a:hover::after {
 
 #comments .comment-list .comment-author img {
   border-radius: 50%;
+  vertical-align: bottom;
 }
 
 #comments .comment-list .comment-author .fn {
-  font-size: 22.4px;
+  font-size: 16px;
   font-weight: 300;
 }
 
@@ -3086,6 +3308,22 @@ ul.wp-block-gallery .blocks-gallery-item a:hover::after {
 
 #comments .comment-list .comment-metadata .comment-edit-link {
   color: #0e6eff;
+}
+
+#respond {
+  margin: 1.5em 0;
+}
+
+#respond #reply-title {
+  margin: 0;
+}
+
+#respond .logged-in-as {
+  margin: 0;
+}
+
+#respond .form-submit {
+  margin-bottom: 0;
 }
 
 /*--------------------------------------------------------------
