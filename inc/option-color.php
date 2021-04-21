@@ -43,7 +43,8 @@ endif;
 	<?php endif; ?>
 
 	<?php if ( ! empty( $beflex_primary ) ) : ?>
-		.button.button-primary:not(.bordered), button, input[type="button"], input[type="reset"], input[type="submit"] {
+		.button.button-primary:not(.bordered), button, input[type="button"], input[type="reset"], input[type="submit"],
+		.course-container .course .course-content .entry-actions .sensei-certificate-link {
 			background: <?php echo esc_html( $beflex_primary ); ?>;
 			border-color: <?php echo esc_html( $beflex_primary ); ?>;
 		}
@@ -55,8 +56,8 @@ endif;
 			box-shadow: inset 0 -2.6em <?php echo esc_html( $beflex_primary ); ?>;
 		}
 		#comments .comment-list .comment-reply-link {
+			background: <?php echo esc_html( $beflex_primary ); ?>;
 			border-color: <?php echo esc_html( $beflex_primary ); ?>;
-			color: <?php echo esc_html( $beflex_primary ); ?>;
 		}
 		#comments .comment-list .comment-reply-link:hover {
 			box-shadow: inset 0 -2.6em <?php echo esc_html( $beflex_primary ); ?>;
@@ -100,9 +101,6 @@ endif;
 			border: 2px solid <?php echo esc_html( $beflex_primary ); ?> !important;
 			box-shadow: 0px 0px 0px 2px <?php echo esc_html( $beflex_primary ); ?> !important;
 		}
-		#burger-menu .navigation-overlay {
-			background: <?php echo esc_html( $beflex_primary ); ?>;
-		}
 		#masthead .site-tool > a.wps-action-mini-cart-opener .wps-numeration-cart {
 			background: <?php echo esc_html( $beflex_primary ); ?>;
 		}
@@ -116,9 +114,21 @@ endif;
 			border-left: 4px solid <?php echo esc_html( $beflex_primary ); ?>;
 		}
 
-	.course-container .course .course-content .entry-content .course-title a:hover {
-		color: <?php echo esc_html( $beflex_primary ); ?>;
-	}
+		.course-container .course .course-content .entry-content .course-title a:hover {
+			color: <?php echo esc_html( $beflex_primary ); ?>;
+		}
+		#colophon .widget_nav_menu a:hover {
+			color: <?php echo esc_html( $beflex_primary ); ?>;
+		}
+		body.sensei_message .message-container .sensei_message h2 a:hover {
+			color: <?php echo esc_html( $beflex_primary ); ?>;
+		}
+		body.single-sensei_message #header-page h1 a:hover {
+			color: <?php echo esc_html( $beflex_primary ); ?>;
+		}
+		.beflex-call-to-action .call-to-container .call-to-block.-mode-box .block-categories .block-categorie {
+			color: <?php echo esc_html( $beflex_primary ); ?>;
+		}
 	<?php endif; ?>
 
 </style>

@@ -9,6 +9,10 @@
 
       .entry {
         display: flex;
+
+        @media ( max-width: $media__medium ) {
+          flex-direction: column;
+        }
       }
 
       .entry-thumbnail {
@@ -21,6 +25,10 @@
           width: 100%;
           height: auto;
           margin-right: 1em;
+
+          @media ( max-width: $media__medium ) {
+            min-width: 0;
+          }
         }
       }
 
@@ -61,11 +69,15 @@
       .entry-actions {
         .sensei-results-links {
           text-align: right;
+
+          @media ( max-width: $media__medium ) {
+            text-align: left;
+          }
         }
         .button {
           float: none;
           @extend .button;
-          margin: 0 0 0.5em 0;
+          margin: 0 0 0.5em 0.5em;
         }
         .sensei-certificate-link {
           @extend .button.button-primary;

@@ -1,4 +1,4 @@
-@media ( max-width: $media__medium ) {
+@media ( max-width: $media__large-s ) {
 	.active-burger #burger-menu {
 		opacity: 1;
 		pointer-events: all;
@@ -7,7 +7,7 @@
 }
 
 
-@media ( min-width: $media__medium ) {
+@media ( min-width: $media__large-s ) {
 	.site-navigation {
 		.menu-toggle {
 			display: none;

@@ -9,12 +9,12 @@
 	height: 100%;
 	left: 0;
 	top: 0;
-	padding-top: 4em;
 	z-index: 9999;
 	@include transition();
 	transform: scale(1.1);
+  backdrop-filter: blur(10px);
 
-	.navigation-overlay {
+  .navigation-overlay {
 		display: block;
 		content: '';
 		position: fixed;
@@ -22,8 +22,8 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		opacity: 0.9;
-		background: $color__primary;
+		opacity: 0.7;
+		background: #fff;
 		z-index: -1;
 	}
 	.burger-container {
@@ -33,7 +33,7 @@
 		left: 0;
 		top: 0;
 		overflow-y: auto;
-
+    display: flex;
 	}
 	.close-burger {
 		position: absolute;
@@ -41,26 +41,29 @@
 		right: 1em;
 		font-size: 28px;
 		@include transition();
-		color: rgba(255,255,255,1);
+    color: $color__title-main;
 		&:hover {
-			color: rgba(255,255,255,0.6);
+			color: lighten($color__title-main, 20%);
 			cursor: pointer;
 		}
 	}
+  .burger-padder {
+    width: 100%;
+    margin: auto 0;
+    padding: 2em;
+    text-align: center;
+  }
 
-	.menu {
-		padding: 2em;
-	}
 	ul, li {
 		margin: 0;
 		padding: 0;
 		list-style-type: none;
 	}
 	.menu li a {
-		color: rgba(255,255,255,1);
+    color: $color__title-main;
 		@include transition();
 		&:hover {
-			color: rgba(255,255,255,0.4);
+      color: lighten($color__title-main, 20%);
 		}
 	}
 
@@ -70,7 +73,6 @@
 		> a {
 			@include font-size(1.5);
 			font-weight: 700;
-			text-transform: uppercase;
 		}
 	}
 
@@ -97,4 +99,11 @@
 		padding-left: 1em;
 		border-left: 1px dotted rgba(255,255,255,0.8);
 	}
+
+  .site-tool {
+    .sensei-links {
+      padding-top: 1em;
+      justify-content: center;
+    }
+  }
 }

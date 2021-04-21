@@ -65,7 +65,7 @@
 			else :
 				the_excerpt();
 				?>
-				<a href="<?php the_permalink(); ?>" class="button button-primary"><?php esc_html_e( 'Lire la suite', 'beflex' ); ?></a>
+				<a href="<?php the_permalink(); ?>" class="button button-primary"><?php esc_html_e( 'Read more', 'beflex' ); ?></a>
 				<?php
 			endif;
 			?>

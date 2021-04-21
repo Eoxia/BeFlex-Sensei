@@ -67,11 +67,7 @@
   padding-left: 16%;
   padding-right: 16%;
 
-  @media ( max-width: $media__medium ) {
-    padding-left: 10%;
-    padding-right: 10%;
-  }
-  @media ( max-width: $media__small ) {
+  @media ( max-width: $media__large ) {
     padding-left: 4%;
     padding-right: 4%;
   }
@@ -80,10 +76,7 @@
 @mixin site-width-left() {
   padding-left: 16%;
 
-  @media ( max-width: $media__medium ) {
-    padding-left: 10%;
-  }
-  @media ( max-width: $media__small ) {
+  @media ( max-width: $media__large ) {
     padding-left: 4%;
   }
 }
@@ -91,10 +84,7 @@
 @mixin site-width-right() {
   padding-right: 16%;
 
-  @media ( max-width: $media__medium ) {
-    padding-right: 10%;
-  }
-  @media ( max-width: $media__small ) {
+  @media ( max-width: $media__large ) {
     padding-right: 4%;
   }
 }

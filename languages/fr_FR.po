@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Beflex v3\n"
-"POT-Creation-Date: 2019-09-04 15:02+0200\n"
-"PO-Revision-Date: 2019-09-04 15:02+0200\n"
+"POT-Creation-Date: 2021-04-21 16:24+0200\n"
+"PO-Revision-Date: 2021-04-21 16:26+0200\n"
 "Last-Translator: \n"
 "Language-Team: Eoxia\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.3\n"
+"X-Generator: Poedit 2.4.2\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -34,7 +34,7 @@ msgstr ""
 "Il semblerait que rien n'ai été trouvé. Peut-être une recherche pourrait "
 "aider ? "
 
-#: comments.php:35
+#: comments.php:36
 #, php-format
 msgctxt "comments title"
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
@@ -42,111 +42,103 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] "%1$s commentaire sur &ldquo;%2$s&rdquo;"
 msgstr[1] "%1$s commentaires sur &ldquo;%2$s&rdquo;"
 
-#: comments.php:44 comments.php:65
+#: comments.php:45 comments.php:70
 msgid "Comment navigation"
 msgstr "Navigation des commentaires"
 
-#: comments.php:47 comments.php:68
+#: comments.php:48 comments.php:73
 msgid "Older Comments"
 msgstr "Anciens commentaires"
 
-#: comments.php:48 comments.php:69
+#: comments.php:49 comments.php:74
 msgid "Newer Comments"
 msgstr "Nouveaux commentaires"
 
-#: comments.php:81
+#: comments.php:87
 msgid "Comments are closed."
 msgstr "Les commentaires sont fermés."
 
-#: footer.php:80 header.php:66
+#: footer.php:66 header.php:70
 msgid "Please set your navigation as \"Main navigation\" to make it appear"
 msgstr ""
 "Veuillez définir un menu en \"Navigation principale\" pour qu'il apparaisse "
 "ici"
 
-#: functions.php:63
+#: functions.php:64
 msgid "Main Navigation"
 msgstr "Navigation principale"
 
-#: functions.php:104
+#: functions.php:111
 msgid "Sidebar Blog"
 msgstr "Blog"
 
-#: functions.php:106
+#: functions.php:113
 msgid "Display on blog / post / archive pages."
 msgstr "S'affiche sur les pages Blog / Article / Archives."
 
-#: functions.php:114
+#: functions.php:123
 msgid "Shop"
 msgstr "Boutique"
 
-#: functions.php:116
+#: functions.php:125
 msgid "Display on shop pages"
 msgstr "S'affiche sur les pages de la boutique"
 
-#: functions.php:124
+#: functions.php:136
+msgid "Sensei LMS (Lessons)"
+msgstr "Sensei LMS (leçons)"
+
+#: functions.php:138
+msgid "Display in Sensei lesson/quizz pages"
+msgstr "S'affiche sur les pages leçon/quizz de Sensei"
+
+#: functions.php:148
 msgid "Boxfoot 1"
 msgstr "Boxfoot 1"
 
-#: functions.php:126
+#: functions.php:150
 msgid "1 Boxfoot. Boxfoot display before Footer"
 msgstr "1ère zone du boxfoot. Le boxfoot s'affiche au dessus du footer"
 
-#: functions.php:133
+#: functions.php:159
 msgid "Boxfoot 2"
 msgstr "Boxfoot 2"
 
-#: functions.php:135
+#: functions.php:161
 msgid "2 Boxfoot. Boxfoot display before Footer"
 msgstr "2ème zone du boxfoot. Le boxfoot s'affiche au dessus du footer"
 
-#: functions.php:142
+#: functions.php:170
 msgid "Boxfoot 3"
 msgstr "Boxfoot 3"
 
-#: functions.php:144
+#: functions.php:172
 msgid "3 Boxfoot. Boxfoot display before Footer"
 msgstr "3ème zone du boxfoot. Le boxfoot s'affiche au dessus du footer"
-
-#: functions.php:151
-msgid "Boxfoot 4"
-msgstr "Boxfoot 4"
-
-#: functions.php:153
-msgid "4 Boxfoot. Boxfoot display before Footer"
-msgstr "4ème zone du boxfoot. Le boxfoot s'affiche au dessus du footer"
-
-#: functions.php:160
-msgid "Footer"
-msgstr "Footer"
-
-#: functions.php:162
-msgid "Display on right in Footer"
-msgstr "S'affiche à droite du footer"
 
 #: header.php:28
 msgid "Skip to content"
 msgstr "Passer au contenu"
 
-#: header.php:70
+#: header.php:74
 msgid "Navigation"
 msgstr "Navigation"
 
-#: header.php:96
+#: header.php:94
 msgctxt "placeholder"
 msgid "Enter a Keyword"
 msgstr "Entrer un mot clé"
 
-#: header.php:98
+#: header.php:96
 msgctxt "label"
 msgid "Search for:"
 msgstr "Recherche pour:"
 
-#: inc/customizer.php:29
+#: inc/customizer.php:35
 msgid "Primary color"
 msgstr "Couleur principale"
 
-#: inc/general-functions.php:109
+#: inc/general-functions.php:127
 #, php-format
 msgid ""
 "<div class=\"notification %1$s\"> <i class=\"notification-icon fas fa-"
@@ -155,65 +147,95 @@ msgstr ""
 "<div class=\"notification %1$s\"> <i class=\"notification-icon fas fa-"
 "exclamation-triangle\"></i> %2$s%3$s</div>"
 
-#: inc/template-tags.php:38
+#: inc/template-tags.php:41
 #, php-format
 msgctxt "post date"
 msgid "The %s"
 msgstr "Le %s"
 
-#: inc/template-tags.php:44
+#: inc/template-tags.php:47
 #, php-format
 msgctxt "post author"
 msgid "by %s"
 msgstr "par %s"
 
-#: inc/template-tags.php:65
+#: inc/template-tags.php:68
 msgid ", "
 msgstr ", "
 
-#: inc/template-tags.php:68
+#: inc/template-tags.php:71
 #, php-format
 msgid "Posted in %1$s"
 msgstr "Posté dans %1$s"
 
-#: inc/template-tags.php:72
+#: inc/template-tags.php:75
 msgctxt "list item separator"
 msgid ", "
 msgstr ", "
 
-#: inc/template-tags.php:75
+#: inc/template-tags.php:78
 #, php-format
 msgid "Tagged %1$s"
 msgstr "Tagué %1$s"
 
-#: inc/template-tags.php:85
+#: inc/template-tags.php:88
 #, php-format
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr "Poster un commentaire<span class=\"screen-reader-text\"> sur %s</span>"
 
-#: inc/template-tags.php:102 inc/template-tags.php:126
-#: template-parts/content-page.php:36
+#: inc/template-tags.php:105 inc/template-tags.php:129
+#: template-parts/content-page.php:34
 #, php-format
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr "Modifier <span class=\"screen-reader-text\">%s</span>"
 
-#: search.php:23
+#: modules/call-action/course.php:58
+msgid "Lire la suite"
+msgstr ""
+
+#: search.php:24
 #, php-format
 msgid "Search Results for: %s"
 msgstr "Recherche pour: %s"
+
+#: sensei/functions.php:255
+msgid "Show course"
+msgstr "Aperçu du cours"
+
+#: sensei/single-course-meta.php:33 sensei/single-lesson-meta.php:38
+#, php-format
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d minute"
+msgstr[1] "%d minutes"
+
+#: sensei/single-course-meta.php:37
+#, php-format
+msgid "%d lesson"
+msgid_plural "%d lessons"
+msgstr[0] "%d leçon"
+msgstr[1] "%d leçons"
+
+#: sensei/single-lesson-backlink.php:24
+msgid "Back to course"
+msgstr "Retour au cours"
+
+#: sensei/single-message-backlink.php:17
+msgid "Back to messages"
+msgstr "Retour aux messages"
 
 #: template-parts/content-none.php:17
 msgid "Nothing Found"
 msgstr "Rien n'a été trouvé"
 
-#: template-parts/content-none.php:28
+#: template-parts/content-none.php:29
 #, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 "Prêt à publier votre premier article ? <a href=\"%1$s\">Commencez ici</a>."
 
-#: template-parts/content-none.php:41
+#: template-parts/content-none.php:43
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
@@ -221,7 +243,7 @@ msgstr ""
 "Désolé, aucun résultat ne correspond à vos critères de recherche. Veuillez "
 "essayer avec différents mots-clés."
 
-#: template-parts/content-none.php:47
+#: template-parts/content-none.php:49
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
@@ -229,13 +251,49 @@ msgstr ""
 "Il semblerait que nous ne trouvons pas ce que vous cherchez. Peut-être une "
 "recherche pourrait aider."
 
-#: template-parts/content-page.php:23 template-parts/content.php:57
+#: template-parts/content-page.php:20 template-parts/content.php:61
 msgid "Pages:"
 msgstr "Pages:"
 
-#: template-parts/content.php:62
-msgid "Lire la suite"
-msgstr ""
+#: template-parts/content.php:68
+msgid "Read more"
+msgstr "Lire la suite"
+
+#: template-parts/navigation-sensei-login.php:19
+msgid "My courses"
+msgstr "Mes cours"
+
+#: template-parts/navigation-sensei-login.php:21
+msgid "Logout"
+msgstr "Deconnexion"
+
+#: template-parts/navigation-sensei-login.php:26
+msgid "Login"
+msgstr "Se connecter"
+
+#: template-parts/navigation-sensei-login.php:27
+msgid "Sign in"
+msgstr "S'enregistrer"
+
+#: template-parts/page-header.php:14
+msgid "404 error"
+msgstr "Erreur 404"
+
+#: template-parts/page-header.php:16
+msgid "Search for :"
+msgstr "Recherche pour :"
+
+#~ msgid "Boxfoot 4"
+#~ msgstr "Boxfoot 4"
+
+#~ msgid "4 Boxfoot. Boxfoot display before Footer"
+#~ msgstr "4ème zone du boxfoot. Le boxfoot s'affiche au dessus du footer"
+
+#~ msgid "Footer"
+#~ msgstr "Footer"
+
+#~ msgid "Display on right in Footer"
+#~ msgstr "S'affiche à droite du footer"
 
 #~ msgid "Category's sub-category list"
 #~ msgstr "Liste des sous-catégories de la catégorie"

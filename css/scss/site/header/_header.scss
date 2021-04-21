@@ -13,11 +13,7 @@
     width: calc(100% - 32%);
     left: 16%;
 
-    @media ( max-width: $media__medium ) {
-      width: calc(100% - 20%);
-      left: 10%;
-    }
-    @media ( max-width: $media__small ) {
+    @media ( max-width: $media__large ) {
       width: calc(100% - 8%);
       left: 4%;
     }
@@ -28,12 +24,12 @@
 		flex-wrap: nowrap;
 	}
 	.site-branding {
-		width: 40%;
+		width: 100%;
 	}
 	.site-navigation {
 		width: 100%;
 	}
-	@media ( max-width: $media__medium ) {
+	@media ( max-width: $media__large-s ) {
 		.site-branding {
 			width: 50%;
 		}
@@ -42,10 +38,10 @@
 			width: auto;
 		}
 	}
-	@media ( max-width: $media__medium ) {
+	@media ( max-width: $media__large-s ) {
 		padding: 0;
 	}
-	@media ( max-width: $media__small ) {
+	@media ( max-width: $media__large-s ) {
 		.site-branding {
 			width: 70%;
 
@@ -110,6 +106,10 @@
 	flex-wrap: nowrap;
 	margin: auto 0;
 
+  @media ( max-width: $media__large-s ) {
+    padding: 0;
+  }
+
 	> a {
 		line-height: 1;
 		@include transition();
@@ -146,28 +146,35 @@
   .sensei-links {
     border-left: 1px solid rgba(0,0,0,0.2);
     padding-left: 0.2em;
-    display: flex;
-    margin: auto 0 auto 0.2em;
 
-    a {
-      font-size: 13px;
-      color: $color__text-main;
-      white-space: nowrap;
-      padding: 0.5em;
-      @include transition;
+    @media ( max-width: $media__large-s ) {
+      display: none;
+    }
+  }
+}
 
-      &:hover {
-        color: lighten($color__text-main, 40%);
-      }
+.site-tool .sensei-links {
+  display: flex;
+  margin: auto 0 auto 0.2em;
 
-      &:last-child {
-        padding-left: 0.2em;
+  a {
+    font-size: 13px;
+    color: $color__text-main;
+    white-space: nowrap;
+    padding: 0.5em;
+    @include transition;
 
-        &::before {
-          display: inline-block;
-          content: '•';
-          letter-spacing: 5px;
-        }
+    &:hover {
+      color: lighten($color__text-main, 40%);
+    }
+
+    &:last-child {
+      padding-left: 0.2em;
+
+      &::before {
+        display: inline-block;
+        content: '•';
+        letter-spacing: 5px;
       }
     }
   }

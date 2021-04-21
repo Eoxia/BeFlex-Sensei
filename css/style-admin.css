@@ -41,6 +41,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 --------------------------------------------------------------*/
   /** Garde seulement la marge du site-width global */
   /** Ajoute une marge en haut de la page si la navigation est en absolute */
+  /** Correctifs si pas de titre affichés pour les pages */
   /*--------------------------------------------------------------
 ## Infinite scroll
 --------------------------------------------------------------*/
@@ -68,6 +69,9 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 ## Pagination
 --------------------------------------------------------------*/
   /*--------------------------------------------------------------
+## Sensei
+--------------------------------------------------------------*/
+  /*--------------------------------------------------------------
 	# Theme
 	--------------------------------------------------------------*/
   /*--------------------------------------------------------------
@@ -76,6 +80,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   /** Site navigation */
   /** Site tool */
   /* Sitcky Header */
+  /** No title header */
   /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
@@ -353,10 +358,11 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 .acf-block-preview select,
 .acf-block-preview optgroup,
 .acf-block-preview textarea {
-  color: #333333;
-  font-family: "Open Sans";
+  color: #2b2b2b;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.8;
+  font-weight: 400;
 }
 
 .acf-block-preview h1, .acf-block-preview h2, .acf-block-preview h3, .acf-block-preview h4, .acf-block-preview h5, .acf-block-preview h6 {
@@ -365,30 +371,104 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   font-weight: 900;
   text-transform: none;
   word-wrap: break-word;
+  color: #1f1f1f;
+  line-height: 1.2;
 }
 
 .acf-block-preview h1 {
-  font-size: 44.8px;
+  font-size: 30px;
+}
+
+@media screen and (min-width: 480px) {
+  .acf-block-preview h1 {
+    font-size: calc(30px + 10 * ((100vw - 480px) / 720));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .acf-block-preview h1 {
+    font-size: 40px;
+  }
 }
 
 .acf-block-preview h2 {
-  font-size: 36.8px;
+  font-size: 25px;
+}
+
+@media screen and (min-width: 480px) {
+  .acf-block-preview h2 {
+    font-size: calc(25px + 5 * ((100vw - 480px) / 720));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .acf-block-preview h2 {
+    font-size: 30px;
+  }
 }
 
 .acf-block-preview h3 {
-  font-size: 32px;
+  font-size: 20px;
+}
+
+@media screen and (min-width: 480px) {
+  .acf-block-preview h3 {
+    font-size: calc(20px + 5 * ((100vw - 480px) / 720));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .acf-block-preview h3 {
+    font-size: 25px;
+  }
 }
 
 .acf-block-preview h4 {
-  font-size: 27.2px;
+  font-size: 15px;
+}
+
+@media screen and (min-width: 480px) {
+  .acf-block-preview h4 {
+    font-size: calc(15px + 5 * ((100vw - 480px) / 720));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .acf-block-preview h4 {
+    font-size: 20px;
+  }
 }
 
 .acf-block-preview h5 {
-  font-size: 22.4px;
+  font-size: 13px;
+}
+
+@media screen and (min-width: 480px) {
+  .acf-block-preview h5 {
+    font-size: calc(13px + 3 * ((100vw - 480px) / 720));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .acf-block-preview h5 {
+    font-size: 16px;
+  }
 }
 
 .acf-block-preview h6 {
-  font-size: 17.6px;
+  font-size: 11px;
+}
+
+@media screen and (min-width: 480px) {
+  .acf-block-preview h6 {
+    font-size: calc(11px + 3 * ((100vw - 480px) / 720));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .acf-block-preview h6 {
+    font-size: 14px;
+  }
 }
 
 .acf-block-preview p {
@@ -442,7 +522,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   color: inherit;
 }
 
-.acf-block-preview .button, .acf-block-preview #comments .comment-list .comment-reply-link, .acf-block-preview button,
+.acf-block-preview .button, .acf-block-preview .course-container .course .course-content .entry-actions .button, .acf-block-preview #learner-info .my-messages-link, .acf-block-preview #learner-info .course .sensei-results-links .button, .acf-block-preview #sensei-user-courses .my-messages-link, .acf-block-preview #comments .comment-list .comment-reply-link, .acf-block-preview button,
 .acf-block-preview input[type="button"],
 .acf-block-preview input[type="reset"],
 .acf-block-preview input[type="submit"] {
@@ -456,7 +536,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   line-height: 1.4;
   vertical-align: middle;
   height: auto;
-  border-radius: 0;
+  border-radius: 4px;
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
   position: relative;
@@ -465,22 +545,22 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   font-size: 12px;
   text-transform: uppercase;
   font-weight: 700;
-  background: #333333;
-  border-color: #333333;
+  background: #2b2b2b;
+  border-color: #2b2b2b;
   color: #fff;
 }
 
-.acf-block-preview .button:focus, .acf-block-preview #comments .comment-list .comment-reply-link:focus, .acf-block-preview button:focus,
+.acf-block-preview .button:focus, .acf-block-preview .course-container .course .course-content .entry-actions .button:focus, .acf-block-preview #learner-info .my-messages-link:focus, .acf-block-preview #learner-info .course .sensei-results-links .button:focus, .acf-block-preview #sensei-user-courses .my-messages-link:focus, .acf-block-preview #comments .comment-list .comment-reply-link:focus, .acf-block-preview button:focus,
 .acf-block-preview input:focus[type="button"],
 .acf-block-preview input:focus[type="reset"],
-.acf-block-preview input:focus[type="submit"], .acf-block-preview .button:visited, .acf-block-preview #comments .comment-list .comment-reply-link:visited, .acf-block-preview button:visited,
+.acf-block-preview input:focus[type="submit"], .acf-block-preview .button:visited, .acf-block-preview .course-container .course .course-content .entry-actions .button:visited, .acf-block-preview #learner-info .my-messages-link:visited, .acf-block-preview #learner-info .course .sensei-results-links .button:visited, .acf-block-preview #sensei-user-courses .my-messages-link:visited, .acf-block-preview #comments .comment-list .comment-reply-link:visited, .acf-block-preview button:visited,
 .acf-block-preview input:visited[type="button"],
 .acf-block-preview input:visited[type="reset"],
 .acf-block-preview input:visited[type="submit"] {
   color: #fff;
 }
 
-.acf-block-preview .button:hover, .acf-block-preview #comments .comment-list .comment-reply-link:hover, .acf-block-preview button:hover,
+.acf-block-preview .button:hover, .acf-block-preview .course-container .course .course-content .entry-actions .button:hover, .acf-block-preview #learner-info .my-messages-link:hover, .acf-block-preview #learner-info .course .sensei-results-links .button:hover, .acf-block-preview #sensei-user-courses .my-messages-link:hover, .acf-block-preview #comments .comment-list .comment-reply-link:hover, .acf-block-preview button:hover,
 .acf-block-preview input:hover[type="button"],
 .acf-block-preview input:hover[type="reset"],
 .acf-block-preview input:hover[type="submit"] {
@@ -490,14 +570,20 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   cursor: pointer;
 }
 
-.acf-block-preview .button:focus, .acf-block-preview #comments .comment-list .comment-reply-link:focus, .acf-block-preview button:focus,
+.acf-block-preview .button:focus, .acf-block-preview .course-container .course .course-content .entry-actions .button:focus, .acf-block-preview #learner-info .my-messages-link:focus, .acf-block-preview #learner-info .course .sensei-results-links .button:focus, .acf-block-preview #sensei-user-courses .my-messages-link:focus, .acf-block-preview #comments .comment-list .comment-reply-link:focus, .acf-block-preview button:focus,
 .acf-block-preview input:focus[type="button"],
 .acf-block-preview input:focus[type="reset"],
 .acf-block-preview input:focus[type="submit"] {
   outline: none;
 }
 
-.acf-block-preview .button.button-primary, .acf-block-preview #comments .comment-list .button-primary.comment-reply-link, .acf-block-preview button,
+.acf-block-preview .button.button-primary, .acf-block-preview .course-container .course .course-content .entry-actions .button-primary.button, .acf-block-preview .course-container .course .course-content .entry-actions .sensei-certificate-link, .acf-block-preview .course-container .course .course-content .entry-actions button,
+.acf-block-preview .course-container .course .course-content .entry-actions input[type="button"],
+.acf-block-preview .course-container .course .course-content .entry-actions input[type="reset"],
+.acf-block-preview .course-container .course .course-content .entry-actions input[type="submit"], .acf-block-preview #learner-info .button-primary.my-messages-link, .acf-block-preview #learner-info .course .sensei-results-links .button-primary.button, .acf-block-preview #learner-info .course-container .course .sensei-results-links .course-content .entry-actions .sensei-certificate-link, .acf-block-preview .course-container #learner-info .course .sensei-results-links .course-content .entry-actions .sensei-certificate-link, .acf-block-preview #learner-info .course-container .course .course-content .entry-actions .sensei-results-links .sensei-certificate-link, .acf-block-preview .course-container #learner-info .course .course-content .entry-actions .sensei-results-links .sensei-certificate-link, .acf-block-preview #learner-info .course .sensei-results-links .button.sensei-certificate-link, .acf-block-preview #learner-info .course .sensei-results-links #comments .comment-list .comment-reply-link, .acf-block-preview #comments .comment-list #learner-info .course .sensei-results-links .comment-reply-link, .acf-block-preview #learner-info .course .sensei-results-links button,
+.acf-block-preview #learner-info .course .sensei-results-links input[type="button"],
+.acf-block-preview #learner-info .course .sensei-results-links input[type="reset"],
+.acf-block-preview #learner-info .course .sensei-results-links input[type="submit"], .acf-block-preview #sensei-user-courses .button-primary.my-messages-link, .acf-block-preview #comments .comment-list .comment-reply-link, .acf-block-preview button,
 .acf-block-preview input[type="button"],
 .acf-block-preview input[type="reset"],
 .acf-block-preview input[type="submit"] {
@@ -506,25 +592,25 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   color: #fff;
 }
 
-.acf-block-preview .button.button-light, .acf-block-preview #comments .comment-list .button-light.comment-reply-link, .acf-block-preview button.button-light,
+.acf-block-preview .button.button-light, .acf-block-preview .course-container .course .course-content .entry-actions .button-light.button, .acf-block-preview #learner-info .button-light.my-messages-link, .acf-block-preview #learner-info .course .sensei-results-links .button-light.button, .acf-block-preview #sensei-user-courses .button-light.my-messages-link, .acf-block-preview #comments .comment-list .button-light.comment-reply-link, .acf-block-preview button.button-light,
 .acf-block-preview input.button-light[type="button"],
 .acf-block-preview input.button-light[type="reset"],
 .acf-block-preview input.button-light[type="submit"] {
   background: #fff;
   border-color: #fff;
-  color: #333333;
+  color: #2b2b2b;
 }
 
-.acf-block-preview .button.button-light:hover, .acf-block-preview #comments .comment-list .button-light.comment-reply-link:hover, .acf-block-preview button.button-light:hover,
+.acf-block-preview .button.button-light:hover, .acf-block-preview .course-container .course .course-content .entry-actions .button-light.button:hover, .acf-block-preview #learner-info .button-light.my-messages-link:hover, .acf-block-preview #learner-info .course .sensei-results-links .button-light.button:hover, .acf-block-preview #sensei-user-courses .button-light.my-messages-link:hover, .acf-block-preview #comments .comment-list .button-light.comment-reply-link:hover, .acf-block-preview button.button-light:hover,
 .acf-block-preview input.button-light:hover[type="button"],
 .acf-block-preview input.button-light:hover[type="reset"],
 .acf-block-preview input.button-light:hover[type="submit"] {
   -webkit-box-shadow: inset 0 -2.6em rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 -2.6em rgba(0, 0, 0, 0.1);
-  color: #333333;
+  color: #2b2b2b;
 }
 
-.acf-block-preview .button.button-dark, .acf-block-preview #comments .comment-list .button-dark.comment-reply-link, .acf-block-preview button.button-dark,
+.acf-block-preview .button.button-dark, .acf-block-preview .course-container .course .course-content .entry-actions .button-dark.button, .acf-block-preview #learner-info .button-dark.my-messages-link, .acf-block-preview #learner-info .course .sensei-results-links .button-dark.button, .acf-block-preview #sensei-user-courses .button-dark.my-messages-link, .acf-block-preview #comments .comment-list .button-dark.comment-reply-link, .acf-block-preview button.button-dark,
 .acf-block-preview input.button-dark[type="button"],
 .acf-block-preview input.button-dark[type="reset"],
 .acf-block-preview input.button-dark[type="submit"] {
@@ -532,7 +618,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   border-color: #333333;
 }
 
-.acf-block-preview .button.bordered, .acf-block-preview #comments .comment-list .comment-reply-link, .acf-block-preview button.bordered,
+.acf-block-preview .button.bordered, .acf-block-preview .course-container .course .course-content .entry-actions .bordered.button, .acf-block-preview #learner-info .bordered.my-messages-link, .acf-block-preview #learner-info .course .sensei-results-links .bordered.button, .acf-block-preview #sensei-user-courses .bordered.my-messages-link, .acf-block-preview #comments .comment-list .bordered.comment-reply-link, .acf-block-preview button.bordered,
 .acf-block-preview input.bordered[type="button"],
 .acf-block-preview input.bordered[type="reset"],
 .acf-block-preview input.bordered[type="submit"] {
@@ -542,7 +628,13 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   color: #0e6eff;
 }
 
-.acf-block-preview .button.bordered.button-primary, .acf-block-preview #comments .comment-list .comment-reply-link, .acf-block-preview button.bordered,
+.acf-block-preview .button.bordered.button-primary, .acf-block-preview .course-container .course .course-content .entry-actions .bordered.button-primary.button, .acf-block-preview .course-container .course .course-content .entry-actions .bordered.sensei-certificate-link, .acf-block-preview .course-container .course .course-content .entry-actions button.bordered,
+.acf-block-preview .course-container .course .course-content .entry-actions input.bordered[type="button"],
+.acf-block-preview .course-container .course .course-content .entry-actions input.bordered[type="reset"],
+.acf-block-preview .course-container .course .course-content .entry-actions input.bordered[type="submit"], .acf-block-preview #learner-info .bordered.button-primary.my-messages-link, .acf-block-preview #learner-info .course .sensei-results-links .bordered.button-primary.button, .acf-block-preview #learner-info .course-container .course .sensei-results-links .course-content .entry-actions .bordered.sensei-certificate-link, .acf-block-preview .course-container #learner-info .course .sensei-results-links .course-content .entry-actions .bordered.sensei-certificate-link, .acf-block-preview #learner-info .course-container .course .course-content .entry-actions .sensei-results-links .bordered.sensei-certificate-link, .acf-block-preview .course-container #learner-info .course .course-content .entry-actions .sensei-results-links .bordered.sensei-certificate-link, .acf-block-preview #learner-info .course .sensei-results-links .bordered.button.sensei-certificate-link, .acf-block-preview #learner-info .course .sensei-results-links button.bordered,
+.acf-block-preview #learner-info .course .sensei-results-links input.bordered[type="button"],
+.acf-block-preview #learner-info .course .sensei-results-links input.bordered[type="reset"],
+.acf-block-preview #learner-info .course .sensei-results-links input.bordered[type="submit"], .acf-block-preview #sensei-user-courses .bordered.button-primary.my-messages-link, .acf-block-preview #comments .comment-list .bordered.comment-reply-link, .acf-block-preview button.bordered,
 .acf-block-preview input.bordered[type="button"],
 .acf-block-preview input.bordered[type="reset"],
 .acf-block-preview input.bordered[type="submit"] {
@@ -550,7 +642,13 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   color: #0e6eff;
 }
 
-.acf-block-preview .button.bordered.button-primary:hover, .acf-block-preview #comments .comment-list .comment-reply-link:hover, .acf-block-preview button.bordered:hover,
+.acf-block-preview .button.bordered.button-primary:hover, .acf-block-preview .course-container .course .course-content .entry-actions .bordered.button-primary.button:hover, .acf-block-preview .course-container .course .course-content .entry-actions .bordered.sensei-certificate-link:hover, .acf-block-preview .course-container .course .course-content .entry-actions button.bordered:hover,
+.acf-block-preview .course-container .course .course-content .entry-actions input.bordered:hover[type="button"],
+.acf-block-preview .course-container .course .course-content .entry-actions input.bordered:hover[type="reset"],
+.acf-block-preview .course-container .course .course-content .entry-actions input.bordered:hover[type="submit"], .acf-block-preview #learner-info .bordered.button-primary.my-messages-link:hover, .acf-block-preview #learner-info .course .sensei-results-links .bordered.button-primary.button:hover, .acf-block-preview #learner-info .course-container .course .sensei-results-links .course-content .entry-actions .bordered.sensei-certificate-link:hover, .acf-block-preview .course-container #learner-info .course .sensei-results-links .course-content .entry-actions .bordered.sensei-certificate-link:hover, .acf-block-preview #learner-info .course-container .course .course-content .entry-actions .sensei-results-links .bordered.sensei-certificate-link:hover, .acf-block-preview .course-container #learner-info .course .course-content .entry-actions .sensei-results-links .bordered.sensei-certificate-link:hover, .acf-block-preview #learner-info .course .sensei-results-links .bordered.button.sensei-certificate-link:hover, .acf-block-preview #learner-info .course .sensei-results-links button.bordered:hover,
+.acf-block-preview #learner-info .course .sensei-results-links input.bordered:hover[type="button"],
+.acf-block-preview #learner-info .course .sensei-results-links input.bordered:hover[type="reset"],
+.acf-block-preview #learner-info .course .sensei-results-links input.bordered:hover[type="submit"], .acf-block-preview #sensei-user-courses .bordered.button-primary.my-messages-link:hover, .acf-block-preview #comments .comment-list .bordered.comment-reply-link:hover, .acf-block-preview button.bordered:hover,
 .acf-block-preview input.bordered:hover[type="button"],
 .acf-block-preview input.bordered:hover[type="reset"],
 .acf-block-preview input.bordered:hover[type="submit"] {
@@ -559,7 +657,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   color: #fff;
 }
 
-.acf-block-preview .button.bordered.button-light, .acf-block-preview #comments .comment-list .button-light.comment-reply-link, .acf-block-preview button.bordered.button-light,
+.acf-block-preview .button.bordered.button-light, .acf-block-preview .course-container .course .course-content .entry-actions .bordered.button-light.button, .acf-block-preview #learner-info .bordered.button-light.my-messages-link, .acf-block-preview #learner-info .course .sensei-results-links .bordered.button-light.button, .acf-block-preview #sensei-user-courses .bordered.button-light.my-messages-link, .acf-block-preview #comments .comment-list .bordered.button-light.comment-reply-link, .acf-block-preview button.bordered.button-light,
 .acf-block-preview input.bordered.button-light[type="button"],
 .acf-block-preview input.bordered.button-light[type="reset"],
 .acf-block-preview input.bordered.button-light[type="submit"] {
@@ -567,16 +665,16 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   color: #fff;
 }
 
-.acf-block-preview .button.bordered.button-light:hover, .acf-block-preview #comments .comment-list .button-light.comment-reply-link:hover, .acf-block-preview button.bordered.button-light:hover,
+.acf-block-preview .button.bordered.button-light:hover, .acf-block-preview .course-container .course .course-content .entry-actions .bordered.button-light.button:hover, .acf-block-preview #learner-info .bordered.button-light.my-messages-link:hover, .acf-block-preview #learner-info .course .sensei-results-links .bordered.button-light.button:hover, .acf-block-preview #sensei-user-courses .bordered.button-light.my-messages-link:hover, .acf-block-preview #comments .comment-list .bordered.button-light.comment-reply-link:hover, .acf-block-preview button.bordered.button-light:hover,
 .acf-block-preview input.bordered.button-light:hover[type="button"],
 .acf-block-preview input.bordered.button-light:hover[type="reset"],
 .acf-block-preview input.bordered.button-light:hover[type="submit"] {
   -webkit-box-shadow: inset 0 -2.6em #fff;
   box-shadow: inset 0 -2.6em #fff;
-  color: #333333;
+  color: #2b2b2b;
 }
 
-.acf-block-preview .button.bordered.button-dark, .acf-block-preview #comments .comment-list .button-dark.comment-reply-link, .acf-block-preview button.bordered.button-dark,
+.acf-block-preview .button.bordered.button-dark, .acf-block-preview .course-container .course .course-content .entry-actions .bordered.button-dark.button, .acf-block-preview #learner-info .bordered.button-dark.my-messages-link, .acf-block-preview #learner-info .course .sensei-results-links .bordered.button-dark.button, .acf-block-preview #sensei-user-courses .bordered.button-dark.my-messages-link, .acf-block-preview #comments .comment-list .bordered.button-dark.comment-reply-link, .acf-block-preview button.bordered.button-dark,
 .acf-block-preview input.bordered.button-dark[type="button"],
 .acf-block-preview input.bordered.button-dark[type="reset"],
 .acf-block-preview input.bordered.button-dark[type="submit"] {
@@ -584,7 +682,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   color: #333333;
 }
 
-.acf-block-preview .button.bordered.button-dark:hover, .acf-block-preview #comments .comment-list .button-dark.comment-reply-link:hover, .acf-block-preview button.bordered.button-dark:hover,
+.acf-block-preview .button.bordered.button-dark:hover, .acf-block-preview .course-container .course .course-content .entry-actions .bordered.button-dark.button:hover, .acf-block-preview #learner-info .bordered.button-dark.my-messages-link:hover, .acf-block-preview #learner-info .course .sensei-results-links .bordered.button-dark.button:hover, .acf-block-preview #sensei-user-courses .bordered.button-dark.my-messages-link:hover, .acf-block-preview #comments .comment-list .bordered.button-dark.comment-reply-link:hover, .acf-block-preview button.bordered.button-dark:hover,
 .acf-block-preview input.bordered.button-dark:hover[type="button"],
 .acf-block-preview input.bordered.button-dark:hover[type="reset"],
 .acf-block-preview input.bordered.button-dark:hover[type="submit"] {
@@ -592,7 +690,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   box-shadow: inset 0 -2.6em #333333;
 }
 
-.acf-block-preview .button.bordered:hover, .acf-block-preview #comments .comment-list .comment-reply-link:hover, .acf-block-preview button.bordered:hover,
+.acf-block-preview .button.bordered:hover, .acf-block-preview .course-container .course .course-content .entry-actions .bordered.button:hover, .acf-block-preview #learner-info .bordered.my-messages-link:hover, .acf-block-preview #learner-info .course .sensei-results-links .bordered.button:hover, .acf-block-preview #sensei-user-courses .bordered.my-messages-link:hover, .acf-block-preview #comments .comment-list .bordered.comment-reply-link:hover, .acf-block-preview button.bordered:hover,
 .acf-block-preview input.bordered:hover[type="button"],
 .acf-block-preview input.bordered:hover[type="reset"],
 .acf-block-preview input.bordered:hover[type="submit"] {
@@ -601,28 +699,28 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   color: #fff;
 }
 
-.acf-block-preview .button .button-icon, .acf-block-preview #comments .comment-list .comment-reply-link .button-icon, .acf-block-preview button .button-icon, .acf-block-preview input[type="button"] .button-icon, .acf-block-preview input[type="reset"] .button-icon, .acf-block-preview input[type="submit"] .button-icon, .acf-block-preview .button span, .acf-block-preview #comments .comment-list .comment-reply-link span, .acf-block-preview button span, .acf-block-preview input[type="button"] span, .acf-block-preview input[type="reset"] span, .acf-block-preview input[type="submit"] span {
+.acf-block-preview .button .button-icon, .acf-block-preview .course-container .course .course-content .entry-actions .button .button-icon, .acf-block-preview #learner-info .my-messages-link .button-icon, .acf-block-preview #learner-info .course .sensei-results-links .button .button-icon, .acf-block-preview #sensei-user-courses .my-messages-link .button-icon, .acf-block-preview #comments .comment-list .comment-reply-link .button-icon, .acf-block-preview button .button-icon, .acf-block-preview input[type="button"] .button-icon, .acf-block-preview input[type="reset"] .button-icon, .acf-block-preview input[type="submit"] .button-icon, .acf-block-preview .button span, .acf-block-preview .course-container .course .course-content .entry-actions .button span, .acf-block-preview #learner-info .my-messages-link span, .acf-block-preview #learner-info .course .sensei-results-links .button span, .acf-block-preview #sensei-user-courses .my-messages-link span, .acf-block-preview #comments .comment-list .comment-reply-link span, .acf-block-preview button span, .acf-block-preview input[type="button"] span, .acf-block-preview input[type="reset"] span, .acf-block-preview input[type="submit"] span {
   position: relative;
 }
 
-.acf-block-preview .button .button-icon ~ span, .acf-block-preview #comments .comment-list .comment-reply-link .button-icon ~ span, .acf-block-preview button .button-icon ~ span, .acf-block-preview input[type="button"] .button-icon ~ span, .acf-block-preview input[type="reset"] .button-icon ~ span, .acf-block-preview input[type="submit"] .button-icon ~ span {
+.acf-block-preview .button .button-icon ~ span, .acf-block-preview .course-container .course .course-content .entry-actions .button .button-icon ~ span, .acf-block-preview #learner-info .my-messages-link .button-icon ~ span, .acf-block-preview #learner-info .course .sensei-results-links .button .button-icon ~ span, .acf-block-preview #sensei-user-courses .my-messages-link .button-icon ~ span, .acf-block-preview #comments .comment-list .comment-reply-link .button-icon ~ span, .acf-block-preview button .button-icon ~ span, .acf-block-preview input[type="button"] .button-icon ~ span, .acf-block-preview input[type="reset"] .button-icon ~ span, .acf-block-preview input[type="submit"] .button-icon ~ span {
   margin-left: 10px;
 }
 
-.acf-block-preview .button span ~ .button-icon, .acf-block-preview #comments .comment-list .comment-reply-link span ~ .button-icon, .acf-block-preview button span ~ .button-icon, .acf-block-preview input[type="button"] span ~ .button-icon, .acf-block-preview input[type="reset"] span ~ .button-icon, .acf-block-preview input[type="submit"] span ~ .button-icon {
+.acf-block-preview .button span ~ .button-icon, .acf-block-preview .course-container .course .course-content .entry-actions .button span ~ .button-icon, .acf-block-preview #learner-info .my-messages-link span ~ .button-icon, .acf-block-preview #learner-info .course .sensei-results-links .button span ~ .button-icon, .acf-block-preview #sensei-user-courses .my-messages-link span ~ .button-icon, .acf-block-preview #comments .comment-list .comment-reply-link span ~ .button-icon, .acf-block-preview button span ~ .button-icon, .acf-block-preview input[type="button"] span ~ .button-icon, .acf-block-preview input[type="reset"] span ~ .button-icon, .acf-block-preview input[type="submit"] span ~ .button-icon {
   margin-left: 10px;
 }
 
-.acf-block-preview .button.button-strong span, .acf-block-preview #comments .comment-list .button-strong.comment-reply-link span, .acf-block-preview button.button-strong span, .acf-block-preview input.button-strong[type="button"] span, .acf-block-preview input.button-strong[type="reset"] span, .acf-block-preview input.button-strong[type="submit"] span {
+.acf-block-preview .button.button-strong span, .acf-block-preview .course-container .course .course-content .entry-actions .button-strong.button span, .acf-block-preview #learner-info .button-strong.my-messages-link span, .acf-block-preview #learner-info .course .sensei-results-links .button-strong.button span, .acf-block-preview #sensei-user-courses .button-strong.my-messages-link span, .acf-block-preview #comments .comment-list .button-strong.comment-reply-link span, .acf-block-preview button.button-strong span, .acf-block-preview input.button-strong[type="button"] span, .acf-block-preview input.button-strong[type="reset"] span, .acf-block-preview input.button-strong[type="submit"] span {
   font-weight: 800;
 }
 
-.acf-block-preview .button.button-uppercase span, .acf-block-preview #comments .comment-list .button-uppercase.comment-reply-link span, .acf-block-preview button.button-uppercase span, .acf-block-preview input.button-uppercase[type="button"] span, .acf-block-preview input.button-uppercase[type="reset"] span, .acf-block-preview input.button-uppercase[type="submit"] span {
+.acf-block-preview .button.button-uppercase span, .acf-block-preview .course-container .course .course-content .entry-actions .button-uppercase.button span, .acf-block-preview #learner-info .button-uppercase.my-messages-link span, .acf-block-preview #learner-info .course .sensei-results-links .button-uppercase.button span, .acf-block-preview #sensei-user-courses .button-uppercase.my-messages-link span, .acf-block-preview #comments .comment-list .button-uppercase.comment-reply-link span, .acf-block-preview button.button-uppercase span, .acf-block-preview input.button-uppercase[type="button"] span, .acf-block-preview input.button-uppercase[type="reset"] span, .acf-block-preview input.button-uppercase[type="submit"] span {
   text-transform: uppercase;
   font-size: 14px;
 }
 
-.acf-block-preview .button[class*="button-square-"], .acf-block-preview #comments .comment-list .comment-reply-link[class*="button-square-"], .acf-block-preview button[class*="button-square-"],
+.acf-block-preview .button[class*="button-square-"], .acf-block-preview .course-container .course .course-content .entry-actions .button[class*="button-square-"], .acf-block-preview #learner-info .my-messages-link[class*="button-square-"], .acf-block-preview #learner-info .course .sensei-results-links .button[class*="button-square-"], .acf-block-preview #sensei-user-courses .my-messages-link[class*="button-square-"], .acf-block-preview #comments .comment-list .comment-reply-link[class*="button-square-"], .acf-block-preview button[class*="button-square-"],
 .acf-block-preview input[class*="button-square-"][type="button"],
 .acf-block-preview input[class*="button-square-"][type="reset"],
 .acf-block-preview input[class*="button-square-"][type="submit"] {
@@ -631,7 +729,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   padding: 0;
 }
 
-.acf-block-preview .button.button-square-30, .acf-block-preview #comments .comment-list .button-square-30.comment-reply-link, .acf-block-preview button.button-square-30,
+.acf-block-preview .button.button-square-30, .acf-block-preview .course-container .course .course-content .entry-actions .button-square-30.button, .acf-block-preview #learner-info .button-square-30.my-messages-link, .acf-block-preview #learner-info .course .sensei-results-links .button-square-30.button, .acf-block-preview #sensei-user-courses .button-square-30.my-messages-link, .acf-block-preview #comments .comment-list .button-square-30.comment-reply-link, .acf-block-preview button.button-square-30,
 .acf-block-preview input.button-square-30[type="button"],
 .acf-block-preview input.button-square-30[type="reset"],
 .acf-block-preview input.button-square-30[type="submit"] {
@@ -640,11 +738,11 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   line-height: 24px;
 }
 
-.acf-block-preview .button.button-square-30 .button-icon, .acf-block-preview #comments .comment-list .button-square-30.comment-reply-link .button-icon, .acf-block-preview button.button-square-30 .button-icon, .acf-block-preview input.button-square-30[type="button"] .button-icon, .acf-block-preview input.button-square-30[type="reset"] .button-icon, .acf-block-preview input.button-square-30[type="submit"] .button-icon {
+.acf-block-preview .button.button-square-30 .button-icon, .acf-block-preview .course-container .course .course-content .entry-actions .button-square-30.button .button-icon, .acf-block-preview #learner-info .button-square-30.my-messages-link .button-icon, .acf-block-preview #learner-info .course .sensei-results-links .button-square-30.button .button-icon, .acf-block-preview #sensei-user-courses .button-square-30.my-messages-link .button-icon, .acf-block-preview #comments .comment-list .button-square-30.comment-reply-link .button-icon, .acf-block-preview button.button-square-30 .button-icon, .acf-block-preview input.button-square-30[type="button"] .button-icon, .acf-block-preview input.button-square-30[type="reset"] .button-icon, .acf-block-preview input.button-square-30[type="submit"] .button-icon {
   font-size: 12px;
 }
 
-.acf-block-preview .button.button-square-40, .acf-block-preview #comments .comment-list .button-square-40.comment-reply-link, .acf-block-preview button.button-square-40,
+.acf-block-preview .button.button-square-40, .acf-block-preview .course-container .course .course-content .entry-actions .button-square-40.button, .acf-block-preview #learner-info .button-square-40.my-messages-link, .acf-block-preview #learner-info .course .sensei-results-links .button-square-40.button, .acf-block-preview #sensei-user-courses .button-square-40.my-messages-link, .acf-block-preview #comments .comment-list .button-square-40.comment-reply-link, .acf-block-preview button.button-square-40,
 .acf-block-preview input.button-square-40[type="button"],
 .acf-block-preview input.button-square-40[type="reset"],
 .acf-block-preview input.button-square-40[type="submit"] {
@@ -653,7 +751,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   line-height: 34px;
 }
 
-.acf-block-preview .button.button-square-50, .acf-block-preview #comments .comment-list .button-square-50.comment-reply-link, .acf-block-preview button.button-square-50,
+.acf-block-preview .button.button-square-50, .acf-block-preview .course-container .course .course-content .entry-actions .button-square-50.button, .acf-block-preview #learner-info .button-square-50.my-messages-link, .acf-block-preview #learner-info .course .sensei-results-links .button-square-50.button, .acf-block-preview #sensei-user-courses .button-square-50.my-messages-link, .acf-block-preview #comments .comment-list .button-square-50.comment-reply-link, .acf-block-preview button.button-square-50,
 .acf-block-preview input.button-square-50[type="button"],
 .acf-block-preview input.button-square-50[type="reset"],
 .acf-block-preview input.button-square-50[type="submit"] {
@@ -662,7 +760,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   line-height: 44px;
 }
 
-.acf-block-preview .button.button-square-60, .acf-block-preview #comments .comment-list .button-square-60.comment-reply-link, .acf-block-preview button.button-square-60,
+.acf-block-preview .button.button-square-60, .acf-block-preview .course-container .course .course-content .entry-actions .button-square-60.button, .acf-block-preview #learner-info .button-square-60.my-messages-link, .acf-block-preview #learner-info .course .sensei-results-links .button-square-60.button, .acf-block-preview #sensei-user-courses .button-square-60.my-messages-link, .acf-block-preview #comments .comment-list .button-square-60.comment-reply-link, .acf-block-preview button.button-square-60,
 .acf-block-preview input.button-square-60[type="button"],
 .acf-block-preview input.button-square-60[type="reset"],
 .acf-block-preview input.button-square-60[type="submit"] {
@@ -671,74 +769,74 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   line-height: 54px;
 }
 
-.acf-block-preview .button.button-float-left, .acf-block-preview #comments .comment-list .button-float-left.comment-reply-link, .acf-block-preview button.button-float-left,
+.acf-block-preview .button.button-float-left, .acf-block-preview .course-container .course .course-content .entry-actions .button-float-left.button, .acf-block-preview #learner-info .button-float-left.my-messages-link, .acf-block-preview #learner-info .course .sensei-results-links .button-float-left.button, .acf-block-preview #sensei-user-courses .button-float-left.my-messages-link, .acf-block-preview #comments .comment-list .button-float-left.comment-reply-link, .acf-block-preview button.button-float-left,
 .acf-block-preview input.button-float-left[type="button"],
 .acf-block-preview input.button-float-left[type="reset"],
 .acf-block-preview input.button-float-left[type="submit"] {
   float: left;
 }
 
-.acf-block-preview .button.button-float-right, .acf-block-preview #comments .comment-list .button-float-right.comment-reply-link, .acf-block-preview button.button-float-right,
+.acf-block-preview .button.button-float-right, .acf-block-preview .course-container .course .course-content .entry-actions .button-float-right.button, .acf-block-preview #learner-info .button-float-right.my-messages-link, .acf-block-preview #learner-info .course .sensei-results-links .button-float-right.button, .acf-block-preview #sensei-user-courses .button-float-right.my-messages-link, .acf-block-preview #comments .comment-list .button-float-right.comment-reply-link, .acf-block-preview button.button-float-right,
 .acf-block-preview input.button-float-right[type="button"],
 .acf-block-preview input.button-float-right[type="reset"],
 .acf-block-preview input.button-float-right[type="submit"] {
   float: right;
 }
 
-.acf-block-preview .button.button-margin, .acf-block-preview #comments .comment-list .button-margin.comment-reply-link, .acf-block-preview button.button-margin,
+.acf-block-preview .button.button-margin, .acf-block-preview .course-container .course .course-content .entry-actions .button-margin.button, .acf-block-preview #learner-info .button-margin.my-messages-link, .acf-block-preview #learner-info .course .sensei-results-links .button-margin.button, .acf-block-preview #sensei-user-courses .button-margin.my-messages-link, .acf-block-preview #comments .comment-list .button-margin.comment-reply-link, .acf-block-preview button.button-margin,
 .acf-block-preview input.button-margin[type="button"],
 .acf-block-preview input.button-margin[type="reset"],
 .acf-block-preview input.button-margin[type="submit"] {
   margin: 1em 0;
 }
 
-.acf-block-preview .button.button-radius-1, .acf-block-preview #comments .comment-list .button-radius-1.comment-reply-link, .acf-block-preview button.button-radius-1,
+.acf-block-preview .button.button-radius-1, .acf-block-preview .course-container .course .course-content .entry-actions .button-radius-1.button, .acf-block-preview #learner-info .button-radius-1.my-messages-link, .acf-block-preview #learner-info .course .sensei-results-links .button-radius-1.button, .acf-block-preview #sensei-user-courses .button-radius-1.my-messages-link, .acf-block-preview #comments .comment-list .button-radius-1.comment-reply-link, .acf-block-preview button.button-radius-1,
 .acf-block-preview input.button-radius-1[type="button"],
 .acf-block-preview input.button-radius-1[type="reset"],
 .acf-block-preview input.button-radius-1[type="submit"] {
   border-radius: 2px;
 }
 
-.acf-block-preview .button.button-radius-2, .acf-block-preview #comments .comment-list .button-radius-2.comment-reply-link, .acf-block-preview button.button-radius-2,
+.acf-block-preview .button.button-radius-2, .acf-block-preview .course-container .course .course-content .entry-actions .button-radius-2.button, .acf-block-preview #learner-info .button-radius-2.my-messages-link, .acf-block-preview #learner-info .course .sensei-results-links .button-radius-2.button, .acf-block-preview #sensei-user-courses .button-radius-2.my-messages-link, .acf-block-preview #comments .comment-list .button-radius-2.comment-reply-link, .acf-block-preview button.button-radius-2,
 .acf-block-preview input.button-radius-2[type="button"],
 .acf-block-preview input.button-radius-2[type="reset"],
 .acf-block-preview input.button-radius-2[type="submit"] {
   border-radius: 4px;
 }
 
-.acf-block-preview .button.button-radius-3, .acf-block-preview #comments .comment-list .button-radius-3.comment-reply-link, .acf-block-preview button.button-radius-3,
+.acf-block-preview .button.button-radius-3, .acf-block-preview .course-container .course .course-content .entry-actions .button-radius-3.button, .acf-block-preview #learner-info .button-radius-3.my-messages-link, .acf-block-preview #learner-info .course .sensei-results-links .button-radius-3.button, .acf-block-preview #sensei-user-courses .button-radius-3.my-messages-link, .acf-block-preview #comments .comment-list .button-radius-3.comment-reply-link, .acf-block-preview button.button-radius-3,
 .acf-block-preview input.button-radius-3[type="button"],
 .acf-block-preview input.button-radius-3[type="reset"],
 .acf-block-preview input.button-radius-3[type="submit"] {
   border-radius: 6px;
 }
 
-.acf-block-preview .button.button-rounded, .acf-block-preview #comments .comment-list .button-rounded.comment-reply-link, .acf-block-preview button.button-rounded,
+.acf-block-preview .button.button-rounded, .acf-block-preview .course-container .course .course-content .entry-actions .button-rounded.button, .acf-block-preview #learner-info .button-rounded.my-messages-link, .acf-block-preview #learner-info .course .sensei-results-links .button-rounded.button, .acf-block-preview #sensei-user-courses .button-rounded.my-messages-link, .acf-block-preview #comments .comment-list .button-rounded.comment-reply-link, .acf-block-preview button.button-rounded,
 .acf-block-preview input.button-rounded[type="button"],
 .acf-block-preview input.button-rounded[type="reset"],
 .acf-block-preview input.button-rounded[type="submit"] {
   border-radius: 50%;
 }
 
-.acf-block-preview .button.button-size-small, .acf-block-preview #comments .comment-list .button-size-small.comment-reply-link, .acf-block-preview button.button-size-small,
+.acf-block-preview .button.button-size-small, .acf-block-preview .course-container .course .course-content .entry-actions .button-size-small.button, .acf-block-preview #learner-info .button-size-small.my-messages-link, .acf-block-preview #learner-info .course .sensei-results-links .button-size-small.button, .acf-block-preview #sensei-user-courses .button-size-small.my-messages-link, .acf-block-preview #comments .comment-list .button-size-small.comment-reply-link, .acf-block-preview button.button-size-small,
 .acf-block-preview input.button-size-small[type="button"],
 .acf-block-preview input.button-size-small[type="reset"],
 .acf-block-preview input.button-size-small[type="submit"] {
   font-size: 14px;
 }
 
-.acf-block-preview .button.button-size-small.button-uppercase span, .acf-block-preview #comments .comment-list .button-size-small.button-uppercase.comment-reply-link span, .acf-block-preview button.button-size-small.button-uppercase span, .acf-block-preview input.button-size-small.button-uppercase[type="button"] span, .acf-block-preview input.button-size-small.button-uppercase[type="reset"] span, .acf-block-preview input.button-size-small.button-uppercase[type="submit"] span {
+.acf-block-preview .button.button-size-small.button-uppercase span, .acf-block-preview .course-container .course .course-content .entry-actions .button-size-small.button-uppercase.button span, .acf-block-preview #learner-info .button-size-small.button-uppercase.my-messages-link span, .acf-block-preview #learner-info .course .sensei-results-links .button-size-small.button-uppercase.button span, .acf-block-preview #sensei-user-courses .button-size-small.button-uppercase.my-messages-link span, .acf-block-preview #comments .comment-list .button-size-small.button-uppercase.comment-reply-link span, .acf-block-preview button.button-size-small.button-uppercase span, .acf-block-preview input.button-size-small.button-uppercase[type="button"] span, .acf-block-preview input.button-size-small.button-uppercase[type="reset"] span, .acf-block-preview input.button-size-small.button-uppercase[type="submit"] span {
   font-size: 12px;
 }
 
-.acf-block-preview .button.button-size-large, .acf-block-preview #comments .comment-list .button-size-large.comment-reply-link, .acf-block-preview button.button-size-large,
+.acf-block-preview .button.button-size-large, .acf-block-preview .course-container .course .course-content .entry-actions .button-size-large.button, .acf-block-preview #learner-info .button-size-large.my-messages-link, .acf-block-preview #learner-info .course .sensei-results-links .button-size-large.button, .acf-block-preview #sensei-user-courses .button-size-large.my-messages-link, .acf-block-preview #comments .comment-list .button-size-large.comment-reply-link, .acf-block-preview button.button-size-large,
 .acf-block-preview input.button-size-large[type="button"],
 .acf-block-preview input.button-size-large[type="reset"],
 .acf-block-preview input.button-size-large[type="submit"] {
   font-size: 18px;
 }
 
-.acf-block-preview .button.button-size-large.button-uppercase span, .acf-block-preview #comments .comment-list .button-size-large.button-uppercase.comment-reply-link span, .acf-block-preview button.button-size-large.button-uppercase span, .acf-block-preview input.button-size-large.button-uppercase[type="button"] span, .acf-block-preview input.button-size-large.button-uppercase[type="reset"] span, .acf-block-preview input.button-size-large.button-uppercase[type="submit"] span {
+.acf-block-preview .button.button-size-large.button-uppercase span, .acf-block-preview .course-container .course .course-content .entry-actions .button-size-large.button-uppercase.button span, .acf-block-preview #learner-info .button-size-large.button-uppercase.my-messages-link span, .acf-block-preview #learner-info .course .sensei-results-links .button-size-large.button-uppercase.button span, .acf-block-preview #sensei-user-courses .button-size-large.button-uppercase.my-messages-link span, .acf-block-preview #comments .comment-list .button-size-large.button-uppercase.comment-reply-link span, .acf-block-preview button.button-size-large.button-uppercase span, .acf-block-preview input.button-size-large.button-uppercase[type="button"] span, .acf-block-preview input.button-size-large.button-uppercase[type="reset"] span, .acf-block-preview input.button-size-large.button-uppercase[type="submit"] span {
   font-size: 16px;
 }
 
@@ -779,18 +877,11 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 .acf-block-preview .site-width {
   width: 100%;
-  padding-left: 12%;
-  padding-right: 12%;
+  padding-left: 16%;
+  padding-right: 16%;
 }
 
-@media (max-width: 770px) {
-  .acf-block-preview .site-width {
-    padding-left: 8%;
-    padding-right: 8%;
-  }
-}
-
-@media (max-width: 480px) {
+@media (max-width: 1200px) {
   .acf-block-preview .site-width {
     padding-left: 4%;
     padding-right: 4%;
@@ -860,7 +951,15 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 }
 
 .acf-block-preview body.sticky-nav #content {
+  padding-top: 2em;
+}
+
+.acf-block-preview body.home.sticky-nav #content {
   padding-top: 80px;
+}
+
+.acf-block-preview body.page:not(.beflex-is-title) #content {
+  padding-top: 0 !important;
 }
 
 .acf-block-preview .infinite-scroll .posts-navigation,
@@ -1000,13 +1099,13 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   }
 }
 
-.acf-block-preview .gridlayout {
+.acf-block-preview .gridlayout, .acf-block-preview #my-courses .col2-set, .acf-block-preview body.sensei_message .message-container {
   display: grid;
   grid-gap: 1em 1em;
   grid-template-columns: repeat(4, 1fr);
 }
 
-.acf-block-preview .gridlayout {
+.acf-block-preview .gridlayout, .acf-block-preview #my-courses .col2-set, .acf-block-preview body.sensei_message .message-container {
   /** Du parent */
   /** Chaque enfant peut modifier sa propre taille */
   /** Chaque enfant peut modifier sa propre taille */
@@ -1016,376 +1115,376 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   /** Chaque enfant peut modifier sa propre taille */
 }
 
-.acf-block-preview .gridlayout.grid-1 {
+.acf-block-preview .gridlayout.grid-1, .acf-block-preview #my-courses .grid-1.col2-set, .acf-block-preview body.sensei_message .grid-1.message-container {
   grid-template-columns: repeat(1, 1fr);
 }
 
-.acf-block-preview .gridlayout.grid-1 > .gridw-1 {
+.acf-block-preview .gridlayout.grid-1 > .gridw-1, .acf-block-preview #my-courses .grid-1.col2-set > .gridw-1, .acf-block-preview body.sensei_message .grid-1.message-container > .gridw-1 {
   grid-column: auto/span 1;
 }
 
-.acf-block-preview .gridlayout.grid-2 {
+.acf-block-preview .gridlayout.grid-2, .acf-block-preview #my-courses .col2-set, .acf-block-preview body.sensei_message .grid-2.message-container {
   grid-template-columns: repeat(2, 1fr);
 }
 
-.acf-block-preview .gridlayout.grid-2 > .gridw-1 {
+.acf-block-preview .gridlayout.grid-2 > .gridw-1, .acf-block-preview #my-courses .col2-set > .gridw-1, .acf-block-preview body.sensei_message .grid-2.message-container > .gridw-1 {
   grid-column: auto/span 1;
 }
 
-.acf-block-preview .gridlayout.grid-2 > .gridw-2 {
+.acf-block-preview .gridlayout.grid-2 > .gridw-2, .acf-block-preview #my-courses .col2-set > .gridw-2, .acf-block-preview body.sensei_message .grid-2.message-container > .gridw-2 {
   grid-column: auto/span 2;
 }
 
 @media (max-width: 770px) {
-  .acf-block-preview .gridlayout.grid-2 > .gridw-2 {
+  .acf-block-preview .gridlayout.grid-2 > .gridw-2, .acf-block-preview #my-courses .col2-set > .gridw-2, .acf-block-preview body.sensei_message .grid-2.message-container > .gridw-2 {
     grid-column: auto / span 2;
   }
 }
 
-.acf-block-preview .gridlayout.grid-3 {
+.acf-block-preview .gridlayout.grid-3, .acf-block-preview #my-courses .grid-3.col2-set, .acf-block-preview body.sensei_message .message-container {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.acf-block-preview .gridlayout.grid-3 > .gridw-1 {
+.acf-block-preview .gridlayout.grid-3 > .gridw-1, .acf-block-preview #my-courses .grid-3.col2-set > .gridw-1, .acf-block-preview body.sensei_message .message-container > .gridw-1 {
   grid-column: auto/span 1;
 }
 
-.acf-block-preview .gridlayout.grid-3 > .gridw-2 {
+.acf-block-preview .gridlayout.grid-3 > .gridw-2, .acf-block-preview #my-courses .grid-3.col2-set > .gridw-2, .acf-block-preview body.sensei_message .message-container > .gridw-2 {
   grid-column: auto/span 2;
 }
 
 @media (max-width: 770px) {
-  .acf-block-preview .gridlayout.grid-3 > .gridw-2 {
+  .acf-block-preview .gridlayout.grid-3 > .gridw-2, .acf-block-preview #my-courses .grid-3.col2-set > .gridw-2, .acf-block-preview body.sensei_message .message-container > .gridw-2 {
     grid-column: auto / span 2;
   }
 }
 
-.acf-block-preview .gridlayout.grid-3 > .gridw-3 {
+.acf-block-preview .gridlayout.grid-3 > .gridw-3, .acf-block-preview #my-courses .grid-3.col2-set > .gridw-3, .acf-block-preview body.sensei_message .message-container > .gridw-3 {
   grid-column: auto/span 3;
 }
 
 @media (max-width: 770px) {
-  .acf-block-preview .gridlayout.grid-3 > .gridw-3 {
+  .acf-block-preview .gridlayout.grid-3 > .gridw-3, .acf-block-preview #my-courses .grid-3.col2-set > .gridw-3, .acf-block-preview body.sensei_message .message-container > .gridw-3 {
     grid-column: auto / span 2;
   }
 }
 
-.acf-block-preview .gridlayout.grid-4 {
+.acf-block-preview .gridlayout.grid-4, .acf-block-preview #my-courses .grid-4.col2-set, .acf-block-preview body.sensei_message .grid-4.message-container {
   grid-template-columns: repeat(4, 1fr);
 }
 
-.acf-block-preview .gridlayout.grid-4 > .gridw-1 {
+.acf-block-preview .gridlayout.grid-4 > .gridw-1, .acf-block-preview #my-courses .grid-4.col2-set > .gridw-1, .acf-block-preview body.sensei_message .grid-4.message-container > .gridw-1 {
   grid-column: auto/span 1;
 }
 
-.acf-block-preview .gridlayout.grid-4 > .gridw-2 {
+.acf-block-preview .gridlayout.grid-4 > .gridw-2, .acf-block-preview #my-courses .grid-4.col2-set > .gridw-2, .acf-block-preview body.sensei_message .grid-4.message-container > .gridw-2 {
   grid-column: auto/span 2;
 }
 
 @media (max-width: 770px) {
-  .acf-block-preview .gridlayout.grid-4 > .gridw-2 {
+  .acf-block-preview .gridlayout.grid-4 > .gridw-2, .acf-block-preview #my-courses .grid-4.col2-set > .gridw-2, .acf-block-preview body.sensei_message .grid-4.message-container > .gridw-2 {
     grid-column: auto / span 2;
   }
 }
 
-.acf-block-preview .gridlayout.grid-4 > .gridw-3 {
+.acf-block-preview .gridlayout.grid-4 > .gridw-3, .acf-block-preview #my-courses .grid-4.col2-set > .gridw-3, .acf-block-preview body.sensei_message .grid-4.message-container > .gridw-3 {
   grid-column: auto/span 3;
 }
 
 @media (max-width: 770px) {
-  .acf-block-preview .gridlayout.grid-4 > .gridw-3 {
+  .acf-block-preview .gridlayout.grid-4 > .gridw-3, .acf-block-preview #my-courses .grid-4.col2-set > .gridw-3, .acf-block-preview body.sensei_message .grid-4.message-container > .gridw-3 {
     grid-column: auto / span 2;
   }
 }
 
-.acf-block-preview .gridlayout.grid-4 > .gridw-4 {
+.acf-block-preview .gridlayout.grid-4 > .gridw-4, .acf-block-preview #my-courses .grid-4.col2-set > .gridw-4, .acf-block-preview body.sensei_message .grid-4.message-container > .gridw-4 {
   grid-column: auto/span 4;
 }
 
 @media (max-width: 770px) {
-  .acf-block-preview .gridlayout.grid-4 > .gridw-4 {
+  .acf-block-preview .gridlayout.grid-4 > .gridw-4, .acf-block-preview #my-courses .grid-4.col2-set > .gridw-4, .acf-block-preview body.sensei_message .grid-4.message-container > .gridw-4 {
     grid-column: auto / span 2;
   }
 }
 
-.acf-block-preview .gridlayout.grid-5 {
+.acf-block-preview .gridlayout.grid-5, .acf-block-preview #my-courses .grid-5.col2-set, .acf-block-preview body.sensei_message .grid-5.message-container {
   grid-template-columns: repeat(5, 1fr);
 }
 
-.acf-block-preview .gridlayout.grid-5 > .gridw-1 {
+.acf-block-preview .gridlayout.grid-5 > .gridw-1, .acf-block-preview #my-courses .grid-5.col2-set > .gridw-1, .acf-block-preview body.sensei_message .grid-5.message-container > .gridw-1 {
   grid-column: auto/span 1;
 }
 
-.acf-block-preview .gridlayout.grid-5 > .gridw-2 {
+.acf-block-preview .gridlayout.grid-5 > .gridw-2, .acf-block-preview #my-courses .grid-5.col2-set > .gridw-2, .acf-block-preview body.sensei_message .grid-5.message-container > .gridw-2 {
   grid-column: auto/span 2;
 }
 
 @media (max-width: 770px) {
-  .acf-block-preview .gridlayout.grid-5 > .gridw-2 {
+  .acf-block-preview .gridlayout.grid-5 > .gridw-2, .acf-block-preview #my-courses .grid-5.col2-set > .gridw-2, .acf-block-preview body.sensei_message .grid-5.message-container > .gridw-2 {
     grid-column: auto / span 2;
   }
 }
 
-.acf-block-preview .gridlayout.grid-5 > .gridw-3 {
+.acf-block-preview .gridlayout.grid-5 > .gridw-3, .acf-block-preview #my-courses .grid-5.col2-set > .gridw-3, .acf-block-preview body.sensei_message .grid-5.message-container > .gridw-3 {
   grid-column: auto/span 3;
 }
 
 @media (max-width: 770px) {
-  .acf-block-preview .gridlayout.grid-5 > .gridw-3 {
+  .acf-block-preview .gridlayout.grid-5 > .gridw-3, .acf-block-preview #my-courses .grid-5.col2-set > .gridw-3, .acf-block-preview body.sensei_message .grid-5.message-container > .gridw-3 {
     grid-column: auto / span 2;
   }
 }
 
-.acf-block-preview .gridlayout.grid-5 > .gridw-4 {
+.acf-block-preview .gridlayout.grid-5 > .gridw-4, .acf-block-preview #my-courses .grid-5.col2-set > .gridw-4, .acf-block-preview body.sensei_message .grid-5.message-container > .gridw-4 {
   grid-column: auto/span 4;
 }
 
 @media (max-width: 770px) {
-  .acf-block-preview .gridlayout.grid-5 > .gridw-4 {
+  .acf-block-preview .gridlayout.grid-5 > .gridw-4, .acf-block-preview #my-courses .grid-5.col2-set > .gridw-4, .acf-block-preview body.sensei_message .grid-5.message-container > .gridw-4 {
     grid-column: auto / span 2;
   }
 }
 
-.acf-block-preview .gridlayout.grid-5 > .gridw-5 {
+.acf-block-preview .gridlayout.grid-5 > .gridw-5, .acf-block-preview #my-courses .grid-5.col2-set > .gridw-5, .acf-block-preview body.sensei_message .grid-5.message-container > .gridw-5 {
   grid-column: auto/span 5;
 }
 
 @media (max-width: 770px) {
-  .acf-block-preview .gridlayout.grid-5 > .gridw-5 {
+  .acf-block-preview .gridlayout.grid-5 > .gridw-5, .acf-block-preview #my-courses .grid-5.col2-set > .gridw-5, .acf-block-preview body.sensei_message .grid-5.message-container > .gridw-5 {
     grid-column: auto / span 2;
   }
 }
 
-.acf-block-preview .gridlayout.grid-6 {
+.acf-block-preview .gridlayout.grid-6, .acf-block-preview #my-courses .grid-6.col2-set, .acf-block-preview body.sensei_message .grid-6.message-container {
   grid-template-columns: repeat(6, 1fr);
 }
 
-.acf-block-preview .gridlayout.grid-6 > .gridw-1 {
+.acf-block-preview .gridlayout.grid-6 > .gridw-1, .acf-block-preview #my-courses .grid-6.col2-set > .gridw-1, .acf-block-preview body.sensei_message .grid-6.message-container > .gridw-1 {
   grid-column: auto/span 1;
 }
 
-.acf-block-preview .gridlayout.grid-6 > .gridw-2 {
+.acf-block-preview .gridlayout.grid-6 > .gridw-2, .acf-block-preview #my-courses .grid-6.col2-set > .gridw-2, .acf-block-preview body.sensei_message .grid-6.message-container > .gridw-2 {
   grid-column: auto/span 2;
 }
 
 @media (max-width: 770px) {
-  .acf-block-preview .gridlayout.grid-6 > .gridw-2 {
+  .acf-block-preview .gridlayout.grid-6 > .gridw-2, .acf-block-preview #my-courses .grid-6.col2-set > .gridw-2, .acf-block-preview body.sensei_message .grid-6.message-container > .gridw-2 {
     grid-column: auto / span 2;
   }
 }
 
-.acf-block-preview .gridlayout.grid-6 > .gridw-3 {
+.acf-block-preview .gridlayout.grid-6 > .gridw-3, .acf-block-preview #my-courses .grid-6.col2-set > .gridw-3, .acf-block-preview body.sensei_message .grid-6.message-container > .gridw-3 {
   grid-column: auto/span 3;
 }
 
 @media (max-width: 770px) {
-  .acf-block-preview .gridlayout.grid-6 > .gridw-3 {
+  .acf-block-preview .gridlayout.grid-6 > .gridw-3, .acf-block-preview #my-courses .grid-6.col2-set > .gridw-3, .acf-block-preview body.sensei_message .grid-6.message-container > .gridw-3 {
     grid-column: auto / span 2;
   }
 }
 
-.acf-block-preview .gridlayout.grid-6 > .gridw-4 {
+.acf-block-preview .gridlayout.grid-6 > .gridw-4, .acf-block-preview #my-courses .grid-6.col2-set > .gridw-4, .acf-block-preview body.sensei_message .grid-6.message-container > .gridw-4 {
   grid-column: auto/span 4;
 }
 
 @media (max-width: 770px) {
-  .acf-block-preview .gridlayout.grid-6 > .gridw-4 {
+  .acf-block-preview .gridlayout.grid-6 > .gridw-4, .acf-block-preview #my-courses .grid-6.col2-set > .gridw-4, .acf-block-preview body.sensei_message .grid-6.message-container > .gridw-4 {
     grid-column: auto / span 2;
   }
 }
 
-.acf-block-preview .gridlayout.grid-6 > .gridw-5 {
+.acf-block-preview .gridlayout.grid-6 > .gridw-5, .acf-block-preview #my-courses .grid-6.col2-set > .gridw-5, .acf-block-preview body.sensei_message .grid-6.message-container > .gridw-5 {
   grid-column: auto/span 5;
 }
 
 @media (max-width: 770px) {
-  .acf-block-preview .gridlayout.grid-6 > .gridw-5 {
+  .acf-block-preview .gridlayout.grid-6 > .gridw-5, .acf-block-preview #my-courses .grid-6.col2-set > .gridw-5, .acf-block-preview body.sensei_message .grid-6.message-container > .gridw-5 {
     grid-column: auto / span 2;
   }
 }
 
-.acf-block-preview .gridlayout.grid-6 > .gridw-6 {
+.acf-block-preview .gridlayout.grid-6 > .gridw-6, .acf-block-preview #my-courses .grid-6.col2-set > .gridw-6, .acf-block-preview body.sensei_message .grid-6.message-container > .gridw-6 {
   grid-column: auto/span 6;
 }
 
 @media (max-width: 770px) {
-  .acf-block-preview .gridlayout.grid-6 > .gridw-6 {
+  .acf-block-preview .gridlayout.grid-6 > .gridw-6, .acf-block-preview #my-courses .grid-6.col2-set > .gridw-6, .acf-block-preview body.sensei_message .grid-6.message-container > .gridw-6 {
     grid-column: auto / span 2;
   }
 }
 
-.acf-block-preview .gridlayout > .gridh-1 {
+.acf-block-preview .gridlayout > .gridh-1, .acf-block-preview #my-courses .col2-set > .gridh-1, .acf-block-preview body.sensei_message .message-container > .gridh-1 {
   grid-row: auto/span 1;
 }
 
 @media (max-width: 770px) {
-  .acf-block-preview .gridlayout > .gridh-1 {
+  .acf-block-preview .gridlayout > .gridh-1, .acf-block-preview #my-courses .col2-set > .gridh-1, .acf-block-preview body.sensei_message .message-container > .gridh-1 {
     grid-row: auto / span 1 !important;
   }
 }
 
-.acf-block-preview .gridlayout > .gridh-2 {
+.acf-block-preview .gridlayout > .gridh-2, .acf-block-preview #my-courses .col2-set > .gridh-2, .acf-block-preview body.sensei_message .message-container > .gridh-2 {
   grid-row: auto/span 2;
 }
 
 @media (max-width: 770px) {
-  .acf-block-preview .gridlayout > .gridh-2 {
+  .acf-block-preview .gridlayout > .gridh-2, .acf-block-preview #my-courses .col2-set > .gridh-2, .acf-block-preview body.sensei_message .message-container > .gridh-2 {
     grid-row: auto / span 1 !important;
   }
 }
 
-.acf-block-preview .gridlayout > .gridh-3 {
+.acf-block-preview .gridlayout > .gridh-3, .acf-block-preview #my-courses .col2-set > .gridh-3, .acf-block-preview body.sensei_message .message-container > .gridh-3 {
   grid-row: auto/span 3;
 }
 
 @media (max-width: 770px) {
-  .acf-block-preview .gridlayout > .gridh-3 {
+  .acf-block-preview .gridlayout > .gridh-3, .acf-block-preview #my-courses .col2-set > .gridh-3, .acf-block-preview body.sensei_message .message-container > .gridh-3 {
     grid-row: auto / span 1 !important;
   }
 }
 
-.acf-block-preview .gridlayout > .gridh-4 {
+.acf-block-preview .gridlayout > .gridh-4, .acf-block-preview #my-courses .col2-set > .gridh-4, .acf-block-preview body.sensei_message .message-container > .gridh-4 {
   grid-row: auto/span 4;
 }
 
 @media (max-width: 770px) {
-  .acf-block-preview .gridlayout > .gridh-4 {
+  .acf-block-preview .gridlayout > .gridh-4, .acf-block-preview #my-courses .col2-set > .gridh-4, .acf-block-preview body.sensei_message .message-container > .gridh-4 {
     grid-row: auto / span 1 !important;
   }
 }
 
-.acf-block-preview .gridlayout > .gridh-5 {
+.acf-block-preview .gridlayout > .gridh-5, .acf-block-preview #my-courses .col2-set > .gridh-5, .acf-block-preview body.sensei_message .message-container > .gridh-5 {
   grid-row: auto/span 5;
 }
 
 @media (max-width: 770px) {
-  .acf-block-preview .gridlayout > .gridh-5 {
+  .acf-block-preview .gridlayout > .gridh-5, .acf-block-preview #my-courses .col2-set > .gridh-5, .acf-block-preview body.sensei_message .message-container > .gridh-5 {
     grid-row: auto / span 1 !important;
   }
 }
 
-.acf-block-preview .gridlayout > .gridh-6 {
+.acf-block-preview .gridlayout > .gridh-6, .acf-block-preview #my-courses .col2-set > .gridh-6, .acf-block-preview body.sensei_message .message-container > .gridh-6 {
   grid-row: auto/span 6;
 }
 
 @media (max-width: 770px) {
-  .acf-block-preview .gridlayout > .gridh-6 {
+  .acf-block-preview .gridlayout > .gridh-6, .acf-block-preview #my-courses .col2-set > .gridh-6, .acf-block-preview body.sensei_message .message-container > .gridh-6 {
     grid-row: auto / span 1 !important;
   }
 }
 
-.acf-block-preview .gridlayout.grid-margin-0 {
+.acf-block-preview .gridlayout.grid-margin-0, .acf-block-preview #my-courses .grid-margin-0.col2-set, .acf-block-preview body.sensei_message .grid-margin-0.message-container {
   margin: 0em 0;
 }
 
-.acf-block-preview .gridlayout.grid-margin-1 {
+.acf-block-preview .gridlayout.grid-margin-1, .acf-block-preview #my-courses .grid-margin-1.col2-set, .acf-block-preview body.sensei_message .grid-margin-1.message-container {
   margin: 1em 0;
 }
 
-.acf-block-preview .gridlayout.grid-margin-2 {
+.acf-block-preview .gridlayout.grid-margin-2, .acf-block-preview #my-courses .grid-margin-2.col2-set, .acf-block-preview body.sensei_message .grid-margin-2.message-container {
   margin: 2em 0;
 }
 
-.acf-block-preview .gridlayout.grid-margin-3 {
+.acf-block-preview .gridlayout.grid-margin-3, .acf-block-preview #my-courses .grid-margin-3.col2-set, .acf-block-preview body.sensei_message .grid-margin-3.message-container {
   margin: 3em 0;
 }
 
-.acf-block-preview .gridlayout.grid-margin-4 {
+.acf-block-preview .gridlayout.grid-margin-4, .acf-block-preview #my-courses .grid-margin-4.col2-set, .acf-block-preview body.sensei_message .grid-margin-4.message-container {
   margin: 4em 0;
 }
 
-.acf-block-preview .gridlayout.grid-margin-5 {
+.acf-block-preview .gridlayout.grid-margin-5, .acf-block-preview #my-courses .grid-margin-5.col2-set, .acf-block-preview body.sensei_message .grid-margin-5.message-container {
   margin: 5em 0;
 }
 
-.acf-block-preview .gridlayout.grid-margin-6 {
+.acf-block-preview .gridlayout.grid-margin-6, .acf-block-preview #my-courses .grid-margin-6.col2-set, .acf-block-preview body.sensei_message .grid-margin-6.message-container {
   margin: 6em 0;
 }
 
-.acf-block-preview .gridlayout.grid-gap-0 {
+.acf-block-preview .gridlayout.grid-gap-0, .acf-block-preview #my-courses .grid-gap-0.col2-set, .acf-block-preview body.sensei_message .grid-gap-0.message-container {
   grid-gap: 0em 0em;
 }
 
-.acf-block-preview .gridlayout.grid-gap-1 {
+.acf-block-preview .gridlayout.grid-gap-1, .acf-block-preview #my-courses .grid-gap-1.col2-set, .acf-block-preview body.sensei_message .grid-gap-1.message-container {
   grid-gap: 1em 1em;
 }
 
-.acf-block-preview .gridlayout.grid-gap-2 {
+.acf-block-preview .gridlayout.grid-gap-2, .acf-block-preview #my-courses .col2-set, .acf-block-preview body.sensei_message .message-container {
   grid-gap: 2em 2em;
 }
 
-.acf-block-preview .gridlayout.grid-gap-3 {
+.acf-block-preview .gridlayout.grid-gap-3, .acf-block-preview #my-courses .grid-gap-3.col2-set, .acf-block-preview body.sensei_message .grid-gap-3.message-container {
   grid-gap: 3em 3em;
 }
 
-.acf-block-preview .gridlayout.grid-gap-4 {
+.acf-block-preview .gridlayout.grid-gap-4, .acf-block-preview #my-courses .grid-gap-4.col2-set, .acf-block-preview body.sensei_message .grid-gap-4.message-container {
   grid-gap: 4em 4em;
 }
 
-.acf-block-preview .gridlayout.grid-gap-5 {
+.acf-block-preview .gridlayout.grid-gap-5, .acf-block-preview #my-courses .grid-gap-5.col2-set, .acf-block-preview body.sensei_message .grid-gap-5.message-container {
   grid-gap: 5em 5em;
 }
 
-.acf-block-preview .gridlayout.grid-gap-6 {
+.acf-block-preview .gridlayout.grid-gap-6, .acf-block-preview #my-courses .grid-gap-6.col2-set, .acf-block-preview body.sensei_message .grid-gap-6.message-container {
   grid-gap: 6em 6em;
 }
 
 @media (max-width: 480px) {
-  .acf-block-preview .gridlayout.grid-2 {
+  .acf-block-preview .gridlayout.grid-2, .acf-block-preview #my-courses .col2-set, .acf-block-preview body.sensei_message .grid-2.message-container {
     grid-template-columns: repeat(1, 1fr) !important;
   }
 }
 
 @media (max-width: 770px) {
-  .acf-block-preview .gridlayout.grid-3 {
+  .acf-block-preview .gridlayout.grid-3, .acf-block-preview #my-courses .grid-3.col2-set, .acf-block-preview body.sensei_message .message-container {
     grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 
 @media (max-width: 480px) {
-  .acf-block-preview .gridlayout.grid-3 {
+  .acf-block-preview .gridlayout.grid-3, .acf-block-preview #my-courses .grid-3.col2-set, .acf-block-preview body.sensei_message .message-container {
     grid-template-columns: repeat(1, 1fr) !important;
   }
 }
 
 @media (max-width: 770px) {
-  .acf-block-preview .gridlayout.grid-4 {
+  .acf-block-preview .gridlayout.grid-4, .acf-block-preview #my-courses .grid-4.col2-set, .acf-block-preview body.sensei_message .grid-4.message-container {
     grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 
 @media (max-width: 480px) {
-  .acf-block-preview .gridlayout.grid-4 {
+  .acf-block-preview .gridlayout.grid-4, .acf-block-preview #my-courses .grid-4.col2-set, .acf-block-preview body.sensei_message .grid-4.message-container {
     grid-template-columns: repeat(1, 1fr) !important;
   }
 }
 
 @media (max-width: 770px) {
-  .acf-block-preview .gridlayout.grid-5 {
+  .acf-block-preview .gridlayout.grid-5, .acf-block-preview #my-courses .grid-5.col2-set, .acf-block-preview body.sensei_message .grid-5.message-container {
     grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 
 @media (max-width: 480px) {
-  .acf-block-preview .gridlayout.grid-5 {
+  .acf-block-preview .gridlayout.grid-5, .acf-block-preview #my-courses .grid-5.col2-set, .acf-block-preview body.sensei_message .grid-5.message-container {
     grid-template-columns: repeat(1, 1fr) !important;
   }
 }
 
 @media (max-width: 770px) {
-  .acf-block-preview .gridlayout.grid-6 {
+  .acf-block-preview .gridlayout.grid-6, .acf-block-preview #my-courses .grid-6.col2-set, .acf-block-preview body.sensei_message .grid-6.message-container {
     grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 
 @media (max-width: 480px) {
-  .acf-block-preview .gridlayout.grid-6 {
+  .acf-block-preview .gridlayout.grid-6, .acf-block-preview #my-courses .grid-6.col2-set, .acf-block-preview body.sensei_message .grid-6.message-container {
     grid-template-columns: repeat(1, 1fr) !important;
   }
 }
 
 @media (max-width: 480px) {
-  .acf-block-preview .gridlayout > * {
+  .acf-block-preview .gridlayout > *, .acf-block-preview #my-courses .col2-set > *, .acf-block-preview body.sensei_message .message-container > * {
     grid-column: auto / span 1 !important;
   }
 }
@@ -1410,7 +1509,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 }
 
 .acf-block-preview .flexible-bloc .bloc .bloc-title a, .acf-block-preview #secondary .bloc .bloc-title a {
-  color: #333333;
+  color: #2b2b2b;
 }
 
 .acf-block-preview .flexible-bloc .bloc .wps-product-section, .acf-block-preview #secondary .bloc .wps-product-section {
@@ -1494,7 +1593,516 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   width: 50%;
 }
 
-.acf-block-preview .button, .acf-block-preview #comments .comment-list .comment-reply-link, .acf-block-preview button,
+.acf-block-preview body.single-course #header-page .header-title-container, .acf-block-preview body.single-lesson #header-page .header-title-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 770px) {
+  .acf-block-preview body.single-course #header-page .header-title-container, .acf-block-preview body.single-lesson #header-page .header-title-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+.acf-block-preview body.single-course #header-page .header-title-container .single-course-meta, .acf-block-preview body.single-lesson #header-page .header-title-container .single-course-meta {
+  max-width: 300px;
+  min-width: 300px;
+  width: 100%;
+  background: #fff;
+  margin: auto 0 auto auto;
+  padding: 1em;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+@media (max-width: 770px) {
+  .acf-block-preview body.single-course #header-page .header-title-container .single-course-meta, .acf-block-preview body.single-lesson #header-page .header-title-container .single-course-meta {
+    max-width: none;
+    min-width: 0;
+    width: 100%;
+    margin-top: 1.5em;
+  }
+}
+
+.acf-block-preview body.single-course #header-page .header-title-container .meta-author .avatar, .acf-block-preview body.single-lesson #header-page .header-title-container .meta-author .avatar {
+  border-radius: 50%;
+  vertical-align: bottom;
+  margin-right: 0.5em;
+}
+
+.acf-block-preview body.single-course #header-page .header-title-container .meta-author .author-label, .acf-block-preview body.single-lesson #header-page .header-title-container .meta-author .author-label {
+  vertical-align: super;
+  color: #8a97ab;
+}
+
+.acf-block-preview body.single-course #header-page .header-title-container .meta-datas .meta-label, .acf-block-preview body.single-lesson #header-page .header-title-container .meta-datas .meta-label {
+  color: #8a97ab;
+}
+
+.acf-block-preview body.single-course #header-page .header-title-container .meta-categories, .acf-block-preview body.single-lesson #header-page .header-title-container .meta-categories {
+  margin-top: 0.5em;
+}
+
+.acf-block-preview body.single-course #header-page .header-title-container .meta-categories [rel="tag"], .acf-block-preview body.single-lesson #header-page .header-title-container .meta-categories [rel="tag"] {
+  background: rgba(0, 0, 0, 0.1);
+  margin: 0 0.2em 0.4em 0;
+  color: rgba(0, 0, 0, 0.6);
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  padding: 0.2em 0.4em;
+  display: inline-block;
+  font-size: 13px;
+}
+
+.acf-block-preview body.single-course #header-page .header-title-container .meta-categories [rel="tag"]:hover, .acf-block-preview body.single-lesson #header-page .header-title-container .meta-categories [rel="tag"]:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.acf-block-preview .course-container {
+  border-bottom: 0;
+  margin-left: 0 !important;
+}
+
+.acf-block-preview .course-container .course {
+  padding: 0;
+}
+
+.acf-block-preview .course-container .course .course-content .entry {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 770px) {
+  .acf-block-preview .course-container .course .course-content .entry {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+.acf-block-preview .course-container .course .course-content .entry-thumbnail .thumbnail {
+  display: block;
+  float: none;
+  margin: 0;
+  max-width: 300px;
+  min-width: 300px;
+  width: 100%;
+  height: auto;
+  margin-right: 1em;
+}
+
+@media (max-width: 770px) {
+  .acf-block-preview .course-container .course .course-content .entry-thumbnail .thumbnail {
+    min-width: 0;
+  }
+}
+
+.acf-block-preview .course-container .course .course-content .entry-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+}
+
+.acf-block-preview .course-container .course .course-content .entry-content .course-categories {
+  display: block;
+  margin-bottom: 1.5em;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.acf-block-preview .course-container .course .course-content .entry-content .course-title a {
+  color: rgba(0, 0, 0, 0.8);
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.acf-block-preview .course-container .course .course-content .entry-content .course-title a:hover {
+  color: #0e6eff;
+}
+
+.acf-block-preview .course-container .course .course-content .entry-content .course-excerpt {
+  margin: 0 0 1.5em 0;
+}
+
+.acf-block-preview .course-container .course .course-content .entry-content .course-meta {
+  margin: auto 0 0 0;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.acf-block-preview .course-container .course .course-content .entry-content .course-meta .course-author .avatar {
+  vertical-align: text-top;
+  border-radius: 50%;
+}
+
+.acf-block-preview .course-container .course .course-content .entry-actions .sensei-results-links {
+  text-align: right;
+}
+
+@media (max-width: 770px) {
+  .acf-block-preview .course-container .course .course-content .entry-actions .sensei-results-links {
+    text-align: left;
+  }
+}
+
+.acf-block-preview .course-container .course .course-content .entry-actions .button, .acf-block-preview .course-container .course .course-content .entry-actions #learner-info .my-messages-link, .acf-block-preview #learner-info .course-container .course .course-content .entry-actions .my-messages-link, .acf-block-preview .course-container #learner-info .course .course-content .entry-actions .sensei-results-links .button, .acf-block-preview #learner-info .course-container .course .course-content .entry-actions .sensei-results-links .button, .acf-block-preview .course-container #learner-info .course .sensei-results-links .course-content .entry-actions .button, .acf-block-preview #learner-info .course-container .course .sensei-results-links .course-content .entry-actions .button, .acf-block-preview .course-container .course .course-content .entry-actions #sensei-user-courses .my-messages-link, .acf-block-preview #sensei-user-courses .course-container .course .course-content .entry-actions .my-messages-link, .acf-block-preview .course-container .course .course-content .entry-actions #comments .comment-list .comment-reply-link, .acf-block-preview #comments .comment-list .course-container .course .course-content .entry-actions .comment-reply-link, .acf-block-preview .course-container .course .course-content .entry-actions button,
+.acf-block-preview .course-container .course .course-content .entry-actions input[type="button"],
+.acf-block-preview .course-container .course .course-content .entry-actions input[type="reset"],
+.acf-block-preview .course-container .course .course-content .entry-actions input[type="submit"] {
+  float: none;
+  margin: 0 0 0.5em 0.5em;
+}
+
+.acf-block-preview .course-container.columns-1 li.course {
+  float: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.acf-block-preview .sensei-archive-controls .sensei-course-filters {
+  margin-left: 0;
+}
+
+.acf-block-preview .sensei-archive-controls .sensei-course-filters li {
+  margin: 0 0.5em 0 0;
+}
+
+.acf-block-preview .wp-block-sensei-lms-lesson-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.acf-block-preview .wp-block-sensei-lms-lesson-actions .wp-block-sensei-lms-button-complete-lesson .wp-block-button__link {
+  background: #1fc588;
+  border-radius: 4px;
+}
+
+.acf-block-preview body.single-lesson .video iframe {
+  width: 100%;
+}
+
+.acf-block-preview .wp-block-sensei-lms-progress-bar div {
+  background: #1fc588;
+}
+
+.acf-block-preview .sensei-pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.acf-block-preview .sensei-pagination .nav-prev, .acf-block-preview .sensei-pagination .nav-next {
+  float: none;
+}
+
+.acf-block-preview .widget.widget_sensei_course_progress {
+  background: #f4f6f9;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.acf-block-preview .widget.widget_sensei_course_progress header {
+  padding: 1em 1em 0 1em;
+  text-align: center;
+}
+
+.acf-block-preview .widget.widget_sensei_course_progress header .course-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.acf-block-preview .widget.widget_sensei_course_progress header .course-title a {
+  color: #1f1f1f;
+}
+
+.acf-block-preview .widget.widget_sensei_course_progress header .course-title a:hover {
+  text-decoration: underline;
+}
+
+.acf-block-preview .widget.widget_sensei_course_progress .course-progress-navigation {
+  display: block;
+  margin: 0;
+  border-top: 0;
+  background: none;
+  text-align: center;
+}
+
+.acf-block-preview .widget.widget_sensei_course_progress .course-progress-navigation .prev, .acf-block-preview .widget.widget_sensei_course_progress .course-progress-navigation .next {
+  margin: 0 0.5em;
+  border-bottom: 0;
+  float: none;
+  display: inline-block;
+  width: auto;
+}
+
+.acf-block-preview .widget.widget_sensei_course_progress .course-progress-navigation .prev a, .acf-block-preview .widget.widget_sensei_course_progress .course-progress-navigation .next a {
+  display: inline-block;
+  background: none;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  border: 0;
+  padding: 0;
+}
+
+.acf-block-preview .widget.widget_sensei_course_progress .course-progress-navigation .prev a::before, .acf-block-preview .widget.widget_sensei_course_progress .course-progress-navigation .prev a::after, .acf-block-preview .widget.widget_sensei_course_progress .course-progress-navigation .next a::before, .acf-block-preview .widget.widget_sensei_course_progress .course-progress-navigation .next a::after {
+  display: block;
+  font-size: 12px;
+  width: 26px;
+  height: 26px;
+  line-height: 26px;
+  background: #8a97ab;
+  color: #fff;
+  border-radius: 50%;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.acf-block-preview .widget.widget_sensei_course_progress .course-progress-navigation .prev a:hover::before, .acf-block-preview .widget.widget_sensei_course_progress .course-progress-navigation .prev a:hover::after, .acf-block-preview .widget.widget_sensei_course_progress .course-progress-navigation .next a:hover::before, .acf-block-preview .widget.widget_sensei_course_progress .course-progress-navigation .next a:hover::after {
+  background: #a8b1c0;
+}
+
+.acf-block-preview .widget.widget_sensei_course_progress .course-progress-lessons {
+  margin: 0;
+}
+
+.acf-block-preview .widget.widget_sensei_course_progress .course-progress-lessons .course-progress-module {
+  background: none;
+  padding: 2em 1em 0 1em;
+  border-bottom: 0;
+}
+
+.acf-block-preview .widget.widget_sensei_course_progress .course-progress-lessons .course-progress-module .module-title {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.acf-block-preview .widget.widget_sensei_course_progress .course-progress-lessons .course-progress-module .module-title a {
+  color: #1f1f1f;
+}
+
+.acf-block-preview .widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson span, .acf-block-preview .widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson a {
+  background: none;
+  border: 0;
+  padding-left: 3.2em;
+  font-weight: 400;
+  color: #2b2b2b;
+  line-height: 1.6;
+}
+
+.acf-block-preview .widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson span::before, .acf-block-preview .widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson a::before {
+  left: 0.6em;
+  font-family: 'Font Awesome 5 Pro',FontAwesomeSensei,FontAwesome;
+  font-weight: 100;
+  content: '\f111';
+  color: #2b2b2b;
+}
+
+.acf-block-preview .widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson a:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.acf-block-preview .widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson.current span {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.acf-block-preview .widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson.current span:before {
+  content: '\f138';
+}
+
+.acf-block-preview .widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson.completed span::before, .acf-block-preview .widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson.completed a::before {
+  content: '\f058';
+  font-weight: 900;
+  color: #1fc588;
+}
+
+.acf-block-preview .wp-block-sensei-lms-course-outline-module .wp-block-sensei-lms-course-outline-module__header {
+  background: none !important;
+  color: #1f1f1f;
+}
+
+.acf-block-preview .wp-block-sensei-lms-course-outline-module .wp-block-sensei-lms-course-outline-module__lessons-title {
+  background: none !important;
+}
+
+.acf-block-preview .wp-block-sensei-lms-course-outline-module .wp-block-sensei-lms-course-outline-module__description {
+  color: rgba(0, 0, 0, 0.5);
+  padding-top: 0 !important;
+}
+
+.acf-block-preview .wp-block-sensei-lms-course-outline-module .wp-block-sensei-lms-course-outline-module__progress-indicator.completed {
+  background: #1fc588 !important;
+  border: 0 !important;
+  color: #fff !important;
+}
+
+.acf-block-preview .wp-block-sensei-lms-course-outline-module .wp-block-sensei-lms-course-outline-lesson.completed .wp-block-sensei-lms-course-outline-lesson__status {
+  background: #1fc588;
+  border: 0;
+  fill: #fff;
+}
+
+.acf-block-preview .header-profile-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.acf-block-preview .header-profile-container .avatar {
+  border-radius: 50%;
+  margin: auto 1em auto 0;
+}
+
+.acf-block-preview #learner-info .learner-avatar, .acf-block-preview #learner-info .learner-content {
+  display: none;
+}
+
+.acf-block-preview #learner-info .my-messages-link::before {
+  display: inline-block;
+  font-family: 'Font Awesome 5 Pro';
+  content: '\f0e0';
+  font-weight: 400;
+  margin-right: 0.4em;
+}
+
+.acf-block-preview #learner-info #my-courses.ui-tabs .ui-tabs-nav {
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.acf-block-preview #learner-info #my-courses.ui-tabs .ui-tabs-nav .ui-tabs-tab .ui-tabs-anchor {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border: 1px solid #dcdcdc;
+  padding: 1em;
+  position: relative;
+  bottom: -1px;
+}
+
+.acf-block-preview #learner-info .course .thumbnail {
+  max-width: 300px;
+}
+
+.acf-block-preview #learner-info .course .course-author {
+  display: none;
+}
+
+.acf-block-preview #learner-info .course .sensei-course-meta {
+  margin: 0;
+}
+
+.acf-block-preview #sensei-user-courses .my-messages-link::before {
+  display: inline-block;
+  font-family: 'Font Awesome 5 Pro';
+  content: '\f0e0';
+  font-weight: 400;
+  margin-right: 0.4em;
+}
+
+.acf-block-preview body.sensei_message .message-container .sensei_message {
+  margin: 0;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.acf-block-preview body.sensei_message .message-container .sensei_message .message-content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.acf-block-preview body.sensei_message .message-container .sensei_message h2 {
+  display: block;
+  font-size: 20px;
+  margin: 0;
+  padding: 1em 1.5em 0 1.5em;
+}
+
+.acf-block-preview body.sensei_message .message-container .sensei_message h2 a {
+  color: #1f1f1f;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.acf-block-preview body.sensei_message .message-container .sensei_message h2 a:hover {
+  color: #0e6eff;
+}
+
+.acf-block-preview body.sensei_message .message-container .sensei_message .entry {
+  display: block;
+  padding: 0.5em 1.5em 1em 1.5em;
+}
+
+.acf-block-preview body.sensei_message .message-container .sensei_message .entry .message-excerpt {
+  margin: 0;
+}
+
+.acf-block-preview body.sensei_message .message-container .sensei_message .message-meta {
+  display: block;
+  margin: auto 0 0 0;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 0.5em 1.5em;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.acf-block-preview body.single-sensei_message #header-page h1 {
+  margin: 0;
+}
+
+.acf-block-preview body.single-sensei_message #header-page h1 a {
+  color: #1f1f1f;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.acf-block-preview body.single-sensei_message #header-page h1 a:hover {
+  color: #0e6eff;
+}
+
+.acf-block-preview body.single-sensei_message #header-page .message-meta {
+  margin: 0;
+}
+
+.acf-block-preview body.single-sensei_message #header-page .message-meta small {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.acf-block-preview body.single-sensei_message #header-page .message-meta em {
+  font-style: normal;
+}
+
+.acf-block-preview .button, .acf-block-preview .course-container .course .course-content .entry-actions .button, .acf-block-preview #learner-info .my-messages-link, .acf-block-preview #learner-info .course .sensei-results-links .button, .acf-block-preview #sensei-user-courses .my-messages-link, .acf-block-preview #comments .comment-list .comment-reply-link, .acf-block-preview button,
 .acf-block-preview input[type="button"],
 .acf-block-preview input[type="reset"],
 .acf-block-preview input[type="submit"] {
@@ -1503,10 +2111,163 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   box-shadow: none;
 }
 
+.acf-block-preview .beflex-call-to-action .call-to-container .call-to-block.-mode-box {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.acf-block-preview .beflex-call-to-action .call-to-container .call-to-block.-mode-box .block-thumbnail {
+  position: relative;
+  background: #000;
+}
+
+.acf-block-preview .beflex-call-to-action .call-to-container .call-to-block.-mode-box .block-thumbnail img {
+  display: block;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.acf-block-preview .beflex-call-to-action .call-to-container .call-to-block.-mode-box .block-thumbnail img:hover {
+  opacity: 0.8;
+}
+
+.acf-block-preview .beflex-call-to-action .call-to-container .call-to-block.-mode-box .block-thumbnail.no-thumb {
+  background: #fff;
+}
+
+.acf-block-preview .beflex-call-to-action .call-to-container .call-to-block.-mode-box .block-thumbnail.no-thumb .block-categories {
+  position: static !important;
+  padding: 0 1.5em;
+}
+
+.acf-block-preview .beflex-call-to-action .call-to-container .call-to-block.-mode-box .block-categories {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+
+.acf-block-preview .beflex-call-to-action .call-to-container .call-to-block.-mode-box .block-categories .block-categorie {
+  background: #fff;
+  padding: 0.3em 0.6em;
+  font-size: 12px;
+  font-weight: 700;
+  margin-right: 0.4em;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  color: #0e6eff;
+}
+
+.acf-block-preview .beflex-call-to-action .call-to-container .call-to-block.-mode-box .block-categories .block-categorie:hover {
+  opacity: 0.8;
+}
+
+.acf-block-preview .beflex-call-to-action .call-to-container .call-to-block.-mode-box .block-content {
+  padding: 1.5em;
+}
+
+.acf-block-preview .beflex-call-to-action .call-to-container .call-to-block.-mode-box .block-content a:not(.button) {
+  color: rgba(0, 0, 0, 0.9);
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.acf-block-preview .beflex-call-to-action .call-to-container .call-to-block.-mode-box .block-content a:not(.button):hover {
+  color: #0e6eff;
+}
+
+.acf-block-preview .beflex-call-to-action .call-to-container .call-to-block.-mode-box .block-content .block-title {
+  font-size: 20px;
+}
+
+.acf-block-preview .beflex-call-to-action .call-to-container .call-to-block.-mode-box .block-footer {
+  background: rgba(0, 0, 0, 0.05);
+  padding: 0.5em 1.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.7);
+  margin-top: auto;
+}
+
+.acf-block-preview .beflex-call-to-action .call-to-container .call-to-block.-mode-box .block-footer .course-length, .acf-block-preview .beflex-call-to-action .call-to-container .call-to-block.-mode-box .block-footer .course-author {
+  margin: auto 0;
+}
+
+.acf-block-preview .beflex-call-to-action .call-to-container .call-to-block.-mode-box .block-footer .course-length {
+  margin-right: 0.5em;
+}
+
+.acf-block-preview .beflex-call-to-action .call-to-container .call-to-block.-mode-box .block-footer .course-author .avatar {
+  border-radius: 50%;
+  vertical-align: text-top;
+  margin-right: 0.2em;
+}
+
+.acf-block-preview #header-page {
+  padding-top: 75px;
+  position: relative;
+}
+
+.acf-block-preview #header-page::before {
+  display: block;
+  content: '';
+  height: 100%;
+  position: absolute;
+  margin-left: calc( -100vw / 2 + 100% / 2);
+  margin-right: calc( -100vw / 2 + 100% / 2);
+  max-width: 100vw;
+  width: 100vw;
+  background: #f4f6f9;
+  border-bottom: 4px solid rgba(0, 0, 0, 0.05);
+  bottom: 0;
+  z-index: -1;
+}
+
+.acf-block-preview #header-page .header-title-container {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.acf-block-preview #header-page .header-title-container #breadcrumbs {
+  margin: 0;
+}
+
+.acf-block-preview #header-page .header-title-container .header-title {
+  margin: 0;
+}
+
+.acf-block-preview #header-page .header-title-container .header-excerpt {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
 .acf-block-preview #masthead {
   position: relative;
-  background: #fff;
-  border-bottom: solid #f7f7f7 1px;
+}
+
+.acf-block-preview #masthead::after {
+  display: block;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.1);
+  width: calc(100% - 32%);
+  left: 16%;
+}
+
+@media (max-width: 1200px) {
+  .acf-block-preview #masthead::after {
+    width: calc(100% - 8%);
+    left: 4%;
+  }
 }
 
 .acf-block-preview #masthead > .site-width {
@@ -1525,14 +2286,14 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 }
 
 .acf-block-preview #masthead .site-branding {
-  width: 30%;
+  width: 100%;
 }
 
 .acf-block-preview #masthead .site-navigation {
   width: 100%;
 }
 
-@media (max-width: 770px) {
+@media (max-width: 980px) {
   .acf-block-preview #masthead .site-branding {
     width: 50%;
   }
@@ -1542,13 +2303,13 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   }
 }
 
-@media (max-width: 770px) {
+@media (max-width: 980px) {
   .acf-block-preview #masthead {
     padding: 0;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 980px) {
   .acf-block-preview #masthead .site-branding {
     width: 70%;
   }
@@ -1576,7 +2337,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 .acf-block-preview #masthead .site-branding .custom-logo-link img {
   width: auto;
-  max-height: 80px;
+  max-height: 40px;
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
@@ -1590,12 +2351,14 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 }
 
 .acf-block-preview #masthead .site-branding .site-title a {
-  color: #333333;
+  color: #2b2b2b;
   font-size: 20px;
+  font-weight: 800;
 }
 
 .acf-block-preview #masthead .site-branding .site-description {
-  font-size: 12px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .acf-block-preview #masthead .site-navigation {
@@ -1620,7 +2383,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 }
 
 .acf-block-preview #masthead .site-tool {
-  padding: 0 0 0 0.6em;
+  padding: 0 0 0 1.4em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1636,18 +2399,24 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   margin: auto 0;
 }
 
+@media (max-width: 980px) {
+  .acf-block-preview #masthead .site-tool {
+    padding: 0;
+  }
+}
+
 .acf-block-preview #masthead .site-tool > a {
   line-height: 1;
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
-  padding: 2.3em 0.6em;
+  padding: 2em 0.6em;
   display: inline-block;
-  color: #333333;
+  color: #2b2b2b;
   font-size: 14px;
 }
 
 .acf-block-preview #masthead .site-tool > a:hover {
-  color: gray;
+  color: #787878;
 }
 
 .acf-block-preview #masthead .site-tool > a:focus {
@@ -1673,6 +2442,47 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   border-radius: 50%;
 }
 
+.acf-block-preview #masthead .site-tool .sensei-links {
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  padding-left: 0.2em;
+}
+
+@media (max-width: 980px) {
+  .acf-block-preview #masthead .site-tool .sensei-links {
+    display: none;
+  }
+}
+
+.acf-block-preview .site-tool .sensei-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto 0 auto 0.2em;
+}
+
+.acf-block-preview .site-tool .sensei-links a {
+  font-size: 13px;
+  color: #2b2b2b;
+  white-space: nowrap;
+  padding: 0.5em;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.acf-block-preview .site-tool .sensei-links a:hover {
+  color: #919191;
+}
+
+.acf-block-preview .site-tool .sensei-links a:last-child {
+  padding-left: 0.2em;
+}
+
+.acf-block-preview .site-tool .sensei-links a:last-child::before {
+  display: inline-block;
+  content: '•';
+  letter-spacing: 5px;
+}
+
 .acf-block-preview #masthead.sticky {
   position: fixed;
   width: 100%;
@@ -1685,9 +2495,16 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   top: 0;
   -webkit-box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  border-bottom: 0;
 }
 
-.acf-block-preview #masthead.sticky.-scroll #main-navigation .menu > .menu-item > a, .acf-block-preview #masthead.sticky.-scroll .site-tool > * {
+.acf-block-preview #masthead.sticky.-scroll::after {
+  display: none;
+  content: '';
+}
+
+.acf-block-preview #masthead.sticky.-scroll #main-navigation .menu > .menu-item > a, .acf-block-preview #masthead.sticky.-scroll .site-tool > .js-search {
   padding-top: 1.2em;
   padding-bottom: 1.2em;
 }
@@ -1702,6 +2519,24 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   }
 }
 
+.acf-block-preview body.page:not(.beflex-is-title) #masthead:not(.-scroll) {
+  background: #f4f6f9;
+  border-bottom: 4px solid rgba(0, 0, 0, 0.05);
+}
+
+.acf-block-preview body.page:not(.beflex-is-title) #masthead::after {
+  display: none !important;
+  content: '' !important;
+}
+
+.acf-block-preview body.page:not(.beflex-is-title) #header-page {
+  opacity: 0;
+}
+
+.acf-block-preview body.page:not(.beflex-is-title) #header-page .header-title-container {
+  padding: 0 !important;
+}
+
 .acf-block-preview #search-area {
   pointer-events: none;
   position: fixed;
@@ -1710,6 +2545,11 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   width: 100%;
   height: 100%;
   z-index: 490;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 
 .acf-block-preview #search-area .search-overlay {
@@ -1751,18 +2591,18 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   flex: 0 1 auto;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  border-bottom: 2px solid #fff;
+  background: #fff;
 }
 
 .acf-block-preview #search-area form .search-icon {
   margin: auto;
-  padding: 0.6em;
+  padding: 0.6em 0.6em 0.6em 2em;
   display: inline-block;
 }
 
 .acf-block-preview #search-area form .fa-search {
-  color: #fff;
-  font-size: 32px;
+  color: #1f1f1f;
+  font-size: 42px;
 }
 
 @media (max-width: 480px) {
@@ -1773,16 +2613,16 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 .acf-block-preview #search-area form input {
   background: none;
-  color: #fff;
+  color: #1f1f1f;
   border: 0;
   border-radius: 0;
-  padding-bottom: 0.2em;
   font-size: 50px;
   font-weight: 100;
   width: 100%;
   -webkit-box-shadow: none;
   box-shadow: none;
   outline: none;
+  padding-left: 0.2em;
 }
 
 .acf-block-preview #search-area form input:focus {
@@ -1791,22 +2631,22 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 .acf-block-preview #search-area form input::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(0, 0, 0, 0.4);
 }
 
 .acf-block-preview #search-area form input::-moz-placeholder {
   /* Firefox 19+ */
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(0, 0, 0, 0.4);
 }
 
 .acf-block-preview #search-area form input:-ms-input-placeholder {
   /* IE 10+ */
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(0, 0, 0, 0.4);
 }
 
 .acf-block-preview #search-area form input:-moz-placeholder {
   /* Firefox 18- */
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(0, 0, 0, 0.4);
 }
 
 @media (max-width: 770px) {
@@ -1830,6 +2670,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 .acf-block-preview .search-active #search-area {
   pointer-events: all;
+  opacity: 1;
 }
 
 .acf-block-preview .search-active #search-area .search-overlay {
@@ -1843,9 +2684,11 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 }
 
 .acf-block-preview #colophon {
-  background: #f7f7f7;
+  background: #fff;
+  border-top: 4px solid rgba(0, 0, 0, 0.05);
   padding: 2em 0;
   font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .acf-block-preview #colophon .sidebar * {
@@ -1853,8 +2696,24 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 }
 
 .acf-block-preview #colophon .sidebar .widget-title {
-  font-size: 20px;
+  font-size: 16px;
   margin-bottom: 0.8em;
+  color: #1f1f1f;
+}
+
+.acf-block-preview #colophon .widget_nav_menu li {
+  list-style-type: none;
+}
+
+.acf-block-preview #colophon .widget_nav_menu a {
+  color: rgba(0, 0, 0, 0.6);
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  line-height: 2.5;
+}
+
+.acf-block-preview #colophon .widget_nav_menu a:hover {
+  color: #0e6eff;
 }
 
 .acf-block-preview #colophon #boxfoot {
@@ -1969,6 +2828,14 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   outline: 0;
 }
 
+.acf-block-preview .beflex-box, .acf-block-preview .wp-block-sensei-lms-lesson-actions, .acf-block-preview .sensei-pagination, .acf-block-preview .wp-block-sensei-lms-course-outline-module, .acf-block-preview #my-courses .col2-set .col-2, .acf-block-preview #respond {
+  background: #f4f6f9;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+  padding: 1em;
+}
+
 .acf-block-preview #page {
   overflow-x: hidden;
 }
@@ -2006,6 +2873,27 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 .acf-block-preview .error404 .error-image {
   border-radius: 50%;
   max-width: 260px;
+}
+
+.acf-block-preview .blog .primary-header, .acf-block-preview .author .primary-header, .acf-block-preview .archive .primary-header, .acf-block-preview .category .primary-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2em 0;
+}
+
+.acf-block-preview .blog .primary-header .header-thumbnail, .acf-block-preview .author .primary-header .header-thumbnail, .acf-block-preview .archive .primary-header .header-thumbnail, .acf-block-preview .category .primary-header .header-thumbnail {
+  border-radius: 50%;
+  margin: auto 0;
+  margin-right: 2em;
+}
+
+.acf-block-preview .blog .primary-header .primary-header-content, .acf-block-preview .author .primary-header .primary-header-content, .acf-block-preview .archive .primary-header .primary-header-content, .acf-block-preview .category .primary-header .primary-header-content {
+  margin: auto 0;
+}
+
+.acf-block-preview .blog .primary-header .primary-header-content *, .acf-block-preview .author .primary-header .primary-header-content *, .acf-block-preview .archive .primary-header .primary-header-content *, .acf-block-preview .category .primary-header .primary-header-content * {
+  margin: 0;
 }
 
 .acf-block-preview .blog .post, .acf-block-preview .author .post, .acf-block-preview .archive .post, .acf-block-preview .category .post {
@@ -2238,6 +3126,23 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   padding: 0;
 }
 
+.acf-block-preview .wp-block-cover.alignfull .wp-block-cover__inner-container {
+  padding-left: 16%;
+  padding-right: 16%;
+}
+
+@media (max-width: 1200px) {
+  .acf-block-preview .wp-block-cover.alignfull .wp-block-cover__inner-container {
+    padding-left: 4%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .acf-block-preview .wp-block-cover.alignfull .wp-block-cover__inner-container {
+    padding-right: 4%;
+  }
+}
+
 .acf-block-preview .site-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2276,6 +3181,10 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   margin: 2em 0;
 }
 
+.acf-block-preview #secondary .widget:first-child {
+  margin-top: 0;
+}
+
 .acf-block-preview #secondary .widget-title {
   margin: 0 0 0.6em 0;
 }
@@ -2307,6 +3216,11 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   margin-left: 3em;
 }
 
+.acf-block-preview #comments .comments-title {
+  font-size: 16px;
+  margin-top: 4em;
+}
+
 .acf-block-preview #comments .comment-list .comment-body {
   position: relative;
   margin: 1em 0;
@@ -2325,10 +3239,11 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 .acf-block-preview #comments .comment-list .comment-author img {
   border-radius: 50%;
+  vertical-align: bottom;
 }
 
 .acf-block-preview #comments .comment-list .comment-author .fn {
-  font-size: 22.4px;
+  font-size: 16px;
   font-weight: 300;
 }
 
@@ -2339,6 +3254,22 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 .acf-block-preview #comments .comment-list .comment-metadata .comment-edit-link {
   color: #0e6eff;
+}
+
+.acf-block-preview #respond {
+  margin: 1.5em 0;
+}
+
+.acf-block-preview #respond #reply-title {
+  margin: 0;
+}
+
+.acf-block-preview #respond .logged-in-as {
+  margin: 0;
+}
+
+.acf-block-preview #respond .form-submit {
+  margin-bottom: 0;
 }
 
 .acf-block-preview input[type="text"],
@@ -2407,7 +3338,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 }
 
 .acf-block-preview #main-navigation .menu a {
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .acf-block-preview #main-navigation .menu > .menu-item {
@@ -2416,14 +3347,13 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 }
 
 .acf-block-preview #main-navigation .menu > .menu-item > a {
-  padding: 2.4em 1.4em;
+  padding: 2em 1.4em;
   height: 100%;
   display: block;
-  text-transform: uppercase;
-  color: #333333;
+  color: #2b2b2b;
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .acf-block-preview #main-navigation .menu > .menu-item.current_page_item > a,
@@ -2578,7 +3508,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 770px) {
   .acf-block-preview .site-navigation .menu-toggle span {
     display: none;
   }
@@ -2597,12 +3527,13 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   height: 100%;
   left: 0;
   top: 0;
-  padding-top: 4em;
   z-index: 9999;
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 .acf-block-preview #burger-menu .navigation-overlay {
@@ -2613,8 +3544,8 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.9;
-  background: #0e6eff;
+  opacity: 0.7;
+  background: #fff;
   z-index: -1;
 }
 
@@ -2625,6 +3556,9 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   left: 0;
   top: 0;
   overflow-y: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .acf-block-preview #burger-menu .close-burger {
@@ -2634,16 +3568,19 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   font-size: 28px;
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
-  color: white;
+  color: #1f1f1f;
 }
 
 .acf-block-preview #burger-menu .close-burger:hover {
-  color: rgba(255, 255, 255, 0.6);
+  color: #525252;
   cursor: pointer;
 }
 
-.acf-block-preview #burger-menu .menu {
+.acf-block-preview #burger-menu .burger-padder {
+  width: 100%;
+  margin: auto 0;
   padding: 2em;
+  text-align: center;
 }
 
 .acf-block-preview #burger-menu ul, .acf-block-preview #burger-menu li {
@@ -2653,13 +3590,13 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 }
 
 .acf-block-preview #burger-menu .menu li a {
-  color: white;
+  color: #1f1f1f;
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
 
 .acf-block-preview #burger-menu .menu li a:hover {
-  color: rgba(255, 255, 255, 0.4);
+  color: #525252;
 }
 
 .acf-block-preview #burger-menu .menu > li {
@@ -2669,7 +3606,6 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 .acf-block-preview #burger-menu .menu > li > a {
   font-size: 24px;
   font-weight: 700;
-  text-transform: uppercase;
 }
 
 .acf-block-preview #burger-menu .menu > li li {
@@ -2696,7 +3632,14 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   border-left: 1px dotted rgba(255, 255, 255, 0.8);
 }
 
-@media (max-width: 770px) {
+.acf-block-preview #burger-menu .site-tool .sensei-links {
+  padding-top: 1em;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+@media (max-width: 980px) {
   .acf-block-preview .active-burger #burger-menu {
     opacity: 1;
     pointer-events: all;
@@ -2705,7 +3648,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   }
 }
 
-@media (min-width: 770px) {
+@media (min-width: 980px) {
   .acf-block-preview .site-navigation .menu-toggle {
     display: none;
   }

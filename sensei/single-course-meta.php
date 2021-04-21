@@ -34,7 +34,7 @@ $category_output = get_the_term_list( $post->ID, 'course-category', '', ' ', '' 
         </div>
         <div class="meta">
             <i class="far fa-book"></i>
-            <span class="meta-label"><?php echo sprintf( _n( '%d leçon', '%d leçons', $lesson_count, 'beflex-child' ), $lesson_count ); ?></span>
+            <span class="meta-label"><?php echo sprintf( _n( '%d lesson', '%d lessons', $lesson_count, 'beflex-child' ), $lesson_count ); ?></span>
         </div>
     </div>
 

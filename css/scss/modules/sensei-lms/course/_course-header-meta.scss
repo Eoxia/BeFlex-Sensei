@@ -2,6 +2,10 @@ body.single-course, body.single-lesson {
   #header-page .header-title-container {
     display: flex;
 
+    @media ( max-width: $media__medium ) {
+      flex-direction: column;
+    }
+
     .single-course-meta {
       max-width: 300px;
       min-width: 300px;
@@ -12,6 +16,13 @@ body.single-course, body.single-lesson {
       border: 1px solid rgba(0,0,0,0.1);
       box-shadow: 0 1px 0 0 rgba(0,0,0,0.15);
       border-radius: 4px;
+
+      @media ( max-width: $media__medium ) {
+        max-width: none;
+        min-width: 0;
+        width: 100%;
+        margin-top: 1.5em;
+      }
     }
     .meta-author {
       .avatar {

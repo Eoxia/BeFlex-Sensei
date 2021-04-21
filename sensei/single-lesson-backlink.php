@@ -21,7 +21,7 @@ $backlink = get_permalink( $sensei->lesson->get_course_id( $post->ID ) );
 
 if ( ! empty( $backlink ) ) :
 	?>
-	<a href="<?php echo esc_url( $backlink ); ?>"><i class="fas fa-reply"></i> <?php esc_html_e( 'Retour au cours', 'beflex-child' ); ?></a>
+	<a href="<?php echo esc_url( $backlink ); ?>"><i class="fas fa-reply"></i> <?php esc_html_e( 'Back to course', 'beflex' ); ?></a>
 	<?php
 endif;
 ?>

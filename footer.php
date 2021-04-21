@@ -52,19 +52,29 @@
 		<div class="navigation-overlay"></div>
 		<div class="burger-container">
 			<span class="close-burger"><i class="fas fa-times"></i></span>
-			<?php
-			$beflex_user = wp_get_current_user();
-			if ( has_nav_menu( 'menu-1' ) ) :
-				wp_nav_menu(
-					array(
-						'theme_location' => 'menu-1',
-						'menu_id'        => 'primary-menu',
-					)
-				);
-			elseif ( beflex_allowed( $beflex_user->roles, 'editor,administrator' ) ) :
-				echo beflex_notification( __( 'Please set your navigation as "Main navigation" to make it appear', 'beflex' ), 'warning', admin_url( 'nav-menus.php' ) );
-			endif;
-			?>
+			<div class="burger-padder">
+				<?php
+				$beflex_user = wp_get_current_user();
+				if ( has_nav_menu( 'menu-1' ) ) :
+					wp_nav_menu(
+						array(
+							'theme_location' => 'menu-1',
+							'menu_id'        => 'primary-menu',
+						)
+					);
+				elseif ( beflex_allowed( $beflex_user->roles, 'editor,administrator' ) ) :
+					echo beflex_notification( __( 'Please set your navigation as "Main navigation" to make it appear', 'beflex' ), 'warning', admin_url( 'nav-menus.php' ) );
+				endif;
+				?>
+
+				<?php if ( beflex_is_sensei() ) : ?>
+					<div class="site-tool">
+							<div class="sensei-links">
+								<?php get_template_part( 'template-parts/navigation-sensei-login' ); ?>
+							</div>
+					</div><!-- .site-tool -->
+				<?php endif; ?>
+			</div><!-- .burger-padder -->
 		</div><!-- .burger-container -->
 	</div><!-- #burger-menu -->
 </div><!-- #page -->
