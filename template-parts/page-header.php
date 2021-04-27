@@ -15,8 +15,7 @@ if ( is_404() ) :
 elseif ( is_search() ) :
 	$page_title = __( 'Search for :', 'beflex' ) . ' ' . get_search_query();
 elseif ( is_author() ) :
-	$post_author_id = get_post_field( 'post_author', $post->ID );
-	$page_title     = get_the_author_meta( 'display_name', $post->post_author );
+	$page_title = '';
 elseif ( is_category() ) :
 	$page_title = single_cat_title( '', false );
 elseif ( is_archive() ) :

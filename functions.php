@@ -374,16 +374,6 @@ function load_acf_parent( $paths ) {
 add_filter( 'acf/settings/load_json', 'load_acf_parent' );
 
 
-function beflex_display_page_breadcrumb() {
-	if ( ! is_single() ) {
-		if (function_exists('yoast_breadcrumb')) {
-			yoast_breadcrumb('<p id="breadcrumbs">', '</p>');
-		}
-	}
-}
-//add_action( 'beflex_header_page_inside_before', 'beflex_display_page_breadcrumb', 10 );
-
-
 add_filter( 'body_class', function( $classes ) {
 	global $post;
 
@@ -400,3 +390,48 @@ add_filter( 'body_class', function( $classes ) {
 
 	return $classes;
 } );
+
+
+/**
+ * Display author informations in the page header
+ *
+ * @return void
+ */
+function beflex_profile_header_author() {
+	if ( is_author() ) {
+		$author_id = get_the_author_meta( 'ID' );
+		if ( ! empty( $author_id ) ) {
+			$name   = get_the_author_meta( 'display_name' );
+			$bio    = get_the_author_meta( 'description' );
+			$avatar = get_avatar( $author_id, 80 );
+
+			get_template_part( 'sensei/profile', 'header', array(
+				'user_ID'      => $author_id,
+				'display_name' => $name,
+				'description'  => $bio,
+				'avatar'       => $avatar,
+			) );
+		}
+
+	}
+}
+add_action( 'beflex_header_page_inside_before', 'beflex_profile_header_author' );
+
+
+function beflex_add_courses_to_admin_author_page() {
+	$user_id = get_the_author_meta( 'ID' );
+	$current_page_user = get_user_by( 'id', $user_id );
+	if ( $current_page_user && in_array( 'administrator', $current_page_user->roles ) ) {
+		$courses_query = new WP_Query(array(
+			'post_type'      => 'course',
+			'posts_per_page' => -1,
+			'author'         => $user_id,
+		));
+
+		get_template_part('template-parts/author', 'courses', array(
+			'courses_query' => $courses_query,
+			'author'        => $current_page_user,
+		));
+	}
+}
+add_action( 'beflex_author_posts_before', 'beflex_add_courses_to_admin_author_page', 10 );

@@ -57,22 +57,21 @@ function beflex_load_theme_actions() {
 	// Lesson.
 	add_action( 'beflex_header_page_inside_before', 'beflex_single_lesson_backlink', 10 );
 	// Profile.
-	add_action( 'beflex_header_page_inside_before', 'beflex_profile_header_author', 10 );
+	add_action( 'beflex_header_page_inside_before', 'beflex_profile_header_learner', 10 );
+	// Message.
+	add_action( 'sensei_content_message_after', array( 'Sensei_Messages', 'the_message_sender' ), 10, 1 );
+	add_action( 'beflex_page_header_title', 'beflex_single_message_title', 10, 2 );
+	add_action( 'beflex_header_page_inside_before', 'beflex_single_message_backlink', 10 );
 
 	// Filters.
 	// Course.
 	add_filter( 'sensei_the_title_html_tag', 'beflex_loop_course_title_tag' );
 	add_filter( 'beflex_callto_data_type', 'beflex_call_to_action_courses', 10, 3 );
 	add_filter( 'beflex_callto_bloc', 'beflex_call_to_action_atts_course', 10, 2 );
-	// Lesson
+	// Lesson.
 	add_filter( 'register_post_type_args', 'beflex_sensei_lesson_filter_post_type_args', 10, 2 );
-	// Module
+	// Module.
 	add_filter( 'sensei_breadcrumb_output', 'beflex_delete_module_breadcrumb_link', 10, 2 );
-	// Message.
-	add_action( 'sensei_content_message_after', array( 'Sensei_Messages', 'the_message_sender' ), 10, 1 );
-	add_action( 'beflex_page_header_title', 'beflex_single_message_title', 10, 2 );
-	add_action( 'beflex_header_page_inside_before', 'beflex_single_message_backlink', 10 );
-
 
 }
 add_action( 'after_setup_theme', 'beflex_load_theme_actions', 11 );
@@ -170,7 +169,7 @@ function beflex_single_lesson_backlink() {
 /**
  * Display student informations in the page header
  */
-function beflex_profile_header_author() {
+function beflex_profile_header_learner() {
 	global $wp_query;
 	if ( isset( $wp_query->query_vars['learner_profile'] ) ) {
 		$query_var    = $wp_query->query_vars['learner_profile'];
