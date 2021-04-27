@@ -10,7 +10,7 @@
  * @link https://codex.wordpress.org/Template_Hierarchy
  */
 
-$courses_query = $args['$courses_query'];
+$courses_query = $args['courses_query'];
 if ( empty( $courses_query ) ) :
 	return;
 endif;
