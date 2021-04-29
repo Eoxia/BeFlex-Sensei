@@ -420,6 +420,10 @@ add_action( 'beflex_header_page_inside_before', 'beflex_profile_header_author' )
 
 function beflex_add_courses_to_admin_author_page() {
 	$user_id = get_the_author_meta( 'ID' );
+	if ( empty( $user_id ) ) {
+		return;
+	}
+
 	$current_page_user = get_user_by( 'id', $user_id );
 	if ( $current_page_user && in_array( 'administrator', $current_page_user->roles ) ) {
 		$courses_query = new WP_Query(array(
@@ -434,4 +438,24 @@ function beflex_add_courses_to_admin_author_page() {
 		));
 	}
 }
-add_action( 'beflex_author_posts_before', 'beflex_add_courses_to_admin_author_page', 10 );
+add_action( 'beflex_author_posts_before', 'beflex_add_courses_to_admin_author_page', 20 );
+
+
+function beflex_add_bio_to_admin_author_page() {
+	$user_id = get_the_author_meta( 'ID' );
+	if ( empty( $user_id ) ) {
+		return;
+	}
+	if ( ! is_acf() ) {
+		return;
+	}
+
+	$bio = get_field( 'beflex_author_bio_advanced', 'user_' . $user_id );
+	if ( ! empty( $bio ) ) {
+		get_template_part( 'template-parts/author', 'bio', array(
+			'user_id' => $user_id,
+			'bio'     => $bio,
+		) );
+	}
+}
+add_action( 'beflex_author_posts_before', 'beflex_add_bio_to_admin_author_page', 10 );

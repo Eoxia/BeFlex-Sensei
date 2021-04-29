@@ -62,6 +62,8 @@ function beflex_load_theme_actions() {
 	add_action( 'sensei_content_message_after', array( 'Sensei_Messages', 'the_message_sender' ), 10, 1 );
 	add_action( 'beflex_page_header_title', 'beflex_single_message_title', 10, 2 );
 	add_action( 'beflex_header_page_inside_before', 'beflex_single_message_backlink', 10 );
+	// Teacher page.
+	add_action( 'sensei_teacher_archive_course_loop_before', 'beflex_add_bio_to_admin_author_page', 9 ); // Function in main functions.php.
 
 	// Filters.
 	// Course.
