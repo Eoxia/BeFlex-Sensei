@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Beflex v3\n"
-"POT-Creation-Date: 2021-04-21 16:24+0200\n"
-"PO-Revision-Date: 2021-04-21 16:26+0200\n"
+"POT-Creation-Date: 2021-05-03 16:14+0200\n"
+"PO-Revision-Date: 2021-05-03 16:16+0200\n"
 "Last-Translator: \n"
 "Language-Team: Eoxia\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.2\n"
+"X-Generator: Poedit 2.4.3\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -198,18 +198,166 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr "Recherche pour: %s"
 
-#: sensei/functions.php:255
+#: sensei/course-results-header.php:24
+msgid "Back to my courses"
+msgstr "Retour à mes cours"
+
+#: sensei/course-results/lessons.php:37
+#, fuzzy
+#| msgid "%d lesson"
+#| msgid_plural "%d lessons"
+msgid "Lesson"
+msgstr "%d leçon"
+
+#: sensei/course-results/lessons.php:39
+#, fuzzy
+#| msgid "%d lesson"
+#| msgid_plural "%d lessons"
+msgid "Lessons"
+msgstr "%d leçon"
+
+#: sensei/course-results/lessons.php:91 sensei/course-results/lessons.php:148
+#, php-format
+msgid "Start %s"
+msgstr ""
+
+#: sensei/course-results/lessons.php:122
+msgid "Other Lessons"
+msgstr ""
+
+#: sensei/course-results/lessons.php:167
+msgid "Total Grade"
+msgstr ""
+
+#: sensei/emails/admin-teacher-new-course-created.php:28
+#: sensei/emails/teacher-new-course-assignment.php:28
+#, fuzzy
+#| msgid "Show course"
+msgid "The Course"
+msgstr "Aperçu du cours"
+
+#: sensei/emails/admin-teacher-new-course-created.php:36
+msgid "was submitted for review by "
+msgstr ""
+
+#: sensei/emails/admin-teacher-new-course-created.php:44
+msgid "You can review and publish the new course here:  "
+msgstr ""
+
+#: sensei/emails/footer.php:26
+#, php-format
+msgid "%1$s - Powered by Sensei LMS"
+msgstr ""
+
+#: sensei/emails/learner-completed-course.php:34
+#, php-format
+msgid "You have completed and %1$s the course"
+msgstr ""
+
+#: sensei/emails/learner-graded-quiz.php:34
+#, php-format
+msgid "You %1$s the lesson"
+msgstr ""
+
+#: sensei/emails/learner-graded-quiz.php:40
+msgid "with a grade of"
+msgstr ""
+
+#: sensei/emails/learner-graded-quiz.php:47
+#, php-format
+msgid "The pass mark is %1$s"
+msgstr ""
+
+#: sensei/emails/learner-graded-quiz.php:56
+#, php-format
+msgid "You can review your grade and your answers %1$shere%2$s."
+msgstr ""
+
+#: sensei/emails/new-message-reply.php:36
+#, php-format
+msgid "has replied to your private message regarding the %1$s"
+msgstr ""
+
+#: sensei/emails/new-message-reply.php:51
+#, php-format
+msgid "You can view the message and reply %1$shere%2$s."
+msgstr ""
+
+#: sensei/emails/teacher-completed-course.php:31
+#: sensei/emails/teacher-completed-lesson.php:31
+#: sensei/emails/teacher-new-message.php:31
+#: sensei/emails/teacher-quiz-submitted.php:32
+#: sensei/emails/teacher-started-course.php:29
+msgid "Your student"
+msgstr ""
+
+#: sensei/emails/teacher-completed-course.php:38
+#, php-format
+msgid "has completed and %1$s the course"
+msgstr ""
+
+#: sensei/emails/teacher-completed-course.php:49
+#: sensei/emails/teacher-started-course.php:42
+#, php-format
+msgid "Manage this course's learners %1$shere%2$s."
+msgstr ""
+
+#: sensei/emails/teacher-completed-lesson.php:35
+msgid "has completed the lesson"
+msgstr ""
+
+#: sensei/emails/teacher-completed-lesson.php:44
+#, php-format
+msgid "Manage this lesson's learners %1$shere%2$s."
+msgstr ""
+
+#: sensei/emails/teacher-new-course-assignment.php:36
+msgid "has been assigned to you."
+msgstr ""
+
+#: sensei/emails/teacher-new-course-assignment.php:44
+msgid "You can edit the assigned course here: "
+msgstr ""
+
+#: sensei/emails/teacher-new-message.php:38
+#, php-format
+msgid "has sent you a private message regarding the %1$s"
+msgstr ""
+
+#: sensei/emails/teacher-new-message.php:53
+#, php-format
+msgid "You can reply to this message %1$shere%2$s."
+msgstr ""
+
+#: sensei/emails/teacher-quiz-submitted.php:36
+msgid "has submitted the quiz for lesson"
+msgstr ""
+
+#: sensei/emails/teacher-quiz-submitted.php:40
+msgid "for grading."
+msgstr ""
+
+#: sensei/emails/teacher-quiz-submitted.php:48
+#, php-format
+msgid "You can grade this quiz %1$shere%2$s."
+msgstr ""
+
+#: sensei/emails/teacher-started-course.php:33
+msgid "has started the course"
+msgstr ""
+
+#: sensei/functions.php:260
 msgid "Show course"
 msgstr "Aperçu du cours"
 
-#: sensei/single-course-meta.php:33 sensei/single-lesson-meta.php:38
+#: sensei/single-course-meta.php:36 sensei/single-lesson-meta.php:41
 #, php-format
 msgid "%d minute"
 msgid_plural "%d minutes"
 msgstr[0] "%d minute"
 msgstr[1] "%d minutes"
 
-#: sensei/single-course-meta.php:37
+#: sensei/single-course-meta.php:40
 #, php-format
 msgid "%d lesson"
 msgid_plural "%d lessons"
@@ -223,6 +371,11 @@ msgstr "Retour au cours"
 #: sensei/single-message-backlink.php:17
 msgid "Back to messages"
 msgstr "Retour aux messages"
+
+#: template-parts/author-courses.php:21
+#, php-format
+msgid "All courses by %s"
+msgstr ""
 
 #: template-parts/content-none.php:17
 msgid "Nothing Found"

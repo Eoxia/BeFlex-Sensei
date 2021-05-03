@@ -129,6 +129,9 @@ endif;
 		.beflex-call-to-action .call-to-container .call-to-block.-mode-box .block-categories .block-categorie {
 			color: <?php echo esc_html( $beflex_primary ); ?>;
 		}
+		body.course-results .lesson-result .result-container .result-line a:hover {
+			color: <?php echo esc_html( $beflex_primary ); ?>;
+		}
 	<?php endif; ?>
 
 </style>

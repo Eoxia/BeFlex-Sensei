@@ -265,7 +265,8 @@ textarea {
   font-weight: 400;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6,
+.h1-size, .h2-size, body.course-results .lesson-result .lesson-title, .h3-size, .h4-size, .h5-size, .h6-size {
   clear: both;
   font-family: 'Open sans', sans-serif;
   font-weight: 900;
@@ -275,98 +276,98 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
 }
 
-h1 {
+h1, .h1-size {
   font-size: 30px;
 }
 
 @media screen and (min-width: 480px) {
-  h1 {
+  h1, .h1-size {
     font-size: calc(30px + 10 * ((100vw - 480px) / 720));
   }
 }
 
 @media screen and (min-width: 1200px) {
-  h1 {
+  h1, .h1-size {
     font-size: 40px;
   }
 }
 
-h2 {
+h2, .h2-size, body.course-results .lesson-result .lesson-title {
   font-size: 25px;
 }
 
 @media screen and (min-width: 480px) {
-  h2 {
+  h2, .h2-size, body.course-results .lesson-result .lesson-title {
     font-size: calc(25px + 5 * ((100vw - 480px) / 720));
   }
 }
 
 @media screen and (min-width: 1200px) {
-  h2 {
+  h2, .h2-size, body.course-results .lesson-result .lesson-title {
     font-size: 30px;
   }
 }
 
-h3 {
+h3, .h3-size {
   font-size: 20px;
 }
 
 @media screen and (min-width: 480px) {
-  h3 {
+  h3, .h3-size {
     font-size: calc(20px + 5 * ((100vw - 480px) / 720));
   }
 }
 
 @media screen and (min-width: 1200px) {
-  h3 {
+  h3, .h3-size {
     font-size: 25px;
   }
 }
 
-h4 {
+h4, .h4-size {
   font-size: 15px;
 }
 
 @media screen and (min-width: 480px) {
-  h4 {
+  h4, .h4-size {
     font-size: calc(15px + 5 * ((100vw - 480px) / 720));
   }
 }
 
 @media screen and (min-width: 1200px) {
-  h4 {
+  h4, .h4-size {
     font-size: 20px;
   }
 }
 
-h5 {
+h5, .h5-size {
   font-size: 13px;
 }
 
 @media screen and (min-width: 480px) {
-  h5 {
+  h5, .h5-size {
     font-size: calc(13px + 3 * ((100vw - 480px) / 720));
   }
 }
 
 @media screen and (min-width: 1200px) {
-  h5 {
+  h5, .h5-size {
     font-size: 16px;
   }
 }
 
-h6 {
+h6, .h6-size {
   font-size: 11px;
 }
 
 @media screen and (min-width: 480px) {
-  h6 {
+  h6, .h6-size {
     font-size: calc(11px + 3 * ((100vw - 480px) / 720));
   }
 }
 
 @media screen and (min-width: 1200px) {
-  h6 {
+  h6, .h6-size {
     font-size: 14px;
   }
 }
@@ -2304,6 +2305,59 @@ body.single-sensei_message #header-page .message-meta em {
   font-style: normal;
 }
 
+body.course-results .course-results {
+  border-bottom: 0;
+}
+
+body.course-results .lesson-result .lesson-title {
+  margin-bottom: 0.6em;
+}
+
+body.course-results .lesson-result .result-container {
+  margin-bottom: 1em;
+}
+
+body.course-results .lesson-result .result-container .result-module-title {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+body.course-results .lesson-result .result-container .result-line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.4em 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body.course-results .lesson-result .result-container .result-line:last-child {
+  border-bottom: 0;
+}
+
+body.course-results .lesson-result .result-container .result-line a {
+  color: rgba(0, 0, 0, 0.8);
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+body.course-results .lesson-result .result-container .result-line a:hover {
+  color: #0e6eff;
+}
+
+body.course-results .lesson-result .result-container .result-line .lesson-grade {
+  margin-left: auto;
+  font-weight: 700;
+}
+
+body.course-results .lesson-result .total-grade {
+  text-align: center;
+  font-size: 32px;
+}
+
+body.course-results .lesson-result .total-grade .lesson-grade {
+  font-weight: 700;
+}
+
 /*--------------------------------------------------------------
 # Theme
 --------------------------------------------------------------*/
@@ -2932,7 +2986,7 @@ a:hover, a:active {
   outline: 0;
 }
 
-.beflex-box, .wp-block-sensei-lms-lesson-actions, .sensei-pagination, .wp-block-sensei-lms-course-outline-module, #my-courses .col2-set .col-2, #respond {
+.beflex-box, .wp-block-sensei-lms-lesson-actions, .sensei-pagination, .wp-block-sensei-lms-course-outline-module, #my-courses .col2-set .col-2, body.course-results .lesson-result .result-container, #respond {
   background: #f4f6f9;
   border: 1px solid rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);

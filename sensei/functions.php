@@ -40,6 +40,8 @@ remove_action( 'sensei_archive_before_message_loop', array( 'Sensei_Messages', '
 remove_action( 'sensei_content_message_before', array( 'Sensei_Messages', 'the_message_sender' ), 20 );
 remove_action( 'sensei_single_message_content_inside_before', array( 'Sensei_Messages', 'the_title' ), 20 );
 remove_action( 'sensei_single_message_content_inside_before', array( 'Sensei_Messages', 'the_message_sent_by_title' ), 40 );
+// Course results.
+remove_action( 'sensei_course_results_content_inside_before', array( $sensei->course, 'course_image' ), 10 );
 
 /**
  * Load theme actions
@@ -64,6 +66,8 @@ function beflex_load_theme_actions() {
 	add_action( 'beflex_header_page_inside_before', 'beflex_single_message_backlink', 10 );
 	// Teacher page.
 	add_action( 'sensei_teacher_archive_course_loop_before', 'beflex_add_bio_to_admin_author_page', 9 ); // Function in main functions.php.
+	// Course results.
+	add_action( 'beflex_header_page_inside_before', 'beflex_course_results_header', 10 );
 
 	// Filters.
 	// Course.
@@ -344,5 +348,18 @@ function beflex_single_message_title($page_title, $post_id) {
 function beflex_single_message_backlink() {
 	if (  is_singular( 'sensei_message' ) ) {
 		get_template_part( 'sensei/single-message', 'backlink' );
+	}
+}
+
+/**
+ * Display header in course results page
+ *
+ * @return void
+ */
+function beflex_course_results_header() {
+	global $course, $wp_query;
+	if ( isset( $wp_query->query_vars['course_results'] ) ) {
+		$course = get_page_by_path( $wp_query->query_vars['course_results'], OBJECT, 'course' );
+		get_template_part( 'sensei/course-results', 'header', array( 'course' => $course ) );
 	}
 }

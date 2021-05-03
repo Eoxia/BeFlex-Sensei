@@ -1,4 +1,5 @@
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6,
+.h1-size, .h2-size, .h3-size, .h4-size, .h5-size, .h6-size {
 	clear: both;
 	font-family: 'Open sans', sans-serif;
 	font-weight: 900;
@@ -8,26 +9,26 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
 }
 
-h1 {
+h1, .h1-size {
   @include fluid-type( $media__small, $media__large, 30px, 40px );
 }
 
-h2 {
+h2, .h2-size {
 	@include fluid-type( $media__small, $media__large, 25px, 30px );
 }
 
-h3 {
+h3, .h3-size {
   @include fluid-type( $media__small, $media__large, 20px, 25px );
 }
 
-h4 {
+h4, .h4-size {
   @include fluid-type( $media__small, $media__large, 15px, 20px );
 }
 
-h5 {
+h5, .h5-size {
   @include fluid-type( $media__small, $media__large, 13px, 16px );
 }
 
-h6 {
+h6, .h6-size {
 	@include fluid-type( $media__small, $media__large, 11px, 14px );
 }
