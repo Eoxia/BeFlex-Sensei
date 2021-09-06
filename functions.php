@@ -500,3 +500,11 @@ function myplugin_user_register( $user_id ) {
 		update_user_meta( $user_id, 'last_name', trim( $_POST['last_name'] ) );
 	}
 }
+
+
+function beflex_hide_admin_bar() {
+	if ( !current_user_can( 'edit_posts' ) ) {
+		show_admin_bar( false );
+	}
+}
+add_action('set_current_user', 'beflex_hide_admin_bar');
