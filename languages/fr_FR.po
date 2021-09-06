@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Beflex v3\n"
-"POT-Creation-Date: 2021-05-03 16:14+0200\n"
-"PO-Revision-Date: 2021-05-03 16:16+0200\n"
+"POT-Creation-Date: 2021-09-06 10:09+0200\n"
+"PO-Revision-Date: 2021-09-06 10:10+0200\n"
 "Last-Translator: \n"
 "Language-Team: Eoxia\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.3\n"
+"X-Generator: Poedit 3.0\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -116,6 +116,18 @@ msgstr "Boxfoot 3"
 msgid "3 Boxfoot. Boxfoot display before Footer"
 msgstr "3ème zone du boxfoot. Le boxfoot s'affiche au dessus du footer"
 
+#: functions.php:465
+msgid "Your informations can no longer be modified"
+msgstr "Vos informations ne pourront plus êtres modifiées"
+
+#: functions.php:476
+msgid "Last name"
+msgstr "Nom"
+
+#: functions.php:480
+msgid "First name"
+msgstr "Prénom"
+
 #: header.php:28
 msgid "Skip to content"
 msgstr "Passer au contenu"
@@ -219,15 +231,15 @@ msgstr "%d leçon"
 #: sensei/course-results/lessons.php:91 sensei/course-results/lessons.php:148
 #, php-format
 msgid "Start %s"
-msgstr ""
+msgstr "Commencer %s"
 
 #: sensei/course-results/lessons.php:122
 msgid "Other Lessons"
-msgstr ""
+msgstr "Autres leçons"
 
 #: sensei/course-results/lessons.php:167
 msgid "Total Grade"
-msgstr ""
+msgstr "Note finale"
 
 #: sensei/emails/admin-teacher-new-course-created.php:28
 #: sensei/emails/teacher-new-course-assignment.php:28
@@ -238,11 +250,11 @@ msgstr "Aperçu du cours"
 
 #: sensei/emails/admin-teacher-new-course-created.php:36
 msgid "was submitted for review by "
-msgstr ""
+msgstr "as été envoyé pour revue"
 
 #: sensei/emails/admin-teacher-new-course-created.php:44
 msgid "You can review and publish the new course here:  "
-msgstr ""
+msgstr "Vous pouvez consulter et publier les nouveaux cours ici:"
 
 #: sensei/emails/footer.php:26
 #, php-format
@@ -344,7 +356,7 @@ msgstr ""
 
 #: sensei/emails/teacher-started-course.php:33
 msgid "has started the course"
-msgstr ""
+msgstr "a débuté le cours"
 
 #: sensei/functions.php:260
 msgid "Show course"

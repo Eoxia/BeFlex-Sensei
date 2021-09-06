@@ -459,3 +459,44 @@ function beflex_add_bio_to_admin_author_page() {
 	}
 }
 add_action( 'beflex_author_posts_before', 'beflex_add_bio_to_admin_author_page', 10 );
+
+
+function beflex_add_register_form_description() {
+	echo '<p style="color: red;"><i><strong>' . __( 'Your informations can no longer be modified', 'beflex' ) . '</strong></i></p>';
+}
+add_action( 'sensei_register_form_start', 'beflex_add_register_form_description', 10 );
+
+
+function beflex_add_register_name_fields() {
+	$first_name = ( ! empty( $_POST['first_name'] ) ) ? trim( $_POST['first_name'] ) : '';
+	$last_name  = ( ! empty( $_POST['last_name'] ) ) ? trim( $_POST['last_name'] ) : '';
+	?>
+	<div class="gridlayout grid-2">
+		<p class="form-row form-row-wide">
+			<label for="last_name"><?php esc_html_e( 'Last name', 'beflex' ); ?> <span class="required">*</span></label>
+			<input type="text" name="last_name" id="last_name" class="input-text input" value="<?php echo esc_attr( wp_unslash( $first_name ) ); // phpcs:ignore WordPress.Security.NonceVerification ?>" size="25" />
+		</p>
+		<p class="form-row form-row-wide">
+			<label for="first_name"><?php esc_html_e( 'First name', 'beflex' ); ?> <span class="required">*</span></label>
+			<input type="text" name="first_name" id="first_name" class="input-text input" value="<?php echo esc_attr( wp_unslash( $last_name ) ); // phpcs:ignore WordPress.Security.NonceVerification ?>" size="25" />
+		</p>
+	</div>
+	<?php
+}
+add_action( 'sensei_register_form_fields', 'beflex_add_register_name_fields', 10 );
+
+
+add_action( 'user_register', 'myplugin_user_register' );
+function myplugin_user_register( $user_id ) {
+	// check the for the sensei specific registration requests.
+	// phpcs:ignore WordPress.Security.NonceVerification -- We are just checking whether to return here.
+	if ( ! isset( $_POST['sensei_reg_username'] ) && ! isset( $_POST['sensei_reg_email'] ) && ! isset( $_POST['sensei_reg_password'] ) ) {
+		// exit if this is not a sensei registration request.
+		return;
+	}
+
+	if ( ! empty( $_POST['first_name'] ) ) {
+		update_user_meta( $user_id, 'first_name', trim( $_POST['first_name'] ) );
+		update_user_meta( $user_id, 'last_name', trim( $_POST['last_name'] ) );
+	}
+}
