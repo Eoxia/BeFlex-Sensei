@@ -1992,9 +1992,20 @@ body.single-course #header-page .header-title-container .meta-categories [rel="t
   justify-content: center;
 }
 
+.wp-block-sensei-lms-lesson-actions .wp-block-button__link {
+  border-radius: 4px;
+  background: #0e6eff;
+  border-color: #0e6eff;
+}
+
 .wp-block-sensei-lms-lesson-actions .wp-block-sensei-lms-button-complete-lesson .wp-block-button__link {
   background: #1fc588;
+  border-color: #1fc588;
   border-radius: 4px;
+}
+
+.wp-block-sensei-lms-lesson-actions .wp-block-sensei-lms-button-reset-lesson .wp-block-button__link {
+  color: #0e6eff;
 }
 
 body.single-lesson .video iframe {

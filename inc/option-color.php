@@ -132,6 +132,13 @@ endif;
 		body.course-results .lesson-result .result-container .result-line a:hover {
 			color: <?php echo esc_html( $beflex_primary ); ?>;
 		}
+		.wp-block-sensei-lms-lesson-actions .wp-block-button__link {
+			background: <?php echo esc_html( $beflex_primary ); ?>;
+			border-color: <?php echo esc_html( $beflex_primary ); ?>;
+		}
+		.wp-block-sensei-lms-lesson-actions .wp-block-sensei-lms-button-reset-lesson .wp-block-button__link {
+			color: <?php echo esc_html( $beflex_primary ); ?>;
+		}
 	<?php endif; ?>
 
 </style>
