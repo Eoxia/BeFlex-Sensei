@@ -96,6 +96,15 @@ if ( ! function_exists( 'beflex_setup' ) ) :
 		if ( ! isset( $content_width ) ) :
 			$content_width = 900;
 		endif;
+
+		if ( ! current_user_can( 'edit_posts' ) ) {
+			show_admin_bar( false );
+
+			// Redirection from backend.
+			if ( is_admin() ) {
+				header( 'Location: ' . get_site_url() );
+			}
+		}
 	}
 endif;
 add_action( 'after_setup_theme', 'beflex_setup' );
@@ -500,11 +509,3 @@ function myplugin_user_register( $user_id ) {
 		update_user_meta( $user_id, 'last_name', trim( $_POST['last_name'] ) );
 	}
 }
-
-
-function beflex_hide_admin_bar() {
-	if ( !current_user_can( 'edit_posts' ) ) {
-		show_admin_bar( false );
-	}
-}
-add_action('set_current_user', 'beflex_hide_admin_bar');
