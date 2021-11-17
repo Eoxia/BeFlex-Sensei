@@ -1983,6 +1983,10 @@ body.single-course #header-page .header-title-container .meta-categories [rel="t
   margin: 0 0.5em 0 0;
 }
 
+body.single-course #post-entries {
+  display: none;
+}
+
 .wp-block-sensei-lms-lesson-actions {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2156,7 +2160,7 @@ body.single-lesson .video iframe {
 
 .wp-block-sensei-lms-course-outline-module .wp-block-sensei-lms-course-outline-module__header {
   background: none !important;
-  color: #1f1f1f;
+  color: #1f1f1f !important;
 }
 
 .wp-block-sensei-lms-course-outline-module .wp-block-sensei-lms-course-outline-module__lessons-title {
