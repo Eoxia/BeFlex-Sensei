@@ -42,4 +42,3 @@ $course_author   = get_post_field( 'post_author', $post_id );
         <?php endif; ?>
     </div>
 </div>
-<?php
