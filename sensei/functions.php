@@ -184,12 +184,15 @@ function beflex_profile_header_learner() {
 		if ( ! empty( $learner_user ) ) {
 			$name   = $learner_user->data->display_name;
 			$bio    = get_user_meta( $learner_user->ID, 'description', true );
+			$email  = get_userdata( $learner_user->ID );
+			$email  = ! empty( $email ) ? $email->data->user_email : '';
 			$avatar = get_avatar( $learner_user->ID, 80 );
 
 			get_template_part( 'sensei/profile', 'header', array(
 				'user_ID'      => $learner_user->ID,
 				'display_name' => $name,
 				'description'  => $bio,
+				'email'        => $email,
 				'avatar'       => $avatar,
 			) );
 		}

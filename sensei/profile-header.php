@@ -21,8 +21,8 @@
 		<?php if ( ! empty( $args['display_name'] ) ) : ?>
 			<h1 class="header-title"><?php echo esc_html( $args['display_name'] ); ?></h1>
 		<?php endif; ?>
-		<?php if ( ! empty( $args['description'] ) ) : ?>
-			<div class="header-excerpt"><?php echo esc_html( $args['description'] ); ?></div>
+		<?php if ( ! empty( $args['email'] ) && get_current_user_id() == $args['user_ID'] ) : ?>
+			<div class="header-excerpt"><?php echo esc_html( $args['email'] ); ?></div>
 		<?php endif; ?>
 	</div>
 </div>
