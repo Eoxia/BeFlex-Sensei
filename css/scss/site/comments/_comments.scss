@@ -24,6 +24,8 @@
 }
 
 #comments .comment-list {
+  @extend .beflex-box;
+
 	.comment-body {
 		position: relative;
 		margin: 1em 0;

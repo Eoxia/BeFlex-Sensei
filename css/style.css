@@ -3042,7 +3042,7 @@ a:hover, a:active {
   outline: 0;
 }
 
-.beflex-box, .wp-block-sensei-lms-lesson-actions, .sensei-pagination, .wp-block-sensei-lms-course-outline-module, #my-courses .col2-set .col-2, body.course-results .lesson-result .result-container, #respond {
+.beflex-box, .wp-block-sensei-lms-lesson-actions, .sensei-pagination, .wp-block-sensei-lms-course-outline-module, #my-courses .col2-set .col-2, body.course-results .lesson-result .result-container, #comments .comment-list, #respond {
   background: #f4f6f9;
   border: 1px solid rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
