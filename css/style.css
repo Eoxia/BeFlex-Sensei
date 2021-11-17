@@ -2033,6 +2033,47 @@ body.single-lesson .video iframe {
   float: none;
 }
 
+.course-container div.sensei-message.info .sensei-message.info,
+.course-container p.sensei-message.info .sensei-message.info,
+.course div.sensei-message.info .sensei-message.info,
+.course p.sensei-message.info .sensei-message.info,
+.learner-info div.sensei-message.info .sensei-message.info,
+.learner-info p.sensei-message.info .sensei-message.info,
+.lesson div.sensei-message.info .sensei-message.info,
+.lesson p.sensei-message.info .sensei-message.info,
+.quiz div.sensei-message.info .sensei-message.info,
+.quiz p.sensei-message.info .sensei-message.info,
+.sensei div.sensei-message.info .sensei-message.info,
+.sensei p.sensei-message.info .course-container .sensei-message.info, .course .sensei-message.info, .learner-info .sensei-message.info, .lesson .sensei-message.info, .quiz .sensei-message.info, .sensei .sensei-message.info {
+  background: #e4eeff !important;
+}
+
+.course-container div.sensei-message.info .sensei-message.info::before, .course-container div.sensei-message.info .sensei-message.info a,
+.course-container p.sensei-message.info .sensei-message.info::before,
+.course-container p.sensei-message.info .sensei-message.info a,
+.course div.sensei-message.info .sensei-message.info::before,
+.course div.sensei-message.info .sensei-message.info a,
+.course p.sensei-message.info .sensei-message.info::before,
+.course p.sensei-message.info .sensei-message.info a,
+.learner-info div.sensei-message.info .sensei-message.info::before,
+.learner-info div.sensei-message.info .sensei-message.info a,
+.learner-info p.sensei-message.info .sensei-message.info::before,
+.learner-info p.sensei-message.info .sensei-message.info a,
+.lesson div.sensei-message.info .sensei-message.info::before,
+.lesson div.sensei-message.info .sensei-message.info a,
+.lesson p.sensei-message.info .sensei-message.info::before,
+.lesson p.sensei-message.info .sensei-message.info a,
+.quiz div.sensei-message.info .sensei-message.info::before,
+.quiz div.sensei-message.info .sensei-message.info a,
+.quiz p.sensei-message.info .sensei-message.info::before,
+.quiz p.sensei-message.info .sensei-message.info a,
+.sensei div.sensei-message.info .sensei-message.info::before,
+.sensei div.sensei-message.info .sensei-message.info a,
+.sensei p.sensei-message.info .course-container .sensei-message.info::before,
+.sensei p.sensei-message.info .course-container .sensei-message.info a, .course .sensei-message.info::before, .course .sensei-message.info a, .learner-info .sensei-message.info::before, .learner-info .sensei-message.info a, .lesson .sensei-message.info::before, .lesson .sensei-message.info a, .quiz .sensei-message.info::before, .quiz .sensei-message.info a, .sensei .sensei-message.info::before, .sensei .sensei-message.info a {
+  color: #5694ff !important;
+}
+
 .widget.widget_sensei_course_progress {
   background: #f4f6f9;
   border: 1px solid rgba(0, 0, 0, 0.1);
