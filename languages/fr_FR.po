@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Beflex v3\n"
-"POT-Creation-Date: 2021-09-06 10:09+0200\n"
-"PO-Revision-Date: 2021-09-06 10:10+0200\n"
+"POT-Creation-Date: 2021-11-17 14:45+0100\n"
+"PO-Revision-Date: 2021-11-17 14:49+0100\n"
 "Last-Translator: \n"
 "Language-Team: Eoxia\n"
 "Language: fr\n"
@@ -68,63 +68,63 @@ msgstr ""
 msgid "Main Navigation"
 msgstr "Navigation principale"
 
-#: functions.php:111
+#: functions.php:120
 msgid "Sidebar Blog"
 msgstr "Blog"
 
-#: functions.php:113
+#: functions.php:122
 msgid "Display on blog / post / archive pages."
 msgstr "S'affiche sur les pages Blog / Article / Archives."
 
-#: functions.php:123
+#: functions.php:132
 msgid "Shop"
 msgstr "Boutique"
 
-#: functions.php:125
+#: functions.php:134
 msgid "Display on shop pages"
 msgstr "S'affiche sur les pages de la boutique"
 
-#: functions.php:136
+#: functions.php:145
 msgid "Sensei LMS (Lessons)"
 msgstr "Sensei LMS (leçons)"
 
-#: functions.php:138
+#: functions.php:147
 msgid "Display in Sensei lesson/quizz pages"
 msgstr "S'affiche sur les pages leçon/quizz de Sensei"
 
-#: functions.php:148
+#: functions.php:157
 msgid "Boxfoot 1"
 msgstr "Boxfoot 1"
 
-#: functions.php:150
+#: functions.php:159
 msgid "1 Boxfoot. Boxfoot display before Footer"
 msgstr "1ère zone du boxfoot. Le boxfoot s'affiche au dessus du footer"
 
-#: functions.php:159
+#: functions.php:168
 msgid "Boxfoot 2"
 msgstr "Boxfoot 2"
 
-#: functions.php:161
+#: functions.php:170
 msgid "2 Boxfoot. Boxfoot display before Footer"
 msgstr "2ème zone du boxfoot. Le boxfoot s'affiche au dessus du footer"
 
-#: functions.php:170
+#: functions.php:179
 msgid "Boxfoot 3"
 msgstr "Boxfoot 3"
 
-#: functions.php:172
+#: functions.php:181
 msgid "3 Boxfoot. Boxfoot display before Footer"
 msgstr "3ème zone du boxfoot. Le boxfoot s'affiche au dessus du footer"
 
-#: functions.php:465
+#: functions.php:474
 msgid "Your informations can no longer be modified"
 msgstr "Vos informations ne pourront plus êtres modifiées"
 
-#: functions.php:476
+#: functions.php:485
 msgid "Last name"
 msgstr "Nom"
 
-#: functions.php:480
+#: functions.php:489
 msgid "First name"
 msgstr "Prénom"
 
@@ -358,7 +358,18 @@ msgstr ""
 msgid "has started the course"
 msgstr "a débuté le cours"
 
-#: sensei/functions.php:260
+#: sensei/functions.php:183
+#, php-format
+msgid "Please sign up for %1$sthe course%2$s before taking this lesson"
+msgstr "Veuillez vous inscrire à %1$sce cours%2$s avant de suivre cette leçon"
+
+#: sensei/functions.php:183
+#, fuzzy
+#| msgid "Sign in"
+msgid "Sign Up"
+msgstr "S'enregistrer"
+
+#: sensei/functions.php:275
 msgid "Show course"
 msgstr "Aperçu du cours"
 
