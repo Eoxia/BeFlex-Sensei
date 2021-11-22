@@ -58,7 +58,6 @@ function beflex_load_theme_actions() {
 	add_action( 'sensei_course_content_inside_before', 'beflex_loop_course_template', 11 );
 	// Lesson.
 	add_action( 'beflex_header_page_inside_before', 'beflex_single_lesson_backlink', 10 );
-	add_action( 'sensei_single_lesson_content_inside_before', 'beflex_lesson_prerequisite_message', 20 );
 
 	// Profile.
 	add_action( 'beflex_header_page_inside_before', 'beflex_profile_header_learner', 10 );
@@ -78,7 +77,6 @@ function beflex_load_theme_actions() {
 	add_filter( 'beflex_callto_bloc', 'beflex_call_to_action_atts_course', 10, 2 );
 	// Lesson.
 	add_filter( 'register_post_type_args', 'beflex_sensei_lesson_filter_post_type_args', 10, 2 );
-	add_filter( 'sensei_can_user_view_lesson', 'beflex_sensei_lesson_filter_can_user_view', 10, 3 );
 
 	// Module.
 	add_filter( 'sensei_breadcrumb_output', 'beflex_delete_module_breadcrumb_link', 10, 2 );
@@ -173,14 +171,6 @@ function beflex_single_lesson_meta() {
 function beflex_single_lesson_backlink() {
 	if ( is_singular( 'lesson' ) ) {
 		get_template_part( 'sensei/single-lesson', 'backlink', array( 'post_id' => get_the_ID() ) );
-	}
-}
-
-function beflex_lesson_prerequisite_message() {
-	$course_id = Sensei()->lesson->get_course_id( get_the_ID() );
-
-	if ( ! sensei_can_user_view_lesson() ) {
-		Sensei()->notices->add_notice( sprintf( esc_html__( 'Please sign up for %1$sthe course%2$s before taking this lesson', 'beflex' ), '<a href="' . esc_url( get_permalink( $course_id ) ) . '" title="' . esc_attr( __( 'Sign Up', 'beflex' ) ) . '">', '</a>' ), 'info' );
 	}
 }
 
@@ -329,26 +319,6 @@ function beflex_sensei_lesson_filter_post_type_args( $args, $post_type ) {
 		$args['has_archive'] = false;
 	}
 	return $args;
-}
-
-/**
- * Filter if the user can view lesson and quiz content.
- * Check if the user has subscribed to the course
- *
- * @since 1.9.0
- *
- * @param bool $can_user_view_lesson True if they can view lesson/quiz content.
- * @param int  $lesson_id            Lesson post ID.
- * @param int  $user_id              User ID.
- */
-function beflex_sensei_lesson_filter_can_user_view( $can_user_view_lesson, $lesson_id, $user_id ) {
-	$course_id = Sensei()->lesson->get_course_id( $lesson_id );
-
-	if ( ! Sensei_Course::is_user_enrolled( $course_id, $user_id ) && ! Sensei_Utils::is_preview_lesson( $lesson_id ) ) {
-		$can_user_view_lesson = false;
-	}
-
-	return $can_user_view_lesson;
 }
 
 
