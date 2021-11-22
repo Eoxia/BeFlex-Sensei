@@ -72,6 +72,7 @@
                 "Exo 2": "Exo 2",
                 "Hind": "Hind",
                 "Kadwa": "Kadwa",
+                "Lato": "Lato",
                 "Lora": "Lora",
                 "Merriweather": "Merriweather",
                 "Nunito": "Nunito",
@@ -677,5 +678,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1637575478
+    "modified": 1637591923
 }
