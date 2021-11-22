@@ -1,0 +1,681 @@
+{
+    "key": "group_5c75595127128",
+    "title": "BeFlex - Options de thème",
+    "fields": [
+        {
+            "key": "field_5c755a39254c6",
+            "label": "Design",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5c755a47254c7",
+            "label": "Logo",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "Vous pouvez éditer votre logo dans la personnalisation du thème (Apparence -> Personnaliser)",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_5c7654ebbca46",
+            "label": "Couleur principale",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "Vous pouvez éditer la couleur principale dans la personnalisation du thème (Apparence -> Personnaliser)",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_5c755aaa254c8",
+            "label": "Police des titres",
+            "name": "beflex_opt_title_font",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.333333",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Caveat Brush": "Caveat Brush",
+                "Dosis": "Dosis",
+                "Droid Serif": "Droid Serif",
+                "Exo 2": "Exo 2",
+                "Hind": "Hind",
+                "Kadwa": "Kadwa",
+                "Lora": "Lora",
+                "Merriweather": "Merriweather",
+                "Nunito": "Nunito",
+                "Open sans": "Open sans",
+                "Oswald": "Oswald",
+                "Palanquin Dark": "Palanquin Dark",
+                "Playfair Display": "Playfair Display",
+                "Poppins": "Poppins",
+                "Raleway": "Raleway",
+                "Roboto": "Roboto",
+                "Work sans": "Work sans"
+            },
+            "default_value": "Open sans",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5c755aef254c9",
+            "label": "Graisse",
+            "name": "beflex_opt_title_weight",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.333333",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "100": "Thin",
+                "200": "Extra-light",
+                "300": "Light",
+                "400": "Regular",
+                "500": "Medium",
+                "600": "Semi-bold",
+                "700": "Bold",
+                "800": "Extra-bold",
+                "900": "Black"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": 900,
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5c755b49254ca",
+            "label": "Afficher en Uppercase",
+            "name": "beflex_opt_title_uppercase",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.333333",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5c7655df32512",
+            "label": "Diaporama",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5c7655f632513",
+            "label": "Largeur de l'image",
+            "name": "beflex_opt_diaporama_width",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.333333",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1400,
+            "placeholder": 1400,
+            "prepend": "",
+            "append": "px",
+            "min": 0,
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_5c76561f32515",
+            "label": "Hauteur de l'image",
+            "name": "beflex_opt_diaporama_height",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.333333",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 600,
+            "placeholder": 600,
+            "prepend": "",
+            "append": "px",
+            "min": 0,
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_5c76569132516",
+            "label": "Couper l'image pour respecter les tailles",
+            "name": "beflex_opt_diaporama_ratio",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.333333",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5c7e8820cd367",
+            "label": "Call To Action",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5c7e89c9cd368",
+            "label": "Largeur de l'image",
+            "name": "beflex_opt_callto_width",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.333333",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 500,
+            "placeholder": 500,
+            "prepend": "",
+            "append": "px",
+            "min": 0,
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_5c7e89d6cd369",
+            "label": "Hauteur de l'image",
+            "name": "beflex_opt_callto_height",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.333333",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 340,
+            "placeholder": 340,
+            "prepend": "",
+            "append": "px",
+            "min": 0,
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_5c7e89d9cd36a",
+            "label": "Couper l'image pour respecter les tailles",
+            "name": "beflex_opt_callto_ratio",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.333333",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5c7658ebdcdb8",
+            "label": "Sidebar",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5c765901dcdb9",
+            "label": "Sidebars",
+            "name": "beflex_opt_sidebars",
+            "type": "repeater",
+            "instructions": "Vous pouvez ajoutez de nouvelles zones de widgets utilisables pour ce thème. Rendez-vous ensuite dans l'onglet \"Apparence\" -> \"Widgets\" pour y associer vos widgets.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Ajouter une Sidebar",
+            "sub_fields": [
+                {
+                    "key": "field_5c765931dcdba",
+                    "label": "Titre",
+                    "name": "sidebar_title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5c76593ddcdbb",
+                    "label": "Description",
+                    "name": "sidebar_description",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5c765cdc1c445",
+            "label": "Code tracking",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5c765ceb1c446",
+            "label": "Tracking général (HEAD)",
+            "name": "beflex_opt_general_tracking",
+            "type": "textarea",
+            "instructions": "Le code s'affichera dans la balise HEAD sur toutes les pages du site.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5ce7ecabbb84d",
+            "label": "Tracking général (BODY)",
+            "name": "beflex_opt_body_tracking",
+            "type": "textarea",
+            "instructions": "Le code s'affichera après l'ouverture de la balise BODY sur toutes les pages du site.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5c765f371c447",
+            "label": "Tracking par page",
+            "name": "beflex_opt_page_tracking",
+            "type": "repeater",
+            "instructions": "Le code s'affichera dans la balise HEAD seulement sur les pages choisies",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Ajouter un code",
+            "sub_fields": [
+                {
+                    "key": "field_5c765f5f1c448",
+                    "label": "Page",
+                    "name": "tracking_page",
+                    "type": "post_object",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "page"
+                    ],
+                    "taxonomy": "",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "return_format": "id",
+                    "ui": 1
+                },
+                {
+                    "key": "field_5c765f9d1c449",
+                    "label": "Code",
+                    "name": "tracking_code",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5c76621f8e3c7",
+            "label": "Réseaux sociaux",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5c7662378e3c8",
+            "label": "Réseaux sociaux",
+            "name": "beflex_opt_socials",
+            "type": "repeater",
+            "instructions": "Vous pouvez les afficher dans le thème grâce aux widgets \"Apparence -> widgets\"",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Ajouter une réseau",
+            "sub_fields": [
+                {
+                    "key": "field_5c7662738e3c9",
+                    "label": "Type",
+                    "name": "social_type",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "facebook-f": "<i class=\"fab fa-facebook-f\"><\/i> Facebook",
+                        "twitter": "<i class=\"fab fa-twitter\"><\/i> Twitter",
+                        "instagram": "<i class=\"fab fa-instagram\"><\/i> Instagram",
+                        "youtube": "<i class=\"fab fa-youtube\"><\/i> Youtube",
+                        "linkedin": "<i class=\"fab fa-linkedin\"><\/i> Linkedin",
+                        "pinterest": "<i class=\"fab fa-pinterest\"><\/i> Pinterest",
+                        "google-plus-g": "<i class=\"fab fa-google-plus-g\"><\/i> Google plus",
+                        "facebook-messenger": "<i class=\"fab fa-facebook-messenger\"><\/i> Facebook Messenger",
+                        "whatsapp": "<i class=\"fab fa-whatsapp\"><\/i> Whatsapp",
+                        "weixin": "<i class=\"fab fa-weixin\"><\/i> Wechat",
+                        "viber": "<i class=\"fab fa-viber\"><\/i> Viber",
+                        "reddit-alien": "<i class=\"fab fa-reddit-alien\"><\/i> Reddit",
+                        "snapchat-ghost": "<i class=\"fab fa-snapchat-ghost\"><\/i> Snapchat",
+                        "skype": "<i class=\"fab fa-skype\"><\/i> Skype",
+                        "telegram-plane": "<i class=\"fab fa-telegram-plane\"><\/i> Telegram",
+                        "twitch": "<i class=\"fab fa-twitch\"><\/i> Twitch",
+                        "slack-hash": "<i class=\"fab fa-slack-hash\"><\/i> Slack",
+                        "github": "<i class=\"fab fa-github\"><\/i> Github"
+                    },
+                    "default_value": "facebook-f",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 1,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5c76627e8e3ca",
+                    "label": "Lien",
+                    "name": "social_link",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "Exemple : https:\/\/www.facebook.com\/EoxiaAgenceWeb\/",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
+            "key": "field_619b5e48eba39",
+            "label": "Emails Sensei",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_619b5e35eba38",
+            "label": "Logo entête email",
+            "name": "beflex_opt_sensei_email_logo",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_619b6b176665f",
+            "label": "Fond de couleur bouton",
+            "name": "beflex_opt_sensei_email_button_background",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string"
+        },
+        {
+            "key": "field_619b6b2c66660",
+            "label": "Couleur texte bouton",
+            "name": "beflex_opt_sensei_email_button_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-general-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1637575478
+}

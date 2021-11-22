@@ -14,36 +14,48 @@ if ( ! defined( 'ABSPATH' ) ) {
 // Get data for email content
 global $sensei_email_data;
 
-// For Gmail compatibility, including CSS styles in head/body are stripped out therefore styles need to be inline. These variables contain rules which are added to the template inline. !important; is a gmail hack to prevent styles being stripped if it doesn't like something.
-$style_small = 'text-align: center !important;';
+// For gmail compatibility, including CSS styles in head/body are stripped out therefore styles need to be inline. These variables contain rules which are added to the template inline. !important; is a gmail hack to prevent styles being stripped if it doesn't like something.
+$background_button = get_field( 'beflex_opt_sensei_email_button_background', 'options' );
+$color_button      = get_field( 'beflex_opt_sensei_email_button_color', 'options' );
+$background_button = ! empty( $background_button ) ? $background_button : '#202020';
+$color_button      = ! empty( $color_button ) ? $color_button : '#fff';
 
-$style_large = 'text-align: center !important;font-size: 350% !important;line-height: 100% !important;';
+$button = '
+	display: inline-block;
+	color: ' . esc_attr( $color_button ) . ";
+	background: $background_button;
+	padding: 10px 12px;
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 14px;
+";
+$box_message = "
+	background: #f1f1f1;
+	color: rgba(0,0,0,0.7);
+	font-style: italic;
+	padding: 20px;
+	border-radius: 6px;
+	font-size: 14px;
+	line-height: 1.4;
+";
 
 // $template is provided by the calling code.
 // phpcs:ignore VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 do_action( 'sensei_before_email_content', $template );
 ?>
 
-<p style="<?php echo esc_attr( $style_small ); ?>">
-	<?php esc_html_e( 'The Course', 'sensei-lms' ); ?>
-</p>
-
-<h2 style="<?php echo esc_attr( $style_large ); ?>">
-	<?php echo esc_html( $sensei_email_data['course_name'] ); ?>
-</h2>
-
-<p style="<?php echo esc_attr( $style_small ); ?>">
-	<?php esc_html_e( 'has been assigned to you.', 'sensei-lms' ); ?>
-</p>
-
-<hr/>
-
-<p style="<?php echo esc_attr( $style_small ); ?>">
+<p style="text-align: center;">
+	<?php esc_html_e( 'The Course', 'sensei-lms' ); ?> <strong><?php echo esc_html( $sensei_email_data['course_name'] ); ?> </strong>
 	<?php
-
-	echo esc_html__( 'You can edit the assigned course here: ', 'sensei-lms' ) . '<a href="' . esc_url( $sensei_email_data['course_edit_link'] ) . '">' . esc_html( $sensei_email_data['course_name'] ) . '</a>';
-
+	// translators: Placeholder is the translated text for "passed" or "failed".
+	printf( esc_html__( 'has been assigned to you.', 'sensei-lms' ), esc_html( $passed ) );
 	?>
+</p>
+
+<p style="text-align: center;">
+	<a href="<?php echo esc_url( $sensei_email_data['course_edit_link'] ); ?>" style="<?php echo esc_attr( $button ); ?>"><?php esc_html_e( 'Edit the assigned course', 'beflex-child' ); ?></a>
 </p>
 
 <?php

@@ -42,41 +42,40 @@ $credit = "
 	line-height:125%;
 	text-align:center;
 ";
+$footer_content = "
+	background-color: #202020;
+	color: rgba(255,255,255,0.6);
+	border-bottom-left-radius: 6px;
+	-webkit-border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+	-webkit-border-bottom-right-radius: 6px;
+	margin: auto;
+	width: 100%;
+	max-width: 600px;
+	padding: 0 36px;
+	font-family:Arial;
+	margin-bottom: 30px;
+";
 ?>
-															</div>
-														</td>
-													</tr>
-												</table>
-												<!-- End Content -->
-											</td>
-										</tr>
-									</table>
-									<!-- End Body -->
-								</td>
-							</tr>
-							<tr>
-								<td align="center" valign="top">
-									<!-- Footer -->
-									<table border="0" cellpadding="10" cellspacing="0" width="600" id="template_footer" style="<?php echo esc_attr( $template_footer ); ?>">
-										<tr>
-											<td valign="top">
-												<table border="0" cellpadding="10" cellspacing="0" width="100%">
-													<tr>
-														<td colspan="2" valign="middle" id="credit" style="<?php echo esc_attr( $credit ); ?>">
-															<?php echo wp_kses_post( wpautop( wptexturize( apply_filters( 'sensei_email_footer_text', $footer_text ) ) ) ); ?>
-														</td>
-													</tr>
-												</table>
-											</td>
-										</tr>
-									</table>
-									<!-- End Footer -->
-								</td>
-							</tr>
-						</table>
-					</td>
-				</tr>
-			</table>
-		</div>
-	</body>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<!-- End content -->
+			<tr>
+				<td>
+					<table border="0" cellpadding="0" cellspacing="0" id="template_footer" style="<?php echo esc_attr( $footer_content ); ?>">
+						<tr>
+							<td style="padding: 20px 0; border-top: 1px solid rgba(0,0,0,0.2); text-align: center">
+								<?php echo wp_kses_post( wpautop( wptexturize( apply_filters( 'sensei_email_footer_text', $footer_text ) ) ) ); ?>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<!-- End footer -->
+		</table>
+	</div><!-- .wrapper -->
+</body>
 </html>
