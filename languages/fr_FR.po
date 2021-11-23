@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Beflex v3\n"
-"POT-Creation-Date: 2021-11-17 14:45+0100\n"
-"PO-Revision-Date: 2021-11-17 14:49+0100\n"
+"POT-Creation-Date: 2021-11-22 15:52+0100\n"
+"PO-Revision-Date: 2021-11-23 09:51+0100\n"
 "Last-Translator: \n"
 "Language-Team: Eoxia\n"
 "Language: fr\n"
@@ -215,18 +215,12 @@ msgid "Back to my courses"
 msgstr "Retour à mes cours"
 
 #: sensei/course-results/lessons.php:37
-#, fuzzy
-#| msgid "%d lesson"
-#| msgid_plural "%d lessons"
 msgid "Lesson"
-msgstr "%d leçon"
+msgstr "Leçon"
 
 #: sensei/course-results/lessons.php:39
-#, fuzzy
-#| msgid "%d lesson"
-#| msgid_plural "%d lessons"
 msgid "Lessons"
-msgstr "%d leçon"
+msgstr "Leçons"
 
 #: sensei/course-results/lessons.php:91 sensei/course-results/lessons.php:148
 #, php-format
@@ -241,135 +235,117 @@ msgstr "Autres leçons"
 msgid "Total Grade"
 msgstr "Note finale"
 
-#: sensei/emails/admin-teacher-new-course-created.php:28
-#: sensei/emails/teacher-new-course-assignment.php:28
-#, fuzzy
-#| msgid "Show course"
+#: sensei/emails/admin-teacher-new-course-created.php:50
+#: sensei/emails/teacher-new-course-assignment.php:50
 msgid "The Course"
-msgstr "Aperçu du cours"
+msgstr "Le cours"
 
-#: sensei/emails/admin-teacher-new-course-created.php:36
+#: sensei/emails/admin-teacher-new-course-created.php:50
 msgid "was submitted for review by "
-msgstr "as été envoyé pour revue"
+msgstr "as été envoyé pour revue "
 
-#: sensei/emails/admin-teacher-new-course-created.php:44
-msgid "You can review and publish the new course here:  "
-msgstr "Vous pouvez consulter et publier les nouveaux cours ici:"
+#: sensei/emails/admin-teacher-new-course-created.php:54
+msgid "Review and publish the new course"
+msgstr "Vous pouvez consulter et publier les nouveaux cours ici"
 
 #: sensei/emails/footer.php:26
 #, php-format
 msgid "%1$s - Powered by Sensei LMS"
 msgstr ""
 
-#: sensei/emails/learner-completed-course.php:34
+#: sensei/emails/learner-completed-course.php:56
 #, php-format
 msgid "You have completed and %1$s the course"
-msgstr ""
-
-#: sensei/emails/learner-graded-quiz.php:34
-#, php-format
-msgid "You %1$s the lesson"
-msgstr ""
-
-#: sensei/emails/learner-graded-quiz.php:40
-msgid "with a grade of"
-msgstr ""
-
-#: sensei/emails/learner-graded-quiz.php:47
-#, php-format
-msgid "The pass mark is %1$s"
-msgstr ""
+msgstr "Vous avez terminé et %1$s le cours"
 
 #: sensei/emails/learner-graded-quiz.php:56
 #, php-format
-msgid "You can review your grade and your answers %1$shere%2$s."
-msgstr ""
+msgid "You %1$s the lesson"
+msgstr "Vous avez %1$s la leçon"
 
-#: sensei/emails/new-message-reply.php:36
+#: sensei/emails/learner-graded-quiz.php:58
+msgid "with a grade of"
+msgstr "avec une note de"
+
+#: sensei/emails/learner-graded-quiz.php:65
+#, php-format
+msgid "The pass mark is %1$s"
+msgstr "La moyenne pour réussir est de %1$s"
+
+#: sensei/emails/learner-graded-quiz.php:71
+msgid "Review your grade and your answers"
+msgstr "Voire votre note et vos réponses"
+
+#: sensei/emails/new-message-reply.php:54
 #, php-format
 msgid "has replied to your private message regarding the %1$s"
-msgstr ""
+msgstr "a répondu à votre message privé votre %1$s"
 
-#: sensei/emails/new-message-reply.php:51
-#, php-format
-msgid "You can view the message and reply %1$shere%2$s."
-msgstr ""
+#: sensei/emails/new-message-reply.php:62
+msgid "View message"
+msgstr "Voir message"
 
-#: sensei/emails/teacher-completed-course.php:31
-#: sensei/emails/teacher-completed-lesson.php:31
-#: sensei/emails/teacher-new-message.php:31
-#: sensei/emails/teacher-quiz-submitted.php:32
-#: sensei/emails/teacher-started-course.php:29
+#: sensei/emails/teacher-completed-course.php:54
+#: sensei/emails/teacher-completed-lesson.php:54
+#: sensei/emails/teacher-new-message.php:54
+#: sensei/emails/teacher-quiz-submitted.php:55
+#: sensei/emails/teacher-started-course.php:51
 msgid "Your student"
-msgstr ""
+msgstr "Votre étudiant"
 
-#: sensei/emails/teacher-completed-course.php:38
+#: sensei/emails/teacher-completed-course.php:57
 #, php-format
 msgid "has completed and %1$s the course"
-msgstr ""
+msgstr "a terminé et %1$s le cours"
 
-#: sensei/emails/teacher-completed-course.php:49
-#: sensei/emails/teacher-started-course.php:42
-#, php-format
-msgid "Manage this course's learners %1$shere%2$s."
-msgstr ""
+#: sensei/emails/teacher-completed-course.php:63
+#: sensei/emails/teacher-started-course.php:55
+msgid "Manage this course's learners"
+msgstr "Gérer les étudiants du cours"
 
-#: sensei/emails/teacher-completed-lesson.php:35
+#: sensei/emails/teacher-completed-lesson.php:57
 msgid "has completed the lesson"
-msgstr ""
+msgstr "a terminé la leçon"
 
-#: sensei/emails/teacher-completed-lesson.php:44
-#, php-format
-msgid "Manage this lesson's learners %1$shere%2$s."
-msgstr ""
+#: sensei/emails/teacher-completed-lesson.php:63
+msgid "Manage this lesson's learners"
+msgstr "Gérer les étudiants de la leçon"
 
-#: sensei/emails/teacher-new-course-assignment.php:36
+#: sensei/emails/teacher-new-course-assignment.php:53
 msgid "has been assigned to you."
-msgstr ""
+msgstr "vous a été assigné."
 
-#: sensei/emails/teacher-new-course-assignment.php:44
-msgid "You can edit the assigned course here: "
-msgstr ""
+#: sensei/emails/teacher-new-course-assignment.php:58
+msgid "Edit the assigned course"
+msgstr "Modifier le cours assigné"
 
-#: sensei/emails/teacher-new-message.php:38
+#: sensei/emails/teacher-new-message.php:57
 #, php-format
 msgid "has sent you a private message regarding the %1$s"
-msgstr ""
+msgstr "vous a envoyé un message privé concernant votre %1$s"
 
-#: sensei/emails/teacher-new-message.php:53
-#, php-format
-msgid "You can reply to this message %1$shere%2$s."
-msgstr ""
+#: sensei/emails/teacher-new-message.php:67
+msgid "Reply to this message"
+msgstr "Répondre à ce message"
 
-#: sensei/emails/teacher-quiz-submitted.php:36
+#: sensei/emails/teacher-quiz-submitted.php:58
 msgid "has submitted the quiz for lesson"
-msgstr ""
+msgstr "a soumis le quiz pour la leçon"
 
-#: sensei/emails/teacher-quiz-submitted.php:40
+#: sensei/emails/teacher-quiz-submitted.php:60
 msgid "for grading."
-msgstr ""
+msgstr "pour notation."
 
-#: sensei/emails/teacher-quiz-submitted.php:48
+#: sensei/emails/teacher-quiz-submitted.php:67
 #, php-format
 msgid "You can grade this quiz %1$shere%2$s."
-msgstr ""
+msgstr "Vous pouvez noter le quiz %1$sici%2$s."
 
-#: sensei/emails/teacher-started-course.php:33
+#: sensei/emails/teacher-started-course.php:51
 msgid "has started the course"
 msgstr "a débuté le cours"
 
-#: sensei/functions.php:183
-#, php-format
-msgid "Please sign up for %1$sthe course%2$s before taking this lesson"
-msgstr "Veuillez vous inscrire à %1$sce cours%2$s avant de suivre cette leçon"
-
-#: sensei/functions.php:183
-#, fuzzy
-#| msgid "Sign in"
-msgid "Sign Up"
-msgstr "S'enregistrer"
-
-#: sensei/functions.php:275
+#: sensei/functions.php:265
 msgid "Show course"
 msgstr "Aperçu du cours"
 
@@ -398,7 +374,7 @@ msgstr "Retour aux messages"
 #: template-parts/author-courses.php:21
 #, php-format
 msgid "All courses by %s"
-msgstr ""
+msgstr "Tous les cours pars %s"
 
 #: template-parts/content-none.php:17
 msgid "Nothing Found"
@@ -458,6 +434,16 @@ msgstr "Erreur 404"
 #: template-parts/page-header.php:16
 msgid "Search for :"
 msgstr "Recherche pour :"
+
+#, php-format
+#~ msgid "Please sign up for %1$sthe course%2$s before taking this lesson"
+#~ msgstr ""
+#~ "Veuillez vous inscrire à %1$sce cours%2$s avant de suivre cette leçon"
+
+#, fuzzy
+#~| msgid "Sign in"
+#~ msgid "Sign Up"
+#~ msgstr "S'enregistrer"
 
 #~ msgid "Boxfoot 4"
 #~ msgstr "Boxfoot 4"
