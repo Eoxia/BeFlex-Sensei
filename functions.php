@@ -105,6 +105,8 @@ if ( ! function_exists( 'beflex_setup' ) ) :
 				header( 'Location: ' . get_site_url() );
 			}
 		}
+
+		require get_template_directory() . '/inc/mega-menu.php';
 	}
 endif;
 add_action( 'after_setup_theme', 'beflex_setup' );
