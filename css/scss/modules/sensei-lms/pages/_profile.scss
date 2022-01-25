@@ -56,7 +56,8 @@
     @extend .button;
 
     &.sensei-certificate-link {
-      @extend .button.button-primary;
+      @extend .button;
+      @extend .button-primary;
     }
   }
 }

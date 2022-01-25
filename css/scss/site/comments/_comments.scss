@@ -33,7 +33,7 @@
 	}
 	.comment-reply-link {
 		@extend .button;
-		@extend .button.button-primary;
+		@extend .button-primary;
 		position: absolute;
 		top: 0;
 		right: 0;

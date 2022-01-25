@@ -1,7 +1,7 @@
 body.sensei_message .message-container {
   @extend .gridlayout;
-  @extend .gridlayout.grid-3;
-  @extend .gridlayout.grid-gap-2;
+  @extend .grid-3;
+  @extend .grid-gap-2;
 
   .sensei_message {
     margin: 0;

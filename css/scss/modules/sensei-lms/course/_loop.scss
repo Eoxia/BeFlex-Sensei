@@ -80,7 +80,8 @@
           margin: 0 0 0.5em 0.5em;
         }
         .sensei-certificate-link {
-          @extend .button.button-primary;
+          @extend .button;
+          @extend .button-primary;
         }
       }
     }
