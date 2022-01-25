@@ -27,12 +27,12 @@ if ( '' != $lesson_complexity ) {
 
 ?>
 <div class="single-course-meta">
-	<div class="meta-author">
-		<?php echo get_avatar( $course_author, 40 ); ?>
-		<a href="<?php echo esc_url( $author_permalink ); ?>">
-			<span class="author-label"><?php echo esc_html( get_the_author_meta( 'display_name', $course_author ) ); ?></span>
-		</a>
-	</div>
+<!--	<div class="meta-author">-->
+<!--		--><?php //echo get_avatar( $course_author, 40 ); ?>
+<!--		<a href="--><?php //echo esc_url( $author_permalink ); ?><!--">-->
+<!--			<span class="author-label">--><?php //echo esc_html( get_the_author_meta( 'display_name', $course_author ) ); ?><!--</span>-->
+<!--		</a>-->
+<!--	</div>-->
 
 	<div class="meta-datas gridlayout grid-2">
 		<?php if ( ! empty( $lesson_length ) ) : ?>

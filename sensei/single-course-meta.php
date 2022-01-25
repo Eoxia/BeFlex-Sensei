@@ -23,12 +23,12 @@ $category_output  = get_the_term_list( $post->ID, 'course-category', '', ' ', ''
 $author_permalink = get_author_posts_url( $course_author );
 ?>
 <div class="single-course-meta">
-    <div class="meta-author">
-        <?php echo get_avatar( $course_author, 40 ); ?>
-		<a href="<?php echo esc_url( $author_permalink ); ?>">
-			<span class="author-label"><?php echo esc_html( get_the_author_meta( 'display_name', $course_author ) ); ?></span>
-		</a>
-    </div>
+<!--    <div class="meta-author">-->
+<!--        --><?php //echo get_avatar( $course_author, 40 ); ?>
+<!--		<a href="--><?php //echo esc_url( $author_permalink ); ?><!--">-->
+<!--			<span class="author-label">--><?php //echo esc_html( get_the_author_meta( 'display_name', $course_author ) ); ?><!--</span>-->
+<!--		</a>-->
+<!--    </div>-->
 
     <div class="meta-datas gridlayout grid-2">
         <div class="meta">
