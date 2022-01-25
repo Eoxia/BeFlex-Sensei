@@ -343,7 +343,7 @@ function beflex_child_theme_setup() {
 	add_theme_support( 'sensei' );
 
 	if ( beflex_is_sensei() ) {
-		add_image_size( 'beflex-call-to-action-course', 300, 300, true );
+		add_image_size( 'beflex-call-to-action-course', 300, 200, true );
 		require get_stylesheet_directory() . '/sensei/functions.php';
 	}
 }
