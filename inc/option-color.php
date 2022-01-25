@@ -43,7 +43,7 @@ endif;
 	<?php endif; ?>
 
 	<?php if ( ! empty( $beflex_primary ) ) : ?>
-		.button.button-primary:not(.bordered), button, input[type="button"], input[type="reset"], input[type="submit"],
+		.button.button-primary:not(.bordered), button, button.button, input[type="button"], input[type="reset"], input[type="submit"],
 		.course-container .course .course-content .entry-actions .sensei-certificate-link {
 			background: <?php echo esc_html( $beflex_primary ); ?>;
 			border-color: <?php echo esc_html( $beflex_primary ); ?>;
