@@ -55,7 +55,7 @@
 								array(
 									'theme_location' => 'menu-1',
 									'menu_id'        => 'primary-menu',
-									'walker'         => new \beflex_pro\Beflex_Mega_Menu(),
+									'walker'         => new \beflex_pro\Beflex_Sensei_Mega_Menu(),
 								)
 							);
 						else :
