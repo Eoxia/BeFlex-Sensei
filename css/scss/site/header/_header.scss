@@ -159,22 +159,17 @@
 
   a {
     font-size: 13px;
-    color: $color__text-main;
     white-space: nowrap;
     padding: 0.5em;
     @include transition;
+    text-transform: none;
+    margin-left: 0.5em;
 
-    &:hover {
-      color: lighten($color__text-main, 40%);
-    }
+    &:not(.button) {
+      color: $color__text-main;
 
-    &:last-child {
-      padding-left: 0.2em;
-
-      &::before {
-        display: inline-block;
-        content: '•';
-        letter-spacing: 5px;
+      &:hover {
+        color: lighten($color__text-main, 40%);
       }
     }
   }
