@@ -1,0 +1,19 @@
+/*--------------------------------------------------------------
+## Post Author
+--------------------------------------------------------------*/
+
+.wp-block-post-author {
+  &.has-text-align-center {
+    flex-direction: column;
+
+    .wp-block-post-author__avatar {
+      margin-right: 0;
+    }
+    .wp-block-post-author__name {
+      font-size: var(--wp--preset--font-size--large);
+    }
+    .wp-block-post-author__bio {
+      font-size: var(--wp--preset--font-size--normal);
+    }
+  }
+}

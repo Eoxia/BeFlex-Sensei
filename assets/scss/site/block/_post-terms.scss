@@ -1,0 +1,16 @@
+/*--------------------------------------------------------------
+## Post Terms
+--------------------------------------------------------------*/
+
+.taxonomy-post_tag.wp-block-post-terms {
+  a {
+    background: rgba(0,0,0,0.1);
+    color: rgba(0,0,0,0.6);
+    padding: 0.2em 0.6em;
+    border-radius: 4px;
+    margin: 0 0.2em;
+  }
+  .wp-block-post-terms__separator {
+    display: none;
+  }
+}

@@ -1,0 +1,27 @@
+/*--------------------------------------------------------------
+# Markup
+--------------------------------------------------------------*/
+
+body {
+  margin: 0;
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+img {
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, ol {
+  padding-left: 1.2em;
+}
+
+figure {
+  margin: 0;
+}

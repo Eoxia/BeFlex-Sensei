@@ -1,0 +1,28 @@
+.single-header {
+  .wp-block-post-featured-image img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  .wp-block-post-terms {
+    text-align: center;
+  }
+
+  .taxonomy-category.wp-block-post-terms {
+    a {
+      color: #fff;
+    }
+  }
+
+  .taxonomy-post_tag.wp-block-post-terms {
+    a {
+      background: rgba(255,255,255,0.3);
+      color: rgba(255,255,255,0.8);
+    }
+  }
+}
