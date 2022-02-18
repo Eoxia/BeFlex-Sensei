@@ -1,12 +1,20 @@
-# Beflex - WordPress Theme
+# BeFlex-Sensei
 
-Beflex is an block based WordPress theme (currently in developpment).
-All the sections are editable from WordPress Dashboard > Site Editor
+Les informations de suivi du projet Sensei pour WordPress
 
-## Instructions to Get Started
+Le dépot de l'extension
 
-1. Clone this repository or upload a zip of the theme into your site’s themes directory.
-2. Install the [Gutenberg](https://wordpress.org/plugins/gutenberg/) plugin.
-3. Enable the "Full Site Editing" experiment in the `Gutenberg` > `Experiments panel`.
-4. Activate the new theme from within `Appearance` > `Themes`.
-5. Enable navigation screen from within `Gutenberg` > `Experiments` > `Enable navigation screen`.
+https://wordpress.org/plugins/search/sensei/
+
+Le dépot du code source
+
+https://github.com/Automattic/sensei
+
+Suivi du projet Sensei et vote
+
+https://ideas.woocommerce.com/forums/191508-sensei
+
+Suivi de la roadmap validée
+
+https://trello.com/c/oe1ma8YV/4-click-here-for-more-info
+

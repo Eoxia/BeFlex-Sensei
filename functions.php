@@ -72,6 +72,7 @@ function beflex_add_custom_classes_to_body( $classes ) {
 }
 add_filter( 'body_class', 'beflex_add_custom_classes_to_body' );
 
-
 // Block patterns.
 require_once 'inc/block-patterns.php';
+// Theme blocks
+require_once 'inc/block-blocks.php';
