@@ -76,3 +76,5 @@ add_filter( 'body_class', 'beflex_add_custom_classes_to_body' );
 require_once 'inc/block-patterns.php';
 // Theme blocks
 require_once 'inc/block-blocks.php';
+// Sensei functions
+require_once 'sensei/functions.php';

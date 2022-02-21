@@ -1,0 +1,16 @@
+.bfs-course-completion {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 10px;
+  background: rgba(0, 0, 0, 0.1);
+}
+.bfs-course-completion.progress-0 {
+  background: #fff;
+}
+.bfs-course-completion .bfs-course-completion__progress-bar {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  background: var(--wp--preset--color--vivid-green-cyan);
+}

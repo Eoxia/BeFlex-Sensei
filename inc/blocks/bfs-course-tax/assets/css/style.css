@@ -1,0 +1,29 @@
+.bfs-course-tax {
+  display: block;
+}
+.bfs-course-tax a {
+  margin-left: 0.8em;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  -webkit-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+}
+.bfs-course-tax a:hover {
+  opacity: 0.6;
+}
+.bfs-course-tax a:first-child {
+  margin-left: 0;
+}
+.bfs-course-tax::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.bfs-course-tax.align-left {
+  text-align: left;
+}
+.bfs-course-tax.align-right {
+  text-align: right;
+}

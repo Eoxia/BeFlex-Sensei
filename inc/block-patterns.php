@@ -43,6 +43,7 @@ function beflex_register_block_patterns() {
 		'header-photo',
 		'query-standard',
 		'query-background',
+		'query-course',
 	);
 
 	/**

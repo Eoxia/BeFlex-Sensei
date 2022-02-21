@@ -1,0 +1,18 @@
+.wp-block-query {
+  .wp-block-post.course {
+    .wp-block-post-featured-image {
+      transition: opacity 0.2s ease-out;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    .wp-block-post-title {
+      transition: opacity 0.2s ease-out;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+}

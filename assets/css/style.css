@@ -168,6 +168,21 @@ Text Domain: beflex
   text-align: center;
 }
 
+.wp-block-query .wp-block-post.course .wp-block-post-featured-image {
+  -webkit-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+}
+.wp-block-query .wp-block-post.course .wp-block-post-featured-image:hover {
+  opacity: 0.8;
+}
+.wp-block-query .wp-block-post.course .wp-block-post-title {
+  -webkit-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+}
+.wp-block-query .wp-block-post.course .wp-block-post-title:hover {
+  opacity: 0.6;
+}
+
 /*--------------------------------------------------------------
 # Gutenberg Blocks Attributes
 --------------------------------------------------------------*/
