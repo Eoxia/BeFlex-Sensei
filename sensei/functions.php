@@ -36,3 +36,13 @@ function beflex_get_course_length( $course_id ) {
 
 	return $course_length;
 }
+
+/**
+ * Filter the number of columns on the course archive page.
+ *
+ * @since 1.9.0
+ * @param int $number_of_columns default 1
+ */
+add_filter( 'sensei_course_loop_number_of_columns', function() {
+	return 3;
+}, 9 );
