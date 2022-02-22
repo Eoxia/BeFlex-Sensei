@@ -443,3 +443,84 @@ body > .is-root-container > .wp-block-template-part > .wp-block-cover,
   height: 100%;
   background: var(--wp--preset--color--vivid-green-cyan);
 }
+
+body.learner-profile .wp-site-blocks > * + * {
+  margin-top: 0 !important;
+}
+body.learner-profile .profile-setting h2, body.learner-profile .profile-setting #learner-info {
+  display: none;
+}
+body.learner-profile .my-messages-link-container {
+  display: none;
+}
+body.learner-profile .wp-block-spacer {
+  display: none;
+}
+body.learner-profile article.post {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+body.learner-profile article.post .profile-sidebar {
+  width: 30%;
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
+  background: #fff;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+body.learner-profile article.post #learner-info {
+  width: 70%;
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2;
+  background: rgba(0, 0, 0, 0.05);
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.profile-box {
+  background: #fff;
+  border-radius: 6px;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+.profile-box .box-line {
+  margin-bottom: 0.6em;
+}
+.profile-box .box-line:last-child {
+  margin-bottom: 0;
+}
+.profile-box .box-line strong {
+  display: inline-block;
+  min-width: 100px;
+}
+
+body.learner-profile #learner-info {
+  padding: 0 10% 2em 2em;
+}
+
+.profile-sidebar .profile-sidebar-content {
+  margin-left: 250px;
+  padding-top: 2em;
+  padding-right: 4em;
+}
+.profile-sidebar .profile-nav {
+  display: block;
+  color: #000;
+  font-size: 14px;
+  margin-bottom: 1.5em;
+}
+.profile-sidebar .profile-nav i {
+  margin-right: 0.4em;
+}
+.profile-sidebar .profile-nav.spacer {
+  margin-top: 3em;
+}
+.profile-sidebar .profile-nav-active, body.sensei.learner-profile .profile-sidebar .nav-courses {
+  background: var(--wp--preset--color--galaxy);
+  color: #fff;
+  padding: 0.6em 1em;
+  border-radius: 6px;
+}

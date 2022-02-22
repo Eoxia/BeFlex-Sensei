@@ -46,3 +46,30 @@ function beflex_get_course_length( $course_id ) {
 add_filter( 'sensei_course_loop_number_of_columns', function() {
 	return 3;
 }, 9 );
+
+/**
+ * Generate profile sidebar
+ *
+ * @return array
+ */
+function bfs_profile_sidebar() {
+	$sidebar = '<div class="profile-sidebar"><div class="profile-sidebar-content">';
+
+	if ( is_user_logged_in() ) {
+		$profile_url = Sensei()->learner_profiles->get_permalink(get_current_user_id());
+		if (!empty($profile_url)) {
+			$sidebar .= '<a href="' . esc_url($profile_url) . '" class="profile-nav nav-courses"><i class="fa-solid fa-book"></i> ' . esc_html__('My courses', 'beflex-child') . '</a>';
+		}
+
+		$message_url = get_post_type_archive_link('sensei_message');
+		if (!empty($message_url)) {
+			$sidebar .= '<a href="' . esc_url($message_url) . '" class="profile-nav nav-messages"><i class="fa-solid fa-envelope"></i> ' . esc_html__('My messages', 'beflex-child') . '</a>';
+		}
+
+		$sidebar .= '<a href="' . esc_url(wp_logout_url(home_url())) . '" class="profile-nav spacer"><i class="fa-solid fa-right-from-bracket"></i> ' . esc_html__('Logout', 'beflex-child') . '</a>';
+	}
+
+	$sidebar .= '</div></div>';
+
+	return $sidebar;
+}

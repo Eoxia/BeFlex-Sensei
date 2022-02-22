@@ -1,0 +1,63 @@
+body.learner-profile {
+  // No use of gutenberg FSE
+  .wp-site-blocks > * + * {
+    margin-top: 0 !important;
+  }
+  .profile-setting {
+    h2, #learner-info {
+      display: none;
+    }
+  }
+  .my-messages-link-container {
+    display: none;
+  }
+  .wp-block-spacer {
+    display: none;
+  }
+
+  article.post {
+    display: flex;
+
+    .profile-sidebar {
+      width: 30%;
+      order: 1;
+      background: #fff;
+      border-right: 1px solid rgba(0,0,0,0.1);
+    }
+    #learner-info {
+      width: 70%;
+      order: 2;
+      background: rgba(0,0,0,0.05);
+      flex-grow: 1;
+    }
+  }
+}
+
+.profile-box {
+  background: #fff;
+  border-radius: 6px;
+  padding: 1em;
+  margin-bottom: 1em;
+
+  .box-line {
+    margin-bottom: 0.6em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    strong {
+      display: inline-block;
+      min-width: 100px;
+    }
+  }
+}
+
+body.learner-profile #learner-info {
+  padding: 0 10% 2em 2em;
+}
+
+body.learner-profile .profile-info {
+
+}
+
