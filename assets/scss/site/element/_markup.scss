@@ -25,3 +25,12 @@ ul, ol {
 figure {
   margin: 0;
 }
+
+button {
+  box-shadow: none;
+  border-style: solid;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

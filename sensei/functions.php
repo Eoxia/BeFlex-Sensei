@@ -73,3 +73,46 @@ function bfs_profile_sidebar() {
 
 	return $sidebar;
 }
+
+/**
+ * Add classes to profile pages
+ *
+ * @param $classes
+ * @return array|mixed
+ */
+function bfs_add_profile_body_classes( $classes ) {
+	if ( 'message' == is_post_type_archive() || is_singular( 'sensei_message' ) ) {
+		return array_merge( $classes, array( 'learner-archive-message' ) );
+	}
+	return $classes;
+}
+add_filter( 'body_class', 'bfs_add_profile_body_classes', 10 );
+
+/**
+ * Get last update of a conversation
+ *
+ * @param $message_id
+ * @return string|void
+ */
+function get_message_last_update( $message_id ) {
+	if ( empty( $message_id ) ) {
+		return;
+	}
+
+	$comments = get_comments( array(
+		'post_id' => get_the_ID(),
+		'number'  => 1
+	) );
+	if ( ! empty( $comments ) ) {
+		$date_day  = get_comment_date( 'd/m/Y', $comments[0]->comment_ID );
+		$date_hour = get_comment_date( 'h:i', $comments[0]->comment_ID );
+	}
+	else {
+		$date_day  = get_the_modified_date( 'd/m/Y', $message_id );
+		$date_hour = get_the_modified_date( 'h:i', $message_id );
+	}
+
+	$render = '<span class="message-data message-date"><i class="fa-regular fa-calendar"></i> ' . $date_day . '</span>';
+	$render .= '<span class="message-data message-hour"><i class="fa-regular fa-clock"></i> ' . $date_hour . '</span>';
+	return $render;
+}

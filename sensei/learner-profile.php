@@ -29,7 +29,7 @@ do_action( 'sensei_learner_profile_content_before' );
 
 <article class="post alignfull">
 
-	<section id="learner-info" class="learner-info entry fix">
+	<section id="learner-container" class="learner-info entry fix">
 
 		<?php
 		/**
@@ -49,11 +49,11 @@ do_action( 'sensei_learner_profile_content_before' );
 			<h1><?php esc_html_e( 'Profile', 'beflex-child' ); ?></h1>
 
 			<div class="profile-info profile-box">
-				<?php $user = get_userdata( get_the_ID() ); ?>
+				<?php $user = get_userdata( $learner_user->ID ); ?>
 				<div class="box-line">
 					<strong><?php esc_html_e( 'Name', 'beflex-child' ); ?></strong> <?php echo esc_html( $user->data->display_name ); ?>
 				</div>
-				<?php if ( get_current_user_ID() == get_the_ID() ) : ?>
+				<?php if ( get_current_user_ID() == $learner_user->ID ) : ?>
 					<div class="box-line">
 						<strong><?php esc_html_e( 'Email', 'beflex-child' ); ?></strong> <?php echo esc_html( $user->data->user_email ); ?>
 					</div>

@@ -1,4 +1,4 @@
-body.learner-profile {
+body.learner-profile, body.learner-archive-message, body.single-sensei_message {
   // No use of gutenberg FSE
   .wp-site-blocks > * + * {
     margin-top: 0 !important;
@@ -17,6 +17,7 @@ body.learner-profile {
 
   article.post {
     display: flex;
+    margin-top: 0;
 
     .profile-sidebar {
       width: 30%;
@@ -24,12 +25,16 @@ body.learner-profile {
       background: #fff;
       border-right: 1px solid rgba(0,0,0,0.1);
     }
-    #learner-info {
+    #learner-container {
       width: 70%;
       order: 2;
       background: rgba(0,0,0,0.05);
       flex-grow: 1;
     }
+  }
+
+  #learner-container {
+    padding: 0 10% 2em 2em;
   }
 }
 
@@ -52,12 +57,3 @@ body.learner-profile {
     }
   }
 }
-
-body.learner-profile #learner-info {
-  padding: 0 10% 2em 2em;
-}
-
-body.learner-profile .profile-info {
-
-}
-

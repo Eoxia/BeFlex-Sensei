@@ -303,6 +303,15 @@ figure {
   margin: 0;
 }
 
+button {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-style: solid;
+}
+button:hover {
+  cursor: pointer;
+}
+
 /*--------------------------------------------------------------
 # Site container
 --------------------------------------------------------------*/
@@ -444,24 +453,25 @@ body > .is-root-container > .wp-block-template-part > .wp-block-cover,
   background: var(--wp--preset--color--vivid-green-cyan);
 }
 
-body.learner-profile .wp-site-blocks > * + * {
+body.learner-profile .wp-site-blocks > * + *, body.learner-archive-message .wp-site-blocks > * + *, body.single-sensei_message .wp-site-blocks > * + * {
   margin-top: 0 !important;
 }
-body.learner-profile .profile-setting h2, body.learner-profile .profile-setting #learner-info {
+body.learner-profile .profile-setting h2, body.learner-profile .profile-setting #learner-info, body.learner-archive-message .profile-setting h2, body.learner-archive-message .profile-setting #learner-info, body.single-sensei_message .profile-setting h2, body.single-sensei_message .profile-setting #learner-info {
   display: none;
 }
-body.learner-profile .my-messages-link-container {
+body.learner-profile .my-messages-link-container, body.learner-archive-message .my-messages-link-container, body.single-sensei_message .my-messages-link-container {
   display: none;
 }
-body.learner-profile .wp-block-spacer {
+body.learner-profile .wp-block-spacer, body.learner-archive-message .wp-block-spacer, body.single-sensei_message .wp-block-spacer {
   display: none;
 }
-body.learner-profile article.post {
+body.learner-profile article.post, body.learner-archive-message article.post, body.single-sensei_message article.post {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-top: 0;
 }
-body.learner-profile article.post .profile-sidebar {
+body.learner-profile article.post .profile-sidebar, body.learner-archive-message article.post .profile-sidebar, body.single-sensei_message article.post .profile-sidebar {
   width: 30%;
   -webkit-box-ordinal-group: 2;
   -ms-flex-order: 1;
@@ -469,7 +479,7 @@ body.learner-profile article.post .profile-sidebar {
   background: #fff;
   border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
-body.learner-profile article.post #learner-info {
+body.learner-profile article.post #learner-container, body.learner-archive-message article.post #learner-container, body.single-sensei_message article.post #learner-container {
   width: 70%;
   -webkit-box-ordinal-group: 3;
   -ms-flex-order: 2;
@@ -478,6 +488,9 @@ body.learner-profile article.post #learner-info {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+}
+body.learner-profile #learner-container, body.learner-archive-message #learner-container, body.single-sensei_message #learner-container {
+  padding: 0 10% 2em 2em;
 }
 
 .profile-box {
@@ -497,10 +510,6 @@ body.learner-profile article.post #learner-info {
   min-width: 100px;
 }
 
-body.learner-profile #learner-info {
-  padding: 0 10% 2em 2em;
-}
-
 .profile-sidebar .profile-sidebar-content {
   margin-left: 250px;
   padding-top: 2em;
@@ -518,9 +527,148 @@ body.learner-profile #learner-info {
 .profile-sidebar .profile-nav.spacer {
   margin-top: 3em;
 }
-.profile-sidebar .profile-nav-active, body.sensei.learner-profile .profile-sidebar .nav-courses {
+.profile-sidebar .profile-nav-active, body.sensei.learner-archive-message .profile-sidebar .nav-messages, body.sensei.learner-profile .profile-sidebar .nav-courses {
   background: var(--wp--preset--color--galaxy);
   color: #fff;
   padding: 0.6em 1em;
   border-radius: 6px;
+}
+
+body.learner-archive-message .archive-header {
+  display: none;
+}
+body.learner-archive-message .message-container a {
+  padding: 1em 1.5em;
+  background: #fff;
+  color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-transition: background 0.2s ease-out;
+  transition: background 0.2s ease-out;
+}
+body.learner-archive-message .message-container a:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+@media (max-width: 599px) {
+  body.learner-archive-message .message-container a {
+    display: block;
+  }
+}
+body.learner-archive-message .message-container a:first-child {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+body.learner-archive-message .message-container a:last-child {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-bottom: 0;
+}
+body.learner-archive-message .message-container a .message-title {
+  font-weight: 700;
+}
+body.learner-archive-message .message-container a .message-data-container {
+  margin-left: auto;
+}
+body.learner-archive-message .message-container a .message-data-container .message-data {
+  opacity: 0.6;
+  margin-left: 0.5em;
+}
+
+body.single-sensei_message .wp-block-post-title {
+  display: none;
+}
+body.single-sensei_message .message-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1.6em 0 0 0;
+}
+body.single-sensei_message .message-header a {
+  -ms-flex-item-align: center;
+  align-self: center;
+  font-size: 30px;
+  -webkit-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+  margin-right: 0.5em;
+}
+body.single-sensei_message .message-header a:hover {
+  opacity: 0.7;
+}
+body.single-sensei_message .message-header .message-title {
+  margin: 0;
+}
+body.single-sensei_message .comment-respond .comment-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1em;
+}
+body.single-sensei_message .comment-respond .comment-form .comment-form-comment {
+  width: 100%;
+}
+body.single-sensei_message .comment-respond .comment-form textarea {
+  display: block;
+  width: 100%;
+  background: #fff;
+  padding: 1em;
+  border-radius: 6px;
+  font-family: var(--wp--preset--font-family--open-sans);
+}
+body.single-sensei_message .comment-respond .comment-form #submit {
+  border: 1px solid var(--wp--preset--color--galaxy);
+  color: var(--wp--preset--color--galaxy);
+  border-radius: 6px;
+  margin: auto 0 auto 1em;
+  padding: 1em;
+  min-width: 120px;
+  text-transform: uppercase;
+  font-weight: 600;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+body.single-sensei_message .comment-respond .comment-form #submit:hover {
+  background: var(--wp--preset--color--galaxy);
+  color: #fff;
+}
+body.single-sensei_message .message-comment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1.5em 0;
+}
+body.single-sensei_message .message-comment .avatar {
+  border-radius: 50%;
+  margin: auto 1.5em auto 0;
+}
+body.single-sensei_message .message-comment .comment-container {
+  background: #fff;
+  width: 100%;
+  padding: 1.2em;
+  border-radius: 6px;
+}
+body.single-sensei_message .message-comment .comment-container .comment-meta {
+  margin-top: 1.5em;
+}
+body.single-sensei_message .message-comment .comment-container .comment-meta .message-data {
+  opacity: 0.6;
+  margin-left: 0.5em;
+  font-size: 14px;
+}
+body.single-sensei_message .message-comment .comment-container .comment-meta i {
+  margin-right: 0.3em;
+}
+body.single-sensei_message .message-comment.message-author .avatar {
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2;
+  margin: auto 0 auto 1.5em;
+}
+body.single-sensei_message .message-comment.message-author .comment-container {
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
+  background: var(--wp--preset--color--galaxy);
+  color: #fff;
 }

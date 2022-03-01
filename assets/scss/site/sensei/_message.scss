@@ -1,0 +1,146 @@
+body.learner-archive-message {
+  .archive-header {
+    display: none;
+  }
+
+  .message-container a {
+    padding: 1em 1.5em;
+    background: #fff;
+    color: #000;
+    display: flex;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    transition: background 0.2s ease-out;
+
+    &:hover {
+      background: rgba(0,0,0,0.05);
+    }
+
+    @media ( max-width: $media__mobile ) {
+      display: block;
+    }
+
+    &:first-child {
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+    }
+    &:last-child {
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+      border-bottom: 0;
+    }
+
+    .message-title {
+      font-weight: 700;
+    }
+    .message-data-container {
+      margin-left: auto;
+
+      .message-data {
+        opacity: 0.6;
+        margin-left: 0.5em;
+      }
+    }
+  }
+}
+
+body.single-sensei_message {
+  .wp-block-post-title {
+    display: none;
+  }
+  .
+
+  .message-header {
+    display: flex;
+    margin: 1.6em 0 0 0;
+
+    a {
+      align-self: center;
+      font-size: 30px;
+      transition: opacity 0.2s ease-out;
+      margin-right: 0.5em;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+    .message-title {
+      margin: 0;
+    }
+  }
+
+  .comment-respond .comment-form {
+    display: flex;
+    margin-top: 1em;
+
+    .comment-form-comment {
+      width: 100%;
+    }
+    textarea {
+      display: block;
+      width: 100%;
+      background: #fff;
+      padding: 1em;
+      border-radius: 6px;
+      font-family: var(--wp--preset--font-family--open-sans);
+    }
+    #submit {
+      border: 1px solid var(--wp--preset--color--galaxy);
+      color: var(--wp--preset--color--galaxy);
+      border-radius: 6px;
+      margin: auto 0 auto 1em;
+      padding: 1em;
+      min-width: 120px;
+      text-transform: uppercase;
+      font-weight: 600;
+      transition: all 0.2s ease-out;
+
+      &:hover {
+        background: var(--wp--preset--color--galaxy);
+        color: #fff;
+      }
+    }
+  }
+
+  .message-comment {
+    display: flex;
+    margin: 1.5em 0;
+
+    .avatar {
+      border-radius: 50%;
+      margin: auto 1.5em auto 0;
+    }
+    .comment-container {
+      background: #fff;
+      width: 100%;
+      padding: 1.2em;
+      border-radius: 6px;
+
+      .comment-meta {
+        margin-top: 1.5em;
+
+        .message-data {
+          opacity: 0.6;
+          margin-left: 0.5em;
+          font-size: 14px;
+        }
+        i {
+          margin-right: 0.3em;
+        }
+      }
+    }
+
+
+    &.message-author {
+      .avatar {
+        order: 2;
+        margin: auto 0 auto 1.5em;
+      }
+      .comment-container {
+        order: 1;
+        background: var(--wp--preset--color--galaxy);
+        color: #fff;
+      }
+    }
+  }
+}
+

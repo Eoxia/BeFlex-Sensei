@@ -30,3 +30,7 @@
 body.sensei.learner-profile .profile-sidebar .nav-courses {
   @extend .profile-nav-active;
 }
+body.sensei.learner-archive-message .profile-sidebar .nav-messages {
+  @extend .profile-nav-active;
+}
+
