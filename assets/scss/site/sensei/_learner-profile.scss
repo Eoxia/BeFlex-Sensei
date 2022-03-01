@@ -15,7 +15,7 @@ body.learner-profile, body.learner-archive-message, body.single-sensei_message {
     display: none;
   }
 
-  article.post {
+  article.post:not(.course) {
     display: flex;
     margin-top: 0;
 
@@ -54,6 +54,29 @@ body.learner-profile, body.learner-archive-message, body.single-sensei_message {
     strong {
       display: inline-block;
       min-width: 100px;
+    }
+  }
+}
+
+body.learner-profile .post.course {
+  background: #fff;
+  padding-bottom: 0;
+
+  .entry {
+    border: 0;
+  }
+  .course-author, .course-excerpt {
+    display: none;
+  }
+  .thumbnail {
+    margin-bottom: 0;
+  }
+  .meter {
+    margin: 0;
+    border-radius: 0;
+
+    .value {
+      border-radius: 0;
     }
   }
 }

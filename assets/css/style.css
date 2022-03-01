@@ -465,13 +465,13 @@ body.learner-profile .my-messages-link-container, body.learner-archive-message .
 body.learner-profile .wp-block-spacer, body.learner-archive-message .wp-block-spacer, body.single-sensei_message .wp-block-spacer {
   display: none;
 }
-body.learner-profile article.post, body.learner-archive-message article.post, body.single-sensei_message article.post {
+body.learner-profile article.post:not(.course), body.learner-archive-message article.post:not(.course), body.single-sensei_message article.post:not(.course) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-top: 0;
 }
-body.learner-profile article.post .profile-sidebar, body.learner-archive-message article.post .profile-sidebar, body.single-sensei_message article.post .profile-sidebar {
+body.learner-profile article.post:not(.course) .profile-sidebar, body.learner-archive-message article.post:not(.course) .profile-sidebar, body.single-sensei_message article.post:not(.course) .profile-sidebar {
   width: 30%;
   -webkit-box-ordinal-group: 2;
   -ms-flex-order: 1;
@@ -479,7 +479,7 @@ body.learner-profile article.post .profile-sidebar, body.learner-archive-message
   background: #fff;
   border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
-body.learner-profile article.post #learner-container, body.learner-archive-message article.post #learner-container, body.single-sensei_message article.post #learner-container {
+body.learner-profile article.post:not(.course) #learner-container, body.learner-archive-message article.post:not(.course) #learner-container, body.single-sensei_message article.post:not(.course) #learner-container {
   width: 70%;
   -webkit-box-ordinal-group: 3;
   -ms-flex-order: 2;
@@ -508,6 +508,27 @@ body.learner-profile #learner-container, body.learner-archive-message #learner-c
 .profile-box .box-line strong {
   display: inline-block;
   min-width: 100px;
+}
+
+body.learner-profile .post.course {
+  background: #fff;
+  padding-bottom: 0;
+}
+body.learner-profile .post.course .entry {
+  border: 0;
+}
+body.learner-profile .post.course .course-author, body.learner-profile .post.course .course-excerpt {
+  display: none;
+}
+body.learner-profile .post.course .thumbnail {
+  margin-bottom: 0;
+}
+body.learner-profile .post.course .meter {
+  margin: 0;
+  border-radius: 0;
+}
+body.learner-profile .post.course .meter .value {
+  border-radius: 0;
 }
 
 .profile-sidebar .profile-sidebar-content {
