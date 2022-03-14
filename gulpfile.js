@@ -17,6 +17,7 @@ var paths = {
   scss_bfs_course_lessons: [ 'inc/blocks/bfs-course-lessons/assets/scss/**/*.scss', 'inc/blocks/bfs-course-lessons/assets/css/' ],
   scss_bfs_course_time: [ 'inc/blocks/bfs-course-time/assets/scss/**/*.scss', 'inc/blocks/bfs-course-time/assets/css/' ],
   scss_bfs_course_completion: [ 'inc/blocks/bfs-course-completion/assets/scss/**/*.scss', 'inc/blocks/bfs-course-completion/assets/css/' ],
+  scss_bfs_login: [ 'inc/blocks/bfs-login/assets/scss/**/*.scss', 'inc/blocks/bfs-login/assets/css/' ],
 
 
   // scss_back: [ 'css/scss-admin/**/*.scss', 'css/' ],
@@ -103,6 +104,22 @@ gulp.task( 'build_scss_bfs_course_completion', function() {
     .pipe( gulp.dest( paths.scss_bfs_course_completion[1] ) );
 });
 
+/** SCSS Block BFS Login */
+gulp.task( 'build_scss_bfs_login', function() {
+  return gulp.src( paths.scss_bfs_login[0] )
+    .pipe( sass( { 'outputStyle': 'expanded' } ).on( 'error', sass.logError ) )
+    .pipe( autoprefixer({
+      browsers: ['last 2 versions'],
+      cascade: false
+    }) )
+    .pipe(lec({verbose:true, eolc: 'CRLF', encoding:'utf8'}))
+    .pipe( gulp.dest( paths.scss_bfs_login[1] ) )
+    .pipe( sass({outputStyle: 'compressed'}).on( 'error', sass.logError ) )
+    .pipe( rename( './style.min.css' ) )
+    .pipe(lec({verbose:true, eolc: 'CRLF', encoding:'utf8'}))
+    .pipe( gulp.dest( paths.scss_bfs_login[1] ) );
+});
+
 /** Scss Backadmin */
 // gulp.task( 'build_scss_back', function() {
 // 	return gulp.src( paths.scss_back[0] )
@@ -137,6 +154,7 @@ gulp.task( 'default', function() {
 	gulp.watch( paths.scss_bfs_course_lessons[0], gulp.series('build_scss_bfs_course_lessons') );
 	gulp.watch( paths.scss_bfs_course_time[0], gulp.series('build_scss_bfs_course_time') );
 	gulp.watch( paths.scss_bfs_course_completion[0], gulp.series('build_scss_bfs_course_completion') );
+	gulp.watch( paths.scss_bfs_login[0], gulp.series('build_scss_bfs_login') );
 	// gulp.watch( paths.scss_back[0], gulp.series('build_scss_back') );
 	// gulp.watch( paths.js[0], gulp.series('build_js') );
 });
