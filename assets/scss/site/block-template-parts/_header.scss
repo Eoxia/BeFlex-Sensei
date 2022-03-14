@@ -12,6 +12,11 @@ header.site-header {
   .wp-block-spacer {
     transition: height 0.2s ease-out;
   }
+
+  // Erase margin of first container.
+  + div {
+    margin-top: 0;
+  }
 }
 
 body .wp-site-blocks .header-sticky {
