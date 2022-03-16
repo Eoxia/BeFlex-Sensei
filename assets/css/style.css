@@ -261,6 +261,10 @@ body.admin-bar .header-sticky {
   color: rgba(255, 255, 255, 0.8);
 }
 
+.header-course.wp-block-template-part .wp-block-post-featured-image img {
+  border-radius: 6px;
+}
+
 /*--------------------------------------------------------------
 # Theme patterns
 --------------------------------------------------------------*/
