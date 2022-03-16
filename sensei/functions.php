@@ -12,6 +12,17 @@
 
 
 /**
+ * Add custom style to Sensei block Course outline
+ */
+function beflex_add_course_outline_style() {
+	register_block_style('sensei-lms/course-outline', [
+		'name' => 'beflex',
+		'label' => __('Beflex style', 'beflex'),
+	]);
+}
+add_action( 'init', 'beflex_add_course_outline_style' );
+
+/**
 * Returns the calculation of all lesson times
 *
 * @param  int $course_id     Course ID.
