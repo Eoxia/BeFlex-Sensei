@@ -14,7 +14,7 @@ header.site-header {
   }
 
   // Erase margin of first container.
-  + div {
+  + * {
     margin-top: 0;
   }
 }

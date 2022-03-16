@@ -211,7 +211,7 @@ header.site-header .wp-block-spacer {
   -webkit-transition: height 0.2s ease-out;
   transition: height 0.2s ease-out;
 }
-header.site-header + div {
+header.site-header + * {
   margin-top: 0;
 }
 
