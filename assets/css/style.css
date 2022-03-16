@@ -347,6 +347,48 @@ button:hover {
   cursor: pointer;
 }
 
+form input[type=text],
+form input[type=email],
+form input[type=url],
+form input[type=password],
+form input[type=search],
+form input[type=number],
+form input[type=tel],
+form input[type=range],
+form input[type=date],
+form input[type=month],
+form input[type=week],
+form input[type=time],
+form input[type=datetime],
+form input[type=datetime-local],
+form input[type=color],
+form select,
+form textarea {
+  width: 100%;
+  color: #666;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 0.6em;
+}
+form input[type=submit] {
+  display: inline-block;
+  width: auto;
+  background: var(--wp--preset--color--galaxy);
+  color: var(--wp--preset--color--white);
+  border: 0;
+  padding: 0.7em 1.2em;
+  border-radius: 4px;
+  font-size: var(--wp--preset--font-size--normal);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  word-break: break-word;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 /*--------------------------------------------------------------
 # Site container
 --------------------------------------------------------------*/
@@ -729,4 +771,29 @@ body.single-sensei_message .message-comment.message-author .comment-container {
   order: 1;
   background: var(--wp--preset--color--galaxy);
   color: #fff;
+}
+
+#my-courses .col2-set {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2em 2em;
+}
+@media (max-width: 599px) {
+  #my-courses .col2-set {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+#my-courses .col-2 {
+  background: var(--wp--preset--color--light-grey);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+#my-courses .col-2 .col2-set {
+  grid-gap: 0 1em;
+}
+#my-courses .col-2 h2 {
+  margin: 0;
+}
+#my-courses .col-2 .required {
+  color: red;
 }
