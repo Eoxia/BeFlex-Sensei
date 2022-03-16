@@ -12,6 +12,7 @@ function beflex_acf_blocks_init() {
 	require get_template_directory() . '/inc/blocks/bfs-course-time/bfs-course-time.php';
 	require get_template_directory() . '/inc/blocks/bfs-course-completion/bfs-course-completion.php';
 	require get_template_directory() . '/inc/blocks/bfs-login/bfs-login.php';
+	require get_template_directory() . '/inc/blocks/bfs-course-signup/bfs-course-signup.php';
 }
 add_action( 'acf/init', 'beflex_acf_blocks_init' );
 
