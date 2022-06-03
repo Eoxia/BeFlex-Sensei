@@ -16,8 +16,8 @@ return array(
 					<!-- /wp:paragraph -->
 
 					<!-- wp:buttons -->
-					<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"galaxy"} -->
-					<div class="wp-block-button"><a class="wp-block-button__link has-galaxy-background-color has-background">Button link</a></div>
+					<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary"} -->
+					<div class="wp-block-button"><a class="wp-block-button__link has-primary-background-color has-background">Button link</a></div>
 					<!-- /wp:button --></div>
 					<!-- /wp:buttons --></div></div>
 					<!-- /wp:media-text -->',

@@ -1,5 +1,6 @@
 jQuery( document ).ready(function() {
   beflexSiteHeaderInit();
+  bfBlockAnimateInInit();
 });
 
 /**
@@ -39,5 +40,49 @@ function beflexNavSticky() {
   }
   else {
     return false;
+  }
+}
+
+function bfBlockAnimateInInit() {
+  var bfBlockToAnimate = jQuery( '.bf-block-animatein' );
+  if ( bfBlockToAnimate == undefined || bfBlockToAnimate.length == 0 ) return;
+
+  checkBlocViewport( bfBlockToAnimate );
+  jQuery( window ).on( 'scroll', function() {
+    checkBlocViewport( bfBlockToAnimate );
+  });
+}
+
+/**
+ * Check if the block is in the viewport
+ *
+ * @method checkBlock
+ * @param  {string}
+ * @return {void}
+ */
+function checkBlocViewport( elementObject ) {
+  if ( elementObject == undefined ) return;
+
+  for ( var i = 0; i < elementObject.length; i++ ) {
+    if ( isInViewport( jQuery( elementObject[i] ) ) && ! jQuery( elementObject[i] ).hasClass( 'bf-block-animatein--animated' )  ) {
+      jQuery( elementObject[i] ).addClass( 'bf-block-animatein--animated' );
+    }
+  }
+}
+
+/**
+ * Return true if the element is in the viewport
+ *
+ * @method isInViewport
+ * @param  {Object}
+ * @return {Boolean}
+ */
+function isInViewport( element ) {
+  if ( element == undefined ) return;
+
+  var elementOffset = jQuery( element ).offset().top;
+  var documentOffset = jQuery( window ).scrollTop() + jQuery( window ).height() * 0.75;
+  if ( elementOffset <= documentOffset ) {
+    return true;
   }
 }

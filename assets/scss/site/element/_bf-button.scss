@@ -1,0 +1,61 @@
+/*--------------------------------------------------------------
+## Beflex Button
+--------------------------------------------------------------*/
+.bf-button {
+  display: inline-block;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 0.6em 1em;
+  box-shadow: none;
+  transition: all 0.2s ease-out;
+  background-color: var(--wp--preset--color--primary);
+  color: #fff;
+  border: 0;
+
+  &:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  &.bf-button__color-primary {
+    background-color: var(--wp--preset--color--primary);
+    color: #fff;
+  }
+  &.bf-button__color-secondary {
+    background-color: var(--wp--preset--color--secondary);
+    color: #fff;
+  }
+  &.bf-button__color-light {
+    background-color: #fff;
+    color: var(--wp--preset--color--anthracite);
+  }
+  &.bf-button__color-dark {
+    background-color: var(--wp--preset--color--anthracite);
+    color: #fff;
+  }
+
+  &.bf-button__style-outline {
+    background: none;
+    border: 2px solid;
+    padding: calc(0.6em - 2px) calc(1em - 2px);
+    border-color: var(--wp--preset--color--primary);
+    color: var(--wp--preset--color--primary);
+
+    &.bf-button__color-primary {
+      border-color: var(--wp--preset--color--primary);
+      color: var(--wp--preset--color--primary);
+    }
+    &.bf-button__color-secondary {
+      border-color: var(--wp--preset--color--secondary);
+      color: var(--wp--preset--color--secondary);
+    }
+    &.bf-button__color-light {
+      border-color: #fff;
+      color: #fff;
+    }
+    &.bf-button__color-dark {
+      border-color: var(--wp--preset--color--anthracite);
+      color: var(--wp--preset--color--anthracite);
+    }
+  }
+}

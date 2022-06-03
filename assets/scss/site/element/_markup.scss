@@ -26,15 +26,6 @@ figure {
   margin: 0;
 }
 
-button {
-  box-shadow: none;
-  border-style: solid;
-
-  &:hover {
-    cursor: pointer;
-  }
-}
-
 form {
   input[type="text"],
   input[type="email"],
@@ -55,24 +46,17 @@ form {
   textarea {
     width: 100%;
     color: #666;
-    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,0.3);
     border-radius: 3px;
-    padding: .6em;
+    padding: 1em;
   }
   input[type="submit"] {
-    display: inline-block;
-    width: auto;
-    background: var(--wp--preset--color--galaxy);
-    color: var(--wp--preset--color--white);
-    border: 0;
-    padding: 0.7em 1.2em;
-    border-radius: 4px;
-    font-size: var(--wp--preset--font-size--normal);
-    box-shadow: none;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    word-break: break-word;
-    box-sizing: border-box;
+    @extend .bf-button;
+  }
+  label {
+    font-weight: 600;
+  }
+  req {
+    color: red;
   }
 }

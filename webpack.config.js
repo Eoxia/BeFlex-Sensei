@@ -4,6 +4,7 @@ const path = require('path');
 module.exports = {
   ...defaultConfig,
   entry: {
+    'block-animation-in': './assets/js/gutenberg-src/block-animation-in.js',
     'block-hide-on-mobile': './assets/js/gutenberg-src/block-hide-on-mobile.js'
   },
   output: {

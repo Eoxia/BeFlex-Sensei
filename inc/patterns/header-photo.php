@@ -14,9 +14,9 @@ return array(
 					<div class="wp-block-group"><!-- wp:site-logo {"width":50,"className":"is-style-default"} /-->
 
 					<!-- wp:group -->
-					<div class="wp-block-group"><!-- wp:site-title {"textColor":"galaxy"} /-->
+					<div class="wp-block-group"><!-- wp:site-title {"style":{"spacing":{"margin":{"top":"0px","right":"0px","bottom":"0px","left":"0px"}}},"textColor":"primary"} /-->
 
-					<!-- wp:site-tagline /--></div>
+					<!-- wp:site-tagline {"style":{"spacing":{"margin":{"top":"0px","right":"0px","bottom":"0px","left":"0px"}}}} /--></div>
 					<!-- /wp:group --></div>
 					<!-- /wp:group -->
 

@@ -1,4 +1,9 @@
 header.site-header {
+  // Erase margin of first container.
+  + * {
+    margin-top: 0;
+  }
+
   &.has-background {
     padding: 0;
   }
@@ -11,11 +16,6 @@ header.site-header {
   }
   .wp-block-spacer {
     transition: height 0.2s ease-out;
-  }
-
-  // Erase margin of first container.
-  + * {
-    margin-top: 0;
   }
 }
 
