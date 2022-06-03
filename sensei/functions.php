@@ -15,7 +15,7 @@
  * Add custom style to Sensei block Course outline
  */
 function beflex_add_course_outline_style() {
-	register_block_style('sensei-lms/course-outline', [
+	register_block_style('sensei-lms/course-outline-module', [
 		'name' => 'beflex',
 		'label' => __('Beflex style', 'beflex'),
 	]);
