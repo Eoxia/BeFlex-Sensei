@@ -14,14 +14,10 @@ if ( is_user_logged_in() ) :
 	?>
 	<div class="wp-block-buttons">
 		<?php if ( ! empty( $profile_url ) ) : ?>
-			<div class="wp-block-button is-style-outline">
-				<a href="<?php echo esc_url( $profile_url ); ?>" class="wp-block-button__link has-galaxy-color has-text-color"><i class="fa-regular fa-user"></i> <?php esc_html_e( 'My courses', 'beflex' ); ?> </a>
-			</div>
+			<a href="<?php echo esc_url( $profile_url ); ?>" class="bf-button bf-button__style-outline bf-button__color-primary"><i class="fa-regular fa-user"></i> <?php esc_html_e( 'My courses', 'beflex' ); ?> </a>
 		<?php endif; ?>
 
-		<div class="wp-block-button is-style-fill">
-			<a href="<?php echo esc_url( wp_logout_url( home_url() ) ); ?>" class="wp-block-button__link has-anthracite-color has-light-grey-background-color has-text-color has-background"><i class="fa-solid fa-arrow-right-from-bracket"></i> <?php esc_html_e( 'Logout', 'beflex' ); ?></a>
-		</div>
+		<a href="<?php echo esc_url( wp_logout_url( home_url() ) ); ?>" class="bf-button bf-button__color-light-grey"><i class="fa-solid fa-arrow-right-from-bracket"></i> <?php esc_html_e( 'Logout', 'beflex' ); ?></a>
 	</div>
 	<?php
 else :
@@ -31,9 +27,7 @@ else :
 	if ( ! empty( $my_courses_url ) ) :
 		?>
 		<div class="wp-block-buttons">
-			<div class="wp-block-button is-style-outline">
-				<a href="<?php echo esc_url( $my_courses_url ); ?>" class="wp-block-button__link has-galaxy-color has-text-color"><i class="fa-regular fa-user"></i> <?php esc_html_e( 'Login', 'beflex' ); ?> </a>
-			</div>
+			<a href="<?php echo esc_url( $my_courses_url ); ?>" class="bf-button bf-button__style-outline bf-button__color-primary"><i class="fa-regular fa-user"></i> <?php esc_html_e( 'Login', 'beflex' ); ?> </a>
 		</div>
 		<?php
 	endif;

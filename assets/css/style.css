@@ -519,6 +519,10 @@ Used for development
   background-color: var(--wp--preset--color--secondary);
   color: #fff;
 }
+.bf-button.bf-button__color-light-grey, form input.bf-button__color-light-grey[type=submit] {
+  background-color: var(--wp--preset--color--light-grey);
+  color: var(--wp--preset--color--light-anthracite);
+}
 .bf-button.bf-button__color-light, form input.bf-button__color-light[type=submit] {
   background-color: #fff;
   color: var(--wp--preset--color--anthracite);
@@ -541,6 +545,10 @@ Used for development
 .bf-button.bf-button__style-outline.bf-button__color-secondary, form input.bf-button__style-outline.bf-button__color-secondary[type=submit] {
   border-color: var(--wp--preset--color--secondary);
   color: var(--wp--preset--color--secondary);
+}
+.bf-button.bf-button__style-outline.bf-button__color-light-grey, form input.bf-button__style-outline.bf-button__color-light-grey[type=submit] {
+  border-color: var(--wp--preset--color--light-grey);
+  color: var(--wp--preset--color--light-grey);
 }
 .bf-button.bf-button__style-outline.bf-button__color-light, form input.bf-button__style-outline.bf-button__color-light[type=submit] {
   border-color: #fff;
