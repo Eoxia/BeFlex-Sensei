@@ -27,12 +27,18 @@ function beflextheme_support()  {
 	// Add support for editor styles.
 	add_theme_support( 'editor-styles' );
 
+	// Add support theme for Sensei
+	add_theme_support( 'sensei' );
+
 	// Enqueue editor styles.
 	add_editor_style( get_template_directory_uri() . '/assets/css/style.min.css' );
 	add_editor_style( 'style.css' );
 
 	// Add support for custom units.
 	add_theme_support( 'custom-units' );
+
+	load_theme_textdomain( 'sensei-lms', get_template_directory() . '/assets/sensei-lms-lang/' );
+
 }
 add_action( 'after_setup_theme', 'beflextheme_support' );
 
