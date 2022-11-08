@@ -35,7 +35,9 @@ gulp.task( 'build_scss', function() {
 		.pipe(lec({verbose:true, eolc: 'CRLF', encoding:'utf8'}))
 		.pipe( gulp.dest( paths.scss[1] ) )
 		.pipe( sass({outputStyle: 'compressed'}).on( 'error', sass.logError ) )
-		.pipe( rename( './style.min.css' ) )
+    .pipe(rename(function(path) {
+      path.basename += ".min";
+    }))
 		.pipe(lec({verbose:true, eolc: 'CRLF', encoding:'utf8'}))
 		.pipe( gulp.dest( paths.scss[1] ) );
 });

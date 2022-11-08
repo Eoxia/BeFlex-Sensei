@@ -13,16 +13,9 @@
 @import "post-excerpt";
 @import "post-author";
 @import "query-pagination";
-@import "query";
 
 /*--------------------------------------------------------------
 # Gutenberg Blocks Attributes
 --------------------------------------------------------------*/
 
 @import "attributes/attributes";
-
-/*--------------------------------------------------------------
-# Sensei blocks
---------------------------------------------------------------*/
-
-@import "sensei/sensei";
