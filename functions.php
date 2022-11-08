@@ -37,6 +37,7 @@ function beflextheme_support()  {
 	// Add support for custom units.
 	add_theme_support( 'custom-units' );
 
+	load_theme_textdomain( 'beflex', get_template_directory() . '/assets/lang/' );
 	load_theme_textdomain( 'sensei-lms', get_template_directory() . '/assets/sensei-lms-lang/' );
 
 }
