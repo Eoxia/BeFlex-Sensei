@@ -25,10 +25,6 @@
     background-color: var(--wp--preset--color--secondary);
     color: #fff;
   }
-  &.bf-button__color-light-grey {
-    background-color: var(--wp--preset--color--light-grey);
-    color: var(--wp--preset--color--light-anthracite);
-  }
   &.bf-button__color-light {
     background-color: #fff;
     color: var(--wp--preset--color--anthracite);
@@ -52,10 +48,6 @@
     &.bf-button__color-secondary {
       border-color: var(--wp--preset--color--secondary);
       color: var(--wp--preset--color--secondary);
-    }
-    &.bf-button__color-light-grey {
-      border-color: var(--wp--preset--color--light-grey);
-      color: var(--wp--preset--color--light-grey);
     }
     &.bf-button__color-light {
       border-color: #fff;
