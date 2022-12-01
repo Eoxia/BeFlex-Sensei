@@ -12,12 +12,18 @@
 if ( is_user_logged_in() ) :
 	$profile_url = Sensei()->learner_profiles->get_permalink( get_current_user_id() );
 	?>
-	<div class="wp-block-buttons">
+	<div class="bfs-login">
 		<?php if ( ! empty( $profile_url ) ) : ?>
-			<a href="<?php echo esc_url( $profile_url ); ?>" class="bf-button bf-button__style-outline bf-button__color-primary"><i class="fa-regular fa-user"></i> <?php esc_html_e( 'My courses', 'beflex' ); ?> </a>
+			<a href="<?php echo esc_url( $profile_url ); ?>" class="bf-button bf-button__style-outline bf-button__color-primary">
+				<svg xmlns="http://www.w3.org/2000/svg" class="bfs-login__icon bfs-login__courses-icon" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M272 304h-96C78.8 304 0 382.8 0 480c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32C448 382.8 369.2 304 272 304zM48.99 464C56.89 400.9 110.8 352 176 352h96c65.16 0 119.1 48.95 127 112H48.99zM224 256c70.69 0 128-57.31 128-128c0-70.69-57.31-128-128-128S96 57.31 96 128C96 198.7 153.3 256 224 256zM224 48c44.11 0 80 35.89 80 80c0 44.11-35.89 80-80 80S144 172.1 144 128C144 83.89 179.9 48 224 48z"/></svg>
+				<span class="bfs-login__label bfs-login__courses-label"><?php esc_html_e( 'My courses', 'beflex' ); ?></span>
+			</a>
 		<?php endif; ?>
 
-		<a href="<?php echo esc_url( wp_logout_url( home_url() ) ); ?>" class="bf-button bf-button__color-light-grey"><i class="fa-solid fa-arrow-right-from-bracket"></i> <?php esc_html_e( 'Logout', 'beflex' ); ?></a>
+		<a href="<?php echo esc_url( wp_logout_url( home_url() ) ); ?>" class="bf-button bf-button__color-light-grey"><i class="fa-solid fa-arrow-right-from-bracket"></i>
+			<svg xmlns="http://www.w3.org/2000/svg" class="bfs-login__icon bfs-login__logout-icon" viewBox="0 0 576 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M534.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L434.7 224 224 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l210.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128zM192 96c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0c-53 0-96 43-96 96l0 256c0 53 43 96 96 96l64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l64 0z"/></svg>
+			<span class="bfs-login__label bfs-login__logout-label"><?php esc_html_e( 'Logout', 'beflex' ); ?></span>
+		</a>
 	</div>
 	<?php
 else :
@@ -26,8 +32,11 @@ else :
 
 	if ( ! empty( $my_courses_url ) ) :
 		?>
-		<div class="wp-block-buttons">
-			<a href="<?php echo esc_url( $my_courses_url ); ?>" class="bf-button bf-button__style-outline bf-button__color-primary"><i class="fa-regular fa-user"></i> <?php esc_html_e( 'Login', 'beflex' ); ?> </a>
+		<div class="bfs-login">
+			<a href="<?php echo esc_url( $my_courses_url ); ?>" class="bf-button bf-button__style-outline bf-button__color-primary">
+				<svg xmlns="http://www.w3.org/2000/svg" class="bfs-login__icon bfs-login__login-icon" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M272 304h-96C78.8 304 0 382.8 0 480c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32C448 382.8 369.2 304 272 304zM48.99 464C56.89 400.9 110.8 352 176 352h96c65.16 0 119.1 48.95 127 112H48.99zM224 256c70.69 0 128-57.31 128-128c0-70.69-57.31-128-128-128S96 57.31 96 128C96 198.7 153.3 256 224 256zM224 48c44.11 0 80 35.89 80 80c0 44.11-35.89 80-80 80S144 172.1 144 128C144 83.89 179.9 48 224 48z"/></svg>
+				<span class="bfs-login__label bfs-login__login-label"><?php esc_html_e( 'Login', 'beflex' ); ?></span>
+			</a>
 		</div>
 		<?php
 	endif;

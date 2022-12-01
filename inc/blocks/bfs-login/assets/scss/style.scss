@@ -1,4 +1,9 @@
-.wp-block-buttons {
+.bfs-login {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+
   .bf-button__style-outline {
     background-color: transparent;
     padding: calc(0.6em - 2px) calc(1em - 2px);
@@ -6,7 +11,8 @@
   }
 
   .bf-button {
-    display: inline-block;
+    display: flex;
+    align-items: center;
     border-radius: 4px;
     font-size: var(--wp--preset--font-size--normal);
     box-shadow: none;
@@ -15,5 +21,21 @@
     text-decoration: none;
     word-break: break-word;
     box-sizing: border-box;
+
+
+    .bfs-login__icon, .bfs-login__label {
+      display: inline-block;
+    }
+    .bfs-login__icon {
+      width: 15px;
+      margin-right: 6px;
+
+      &.bfs-login__courses-icon {
+        fill: var(--wp--preset--color--primary);
+      }
+      &.bfs-login__login-icon {
+        fill: var(--wp--preset--color--primary);
+      }
+    }
   }
 }
