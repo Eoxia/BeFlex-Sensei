@@ -44,7 +44,12 @@ function beflex_register_block_patterns() {
 		'query-standard',
 		'query-background',
 		'query-course',
+		'course-default'
 	);
+
+	$sensei_block_patterns = array(
+	);
+
 
 	/**
 	 * Filters the theme block patterns.
