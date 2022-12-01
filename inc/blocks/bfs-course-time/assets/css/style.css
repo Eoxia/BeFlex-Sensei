@@ -2,3 +2,10 @@
   color: rgba(0, 0, 0, 0.6);
   font-size: 14px;
 }
+.bfs-course-time .bfs-course-lessons__icon {
+  width: 14px;
+  vertical-align: text-top;
+}
+.bfs-course-time span {
+  vertical-align: text-bottom;
+}

@@ -51,6 +51,7 @@ endif;
 function beflextheme_scripts() {
 	// Enqueue theme stylesheets.
 	wp_enqueue_style( 'beflex-style', get_template_directory_uri() . '/assets/css/style.min.css', array(), wp_get_theme()->get( 'Version' ) );
+	wp_enqueue_style( 'beflex-sensei-style', get_template_directory_uri() . '/assets/css/style-sensei.min.css', array(), wp_get_theme()->get( 'Version' ) );
 
 	// Enqueue theme scripts.
 	wp_enqueue_script( 'beflex-script', get_template_directory_uri() . '/assets/js/theme.js', array( 'jquery' ), '', true );

@@ -178,9 +178,6 @@ Text Domain: beflex
 .wp-block-query-pagination .wp-block-query-pagination-next:hover {
   opacity: 0.8;
 }
-.wp-block-query-pagination .wp-block-query-pagination-previous {
-  margin-left: auto;
-}
 .wp-block-query-pagination .page-numbers {
   -webkit-transition: background 0.2s ease-out;
   transition: background 0.2s ease-out;

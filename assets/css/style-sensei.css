@@ -408,3 +408,30 @@ body.single-sensei_message .message-comment.message-author .comment-container {
 .wp-block-sensei-lms-course-outline-module.is-style-beflex .wp-block-sensei-lms-course-outline-lesson:last-child > span {
   padding-bottom: 16px;
 }
+
+.wp-block-query.query-course .wp-block-post .wp-block-post-featured-image {
+  margin: 0;
+}
+.wp-block-query.query-course .wp-block-post .wp-block-sensei-lms-course-categories {
+  margin: 0;
+}
+.wp-block-query.query-course .wp-block-post .wp-block-sensei-lms-course-categories a {
+  background: none;
+  text-transform: uppercase;
+  color: var(--wp--preset--color--primary);
+  font-weight: 700;
+  font-size: 12px;
+  padding: 0;
+  margin-right: 6px;
+  -webkit-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+}
+.wp-block-query.query-course .wp-block-post .wp-block-sensei-lms-course-categories a span {
+  color: var(--wp--preset--color--primary);
+}
+.wp-block-query.query-course .wp-block-post .wp-block-sensei-lms-course-categories a:hover {
+  opacity: 0.7;
+}
+.wp-block-query.query-course .wp-block-post .sensei-progress-bar__label {
+  display: none;
+}

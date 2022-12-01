@@ -7,10 +7,10 @@
  */
 
 function beflex_acf_blocks_init() {
-	require get_template_directory() . '/inc/blocks/bfs-course-tax/bfs-course-tax.php';
+//	require get_template_directory() . '/inc/blocks/bfs-course-tax/bfs-course-tax.php';
 	require get_template_directory() . '/inc/blocks/bfs-course-lessons/bfs-course-lessons.php';
 	require get_template_directory() . '/inc/blocks/bfs-course-time/bfs-course-time.php';
-	require get_template_directory() . '/inc/blocks/bfs-course-completion/bfs-course-completion.php';
+//	require get_template_directory() . '/inc/blocks/bfs-course-completion/bfs-course-completion.php';
 	require get_template_directory() . '/inc/blocks/bfs-login/bfs-login.php';
 	require get_template_directory() . '/inc/blocks/bfs-course-signup/bfs-course-signup.php';
 }

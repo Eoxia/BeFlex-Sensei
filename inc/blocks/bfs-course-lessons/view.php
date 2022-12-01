@@ -34,7 +34,8 @@ if ( ! empty( $lesson_count ) ) :
 	<div class="<?php echo esc_attr( $classes ); ?>">
 		<?php
 		echo sprintf(
-			'<i class="fa-solid fa-list-check"></i> %1$s %2$s',
+			'<img src="%1$s" class="bfs-course-lessons__icon" /> <span>%2$s %3$s</span>',
+			esc_url( get_stylesheet_directory_uri() . '/inc/blocks/bfs-course-lessons/assets/images/list-check-solid.svg' ),
 			esc_html( $lesson_count ),
 			esc_html__( 'lessons', 'beflex-child' )
 		);
