@@ -21,8 +21,8 @@ if ( function_exists( 'acf_register_block_type' ) ) {
 			'keywords'        => array( 'beflex', 'sensei', 'bfs', 'block', 'lessons', 'count', 'course' ),
 			'render_callback' => 'bfs_course_lessons_render_callback',
 			'enqueue_assets'  => function() {
-				wp_enqueue_style( 'block-bfs-course-lessons-style', get_stylesheet_directory_uri() . '/inc/blocks/bfs-course-lessons/assets/css/style.min.css' );
-//				wp_enqueue_script( 'block-bfs-course-lessons-script', get_stylesheet_directory_uri() . '/inc/blocks/bf-process/assets/js/bf-process.js', array('jquery'), '', true );
+				wp_enqueue_style( 'block-bfs-course-lessons-style', get_template_directory_uri() . '/inc/blocks/bfs-course-lessons/assets/css/style.min.css' );
+//				wp_enqueue_script( 'block-bfs-course-lessons-script', get_template_directory_uri() . '/inc/blocks/bf-process/assets/js/bf-process.js', array('jquery'), '', true );
 			}
 		)
 	);

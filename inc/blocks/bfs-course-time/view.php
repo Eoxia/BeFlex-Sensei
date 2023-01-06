@@ -35,7 +35,7 @@ if ( ! empty( $lesson_time ) ) :
 		<?php
 		echo sprintf(
 			'<img src="%1$s" class="bfs-course-lessons__icon" /> <span>%2$s %3$s</span>',
-			esc_url( get_stylesheet_directory_uri() . '/inc/blocks/bfs-course-time/assets/images/clock-regular.svg' ),
+			esc_url( get_template_directory_uri() . '/inc/blocks/bfs-course-time/assets/images/clock-regular.svg' ),
 			esc_html( $lesson_time ),
 			esc_html__( 'min', 'beflex' )
 		);
