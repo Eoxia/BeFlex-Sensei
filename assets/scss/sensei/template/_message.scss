@@ -82,9 +82,12 @@ body.single-sensei_message {
       border-radius: 6px;
       font-family: var(--wp--preset--font-family--open-sans);
     }
+    .form-submit {
+      margin: auto;
+    }
     #submit {
-      border: 1px solid var(--wp--preset--color--galaxy);
-      color: var(--wp--preset--color--galaxy);
+      border: 1px solid var(--wp--preset--color--primary);
+      color: var(--wp--preset--color--primary);
       border-radius: 6px;
       margin: auto 0 auto 1em;
       padding: 1em;
@@ -92,9 +95,10 @@ body.single-sensei_message {
       text-transform: uppercase;
       font-weight: 600;
       transition: all 0.2s ease-out;
+      background: none;
 
       &:hover {
-        background: var(--wp--preset--color--galaxy);
+        background: var(--wp--preset--color--primary);
         color: #fff;
       }
     }
@@ -136,7 +140,7 @@ body.single-sensei_message {
       }
       .comment-container {
         order: 1;
-        background: var(--wp--preset--color--galaxy);
+        background: var(--wp--preset--color--primary);
         color: #fff;
       }
     }

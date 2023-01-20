@@ -186,7 +186,7 @@ body.learner-profile .post.course .meter .value {
   margin-top: 3em;
 }
 .profile-sidebar .profile-nav-active, body.sensei.learner-archive-message .profile-sidebar .nav-messages, body.sensei.learner-profile .profile-sidebar .nav-courses {
-  background: var(--wp--preset--color--galaxy);
+  background: var(--wp--preset--color--primary);
   color: #fff;
   padding: 0.6em 1em;
   border-radius: 6px;
@@ -274,9 +274,12 @@ body.single-sensei_message .comment-respond .comment-form textarea {
   border-radius: 6px;
   font-family: var(--wp--preset--font-family--open-sans);
 }
+body.single-sensei_message .comment-respond .comment-form .form-submit {
+  margin: auto;
+}
 body.single-sensei_message .comment-respond .comment-form #submit {
-  border: 1px solid var(--wp--preset--color--galaxy);
-  color: var(--wp--preset--color--galaxy);
+  border: 1px solid var(--wp--preset--color--primary);
+  color: var(--wp--preset--color--primary);
   border-radius: 6px;
   margin: auto 0 auto 1em;
   padding: 1em;
@@ -285,9 +288,10 @@ body.single-sensei_message .comment-respond .comment-form #submit {
   font-weight: 600;
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
+  background: none;
 }
 body.single-sensei_message .comment-respond .comment-form #submit:hover {
-  background: var(--wp--preset--color--galaxy);
+  background: var(--wp--preset--color--primary);
   color: #fff;
 }
 body.single-sensei_message .message-comment {
@@ -327,7 +331,7 @@ body.single-sensei_message .message-comment.message-author .comment-container {
   -webkit-box-ordinal-group: 2;
   -ms-flex-order: 1;
   order: 1;
-  background: var(--wp--preset--color--galaxy);
+  background: var(--wp--preset--color--primary);
   color: #fff;
 }
 

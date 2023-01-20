@@ -1,61 +1,74 @@
 <?php
-/**
- * The Template for displaying message archives.
- *
- * Override this template by copying it to yourtheme/sensei/archive-message.php
- *
- * @author      Automattic
- * @package     Sensei
- * @category    Templates
- * @version     2.0.0
- */
-
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
-
-get_sensei_header();
-
-/**
- * This action before course messages archive loop. This hook fires within the archive-message.php file.
- * It fires even if the current archive has no no messages.
- *
- * @since 1.9.0
- *
- * @hooked Sensei_Messages::the_archive_header -20
- */
-do_action( 'sensei_archive_before_message_loop' );
+/*
+Template Name: Example
+*/
 ?>
+<!doctype html>
+<html <?php language_attributes(); ?>>
+<head>
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<?php
+	$block_content = do_blocks( file_get_contents(get_stylesheet_directory() . "/block-templates/archive-course.html") );
+	?>
+	<?php wp_head(); ?>
+</head>
 
-<article id="main-sensei_message" class="post sensei_message-container alignfull">
+<body <?php body_class( 'sensei-template-old' ); ?>>
+<?php wp_body_open(); ?>
+<div class="wp-site-blocks">
 
-	<section id="learner-container" class="learner-messages">
+	<header class="wp-block-template-part site-header">
+		<?php block_header_area(); ?>
+	</header>
 
-		<h1><?php esc_html_e( 'Messages', 'beflex-child' ); ?></h1>
+	<?php
+	/**
+	 * This action before course messages archive loop. This hook fires within the archive-message.php file.
+	 * It fires even if the current archive has no no messages.
+	 *
+	 * @since 1.9.0
+	 *
+	 * @hooked Sensei_Messages::the_archive_header -20
+	 */
+	do_action( 'sensei_archive_before_message_loop' );
+	?>
 
-		<?php if ( have_posts() ) : ?>
+	<article id="main-sensei_message" class="post sensei_message-container alignfull">
 
-			<?php sensei_load_template( 'loop-message.php' ); ?>
+		<section id="learner-container" class="learner-messages">
 
-		<?php else : ?>
+			<h1><?php esc_html_e( 'Messages', 'beflex-child' ); ?></h1>
 
-			<p> <?php esc_html_e( 'You do not have any messages.', 'sensei-lms' ); ?> </p>
+			<?php if ( have_posts() ) : ?>
 
-		<?php endif; ?>
-	</section>
+				<?php sensei_load_template( 'loop-message.php' ); ?>
 
-	<?php echo bfs_profile_sidebar(); ?>
+			<?php else : ?>
 
-</article>
+				<p> <?php esc_html_e( 'You do not have any messages.', 'sensei-lms' ); ?> </p>
 
-<?php
-/**
- * This action before course messages archive loop. This hook fires within the archive-message.php file.
- * It fires even if the current archive has no no messages.
- *
- * @since 1.9.0
- */
-do_action( 'sensei_archive_after_message_loop' );
-?>
+			<?php endif; ?>
+		</section>
 
-<?php get_sensei_footer(); ?>
+		<?php echo bfs_profile_sidebar(); ?>
+
+	</article>
+
+	<?php
+	/**
+	 * This action before course messages archive loop. This hook fires within the archive-message.php file.
+	 * It fires even if the current archive has no no messages.
+	 *
+	 * @since 1.9.0
+	 */
+	do_action( 'sensei_archive_after_message_loop' );
+	?>
+
+	<footer class="wp-block-template-part site-footer">
+		<?php block_footer_area(); ?>
+	</footer>
+</div>
+<?php wp_footer(); ?>
+</body>
+
+</html>

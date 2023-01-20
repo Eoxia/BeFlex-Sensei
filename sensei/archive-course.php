@@ -13,7 +13,7 @@ Template Name: Example
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class( 'sensei-template-old' ); ?>>
 <?php wp_body_open(); ?>
 <div class="wp-site-blocks">
 
