@@ -11,7 +11,7 @@ function beflex_register_block_patterns() {
 		'design' => array( 'label' => __( 'Design', 'beflex' ) ),
 		'header' => array( 'label' => __( 'Headers', 'beflex' ) ),
 		'footer' => array( 'label' => __( 'Footers', 'beflex' ) ),
-		'query'  => array( 'label' => __( 'Requête', 'beflex' ) ),
+		'query'  => array( 'label' => __( 'Query', 'beflex' ) ),
 	);
 
 	/**

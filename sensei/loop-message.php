@@ -48,7 +48,7 @@ do_action( 'sensei_loop_message_before' );
 		<a href="<?php the_permalink(); ?>">
 			<div class="message-title">
 				<?php printf(
-					esc_html__( 'Conversation du cours : %s', 'beflex-child' ),
+					esc_html__( 'Conversation du cours : %s', 'beflex' ),
 					get_the_title( $course_id )
 				); ?>
 			</div>

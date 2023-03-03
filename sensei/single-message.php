@@ -37,7 +37,7 @@ Template Name: Example
 					</a>
 					<h1 class="message-title">
 						<?php printf(
-							esc_html__( 'Conversation du cours : %s', 'beflex-child' ),
+							esc_html__( 'Conversation du cours : %s', 'beflex' ),
 							get_the_title( $course_id )
 						); ?>
 					</h1>
@@ -45,14 +45,14 @@ Template Name: Example
 
 				<?php
 				//			comment_form( array(
-				//				'label_submit'         => __( 'Send', 'beflex-child' ),
+				//				'label_submit'         => __( 'Send', 'beflex' ),
 				//				'logged_in_as'         => '',
 				//				'must_log_in'          => '',
 				//				'comment_notes_before' => '',
 				//				'comment_notes_after'  => '',
 				//				'title_reply'          => '',
 				//				'format'               => 'html5',
-				//				'comment_field'        => '<p class="comment-form-comment"><textarea id="comment" name="comment" aria-required="true" placeholder="' . __( 'Write a new message...', 'beflex-child' ) . '"></textarea></p>',
+				//				'comment_field'        => '<p class="comment-form-comment"><textarea id="comment" name="comment" aria-required="true" placeholder="' . __( 'Write a new message...', 'beflex' ) . '"></textarea></p>',
 				//			), get_the_ID() );
 
 				?>
@@ -70,10 +70,10 @@ Template Name: Example
 <!--			<div id="respond" class="comment-respond">-->
 <!--					<form action="--><?php //echo esc_url( get_site_url() ); ?><!--/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate="">-->
 <!--						<p class="comment-form-comment">-->
-<!--							<textarea id="comment" name="comment" aria-required="true" placeholder="--><?php //esc_html_e( 'Write a new message...', 'beflex-child' ); ?><!--"></textarea>-->
+<!--							<textarea id="comment" name="comment" aria-required="true" placeholder="--><?php //esc_html_e( 'Write a new message...', 'beflex' ); ?><!--"></textarea>-->
 <!--						</p>-->
 <!---->
-<!--						<button name="submit" type="submit" id="submit" class="submit"><i class="fa-regular fa-paper-plane"></i> --><?php //esc_html_e( 'Send', 'beflex-child' ); ?><!--</button>-->
+<!--						<button name="submit" type="submit" id="submit" class="submit"><i class="fa-regular fa-paper-plane"></i> --><?php //esc_html_e( 'Send', 'beflex' ); ?><!--</button>-->
 <!---->
 <!--						<input type="hidden" name="comment_post_ID" value="--><?php //echo get_the_ID(); ?><!--" id="comment_post_ID">-->
 <!--						<input type="hidden" name="comment_parent" id="comment_parent" value="0">-->

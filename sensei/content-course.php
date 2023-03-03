@@ -65,7 +65,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 							echo sprintf(
 								'<i class="fa-solid fa-list-check"></i> %1$s %2$s',
 								esc_html( $lesson_count ),
-								esc_html__( 'lessons', 'beflex-child' )
+								esc_html__( 'lessons', 'beflex' )
 							);
 							?>
 						</div>
@@ -81,7 +81,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 							echo sprintf(
 								'<i class="fa-regular fa-clock"></i> %1$s %2$s',
 								esc_html( $lesson_time ),
-								esc_html__( 'min', 'beflex-child' )
+								esc_html__( 'min', 'beflex' )
 							);
 							?>
 						</div>

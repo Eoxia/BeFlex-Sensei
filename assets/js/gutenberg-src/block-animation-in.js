@@ -37,7 +37,7 @@ const headingAdvancedControls = wp.compose.createHigherOrderComponent((BlockEdit
         <InspectorAdvancedControls>
 
           <ToggleControl
-            label={wp.i18n.__('Display IN animation', 'beflex-child')}
+            label={wp.i18n.__('Display IN animation', 'beflex')}
             help={
               attributes.animationIn
                 ? 'Display IN animation'
@@ -49,7 +49,7 @@ const headingAdvancedControls = wp.compose.createHigherOrderComponent((BlockEdit
 
           { attributes.animationIn &&
           <RadioControl
-            label={wp.i18n.__('Animation type', 'beflex-child')}
+            label={wp.i18n.__('Animation type', 'beflex')}
             selected={attributes.animationInType}
             help={'Choose the type of animation'}
             options={[

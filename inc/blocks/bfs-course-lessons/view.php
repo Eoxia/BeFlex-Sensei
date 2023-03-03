@@ -11,7 +11,7 @@
 
 // That block only works with courses custom post types.
 if ( is_admin() ) :
-	esc_html_e( 'Display course lessons', 'beflex-child' );
+	esc_html_e( 'Display course lessons', 'beflex' );
 	return;
 endif;
 
@@ -37,7 +37,7 @@ if ( ! empty( $lesson_count ) ) :
 			'<img src="%1$s" class="bfs-course-lessons__icon" /> <span>%2$s %3$s</span>',
 			esc_url( get_template_directory_uri() . '/inc/blocks/bfs-course-lessons/assets/images/list-check-solid.svg' ),
 			esc_html( $lesson_count ),
-			esc_html__( 'lessons', 'beflex-child' )
+			esc_html__( 'lessons', 'beflex' )
 		);
 		?>
 	</div>

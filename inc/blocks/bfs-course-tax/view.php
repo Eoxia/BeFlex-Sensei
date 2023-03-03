@@ -11,7 +11,7 @@
 
 // That block only works with courses custom post types.
 if ( is_admin() ) :
-	esc_html_e( 'Display course categories', 'beflex-child' );
+	esc_html_e( 'Display course categories', 'beflex' );
 	return;
 endif;
 

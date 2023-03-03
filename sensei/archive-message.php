@@ -37,7 +37,7 @@ Template Name: Example
 
 		<section id="learner-container" class="learner-messages">
 
-			<h1><?php esc_html_e( 'Messages', 'beflex-child' ); ?></h1>
+			<h1><?php esc_html_e( 'Messages', 'beflex' ); ?></h1>
 
 			<?php if ( have_posts() ) : ?>
 
