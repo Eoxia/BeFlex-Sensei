@@ -1,0 +1,16 @@
+.sensei-lms-course-navigation {
+  .sensei-lms-course-navigation-lesson.status-completed .sensei-lms-course-navigation-lesson__link {
+    color: #0ec986;
+
+    &:hover * {
+      color: #0ec986;
+    }
+  }
+  .sensei-lms-course-navigation-lesson.status-in-progress .sensei-lms-course-navigation-lesson__link {
+    color: #e4612e;
+
+    &:hover * {
+      color: #e4612e;
+    }
+  }
+}
