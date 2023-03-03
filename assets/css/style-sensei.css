@@ -360,6 +360,20 @@ body.single-sensei_message .message-comment.message-author .comment-container {
   color: red;
 }
 
+body.sensei-template-old .site-header > .header-sticky > .wp-block-group > .wp-block-group {
+  max-width: 1200px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+body.sensei-template-old .wp-block-sensei-lms-course-list-filter {
+  display: none !important;
+}
+
 .header-course.wp-block-template-part .wp-block-post-featured-image img {
   border-radius: 6px;
 }

@@ -1,0 +1,12 @@
+body.sensei-template-old {
+  .site-header > .header-sticky > .wp-block-group > .wp-block-group {
+    max-width: 1200px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  .wp-block-sensei-lms-course-list-filter  {
+    display: none !important;
+  }
+}
