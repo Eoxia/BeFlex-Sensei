@@ -28,12 +28,14 @@ if ( !empty( $block['align'] ) ) :
 endif;
 
 
-$terms_list = get_the_term_list( get_the_ID(), 'course-category', '', ' ', '' );
+$terms_list = get_the_terms( get_the_ID(), 'course-category' );
 
 if ( ! empty( $terms_list ) ) :
 	?>
 	<div class="<?php echo esc_attr( $classes ); ?>">
-		<?php echo $terms_list; ?>
+		<?php foreach( $terms_list as $term ) : ?>
+			<a href="<?php echo get_term_link( $term->slug, 'course-category'); ?>" rel="tag" class="bfs-course-tax__id-<?php echo $term->term_id; ?>"><?php echo $term->name; ?></a>
+		<?php endforeach; ?>
 	</div>
-	<?php
+<?php
 endif;
