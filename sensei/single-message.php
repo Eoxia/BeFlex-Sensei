@@ -7,9 +7,6 @@ Template Name: Example
 	<html <?php language_attributes(); ?>>
 	<head>
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
-		<?php
-		$block_content = do_blocks( file_get_contents(get_stylesheet_directory() . "/block-templates/archive-course.html") );
-		?>
 		<?php wp_head(); ?>
 	</head>
 
@@ -28,19 +25,35 @@ Template Name: Example
 		<article id="main-sensei_message" class="post sensei_message-container alignfull">
 			<section id="learner-container" class="learner-messages">
 				<?php
-				$course_id = get_post_meta( get_the_ID(), '_post', true );
+				$post_id = get_post_meta( get_the_ID(), '_post', true );
 				$message_url = get_post_type_archive_link( 'sensei_message' );
+				if (  'lesson' === get_post_type( $post_id ) ) :
+					$course_attached_id = intval( get_post_meta( $post_id, '_lesson_course', true ) );
+				else :
+					$course_attached_id = $post_id;
+				endif;
 				?>
+
 				<div class="message-header">
 					<a href="<?php echo esc_url( $message_url ); ?>">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome 6.3.0 by @fontawesome - https://fontawesome.com License Copyright 2023 Fonticons, Inc. --><path d="M48 256a208 208 0 1 1 416 0A208 208 0 1 1 48 256zm464 0A256 256 0 1 0 0 256a256 256 0 1 0 512 0zM217.4 376.9c4.2 4.5 10.1 7.1 16.3 7.1c12.3 0 22.3-10 22.3-22.3V304h96c17.7 0 32-14.3 32-32V240c0-17.7-14.3-32-32-32H256V150.3c0-12.3-10-22.3-22.3-22.3c-6.2 0-12.1 2.6-16.3 7.1L117.5 242.2c-3.5 3.8-5.5 8.7-5.5 13.8s2 10.1 5.5 13.8l99.9 107.1z"/></svg>
 					</a>
 					<h1 class="message-title">
 						<?php printf(
-							esc_html__( 'Conversation du cours : %s', 'beflex' ),
-							get_the_title( $course_id )
+							esc_html__( 'Conversation de : %s', 'beflex' ),
+							get_the_title( $post_id )
 						); ?>
 					</h1>
+				</div>
+				<div class="message-data">
+					<?php if ( $course_attached_id ) : ?>
+						<?php echo sprintf(
+							'%1$s : <a href="%2$s">%3$s</a>',
+							esc_html__( 'Cours', 'beflex' ),
+							get_post_permalink( $course_attached_id ),
+							get_the_title( $course_attached_id )
+						); ?>
+					<?php endif; ?>
 				</div>
 
 				<?php

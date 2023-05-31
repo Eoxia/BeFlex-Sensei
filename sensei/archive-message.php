@@ -7,9 +7,6 @@ Template Name: Example
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<?php
-	$block_content = do_blocks( file_get_contents(get_stylesheet_directory() . "/block-templates/archive-course.html") );
-	?>
 	<?php wp_head(); ?>
 </head>
 
