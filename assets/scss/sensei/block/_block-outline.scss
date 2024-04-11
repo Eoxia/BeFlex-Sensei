@@ -1,0 +1,29 @@
+/*--------------------------------------------------------------
+## Block outline
+--------------------------------------------------------------*/
+
+.wp-block-sensei-lms-course-outline.is-style-beflex .wp-block-sensei-lms-course-outline-module,
+.wp-block-sensei-lms-course-outline-module.is-style-beflex {
+  background: var(--wp--preset--color--light-grey);
+  border-color: rgba(0,0,0,0.2) !important;
+
+  .wp-block-sensei-lms-course-outline-module__header {
+    background-color: transparent !important;
+    color: var(--wp--preset--color--anthracite) !important;
+  }
+  .wp-block-sensei-lms-course-outline-module__description {
+    padding: 0 16px 16px 16px;
+    font-size: 14px;
+  }
+  .wp-block-sensei-lms-course-outline-module__lessons-title {
+    background: none;
+  }
+  .wp-block-sensei-lms-course-outline-lesson {
+    > span {
+      padding: 10px 16px;
+    }
+    &:last-child > span {
+      padding-bottom: 16px;
+    }
+  }
+}

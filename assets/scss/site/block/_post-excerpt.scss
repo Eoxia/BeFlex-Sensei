@@ -1,0 +1,14 @@
+/*--------------------------------------------------------------
+## Post Excerpt
+--------------------------------------------------------------*/
+
+.wp-block-post-excerpt.wp-button {
+  .wp-block-post-excerpt__more-link {
+    display: inline-block;
+    background-color: var(--wp--preset--color--primary);
+    color: var(--wp--preset--color--white);
+    font-size: var(--wp--preset--font-size--normal);
+    border-radius: 4px;
+    padding: 0.6em 1em;
+  }
+}

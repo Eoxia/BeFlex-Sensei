@@ -1,0 +1,27 @@
+body.frontend .bf-block-animatein {
+  opacity: 0;
+  transition: all 0.4s ease-out;
+
+  &.bf-block-animatein--animated {
+    opacity: 1;
+  }
+
+  &.bf-block-animatein--type-top:not(.bf-block-animatein--animated) {
+    transform: translateY(-2em);
+  }
+  &.bf-block-animatein--type-right:not(.bf-block-animatein--animated) {
+    transform: translateX(2em);
+  }
+  &.bf-block-animatein--type-bot:not(.bf-block-animatein--animated) {
+    transform: translateY(2em);
+  }
+  &.bf-block-animatein--type-left:not(.bf-block-animatein--animated) {
+    transform: translateX(-2em);
+  }
+  &.bf-block-animatein--type-scalein:not(.bf-block-animatein--animated) {
+    transform: scale(0.95);
+  }
+  &.bf-block-animatein--type-scaleout:not(.bf-block-animatein--animated) {
+    transform: scale(1.05);
+  }
+}

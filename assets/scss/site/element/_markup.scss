@@ -1,0 +1,62 @@
+/*--------------------------------------------------------------
+# Markup
+--------------------------------------------------------------*/
+
+body {
+  margin: 0;
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+img {
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, ol {
+  padding-left: 1.2em;
+}
+
+figure {
+  margin: 0;
+}
+
+form {
+  input[type="text"],
+  input[type="email"],
+  input[type="url"],
+  input[type="password"],
+  input[type="search"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="range"],
+  input[type="date"],
+  input[type="month"],
+  input[type="week"],
+  input[type="time"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="color"],
+  select,
+  textarea {
+    width: 100%;
+    color: #666;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 3px;
+    padding: 1em;
+  }
+  input[type="submit"] {
+    @extend .bf-button;
+  }
+  label {
+    font-weight: 600;
+  }
+  req {
+    color: red;
+  }
+}

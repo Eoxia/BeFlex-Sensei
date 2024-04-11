@@ -1,0 +1,35 @@
+.bfs-course-tax {
+  display: block;
+
+  a {
+    margin-left: 0.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    transition: opacity 0.2s ease-out;
+
+    &:hover {
+      opacity: 0.6;
+    }
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &::after {
+    display: block;
+    content: '';
+    clear: both;
+  }
+}
+
+// Align.
+.bfs-course-tax {
+  &.align-left {
+    text-align: left;
+  }
+  &.align-right {
+    text-align: right;
+  }
+}
+

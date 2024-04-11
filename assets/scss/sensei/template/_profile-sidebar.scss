@@ -1,0 +1,44 @@
+.profile-sidebar {
+  .profile-sidebar-content {
+    margin-left: 250px;
+    padding-top: 2em;
+    padding-right: 4em;
+
+    svg {
+      max-width: 12px;
+    }
+  }
+
+  .profile-nav {
+    display: block;
+    color: #000;
+    font-size: 14px;
+    margin-bottom: 1.5em;
+
+    svg {
+      margin-right: 0.4em;
+    }
+
+    &.spacer {
+      margin-top: 3em;
+    }
+  }
+  .profile-nav-active {
+    background: var(--wp--preset--color--primary);
+    color: #fff;
+    padding: 0.6em 1em;
+    border-radius: 6px;
+
+    svg {
+      fill: #fff;
+    }
+  }
+}
+
+body.sensei.learner-profile .profile-sidebar .nav-courses {
+  @extend .profile-nav-active;
+}
+body.sensei.learner-archive-message .profile-sidebar .nav-messages {
+  @extend .profile-nav-active;
+}
+

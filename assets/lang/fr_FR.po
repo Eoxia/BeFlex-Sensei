@@ -1,0 +1,232 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Beflex Sensei 2.2.0\n"
+"POT-Creation-Date: 2023-03-03 15:48+0100\n"
+"PO-Revision-Date: 2023-03-03 15:53+0100\n"
+"Last-Translator: \n"
+"Language-Team: contact@eoxia.com\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.2.2\n"
+"X-Poedit-Basepath: ../..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: esc_html__;__;_e;esc_html_e;_n;_x;_ex\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: node_modules\n"
+
+#: assets/js/gutenberg-build/block-animation-in.js:132
+#: assets/js/gutenberg-src/block-animation-in.js:40
+msgid "Display IN animation"
+msgstr "Afficher animation d'entrée"
+
+#: assets/js/gutenberg-build/block-animation-in.js:139
+#: assets/js/gutenberg-src/block-animation-in.js:52
+msgid "Animation type"
+msgstr "Type d'animation"
+
+#: assets/js/gutenberg-build/block-hide-on-mobile.js:124
+#: assets/js/gutenberg-src/block-hide-on-mobile.js:30
+msgid "Hide on mobile"
+msgstr "Masquer sur mobile"
+
+#: inc/block-blocks.php:31
+msgid "Beflex"
+msgstr "Beflex"
+
+#: inc/block-patterns.php:11
+msgid "Design"
+msgstr "Design"
+
+#: inc/block-patterns.php:12
+msgid "Headers"
+msgstr "Entêtes"
+
+#: inc/block-patterns.php:13
+msgid "Footers"
+msgstr "Pieds de page"
+
+#: inc/block-patterns.php:14
+msgid "Query"
+msgstr "Requête"
+
+#: inc/blocks/bfs-course-completion/bfs-course-completion.php:16
+msgid "Course completion"
+msgstr "Complétion du cours"
+
+#: inc/blocks/bfs-course-completion/bfs-course-completion.php:17
+msgid "Display completion length of a course"
+msgstr "Affiche la durée complétion d'un cours"
+
+#: inc/blocks/bfs-course-completion/view.php:14
+msgid "Display course completion"
+msgstr "Affiche la complétion d'un cours"
+
+#: inc/blocks/bfs-course-lessons/bfs-course-lessons.php:16
+msgid "Course lessons"
+msgstr "Leçons du cours"
+
+#: inc/blocks/bfs-course-lessons/bfs-course-lessons.php:17
+msgid "Display lessons associated to a course"
+msgstr "Afficher les leçons associées à un cours"
+
+#: inc/blocks/bfs-course-lessons/view.php:14
+msgid "Display course lessons"
+msgstr "Affiche les leçons du cours"
+
+#: inc/blocks/bfs-course-lessons/view.php:40 sensei/content-course.php:68
+msgid "lessons"
+msgstr "Leçons"
+
+#: inc/blocks/bfs-course-signup/bfs-course-signup.php:16
+msgid "Sensei Course signup"
+msgstr "Sensei inscription au cours"
+
+#: inc/blocks/bfs-course-signup/bfs-course-signup.php:17
+msgid "Display button to take course"
+msgstr "Affiche le bouton d'inscription au cours"
+
+#: inc/blocks/bfs-course-signup/view.php:14
+msgid "Display course signup button"
+msgstr "Affiche le bouton d'enregistrement"
+
+#: inc/blocks/bfs-course-signup/view.php:26
+msgid "Start course"
+msgstr "Commencer le cours"
+
+#: inc/blocks/bfs-course-signup/view.php:29
+msgid "Take course"
+msgstr "S'inscrire au cours"
+
+#: inc/blocks/bfs-course-tax/bfs-course-tax.php:16
+msgid "Course categories"
+msgstr "Catégories de cours"
+
+#: inc/blocks/bfs-course-tax/bfs-course-tax.php:17
+msgid "Display categories associated to a course"
+msgstr "Affiche les catégories associées à un cours"
+
+#: inc/blocks/bfs-course-tax/view.php:14
+msgid "Display course categories"
+msgstr "Affiche les catégories de cours"
+
+#: inc/blocks/bfs-course-time/bfs-course-time.php:16
+msgid "Course time"
+msgstr "Durée du cours"
+
+#: inc/blocks/bfs-course-time/bfs-course-time.php:17
+msgid "Display time length of a course"
+msgstr "Affiche la durée d'un cours"
+
+#: inc/blocks/bfs-course-time/view.php:14
+msgid "Display course time"
+msgstr "Afficher la durée du cours"
+
+#: inc/blocks/bfs-course-time/view.php:40 sensei/content-course.php:84
+msgid "min"
+msgstr "min"
+
+#: inc/blocks/bfs-login/bfs-login.php:16
+msgid "Sensei login navigation"
+msgstr "Sensei login navigation"
+
+#: inc/blocks/bfs-login/bfs-login.php:17
+msgid "Display login and profile link"
+msgstr "Affiche le bouton connexion et profile"
+
+#: inc/blocks/bfs-login/view.php:19 sensei/functions.php:76
+msgid "My courses"
+msgstr "Mes cours"
+
+#: inc/blocks/bfs-login/view.php:25 sensei/functions.php:84
+msgid "Logout"
+msgstr "Deconnexion"
+
+#: inc/blocks/bfs-login/view.php:38
+msgid "Login"
+msgstr "Connexion"
+
+#: inc/patterns/course-default.php:6
+msgid "BFS Sensei - course template"
+msgstr "BFS Sensei - course template"
+
+#: inc/patterns/design-columns-media.php:6
+msgid "Columns width rounded media and text"
+msgstr "Colonnes avec media et texte"
+
+#: inc/patterns/design-media-content-background.php:6
+msgid "Image and content with background"
+msgstr "Image et contenu avec fond"
+
+#: inc/patterns/header-photo.php:7
+msgid "Header with background banner"
+msgstr "Entête avec bannière en fond"
+
+#: inc/patterns/query-background.php:7
+msgid "Call To Action - Background"
+msgstr "Call To Action - Background"
+
+#: inc/patterns/query-course.php:7
+msgid "Sensei course grid"
+msgstr "Sensei course grid"
+
+#: inc/patterns/query-standard.php:7
+msgid "Call To Action - Standard"
+msgstr "Call To Action - Standard"
+
+#: sensei/archive-message.php:40
+msgid "Messages"
+msgstr "Messages"
+
+#: sensei/archive-message.php:48
+msgid "You do not have any messages."
+msgstr "Vous n'avez pas de messages."
+
+#: sensei/functions.php:20 sensei/functions.php:24
+msgid "Beflex style"
+msgstr "Beflex style"
+
+#: sensei/functions.php:81
+msgid "My messages"
+msgstr "Mes messages"
+
+#: sensei/functions.php:139
+msgid "Your informations can no longer be modified"
+msgstr "Vos informations ne peuvent plus êtres modifiées"
+
+#: sensei/functions.php:152
+msgid "Last name"
+msgstr "Nom de famille"
+
+#: sensei/functions.php:156
+msgid "First name"
+msgstr "Prénom"
+
+#: sensei/learner-profile.php:55
+msgid "Profile"
+msgstr "Profile"
+
+#: sensei/learner-profile.php:60
+msgid "Name"
+msgstr "Nom"
+
+#: sensei/learner-profile.php:64
+msgid "Email"
+msgstr "Email"
+
+#: sensei/learner-profile.php:87
+msgid "The user requested does not exist."
+msgstr "L'utilisateur demandé n'existe pas"
+
+#: sensei/loop-message.php:51 sensei/single-message.php:40
+#, php-format
+msgid "Conversation du cours : %s"
+msgstr "Conversation du cours : %s"
+
+#~ msgid "Write a new message..."
+#~ msgstr "Écrire un nouveau message..."
+
+#~ msgid "Send"
+#~ msgstr "Envoyer"

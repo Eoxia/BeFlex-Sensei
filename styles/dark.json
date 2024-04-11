@@ -1,0 +1,10 @@
+{
+	"version": 2,
+	"title": "Dark",
+	"styles": {
+		"color": {
+			"background": "var(--wp--preset--color--anthracite)",
+			"text": "var(--wp--preset--color--light-grey)"
+		}
+	}
+}

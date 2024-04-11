@@ -1,0 +1,30 @@
+.wp-block-query.query-course .wp-block-post {
+  .wp-block-post-featured-image {
+    margin: 0;
+  }
+  .wp-block-sensei-lms-course-categories {
+    margin: 0;
+
+    a {
+      background: none;
+      text-transform: uppercase;
+      color: var(--wp--preset--color--primary);
+      font-weight: 700;
+      font-size: 12px;
+      padding: 0;
+      margin-right: 6px;
+      transition: opacity 0.2s ease-out;
+
+      span {
+        color: var(--wp--preset--color--primary);
+      }
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+  .sensei-progress-bar__label {
+    display: none;
+  }
+}

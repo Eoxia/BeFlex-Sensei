@@ -1,0 +1,55 @@
+/*--------------------------------------------------------------
+## Query Pagination
+--------------------------------------------------------------*/
+
+.wp-block-query-pagination {
+  .wp-block-query-pagination-previous,
+  .wp-block-query-pagination-next,
+  .page-numbers {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+  }
+
+  .wp-block-query-pagination-previous,
+  .wp-block-query-pagination-next {
+    transition: opacity 0.2s ease-out;
+    background: var(--wp--preset--color--anthracite);
+    color: #fff;
+    font-weight: 900;
+    border-radius: 4px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  .wp-block-query-pagination-previous {
+    //margin-left: auto;
+  }
+
+  .page-numbers {
+    transition: background 0.2s ease-out;
+    border-radius: 50%;
+
+    &.current {
+      font-weight: 400;
+      background: var(--wp--preset--color--secondary);
+      color: #fff;
+    }
+    &:not(.current) {
+      color: var(--wp--preset-color--anthracite);
+
+      &:hover {
+        background: var(--wp--preset--color--light-grey);
+      }
+    }
+  }
+}
+
+.wp-block-query-pagination.aligncenter {
+  > * {
+    text-align: center;
+  }
+}

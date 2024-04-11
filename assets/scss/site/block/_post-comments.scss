@@ -1,0 +1,28 @@
+/*--------------------------------------------------------------
+## Post Comments
+--------------------------------------------------------------*/
+
+.wp-block-post-comments {
+  .comment {
+    .comment-body {
+      background: var(--wp--preset--color--light-grey);
+      padding: 1em;
+      border-radius: 6px;
+      margin-bottom: 1.5em;
+
+      .comment-author {
+        margin-left: auto;
+      }
+      .reply {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .commentlist > .comment {
+    padding-left: 0;
+  }
+
+  input[type="submit"] {
+    border: 0;
+  }
+}

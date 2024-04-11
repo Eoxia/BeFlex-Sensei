@@ -1,0 +1,46 @@
+header.site-header {
+  // Erase margin of first container.
+  + * {
+    margin-top: 0;
+  }
+
+  &.has-background {
+    padding: 0;
+  }
+  .wp-block-columns {
+    margin-bottom: 0;
+  }
+  .wp-block-social-links {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .wp-block-spacer {
+    transition: height 0.2s ease-out;
+  }
+}
+
+body .wp-site-blocks .header-sticky {
+  position: static;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+/** Fixed position only in frontend */
+body.frontend .header-sticky {
+  position: fixed;
+}
+
+.header-sticky.-sticky {
+  box-shadow: 0 0 16px 0 rgb(0, 0, 0, 0.1);
+
+  .wp-block-spacer {
+    height: 6px !important;
+  }
+}
+
+body.admin-bar .header-sticky {
+  top: 32px;
+}
+
