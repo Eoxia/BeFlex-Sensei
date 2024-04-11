@@ -81,6 +81,20 @@ function beflex_add_custom_classes_to_body( $classes ) {
 }
 add_filter( 'body_class', 'beflex_add_custom_classes_to_body' );
 
+/**
+ * Création admin page for theme settings
+ */
+if( function_exists('acf_add_options_page') ) {
+
+	acf_add_options_page( array(
+		'page_title'  => esc_html__('BeFlex Settings', 'beflex'),
+		'menu_title'  => esc_html__('BeFlex Settings', 'beflex'),
+		'menu_slug'   => 'theme-general-settings',
+		'parent_slug' => 'themes.php',
+		'capability'  => 'edit_pages',
+	));
+
+}
 
 // Block patterns.
 require_once 'inc/block-patterns.php';
