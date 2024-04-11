@@ -178,3 +178,16 @@ function myplugin_user_register( $user_id ) {
 		update_user_meta( $user_id, 'last_name', trim( $_POST['last_name'] ) );
 	}
 }
+
+/**
+ * Change the redirect of login page
+ */
+add_filter( 'sensei_registration_url', 'beflex_registration_url', 10, 2 );
+function beflex_registration_url( $registration_url, $redirect) {
+	$beflex_registration_url = get_field( 'page_url_register', 'options' );
+	if ( ! empty( $beflex_registration_url ) ) {
+		$registration_url = esc_url( $beflex_registration_url );
+	}
+
+	return $registration_url;
+}
