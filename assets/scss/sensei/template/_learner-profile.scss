@@ -19,17 +19,29 @@ body.learner-profile, body.learner-archive-message, body.single-sensei_message {
     display: flex;
     margin-top: 0;
 
+    @media ( max-width: $media__mobile ) {
+      flex-direction: column;
+    }
+
     .profile-sidebar {
       width: 30%;
       order: 1;
       background: #fff;
       border-right: 1px solid rgba(0,0,0,0.1);
+
+      @media ( max-width: $media__mobile ) {
+        width: 100%;
+      }
     }
     #learner-container {
       width: 70%;
       order: 2;
       background: rgba(0,0,0,0.05);
       flex-grow: 1;
+
+      @media ( max-width: $media__mobile ) {
+        width: 100%;
+      }
     }
   }
 

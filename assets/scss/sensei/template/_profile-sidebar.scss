@@ -1,8 +1,14 @@
 .profile-sidebar {
   .profile-sidebar-content {
-    margin-left: 250px;
+    margin-left: auto;
     padding-top: 2em;
     padding-right: 4em;
+    max-width: 250px;
+
+    @media ( max-width: $media__mobile ) {
+      margin-right: auto;
+      padding-right: 0;
+    }
 
     svg {
       max-width: 12px;
