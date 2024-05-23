@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Beflex Sensei 2.2.0\n"
-"POT-Creation-Date: 2023-03-03 15:48+0100\n"
-"PO-Revision-Date: 2023-03-03 15:53+0100\n"
+"POT-Creation-Date: 2024-05-23 16:12+0200\n"
+"PO-Revision-Date: 2024-05-23 16:16+0200\n"
 "Last-Translator: \n"
 "Language-Team: contact@eoxia.com\n"
 "Language: fr_FR\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.4.4\n"
 "X-Poedit-Basepath: ../..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: esc_html__;__;_e;esc_html_e;_n;_x;_ex\n"
@@ -32,9 +32,9 @@ msgstr "Type d'animation"
 msgid "Hide on mobile"
 msgstr "Masquer sur mobile"
 
-#: inc/block-blocks.php:31
-msgid "Beflex"
-msgstr "Beflex"
+#: functions.php:90 functions.php:91
+msgid "BeFlex Settings"
+msgstr "Options Beflex"
 
 #: inc/block-patterns.php:11
 msgid "Design"
@@ -52,103 +52,55 @@ msgstr "Pieds de page"
 msgid "Query"
 msgstr "Requête"
 
-#: inc/blocks/bfs-course-completion/bfs-course-completion.php:16
-msgid "Course completion"
-msgstr "Complétion du cours"
+#: inc/blocks.php:29
+msgid "Beflex"
+msgstr "Beflex"
 
-#: inc/blocks/bfs-course-completion/bfs-course-completion.php:17
-msgid "Display completion length of a course"
-msgstr "Affiche la durée complétion d'un cours"
-
-#: inc/blocks/bfs-course-completion/view.php:14
-msgid "Display course completion"
-msgstr "Affiche la complétion d'un cours"
-
-#: inc/blocks/bfs-course-lessons/bfs-course-lessons.php:16
-msgid "Course lessons"
-msgstr "Leçons du cours"
-
-#: inc/blocks/bfs-course-lessons/bfs-course-lessons.php:17
-msgid "Display lessons associated to a course"
-msgstr "Afficher les leçons associées à un cours"
-
-#: inc/blocks/bfs-course-lessons/view.php:14
+#: inc/blocks/bfs-course-lesson/view.php:33
 msgid "Display course lessons"
 msgstr "Affiche les leçons du cours"
 
-#: inc/blocks/bfs-course-lessons/view.php:40 sensei/content-course.php:68
+#: inc/blocks/bfs-course-lesson/view.php:50 sensei/content-course.php:68
 msgid "lessons"
 msgstr "Leçons"
 
-#: inc/blocks/bfs-course-signup/bfs-course-signup.php:16
-msgid "Sensei Course signup"
-msgstr "Sensei inscription au cours"
-
-#: inc/blocks/bfs-course-signup/bfs-course-signup.php:17
-msgid "Display button to take course"
-msgstr "Affiche le bouton d'inscription au cours"
-
-#: inc/blocks/bfs-course-signup/view.php:14
+#: inc/blocks/bfs-course-signup/view.php:33
 msgid "Display course signup button"
 msgstr "Affiche le bouton d'enregistrement"
 
-#: inc/blocks/bfs-course-signup/view.php:26
+#: inc/blocks/bfs-course-signup/view.php:47
 msgid "Start course"
 msgstr "Commencer le cours"
 
-#: inc/blocks/bfs-course-signup/view.php:29
+#: inc/blocks/bfs-course-signup/view.php:50
 msgid "Take course"
 msgstr "S'inscrire au cours"
 
-#: inc/blocks/bfs-course-tax/bfs-course-tax.php:16
-msgid "Course categories"
-msgstr "Catégories de cours"
+#: inc/blocks/bfs-course-tax/view.php:33
+msgid "Display course taxonomies"
+msgstr "Afficher les catégories du cours"
 
-#: inc/blocks/bfs-course-tax/bfs-course-tax.php:17
-msgid "Display categories associated to a course"
-msgstr "Affiche les catégories associées à un cours"
-
-#: inc/blocks/bfs-course-tax/view.php:14
-msgid "Display course categories"
-msgstr "Affiche les catégories de cours"
-
-#: inc/blocks/bfs-course-time/bfs-course-time.php:16
-msgid "Course time"
-msgstr "Durée du cours"
-
-#: inc/blocks/bfs-course-time/bfs-course-time.php:17
-msgid "Display time length of a course"
-msgstr "Affiche la durée d'un cours"
-
-#: inc/blocks/bfs-course-time/view.php:14
+#: inc/blocks/bfs-course-time/view.php:33
 msgid "Display course time"
 msgstr "Afficher la durée du cours"
 
-#: inc/blocks/bfs-course-time/view.php:40 sensei/content-course.php:84
+#: inc/blocks/bfs-course-time/view.php:50 sensei/content-course.php:84
 msgid "min"
 msgstr "min"
 
-#: inc/blocks/bfs-login/bfs-login.php:16
-msgid "Sensei login navigation"
-msgstr "Sensei login navigation"
+#: inc/blocks/bfs-login/view.php:33
+msgid "Display Sensei login navigation"
+msgstr "Afficher le bloc Connexion"
 
-#: inc/blocks/bfs-login/bfs-login.php:17
-msgid "Display login and profile link"
-msgstr "Affiche le bouton connexion et profile"
+#: inc/blocks/bfs-login/view.php:47
+msgid "Check my profile"
+msgstr "Voir mon profile"
 
-#: inc/blocks/bfs-login/view.php:19 sensei/functions.php:76
-msgid "My courses"
-msgstr "Mes cours"
-
-#: inc/blocks/bfs-login/view.php:25 sensei/functions.php:84
-msgid "Logout"
-msgstr "Deconnexion"
-
-#: inc/blocks/bfs-login/view.php:38
+#: inc/blocks/bfs-login/view.php:69
 msgid "Login"
 msgstr "Connexion"
 
-#: inc/patterns/course-default.php:6
+#: inc/patterns/course-default.php:7
 msgid "BFS Sensei - course template"
 msgstr "BFS Sensei - course template"
 
@@ -176,11 +128,11 @@ msgstr "Sensei course grid"
 msgid "Call To Action - Standard"
 msgstr "Call To Action - Standard"
 
-#: sensei/archive-message.php:40
+#: sensei/archive-message.php:37
 msgid "Messages"
 msgstr "Messages"
 
-#: sensei/archive-message.php:48
+#: sensei/archive-message.php:45
 msgid "You do not have any messages."
 msgstr "Vous n'avez pas de messages."
 
@@ -188,9 +140,17 @@ msgstr "Vous n'avez pas de messages."
 msgid "Beflex style"
 msgstr "Beflex style"
 
+#: sensei/functions.php:76
+msgid "My courses"
+msgstr "Mes cours"
+
 #: sensei/functions.php:81
 msgid "My messages"
 msgstr "Mes messages"
+
+#: sensei/functions.php:84
+msgid "Logout"
+msgstr "Deconnexion"
 
 #: sensei/functions.php:139
 msgid "Your informations can no longer be modified"
@@ -220,10 +180,55 @@ msgstr "Email"
 msgid "The user requested does not exist."
 msgstr "L'utilisateur demandé n'existe pas"
 
-#: sensei/loop-message.php:51 sensei/single-message.php:40
+#: sensei/loop-message.php:51
 #, php-format
 msgid "Conversation du cours : %s"
 msgstr "Conversation du cours : %s"
+
+#: sensei/single-message.php:43
+#, php-format
+msgid "Conversation de : %s"
+msgstr "Conversation de : %s"
+
+#: sensei/single-message.php:52
+msgid "Cours"
+msgstr "Cours"
+
+#~ msgid "Course completion"
+#~ msgstr "Complétion du cours"
+
+#~ msgid "Display completion length of a course"
+#~ msgstr "Affiche la durée complétion d'un cours"
+
+#~ msgid "Display course completion"
+#~ msgstr "Affiche la complétion d'un cours"
+
+#~ msgid "Course lessons"
+#~ msgstr "Leçons du cours"
+
+#~ msgid "Display lessons associated to a course"
+#~ msgstr "Afficher les leçons associées à un cours"
+
+#~ msgid "Sensei Course signup"
+#~ msgstr "Sensei inscription au cours"
+
+#~ msgid "Display button to take course"
+#~ msgstr "Affiche le bouton d'inscription au cours"
+
+#~ msgid "Course categories"
+#~ msgstr "Catégories de cours"
+
+#~ msgid "Display categories associated to a course"
+#~ msgstr "Affiche les catégories associées à un cours"
+
+#~ msgid "Display course categories"
+#~ msgstr "Affiche les catégories de cours"
+
+#~ msgid "Display time length of a course"
+#~ msgstr "Affiche la durée d'un cours"
+
+#~ msgid "Display login and profile link"
+#~ msgstr "Affiche le bouton connexion et profile"
 
 #~ msgid "Write a new message..."
 #~ msgstr "Écrire un nouveau message..."
