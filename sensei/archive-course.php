@@ -8,9 +8,9 @@ Template Name: Example
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<?php
-	$block_header  = do_blocks( file_get_contents(get_stylesheet_directory_uri() . "/block-template-parts/header.html") );
-	$block_content = do_blocks( file_get_contents(get_stylesheet_directory_uri() . "/block-templates/archive-course.html") );
-	$block_footer  = do_blocks( file_get_contents(get_stylesheet_directory_uri() . "/block-template-parts/footer.html") );
+	$block_header  = do_blocks( file_get_contents( locate_template( 'block-template-parts/header.html' ) ) );
+	$block_content = do_blocks( file_get_contents( locate_template( 'block-templates/archive-course.html' ) ) );
+	$block_footer  = do_blocks( file_get_contents( locate_template( 'block-template-parts/footer.html' ) ) );
 	?>
 	<?php wp_head(); ?>
 </head>

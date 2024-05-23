@@ -130,7 +130,7 @@ if ( ! defined( '{{blockVar}}_DIR' ) ) {
     define( '{{blockVar}}_DIR', dirname(__DIR__, 1) . '/{{blockName}}' );
 }
 if ( ! defined( '{{blockVar}}_URL' ) ) {
-    define( '{{blockVar}}_URL', get_stylesheet_directory_uri() . '/inc/blocks/{{blockName}}' );
+    define( '{{blockVar}}_URL', get_template_directory_uri() . '/inc/blocks/{{blockName}}' );
 }
 
 /**
