@@ -12,7 +12,7 @@ var scss_paths = [
   'assets/scss/**/*.scss',
 
   'inc/blocks/bfs-course-tax/assets/scss/**/*.scss',
-  'inc/blocks/bfs-course-lessons/assets/scss/**/*.scss',
+  'inc/blocks/bfs-course-lesson/assets/scss/**/*.scss',
   'inc/blocks/bfs-course-time/assets/scss/**/*.scss',
   'inc/blocks/bfs-course-completion/assets/scss/**/*.scss',
   'inc/blocks/bfs-login/assets/scss/**/*.scss'

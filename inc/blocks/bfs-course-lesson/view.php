@@ -1,6 +1,6 @@
 <?php
 /**
- * Display taxonomies of a Sensei course.
+ * course-lesson.
  *
  * @param   array $block The block settings and attributes.
  * @param   string $content The block inner HTML (empty).
@@ -18,7 +18,7 @@ if ( ! empty( $block['anchor'] ) ) {
 }
 
 // Create class attribute allowing for custom "className" and "align" values.
-$class_name = 'bfs-course-tax';
+$class_name = 'bfs-course-lesson';
 
 if ( ! empty( $block['className'] ) ) {
     $class_name .= ' ' . $block['className'];
@@ -30,19 +30,27 @@ if ( ! empty( $block['align'] ) ) {
 // Admin classes
 if ( is_admin() ) :
     $class_name .= ' is-admin';
-	esc_html_e( 'Display course taxonomies', 'beflex' );
+	esc_html_e( 'Display course lessons', 'beflex' );
 endif;
 
 if ( 'course' != get_post_type( get_the_ID() ) ) :
 	return;
 endif;
 
-$terms_list = get_the_terms( get_the_ID(), 'course-category' );
-if ( ! empty( $terms_list ) ) :
+$lesson_count = Sensei()->course->course_lesson_count( get_the_ID() );
+
+if ( ! empty( $lesson_count ) ) :
 	?>
 	<div <?php echo $anchor; ?> class="<?php echo esc_attr( $class_name ); ?>">
-		<?php foreach( $terms_list as $term ) : ?>
-			<a href="<?php echo get_term_link( $term->slug, 'course-category'); ?>" rel="tag" class="bfs-course-tax__id-<?php echo $term->term_id; ?>"><?php echo $term->name; ?></a>
-		<?php endforeach; ?>
+		<?php
+		echo sprintf(
+			'<img src="%1$s" class="bfs-course-lesson__icon" /> <span>%2$s %3$s</span>',
+			esc_url( BFS_COURSE_LESSON_URL . '/assets/images/list-check-solid.svg' ),
+			esc_html( $lesson_count ),
+			esc_html__( 'lessons', 'beflex' )
+		);
+		?>
 	</div>
-<?php endif; ?>
+	<?php
+endif;
+?>
