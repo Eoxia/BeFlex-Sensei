@@ -434,7 +434,8 @@ body.sensei-template-old .wp-block-sensei-lms-course-list-filter {
 }
 .wp-block-sensei-lms-course-outline.is-style-beflex .wp-block-sensei-lms-course-outline-module .wp-block-sensei-lms-course-outline-module__lessons-title,
 .wp-block-sensei-lms-course-outline-module.is-style-beflex .wp-block-sensei-lms-course-outline-module__lessons-title {
-  background: none;
+  background: none !important;
+  font-size: 10px;
 }
 .wp-block-sensei-lms-course-outline.is-style-beflex .wp-block-sensei-lms-course-outline-module .wp-block-sensei-lms-course-outline-lesson > span,
 .wp-block-sensei-lms-course-outline-module.is-style-beflex .wp-block-sensei-lms-course-outline-lesson > span {
