@@ -13,7 +13,7 @@ if ( ! defined( 'BFS_LOGIN_DIR' ) ) {
     define( 'BFS_LOGIN_DIR', dirname(__DIR__, 1) . '/bfs-login' );
 }
 if ( ! defined( 'BFS_LOGIN_URL' ) ) {
-    define( 'BFS_LOGIN_URL', get_stylesheet_directory_uri() . '/inc/blocks/bfs-login' );
+    define( 'BFS_LOGIN_URL', get_template_directory_uri() . '/inc/blocks/bfs-login' );
 }
 
 /**
@@ -40,4 +40,3 @@ function bfs_login_load_json( $paths ) {
     return $paths;
 }
 add_filter( 'acf/settings/load_json', 'bfs_login_load_json' );
-    

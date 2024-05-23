@@ -13,7 +13,7 @@ if ( ! defined( 'BFS_COURSE_LESSON_DIR' ) ) {
     define( 'BFS_COURSE_LESSON_DIR', dirname(__DIR__, 1) . '/bfs-course-lesson' );
 }
 if ( ! defined( 'BFS_COURSE_LESSON_URL' ) ) {
-    define( 'BFS_COURSE_LESSON_URL', get_stylesheet_directory_uri() . '/inc/blocks/bfs-course-lesson' );
+    define( 'BFS_COURSE_LESSON_URL', get_template_directory_uri() . '/inc/blocks/bfs-course-lesson' );
 }
 
 /**
@@ -40,4 +40,3 @@ function bfs_course_lesson_load_json( $paths ) {
     return $paths;
 }
 add_filter( 'acf/settings/load_json', 'bfs_course_lesson_load_json' );
-    

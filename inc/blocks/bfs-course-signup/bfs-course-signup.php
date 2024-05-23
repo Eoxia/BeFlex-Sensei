@@ -13,7 +13,7 @@ if ( ! defined( 'BFS_COURSE_SIGNUP_DIR' ) ) {
     define( 'BFS_COURSE_SIGNUP_DIR', dirname(__DIR__, 1) . '/bfs-course-signup' );
 }
 if ( ! defined( 'BFS_COURSE_SIGNUP_URL' ) ) {
-    define( 'BFS_COURSE_SIGNUP_URL', get_stylesheet_directory_uri() . '/inc/blocks/bfs-course-signup' );
+    define( 'BFS_COURSE_SIGNUP_URL', get_template_directory_uri() . '/inc/blocks/bfs-course-signup' );
 }
 
 /**

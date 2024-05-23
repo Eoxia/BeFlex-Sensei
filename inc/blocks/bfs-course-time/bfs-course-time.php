@@ -13,7 +13,7 @@ if ( ! defined( 'BFS_COURSE_TIME_DIR' ) ) {
     define( 'BFS_COURSE_TIME_DIR', dirname(__DIR__, 1) . '/bfs-course-time' );
 }
 if ( ! defined( 'BFS_COURSE_TIME_URL' ) ) {
-    define( 'BFS_COURSE_TIME_URL', get_stylesheet_directory_uri() . '/inc/blocks/bfs-course-time' );
+    define( 'BFS_COURSE_TIME_URL', get_template_directory_uri() . '/inc/blocks/bfs-course-time' );
 }
 
 /**
@@ -40,4 +40,3 @@ function bfs_course_time_load_json( $paths ) {
     return $paths;
 }
 add_filter( 'acf/settings/load_json', 'bfs_course_time_load_json' );
-    

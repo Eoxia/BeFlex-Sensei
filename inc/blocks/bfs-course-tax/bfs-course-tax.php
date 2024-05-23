@@ -13,7 +13,7 @@ if ( ! defined( 'BFS_COURSE_TAX_DIR' ) ) {
     define( 'BFS_COURSE_TAX_DIR', dirname(__DIR__, 1) . '/bfs-course-tax' );
 }
 if ( ! defined( 'BFS_COURSE_TAX_URL' ) ) {
-    define( 'BFS_COURSE_TAX_URL', get_stylesheet_directory_uri() . '/inc/blocks/bfs-course-tax' );
+    define( 'BFS_COURSE_TAX_URL', get_template_directory_uri() . '/inc/blocks/bfs-course-tax' );
 }
 
 /**
@@ -40,4 +40,3 @@ function bfs_course_tax_load_json( $paths ) {
     return $paths;
 }
 add_filter( 'acf/settings/load_json', 'bfs_course_tax_load_json' );
-    
