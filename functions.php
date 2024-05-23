@@ -99,6 +99,6 @@ if( function_exists('acf_add_options_page') ) {
 // Block patterns.
 require_once 'inc/block-patterns.php';
 // Theme blocks
-require_once 'inc/block-blocks.php';
+require_once 'inc/blocks.php';
 // Sensei functions
 require_once 'sensei/functions.php';
