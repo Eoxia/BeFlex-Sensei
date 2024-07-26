@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Beflex Sensei 2.2.0\n"
 "POT-Creation-Date: 2024-05-23 16:12+0200\n"
-"PO-Revision-Date: 2024-05-23 16:16+0200\n"
+"PO-Revision-Date: 2024-07-26 11:27+0200\n"
 "Last-Translator: \n"
 "Language-Team: contact@eoxia.com\n"
 "Language: fr_FR\n"
@@ -94,7 +94,7 @@ msgstr "Afficher le bloc Connexion"
 
 #: inc/blocks/bfs-login/view.php:47
 msgid "Check my profile"
-msgstr "Voir mon profile"
+msgstr "Voir mon profil"
 
 #: inc/blocks/bfs-login/view.php:69
 msgid "Login"
@@ -166,7 +166,7 @@ msgstr "Prénom"
 
 #: sensei/learner-profile.php:55
 msgid "Profile"
-msgstr "Profile"
+msgstr "Profil"
 
 #: sensei/learner-profile.php:60
 msgid "Name"
