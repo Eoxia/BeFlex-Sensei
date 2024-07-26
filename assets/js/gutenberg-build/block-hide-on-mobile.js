@@ -1,14 +1,100 @@
-/******/ (function() { // webpackBootstrap
-/******/ 	"use strict";
+/******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "@wordpress/element":
-/*!*********************************!*\
-  !*** external ["wp","element"] ***!
-  \*********************************/
-/***/ (function(module) {
+/***/ "react/jsx-runtime":
+/*!**********************************!*\
+  !*** external "ReactJSXRuntime" ***!
+  \**********************************/
+/***/ ((module) => {
 
-module.exports = window["wp"]["element"];
+"use strict";
+module.exports = window["ReactJSXRuntime"];
+
+/***/ }),
+
+/***/ "./node_modules/classnames/index.js":
+/*!******************************************!*\
+  !*** ./node_modules/classnames/index.js ***!
+  \******************************************/
+/***/ ((module, exports) => {
+
+var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+	Copyright (c) 2018 Jed Watson.
+	Licensed under the MIT License (MIT), see
+	http://jedwatson.github.io/classnames
+*/
+/* global define */
+
+(function () {
+	'use strict';
+
+	var hasOwn = {}.hasOwnProperty;
+
+	function classNames () {
+		var classes = '';
+
+		for (var i = 0; i < arguments.length; i++) {
+			var arg = arguments[i];
+			if (arg) {
+				classes = appendClass(classes, parseValue(arg));
+			}
+		}
+
+		return classes;
+	}
+
+	function parseValue (arg) {
+		if (typeof arg === 'string' || typeof arg === 'number') {
+			return arg;
+		}
+
+		if (typeof arg !== 'object') {
+			return '';
+		}
+
+		if (Array.isArray(arg)) {
+			return classNames.apply(null, arg);
+		}
+
+		if (arg.toString !== Object.prototype.toString && !arg.toString.toString().includes('[native code]')) {
+			return arg.toString();
+		}
+
+		var classes = '';
+
+		for (var key in arg) {
+			if (hasOwn.call(arg, key) && arg[key]) {
+				classes = appendClass(classes, key);
+			}
+		}
+
+		return classes;
+	}
+
+	function appendClass (value, newClass) {
+		if (!newClass) {
+			return value;
+		}
+	
+		if (value) {
+			return value + ' ' + newClass;
+		}
+	
+		return value + newClass;
+	}
+
+	if ( true && module.exports) {
+		classNames.default = classNames;
+		module.exports = classNames;
+	} else if (true) {
+		// register as 'classnames', consistent with npm package name
+		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = (function () {
+			return classNames;
+		}).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
+		__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	} else {}
+}());
+
 
 /***/ })
 
@@ -40,77 +126,98 @@ module.exports = window["wp"]["element"];
 /******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
-/******/ 	!function() {
+/******/ 	(() => {
 /******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = function(module) {
+/******/ 		__webpack_require__.n = (module) => {
 /******/ 			var getter = module && module.__esModule ?
-/******/ 				function() { return module['default']; } :
-/******/ 				function() { return module; };
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
 /******/ 			__webpack_require__.d(getter, { a: getter });
 /******/ 			return getter;
 /******/ 		};
-/******/ 	}();
+/******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/define property getters */
-/******/ 	!function() {
+/******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = function(exports, definition) {
+/******/ 		__webpack_require__.d = (exports, definition) => {
 /******/ 			for(var key in definition) {
 /******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
 /******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
 /******/ 				}
 /******/ 			}
 /******/ 		};
-/******/ 	}();
+/******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	!function() {
-/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
-/******/ 	}();
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
-/******/ 	!function() {
+/******/ 	(() => {
 /******/ 		// define __esModule on exports
-/******/ 		__webpack_require__.r = function(exports) {
+/******/ 		__webpack_require__.r = (exports) => {
 /******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
 /******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
-/******/ 	}();
+/******/ 	})();
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
-!function() {
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+(() => {
+"use strict";
 /*!*********************************************************!*\
   !*** ./assets/js/gutenberg-src/block-hide-on-mobile.js ***!
   \*********************************************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
-
-
-function hideOnMobileAttribute(settings, name) {
-  if (typeof settings.attributes !== 'undefined') {
-    settings.attributes = Object.assign(settings.attributes, {
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
+// Declare
+const bfCheckNamespace = name => {
+  const namespace = [{
+    name: 'core/'
+  }, {
+    name: 'beflex/'
+  }];
+  for (let i = 0; namespace.length > i; i++) {
+    if (name.startsWith(namespace[i].name)) {
+      return true;
+    }
+  }
+  return false;
+};
+const bfHideOnMobileAttributes = (settings, name) => {
+  if (!bfCheckNamespace(name)) {
+    return settings;
+  }
+  return Object.assign({}, settings, {
+    attributes: Object.assign({}, settings.attributes, {
       hideOnMobile: {
         type: 'boolean'
       }
-    });
-  }
-
-  return settings;
-}
-
-wp.hooks.addFilter('blocks.registerBlockType', 'beflex/hide-on-mobile', hideOnMobileAttribute);
-const hideOnMobileControls = wp.compose.createHigherOrderComponent(BlockEdit => {
+    })
+  });
+};
+wp.hooks.addFilter('blocks.registerBlockType', 'beflex/hide-on-mobile-attributes', bfHideOnMobileAttributes);
+const {
+  createHigherOrderComponent
+} = wp.compose;
+const bfHideOnMobileControls = createHigherOrderComponent(BlockEdit => {
   return props => {
     const {
-      Fragment
+      Fragment,
+      useState
     } = wp.element;
     const {
-      ToggleControl
+      ToggleControl,
+      RadioControl,
+      TextControl
     } = wp.components;
     const {
       InspectorAdvancedControls
@@ -120,31 +227,58 @@ const hideOnMobileControls = wp.compose.createHigherOrderComponent(BlockEdit => 
       setAttributes,
       isSelected
     } = props;
-    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(BlockEdit, props), isSelected && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(InspectorAdvancedControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(ToggleControl, {
-      label: wp.i18n.__('Hide on mobile', 'beflex'),
-      checked: !!attributes.hideOnMobile,
-      onChange: newval => setAttributes({
-        hideOnMobile: !attributes.hideOnMobile
-      })
-    })));
+    const {
+      hideOnMobile
+    } = attributes;
+    if (!bfCheckNamespace(props.name)) {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(BlockEdit, {
+        ...props
+      });
+    }
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(Fragment, {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(BlockEdit, {
+        ...props
+      }), isSelected && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(InspectorAdvancedControls, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(ToggleControl, {
+          label: wp.i18n.__('Hide on mobile', 'beflex'),
+          checked: !!hideOnMobile,
+          onChange: () => setAttributes({
+            hideOnMobile: !hideOnMobile
+          })
+        })
+      })]
+    });
   };
-}, 'hideOnMobileControls');
-wp.hooks.addFilter('editor.BlockEdit', 'beflex/hide-on-mobile-control', hideOnMobileControls);
+}, 'bfHideOnMobileControls');
+wp.hooks.addFilter('editor.BlockEdit', 'beflex/hide-on-mobile-controls', bfHideOnMobileControls);
+const bfHideOnMobileProp = createHigherOrderComponent(BlockListBlock => {
+  return props => {
+    if (!bfCheckNamespace(props.name)) {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(BlockListBlock, {
+        ...props
+      });
+    }
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(BlockListBlock, {
+      ...props,
+      className: 'hide-on-mobile'
+    });
+  };
+}, 'bfHideOnMobileProp');
+wp.hooks.addFilter('editor.BlockListBlock', 'beflex/hide-on-mobile-prop', bfHideOnMobileProp);
 
-function hideOnMobileClass(extraProps, blockType, attributes) {
+
+const bfHideOnMobileDisplay = (extraProps, blockType, attributes) => {
   const {
     hideOnMobile
   } = attributes;
-
-  if (typeof hideOnMobile !== 'undefined' && hideOnMobile) {
-    extraProps.className = extraProps.className + ' hide-on-mobile';
+  if (hideOnMobile) {
+    extraProps.className = classnames__WEBPACK_IMPORTED_MODULE_1___default()(extraProps.className, 'hide-on-mobile');
   }
-
   return extraProps;
-}
+};
+wp.hooks.addFilter('blocks.getSaveContent.extraProps', 'beflex/hide-on-mobile-display', bfHideOnMobileDisplay);
+})();
 
-wp.hooks.addFilter('blocks.getSaveContent.extraProps', 'beflex/hide-on-mobile-class', hideOnMobileClass);
-}();
 /******/ })()
 ;
 //# sourceMappingURL=block-hide-on-mobile.js.map
