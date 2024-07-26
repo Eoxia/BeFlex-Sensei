@@ -6,15 +6,13 @@
  * @since 4.0.0
  */
 
-function beflex_acf_blocks_init() {
-	require get_template_directory() . '/inc/blocks/bfs-course-tax/bfs-course-tax.php';
-	require get_template_directory() . '/inc/blocks/bfs-course-lessons/bfs-course-lessons.php';
-	require get_template_directory() . '/inc/blocks/bfs-course-time/bfs-course-time.php';
-//	require get_template_directory() . '/inc/blocks/bfs-course-completion/bfs-course-completion.php';
-	require get_template_directory() . '/inc/blocks/bfs-login/bfs-login.php';
+if ( class_exists( 'Sensei_Main', true ) ) {
 	require get_template_directory() . '/inc/blocks/bfs-course-signup/bfs-course-signup.php';
+	require get_template_directory() . '/inc/blocks/bfs-course-tax/bfs-course-tax.php';
+	require get_template_directory() . '/inc/blocks/bfs-course-lesson/bfs-course-lesson.php';
+	require get_template_directory() . '/inc/blocks/bfs-course-time/bfs-course-time.php';
+	require get_template_directory() . '/inc/blocks/bfs-login/bfs-login.php';
 }
-add_action( 'acf/init', 'beflex_acf_blocks_init' );
 
 /**
  * Create custom block category

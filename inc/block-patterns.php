@@ -43,13 +43,12 @@ function beflex_register_block_patterns() {
 		'header-photo',
 		'query-standard',
 		'query-background',
-		'query-course',
-		'course-default'
 	);
 
 	$sensei_block_patterns = array(
+		'course-default',
+		'query-course'
 	);
-
 
 	/**
 	 * Filters the theme block patterns.
@@ -68,5 +67,27 @@ function beflex_register_block_patterns() {
 			require $pattern_file
 		);
 	}
+
+	if ( class_exists( 'Sensei_Main', true ) ) {
+
+		/**
+		 * Filters the theme block patterns.
+		 *
+		 * @since Twenty Twenty-Two 1.0
+		 *
+		 * @param array $block_patterns List of block patterns by name.
+		 */
+		$sensei_block_patterns = apply_filters( 'beflex_sensei_block_patterns', $sensei_block_patterns );
+
+		foreach ( $sensei_block_patterns as $block_pattern ) {
+			$pattern_file = get_theme_file_path( '/inc/patterns/' . $block_pattern . '.php' );
+
+			register_block_pattern(
+				'beflex/' . $block_pattern,
+				require $pattern_file
+			);
+		}
+	}
+
 }
 add_action( 'init', 'beflex_register_block_patterns', 9 );
