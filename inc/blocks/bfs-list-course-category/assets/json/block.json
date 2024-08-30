@@ -1,0 +1,23 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "beflex/list-course-category",
+  "title": "BFS List Course Category",
+  "description": "",
+  "style": [ "block-bfs-list-course-category-style" ],
+  "viewScript": [],
+  "category": "beflex",
+  "icon": "",
+  "apiVersion": 2,
+  "textdomain": "beflex",
+  "keywords": [
+    "beflex",
+	"bfs",
+    "list-course-category"
+  ],
+  "supports": {
+  },
+  "acf": {
+    "mode": "auto",
+    "renderTemplate": "../../view.php"
+  }
+}
