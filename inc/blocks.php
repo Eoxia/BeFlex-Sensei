@@ -12,6 +12,7 @@ if ( class_exists( 'Sensei_Main', true ) ) {
 	require get_template_directory() . '/inc/blocks/bfs-course-lesson/bfs-course-lesson.php';
 	require get_template_directory() . '/inc/blocks/bfs-course-time/bfs-course-time.php';
 	require get_template_directory() . '/inc/blocks/bfs-login/bfs-login.php';
+	require get_template_directory() . '/inc/blocks/bfs-list-course-category/bfs-list-course-category.php';
 }
 
 /**
