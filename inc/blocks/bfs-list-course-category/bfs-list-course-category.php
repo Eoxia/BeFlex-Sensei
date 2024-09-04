@@ -56,6 +56,7 @@ function bfs_get_taxonomy_hierarchy( $taxonomy, $parent = 0 ) {
 	$terms = get_terms( $taxonomy, array(
 		'parent'     => $parent,
 		'hide_empty' => false,
+		'orderby'    => 'term_order',
 		'meta_query' => array(
 			array(
 				'key'     => 'bfs_private_course_tax',
