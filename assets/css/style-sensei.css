@@ -186,6 +186,45 @@ body.learner-profile .post.course .meter .value {
   border-radius: 0;
 }
 
+#my-courses .post.course {
+  border-bottom: 0;
+  background: #fff;
+  padding: 15px 15px 25px 15px;
+  border-radius: 6px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.05);
+  margin-bottom: 1em;
+}
+#my-courses .post.course .thumbnail {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 6px;
+}
+#my-courses .post.course .meter {
+  position: absolute;
+  height: 15px;
+  line-height: 15px;
+  font-size: 12px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.15);
+}
+#my-courses .post.course .sensei-course-meta {
+  margin: 0;
+}
+#my-courses .post.course .course-lesson-progress::before {
+  display: inline-block;
+  content: "-";
+  padding-right: 0.5em;
+}
+#my-courses .post.course .sensei-results-links {
+  margin: 0;
+}
+
 .profile-sidebar .profile-sidebar-content {
   margin-left: auto;
   padding-top: 2em;
