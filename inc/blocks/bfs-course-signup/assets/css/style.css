@@ -1,0 +1,9 @@
+/**
+ * Style CSS de bfs-course-signup
+*/
+.bfs-course-signup .bf-button[disabled=disabled] {
+  pointer-events: none;
+  opacity: 0.5;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}

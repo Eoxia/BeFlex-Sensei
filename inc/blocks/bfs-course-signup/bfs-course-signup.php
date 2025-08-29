@@ -22,7 +22,7 @@ if ( ! defined( 'BFS_COURSE_SIGNUP_URL' ) ) {
  * @return void
  */
 function bfs_course_signup_register_acf_blocks() {
-//    wp_register_style( 'block-bfs-course-signup-style', BFS_COURSE_SIGNUP_URL . '/assets/css/style.min.css' );
+    wp_register_style( 'block-bfs-course-signup-style', BFS_COURSE_SIGNUP_URL . '/assets/css/style.min.css' );
 //    wp_register_script( 'block-bfs-course-signup-script', BFS_COURSE_SIGNUP_URL . '/assets/js/bfs-course-signup.js', array('jquery'), '', true );
     register_block_type( BFS_COURSE_SIGNUP_DIR . '/assets/json/' );
 }

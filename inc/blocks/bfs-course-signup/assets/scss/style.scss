@@ -1,3 +1,10 @@
 /**
  * Style CSS de bfs-course-signup
 */
+.bfs-course-signup {
+  .bf-button[disabled="disabled"] {
+    pointer-events: none;
+    opacity: .5;
+    filter: grayscale(100%);
+  }
+}
